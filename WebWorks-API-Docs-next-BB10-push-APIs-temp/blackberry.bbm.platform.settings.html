@@ -1,0 +1,369 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                Settings
+            
+        </h1>
+
+
+        
+            <p>
+                Provides read access to BBM Connected Application settings.
+            </p>
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry OS 5.0+</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                    
+                    
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                            <td>
+                                <a href="blackberry.bbm.platform.settings.html#.alwaysAllowPublicConns">alwaysAllowPublicConns</a>
+                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                            <td>
+                                <a href="blackberry.bbm.platform.settings.html#.profileboxEnabled">profileboxEnabled</a>
+                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                         <td>
+                             &lt;feature id="blackberry.bbm.platform" /&gt;
+                             <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+                         </td>
+                     </tr>
+                 
+            </table>
+        
+
+
+        <div x-ww-support="pb1.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb5.0|bb6.0|bb7.0">
+                <h3> Properties </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <a href="blackberry.bbm.platform.settings.html#.alwaysAllowPublicConns">alwaysAllowPublicConns</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <a href="blackberry.bbm.platform.settings.html#.profileboxEnabled">profileboxEnabled</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+
+    
+
+    
+
+
+
+        
+        
+
+
+
+
+    
+    
+       
+        <div x-ww-support="bb5.0|bb6.0|bb7.0">
+            <h2>Properties:</h2>
+            <hr/>
+          
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                        <td>
+                            <a name=".alwaysAllowPublicConns">alwaysAllowPublicConns</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Boolean
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Whether a prompt is shown when hosting a public connection or requesting to join a public connection.
+<p><code>true</code> if the prompt is never shown; <code>false</code> otherwise.
+<p>See <a href="blackberry.bbm.platform.io.html#.host">host</a> and <a href="blackberry.bbm.platform.io.html#.joinHost">joinHost</a>
+                            
+                                <br />
+                                
+                            
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry OS 5.0+
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                        <td>
+                            <a name=".profileboxEnabled">profileboxEnabled</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Boolean
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Whether the application profile box appears in the current user's BBM profile.
+<p><code>true</code> if the profile box appears; <code>false</code> otherwise.
+<p>See <a href="blackberry.bbm.platform.self.profilebox.html">blackberry.bbm.platform.self.profilebox</a>
+                            
+                                <br />
+                                
+                            
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry OS 5.0+
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+				
+                
+    
+            
+        </div>
+    
+
+    
+    
+
+
+
+        
+        
+
+    
+
+
+
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Mar 07 2012 15:32:41 GMT-0500 (EST)
+        </div>
+
+    </div>
+</section>
