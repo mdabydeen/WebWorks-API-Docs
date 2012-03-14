@@ -43,7 +43,7 @@
 
         
             <p>
-                The Push object allows you to leverage the BlackBerry push architecture to receive push data in your application.<br/><br/>Since the state for JavaScript for a web page is only as long as the web page is being viewed, there is a need for the app to maintain the open listener for push information. This allows this listening for push data to remain open between page transitions. If no current active callback is assigned to the push listener, the app will queue the push data (limiting the number of messages using maxQueueCap if available) for the application until a subsequent openPushListener call is made for that port. At that point it will then pass the data to the subscribed callback function. To subscribe to the same previously opened push listener on a new web page, a secondary call to openPushListener is called. In this scenario it will reassign the callback provided to the already open listener. <br/><br/><p/>It is possible for the BlackBerry Push Service to automatically unregister a subscriber behind the scenes. When writing a push application, to combat this possible automatic unregister, you should offer one of the following options: <ol><li>Explicit register, unregister menu options.</li><li>Use automatic, periodic registration calls to the BlackBerry Push Service to ensure that subscribers receive their desired pushes.  The period you pick would depend on the application you write.  If you plan to send out a high frequency of pushes to a subscriber in a given day, you will want to make the registration calls more frequent (e.g. once a day).  If your application will only send out a low number of pushes in a given day to a subscriber, then you can make the registration calls less frequent (e.g. once a week).</li></ol>
+                The Push object allows you to leverage the BlackBerry push architecture to receive push data in your application.<br/><br/>Since the state for JavaScript for a web page is only as long as the web page is being viewed, there is a need for the app to maintain the open listener for push information. This allows this listening for push data to remain open between page transitions. If no current active callback is assigned to the push listener, the app will queue the push data (limiting the number of messages using maxQueueCap if available) for the application until a subsequent openPushListener call is made. At that point it will then pass the data to the subscribed callback function. To subscribe to the same previously opened push listener on a new web page, a secondary call to openPushListener is called. In this scenario it will reassign the callback provided to the already open listener. <br/><br/><p/>It is possible for the BlackBerry Push Service to automatically unregister a subscriber behind the scenes. When writing a push application, to combat this possible automatic unregister, you should offer one of the following options: <ol><li>Explicit register, unregister menu options.</li><li>Use automatic, periodic registration calls to the BlackBerry Push Service to ensure that subscribers receive their desired pushes.  The period you pick would depend on the application you write.  If you plan to send out a high frequency of pushes to a subscriber in a given day, you will want to make the registration calls more frequent (e.g. once a day).  If your application will only send out a low number of pushes in a given day to a subscriber, then you can make the registration calls less frequent (e.g. once a week).</li></ol>
             </p>
         
 
@@ -257,7 +257,7 @@
                                 static              
                                 void
                                 
-                                    closePushListener(onUnregister : function)
+                                    closePushListener(<i>[port: Number]</i>, onUnregister : function)
                                                           
                             
                         </td></tr>
@@ -303,6 +303,22 @@
                             </th>
                         </tr></thead>
                                        
+                        
+                            
+                            <tr>
+                                <td><b>port</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                    <br /><i>Optional</i>                                                    
+                                </td>
+                                <td>
+                                    
+                                    The port used in the open push method. If port is not specified, all open ports will be closed. <p> NOTE: port is not required for BlackBerry 10 or PlayBook.                         
+                                    
+                                </td>
+                            </tr>
                         
                             
                             <tr>
@@ -929,7 +945,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Mar 14 2012 15:21:49 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Mar 14 2012 16:27:13 GMT-0400 (EDT)
         </div>
 
     </div>
