@@ -13,3 +13,4 @@ WebWorks-API-Docs-next-BB10-push-APIs
 WebWorks-API-Docs-next-BB10-push-APIs-proposal
 WebWorks-API-Docs-next-BB10-battery-APIs
 WebWorks-API-Docs-next-BB10-system-api
+WebWorks-API-Docs-next-BB10-app-api
