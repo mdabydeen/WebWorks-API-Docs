@@ -13,3 +13,4 @@ WebWorks-API-Docs-next-BB10-push-APIs
 WebWorks-API-Docs-next-BB10-push-APIs-proposal
 WebWorks-API-Docs-next-BB10-app-api
 WebWorks-API-Docs-next-BB10-identity-uuid
+WebWorks-API-Docs-next-BB10-battery-low-critical-events
