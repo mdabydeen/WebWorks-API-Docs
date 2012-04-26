@@ -43,7 +43,7 @@
 
         
             <p>
-                The PushService object allows you to perform all the push-related operations.
+                The PushService object allows you to leverage the BlackBerry push architecture to receive push data in your application. The push solution includes a push-enabled application on a BlackBerry device and a Push Initiator server-side application. The Push Initiator can deliver up to 8 KB of content (images, text, etc...) and headers (meta-data name-value pairs) through the BlackBerry Push Service (to the general public) or through the BlackBerry Enterprise Server (to enterprise users). These servers are also known as PPGs (Push Proxy Gateway). The PushServiceobject will allow your application receive push message sent through either of these PPGs.<br/><br/>The PushService object must be created as an instance using the new keyword. Only one instance is needed per application.</p></div>
             </p>
         
 
@@ -682,7 +682,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p><div><p>   The PushService object must be created as an instance using the new keyword.</p></div></p>
+                <p></p>
                 <br />
                         
                 
@@ -722,10 +722,10 @@
                                         <br />
                                         
                                             <br />
-                                            <b>appId:</b> The provider application ID you are assigned after registering to use the BlackBerry Push Service.
+                                            <b>appId:</b> The provider application ID. For public push you are assigned a unique provider application id after registering to use the BlackBerry Push Service. For enterprise push, this is any value that uniquely identifies this application as agreed to with the push initiator
                                         
                                             <br />
-                                            <b>ppgUrl:</b> The PPG URL.  You will be provided with this URL after registering to use the BlackBerry Push Service.  The URL will point to either the eval or the production environment of the BlackBerry Push Service (for eval, https://cp{cpid}.pushapi.eval.blackberry.com; for production, https://cp{cpid}.pushapi.na.blackberry.com where {cpid} is replaced with your content provider ID).
+                                            <b>ppgUrl:</b> Optional parameter that specifies the PPG URL to register with. For public push, you will be provided with this URL after registering to use the BlackBerry Push Service. The URL will point to either the eval or the production environment of the BlackBerry Push Service (for eval, https://cp{cpid}.pushapi.eval.blackberry.com; for production, https://cp{cpid}.pushapi.na.blackberry.com where {cpid} is replaced with your content provider ID).For enterprise push PPG URL is not required since not registration is required to receive push messages.
                                         
                                             <br />
                                             <b>invokeTargetKey:</b> Your application's unique invoke target key, as set in your application BAR file's manifest, related to when a new push notification is received and the application needs to be invoked.
@@ -912,7 +912,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p><p>Creates a push channel for the given application. Unlike a session, once a channel is created it will survive application restarts and thereforedoes not necessarily need to be called on every application start up. However, since it is possible for the BlackBerry Push Serviceto destroy a channel under certain circumstances it may be advisable to periodicially re-create the channel (e.g. once a month).     </p><p>A session must have been created using <code>createSession</code> before calling this function.</p><p>This function should be called in order for an application to be able to start receiving pushes.  If a <code>destroyChannel</code> call is then made, no pushes will be able to be received until a <code>createChannel</code> call is made again.</p><p>Note: This function will communicate under the covers with the BlackBerry Push Service.</p></p>
+                <p><p>Creates a push channel for the given application. Unlike a session, once a channel is created it will survive application restarts and thereforedoes not necessarily need to be called on every application start up. However, since it is possible for the BlackBerry Push Serviceto destroy a channel under certain circumstances it may be advisable to periodicially re-create the channel (e.g. once a month).     </p><p>A session must have been created using <code>createSession</code> before calling this function.</p><p>This function should be called in order for an application to be able to start receiving pushes.  If a <code>destroyChannel</code> call is then made, no pushes will be able to be received until a <code>createChannel</code> call is made again.</p><p>Note: If using public push PPG, this function will communicate under the covers with the BlackBerry Push Service.</p></p>
                 <br />
                         
                 
@@ -1109,7 +1109,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p><p>Destroys a push channel for the given application.</p><p>A session and a channel must have been created using <code>createSession</code> and <code>createChannel</code> before calling this function.</p><p>This function should be called in order for an application to stop receiving pushes.No pushes will be received after a <code>destroyChannel</code> call until a <code>createChannel</code> call is made after that.</p><p>Note: This function will communicate under the covers with the BlackBerry Push Service.</p></p>
+                <p><p>Destroys a push channel for the given application.</p><p>A session and a channel must have been created using <code>createSession</code> and <code>createChannel</code> before calling this function.</p><p>This function should be called in order for an application to stop receiving pushes.No pushes will be received after a <code>destroyChannel</code> call until a <code>createChannel</code> call is made after that.</p><p>Note: If using public push PPG, this function will communicate under the covers with the BlackBerry Push Service.</p></p>
                 <br />
                         
                 
@@ -1540,7 +1540,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for an invalid provider application ID.  </p><p>Operations this error can occur on: createChannel, destroyChannel</p><p>Recommended action: Fixing the application ID programmatically and retrying might correct the issue.</p>
+                            <p>Result error code for an invalid provider application ID.  </p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public push PPG)</p><p>Recommended action: Fixing the application ID programmatically and retrying might correct the issue.</p>
                             
                                 <br />
                                 
@@ -1573,7 +1573,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code when attempting to call destroy channel again after a successful destroy channel has already been done.  </p><p>Operations this error can occur on: destroyChannel</p><p>Recommended action: Most applications will typically want to just ignore this error code when it comes back.</p>
+                            <p>Result error code when attempting to call destroy channel again after a successful destroy channel has already been done.  </p><p>Operations this error can occur on: destroyChannel (only if using public push PPG)</p><p>Recommended action: Most applications will typically want to just ignore this error code when it comes back.</p>
                             
                                 <br />
                                 
@@ -1606,7 +1606,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code when attempting to call destroy channel after a content provider has already done the destroying of the channelby unregistering a user.  </p><p>Operations this error can occur on: destroyChannel</p><p>Recommended action: Most applications will typically want to just ignore this error code when it comes back.</p>
+                            <p>Result error code when attempting to call destroy channel after a content provider has already done the destroying of the channelby unregistering a user.  </p><p>Operations this error can occur on: destroyChannel (only if using public push PPG)</p><p>Recommended action: Most applications will typically want to just ignore this error code when it comes back.</p>
                             
                                 <br />
                                 
@@ -1639,7 +1639,7 @@
                         </td>
                         
                         <td >
-                            <p>This result error code should not typically be encountered.  It would only occur if a create or destroy channel operation internally causes the state of a subscriber on the PPG to be in an invalid state.</p><p>Operations this error can occur on: createChannel, destroyChannel</p><p>Recommended action: If this error occurs, it should be logged and reported to the RIM support team.</p>
+                            <p>This result error code should not typically be encountered.  It would only occur if a create or destroy channel operation internally causes the state of a subscriber on the PPG to be in an invalid state.</p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public push PPG)</p><p>Recommended action: If this error occurs, it should be logged and reported to the RIM support team.</p>
                             
                                 <br />
                                 
@@ -1672,7 +1672,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for when the device PIN could not be determined.  </p><p>Operations this error can occur on: createChannel</p><p>Recommended action: Retrying the operation might correct the issue.</p>
+                            <p>Result error code for when the device PIN could not be determined.  </p><p>Operations this error can occur on: createChannel (only if using public push PPG)</p><p>Recommended action: Retrying the operation might correct the issue.</p>
                             
                                 <br />
                                 
@@ -1705,7 +1705,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for when a create channel or destroy channel operation internally passes an expired authentication token to the PPG.  </p><p>Operations this error can occur on: createChannel, destroyChannel</p><p>Recommended action: Retrying the operation might correct the issue.</p>
+                            <p>Result error code for when a create channel or destroy channel operation internally passes an expired authentication token to the PPG.  </p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public push PPG)</p><p>Recommended action: Retrying the operation might correct the issue.</p>
                             
                                 <br />
                                 
@@ -1738,7 +1738,7 @@
                         </td>
                         
                         <td >
-                            <p>This result error code should not typically be encountered.  It would only occur if a create channel or destroy channel operation internally passes an invalid authentication token to the PPG.</p><p>Operations this error can occur on: createChannel, destroyChannel</p><p>Recommended action: If this error occurs, it should be logged and reported to the RIM support team.</p>
+                            <p>This result error code should not typically be encountered.  It would only occur if a create channel or destroy channel operation internally passes an invalid authentication token to the PPG.</p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public push PPG)</p><p>Recommended action: If this error occurs, it should be logged and reported to the RIM support team.</p>
                             
                                 <br />
                                 
@@ -1771,7 +1771,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for when too many devices have already performed a create channel for the provider application ID.The create channel is described as still "active" because no destroy channel has been done for it.</p><p>Operations this error can occur on: createChannel</p><p>Recommended action: No action can be taken by the application for this error, but it should somehow be communicated  back to the content provider and then to RIM to try to increase the allowed subscription limit.  </p>
+                            <p>Result error code for when too many devices have already performed a create channel for the provider application ID.The create channel is described as still "active" because no destroy channel has been done for it.</p><p>Operations this error can occur on: createChannel (only if using public push PPG)</p><p>Recommended action: No action can be taken by the application for this error, but it should somehow be communicated  back to the content provider and then to RIM to try to increase the allowed subscription limit.  </p>
                             
                                 <br />
                                 
@@ -1804,7 +1804,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for when a device attempting to do a create channel has an invalid operating system version number or an invalid device model number.</p><p>Operations this error can occur on: createChannel</p><p>Recommended action: Retrying the operation is not recommended since this is an unrecoverable error that is out of control of the application.It might make sense to communicate this issue up to the user. </p>
+                            <p>Result error code for when a device attempting to do a create channel has an invalid operating system version number or an invalid device model number.</p><p>Operations this error can occur on: createChannel (only if using public push PPG)</p><p>Recommended action: Retrying the operation is not recommended since this is an unrecoverable error that is out of control of the application.It might make sense to communicate this issue up to the user. </p>
                             
                                 <br />
                                 
@@ -1837,7 +1837,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code when attempting to call destroy channel after a content provider has manually suspended a user.Similar to the <code>CHANNEL_ALREADY_DESTROYED_BY_PROVIDER</code> error.</p><p>Operations this error can occur on: destroyChannel</p><p>Recommended action: Most applications will typically want to just ignore this error code when it comes back. </p>
+                            <p>Result error code when attempting to call destroy channel after a content provider has manually suspended a user.Similar to the <code>CHANNEL_ALREADY_DESTROYED_BY_PROVIDER</code> error.</p><p>Operations this error can occur on: destroyChannel (only if using public push PPG)</p><p>Recommended action: Most applications will typically want to just ignore this error code when it comes back. </p>
                             
                                 <br />
                                 
@@ -2187,7 +2187,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Apr 26 2012 13:58:17 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Apr 26 2012 14:43:15 GMT-0400 (EDT)
         </div>
 
     </div>
