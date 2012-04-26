@@ -15,3 +15,4 @@ WebWorks-API-Docs-next-BB10-app-api
 WebWorks-API-Docs-next-BB10-identity-uuid
 WebWorks-API-Docs-next-BB10-invoke
 WebWorks-API-Docs-next-BB10-push-APIs-2.0
+WebWorks-API-Docs-next-BB10-signatureChanges
