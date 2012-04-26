@@ -158,7 +158,7 @@
 
         
             <p>
-                The PushPayload object provides access to the payload that has arrived as the result of a push.
+                The PushPayload object provides access to the payload that has arrived as the result of a push.  This object cannot be created by the new keyword.  It is generated only by the system on receipt of a push notification.
             </p>
         
 
@@ -182,44 +182,6 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                        
-                            <tr x-ww-support="bb10x">
-                                <td>
-                                    <a href="blackberry.push.PushPayload.html">blackberry.push.PushPayload</a>
-                                    <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                </td>
-                            </tr>
-                        
-                    
-                    
-                        <tr x-ww-support="bb10x">
-                            <td>
-                                <a href="blackberry.push.PushPayload.html#getHeader">getHeader</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb10x">
-                            <td>
-                                <a href="blackberry.push.PushPayload.html#getHeaders">getHeaders</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
                     
                         <tr x-ww-support="bb10x">
                             <td>
@@ -317,45 +279,8 @@
     
         
         
-            <br />
-            <div x-ww-support="bb10x">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb10x">
-                                <a href="blackberry.push.PushPayload.html">blackberry.push.PushPayload</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
     
         
-        
-            <br />
-            <div x-ww-support="bb10x">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb10x">
-                                <a href="blackberry.push.PushPayload.html#getHeader">getHeader</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb10x">
-                                <a href="blackberry.push.PushPayload.html#getHeaders">getHeaders</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
         
     
         
@@ -406,278 +331,7 @@
         
 
     
-        
-            <div x-ww-support="bb10x">
-                <h2>
-                    <a name=".PushPayload"></a>
-                    blackberry.push.PushPayload
-                </h2>
-                <hr/>
-                 
-                
-                    <table>
-                        <tr><td>
-                            
-                                blackberry.push.PushPayload
-                                
-                                    (id : String, data : Blob, isAckRequired : Boolean)
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p><div><p>   This object cannot be created by the new keyword.  It is generated only by the system on receipt of a push notification.</p></div></p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>id</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The ID of a push.                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>data</b></td>
-                                <td>
-                                    
-                                        Blob
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The data of a push.                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>isAckRequired</b></td>
-                                <td>
-                                    
-                                        Boolean
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    True if an acknowledgement is required for the push; false otherwise.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
 
-                
-
-                
-                
-    
-            </div>
-        
-    
-
-    
-        
-            <div x-ww-support="bb10x">
-                <h2>
-                    <a name="getHeader"></a>
-                    getHeader
-                </h2>
-                <hr/>
-                 
-                
-                    <table>
-                        <tr><td>
-                            
-                                              
-                                String
-                                
-                                    getHeader(headerName : String)
-                                                          
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p></p>
-                <br />
-                        
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Returns the header value. </p>
-                    
-                    <br />
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>headerName</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The header name.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="bb10x">
-                <h2>
-                    <a name="getHeaders"></a>
-                    getHeaders
-                </h2>
-                <hr/>
-                 
-                
-                    <table>
-                        <tr><td>
-                            
-                                              
-                                Object
-                                
-                                    getHeaders()
-                                                          
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p></p>
-                <br />
-                        
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Returns all the headers. </p>
-                    
-                    <br />
-                
-                        
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
     
 
     
@@ -863,12 +517,18 @@
 
 
         
+            <div x-ww-support="bb10x">
+            
+                
+  
+            </div>
+        
 
 
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Apr 25 2012 15:57:56 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Apr 26 2012 09:32:59 GMT-0400 (EDT)
         </div>
 
     </div>
