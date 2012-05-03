@@ -49,6 +49,9 @@
 
 
         
+            
+            <br />
+        
 
 
         
@@ -59,7 +62,7 @@
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- Ripple Emulator</pre>
+            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -140,6 +143,18 @@
                             </td>
                         </tr>
                     
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.identity.html#.uuid">uuid</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
                 </table>
             </div>
         
@@ -158,7 +173,7 @@
                      
                          
                      
-                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                          <td>
                              &lt;feature id="blackberry.identity" /&gt;
                              <td class="apiYes">Y</td>
@@ -166,7 +181,7 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                          </td>
                      </tr>
                  
@@ -174,7 +189,7 @@
                      
                          
                      
-                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                          <td>
                              &lt;feature id="blackberry.identity.phone" /&gt;
                              <td class="apiYes">Y</td>
@@ -182,7 +197,7 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                          </td>
                      </tr>
                  
@@ -260,7 +275,7 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                 <h3> Properties </h3>
                 
                     <ul>
@@ -277,6 +292,11 @@
                         
                             <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                 <a href="blackberry.identity.html#.PIN">PIN</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.identity.html#.uuid">uuid</a>
                                 
                             </li>
                         
@@ -329,20 +349,30 @@
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                Service[]
                                 
-                                    getServiceList()
-                                                          
+                                    static              
+                                    Service[]
+                                    
+                                    
+                                        getServiceList()
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -382,20 +412,30 @@
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                Transport[]
                                 
-                                    getTransportList()
-                                                          
+                                    static              
+                                    Transport[]
+                                    
+                                    
+                                        getTransportList()
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -438,8 +478,11 @@
 
 
 
+
         
         
+
+
 
 
 
@@ -447,10 +490,44 @@
     
     
        
-        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             <h2>Properties:</h2>
             <hr/>
-          
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                        
+                            <div class="note">                        
+                                <h3>BB10 API Changes</h3>
+                                 <a href="blackberry.identity.html#.PIN">PIN</a> has been changed to <a href="blackberry.identity.html#.uuid">uuid</a> in BlackBerry 10.                        
+                            </div>
+                        
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
             <table>
                 <thead><tr>
                     <th>
@@ -499,6 +576,7 @@
                                 <br />
                                 
                             
+
                                            
                         </td>
                         
@@ -542,6 +620,7 @@
                                 <br />
                                 
                             
+
                                            
                         </td>
                         
@@ -580,11 +659,12 @@
                         </td>
                         
                         <td >
-                            Contains the Personal Identification number for the smartphone.
+                            Contains the Personal Identification number for the device.
                             
                                 <br />
                                 
                             
+
                                            
                         </td>
                         
@@ -598,6 +678,47 @@
                                     <br />
                                 
                                     &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".uuid">uuid</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Contains the unique identifier for the device.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
                                     <br />
                                                   
                             
@@ -619,11 +740,16 @@
                 
     
             
+				
+                
+    
+            
         </div>
     
 
     
     
+
 
 
 
@@ -640,7 +766,14 @@
                 <hr/>
                  
                 
+                
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -686,8 +819,9 @@
 
 
 
+
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             
                 
   
@@ -698,7 +832,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Mar 15 2012 16:47:42 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu May 03 2012 15:04:51 GMT-0400 (EDT)
         </div>
 
     </div>
