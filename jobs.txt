@@ -15,3 +15,4 @@ WebWorks-API-Docs-next-BB10-invoke
 WebWorks-API-Docs-next-BB10-push-APIs-2.0
 WebWorks-API-Docs-next-BB10-signatureChanges
 WebWorks-API-Docs-next-BB10-conn-type
+WebWorks-API-Docs-next-BB10-dialog_ext
