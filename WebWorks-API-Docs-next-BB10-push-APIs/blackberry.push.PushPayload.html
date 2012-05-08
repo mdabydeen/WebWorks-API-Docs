@@ -36,14 +36,14 @@
 
         <h1>
             
-                HTML5 Canvas
+                PushPayload
             
         </h1>
 
 
         
             <p>
-                The HTML5 canvas element provides a container for JavaScript to draw graphics on a web page. It is a resolution dependent rectangular area with per-pixel control. <br/>The canvas element has several methods for drawing paths, boxes, circles, characters, and adding images. Any text inside the between <strong>&#60canvas&#62</strong> tags will be displayed in browsers that do not support the canvas element.
+                The PushPayload object provides access to the payload that has arrived as the result of a push.  This object cannot be created by the new keyword.  It is generated only by the system on receipt of a push notification.
             </p>
         
 
@@ -62,7 +62,7 @@
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 6.0+<br />- BlackBerry PlayBook 1.0+<br />- Ripple Emulator</pre>
+            <pre>- BlackBerry 10</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -71,51 +71,75 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="canvas.html#.getContext">getContext</a>
+                                <a href="blackberry.push.PushPayload.html#acknowledge">acknowledge</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="canvas.html#.toDataURL">toDataURL</a>
+                                <a href="blackberry.push.PushPayload.html#getHeader">getHeader</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="canvas.html#.height">height</a>
+                                <a href="blackberry.push.PushPayload.html#getHeaders">getHeaders</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="canvas.html#.width">width</a>
+                                <a href="blackberry.push.PushPayload.html#data">data</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.push.PushPayload.html#id">id</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.push.PushPayload.html#isAcknowledgeRequired">isAcknowledgeRequired</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -128,8 +152,28 @@
         <h2>Configuration Document Settings</h2>
         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
         
-            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
             <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="bb10x">
+                         <td>
+                             &lt;feature id="blackberry.push" /&gt;
+                             <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                         </td>
+                     </tr>
+                 
+            </table>
         
 
 
@@ -163,18 +207,23 @@
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="canvas.html#.getContext">getContext</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.push.PushPayload.html#acknowledge">acknowledge</a>
                                 
                             </li>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="canvas.html#.toDataURL">toDataURL</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.push.PushPayload.html#getHeader">getHeader</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.push.PushPayload.html#getHeaders">getHeaders</a>
                                 
                             </li>
                         
@@ -190,18 +239,23 @@
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h3> Properties </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="canvas.html#.height">height</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.push.PushPayload.html#data">data</a>
                                 
                             </li>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="canvas.html#.width">width</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.push.PushPayload.html#id">id</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.push.PushPayload.html#isAcknowledgeRequired">isAcknowledgeRequired</a>
                                 
                             </li>
                         
@@ -230,10 +284,10 @@
 
     
         
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h2>
-                    <a name=".getContext"></a>
-                    getContext
+                    <a name="acknowledge"></a>
+                    acknowledge
                 </h2>
                 <hr/>
                  
@@ -243,11 +297,12 @@
                         <tr><td>
                             
                                 
-                                    static              
-                                    Object
+                                                  
+                                    
+                                        void
                                     
                                     
-                                        getContext(contextId : String)
+                                        acknowledge(shouldAcceptPush : Boolean)
                                                               
                                 
                             
@@ -267,27 +322,122 @@
                               
                     <h3>Supported Platform(s)</h3>      
                     
-                        &nbsp;- BlackBerry OS 6.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
+                        &nbsp;- BlackBerry 10
                         <br />
                                   
                                    
                 <br />
                         
                 <h3>Description</h3>
-                <p>Returns an object that exposes an API for drawing on the canvas.</p>
+                <p><p>Sends an acknowledgement to the PPG indicating whether a push should be accepted or rejected. It is up to the application to determinewhether to accept or reject a push message based on it own business rules. It is strongly recommended to accept or reject the push message as soon as possible otherwise the push message will automatically be considered rejected.</p><p>Use the <code>isAckRequired</code> property to determine whether or not calling <code>acknowledge</code> is required.</p></p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>shouldAcceptPush</b></td>
+                                <td>
+                                    
+                                        Boolean
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    True if the push should be accepted; false if the push should be rejected                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>if (pushPayload.isAckRequired) {   // Accept push   pushPayload.acknowledge(true);   // To reject the push, you would call: pushPayload.acknowledge(false);}</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name="getHeader"></a>
+                    getHeader
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    String
+                                    
+                                    
+                                        getHeader(headerName : String)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p><p>Gets the header value matching the given header name. </p></p>
                 <br />
                         
                 
                     <br />
                     <h3>Returns</h3>
                     
-                        <p> Returns an object for contextId.Returns null if the given context ID is not supported or if the canvas has already been initialised with some other (incompatible) context type (e.g. trying to get a "2d" context after getting a "experimental-webgl" context). </p>
+                        <p> Returns the header value. </p>
                     
                     <br />
                 
@@ -313,7 +463,7 @@
                         
                             
                             <tr>
-                                <td><b>contextId</b></td>
+                                <td><b>headerName</b></td>
                                 <td>
                                     
                                         String
@@ -322,7 +472,7 @@
                                 </td>
                                 <td>
                                     
-                                    Specifies the desired API.<br>List of defined contexts: 2d, experimental-webgl.                         
+                                    The header name.                         
                                     
                                 </td>
                             </tr>
@@ -336,18 +486,13 @@
 
                 
                 
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&#60script type="text/javascript"&#62  var c=document.getElementById("myCanvas");  var cxt=c.getContext("2d");  cxt.fillStyle="#FF0000";  cxt.fillRect(0,0,150,75);&#60/script&#62</pre>
-	
     
             </div>
         
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h2>
-                    <a name=".toDataURL"></a>
-                    toDataURL
+                    <a name="getHeaders"></a>
+                    getHeaders
                 </h2>
                 <hr/>
                  
@@ -357,11 +502,11 @@
                         <tr><td>
                             
                                 
-                                    static              
-                                    String
+                                                  
+                                    Object
                                     
                                     
-                                        toDataURL(<i>[type: String]</i>)
+                                        getHeaders()
                                                               
                                 
                             
@@ -381,67 +526,25 @@
                               
                     <h3>Supported Platform(s)</h3>      
                     
-                        &nbsp;- BlackBerry OS 6.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
+                        &nbsp;- BlackBerry 10
                         <br />
                                   
                                    
                 <br />
                         
                 <h3>Description</h3>
-                <p>Returns a data:URL for the image in the canvas.</p>
+                <p><p>Gets all the headers associated with a push.</p></p>
                 <br />
                         
                 
                     <br />
                     <h3>Returns</h3>
                     
-                        <p> When called with no arguments, returns a data:URL containing a representation of the image as a PNG file.If the canvas has no pixels (i.e. either its horizontal dimension or its vertical dimension is zero) then the method must return the string "data:,". When the method is called with one arguments, it must return a data:URL containing a representation of the image in the format given by type. The possible values are MIME types with no parameters, for example image/png, image/jpeg, or even maybe image/svg+xml if the implementation actually keeps enough information to reliably render an SVG image from the canvas. </p>
+                        <p> Returns all the headers. </p>
                     
                     <br />
                 
                         
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>type</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                    <br /><i>Optional</i>                                                    
-                                </td>
-                                <td>
-                                    
-                                    The argument, if provided, controls the type of the image to be returned (e.g. PNG or JPEG). The default is image/png; that type is also used if the given type isn't supported.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
                                    
                         
                 
@@ -450,13 +553,6 @@
 
                 
                 
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&#60script&#62  var img1=new Image();  img1.src="Image1.jpeg";  var canvas=document.createElement('canvas');  canvas.width=300;  canvas.height=300;  var canvas2d=canvas.getContext("2d");  canvas2d.drawImage(img1,100,100);  window.location = canvas.toDataURL("image/png");&#60/script&#62</pre>
-	
-		<pre>&#60canvas id=mycanvas width=200 height=200&#62&#60/canvas&#62&#60script&#62  var canvas = document.getElementById("mycanvas");   var context = canvas.getContext("2d");   var img = canvas.toDataURL();   document.write('&#60img src="'+img+'"/&#62');&#60/script&#62</pre>
-	
     
             </div>
         
@@ -478,11 +574,17 @@
     
     
        
-        <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+        <div x-ww-support="bb10x">
             <h2>Properties:</h2>
             <hr/>
 
                      
+            
+                
+                
+                    
+                    <br />
+                
             
                 
                 
@@ -518,27 +620,27 @@
                 </tr></thead>
                 
                 
-                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".height">height</a>
+                            <a name="data">data</a>
 
                             
                         </td>
                         <td>
                             
-                                pixels
+                                Blob
                             
                             
                             
                                 
-                                    <br /> Static
                                 
+                                    <br /> Readonly
                                 
                             
                         </td>
                         
                         <td >
-                            Specifies the height of the canvas.<p/>The default value of height is 150 pixels.<p/>Whenever the height or width of a canvas is re-set the canvas content will be cleared.<p/>Syntax :&#60canvas height="value"&#62
+                            The data (payload) of a push.
                             
                                 <br />
                                 
@@ -550,40 +652,34 @@
                         <td class="tdNoWrap">
                             
                                 
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
+                                    &nbsp;- BlackBerry 10
                                     <br />
                                                   
                             
                         </td>
                     </tr>
                 
-                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".width">width</a>
+                            <a name="id">id</a>
 
                             
                         </td>
                         <td>
                             
-                                pixels
+                                String
                             
                             
                             
                                 
-                                    <br /> Static
                                 
+                                    <br /> Readonly
                                 
                             
                         </td>
                         
                         <td >
-                            Specifies the width of the canvas.<p/>The default value of width is 300 pixels.<p/>Whenever the height or width of a canvas is re-set the canvas content will be cleared.<p/>Syntax :&#60canvas width="value"&#62
+                            The ID of a push.
                             
                                 <br />
                                 
@@ -595,13 +691,46 @@
                         <td class="tdNoWrap">
                             
                                 
-                                    &nbsp;- BlackBerry OS 6.0+
+                                    &nbsp;- BlackBerry 10
                                     <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name="isAcknowledgeRequired">isAcknowledgeRequired</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Boolean
+                            
+                            
+                            
                                 
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
                                 
-                                    &nbsp;- Ripple Emulator
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Indicates whether or not a developer must acknowledge the receipt of a push.True if an acknowledgement is required for the push; false otherwise.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
                                     <br />
                                                   
                             
@@ -613,11 +742,10 @@
             
 				
                 
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&#60canvas id="myCanvas" width="200" height="100"&#62&#60/canvas&#62</pre>
-	
+    
+            
+				
+                
     
             
 				
@@ -642,7 +770,7 @@
 
 
         
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
             
                 
   
@@ -653,7 +781,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue May 08 2012 13:53:08 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue May 08 2012 13:53:12 GMT-0400 (EDT)
         </div>
 
     </div>
