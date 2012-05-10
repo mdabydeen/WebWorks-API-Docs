@@ -86,6 +86,18 @@ array('title'=>'Cache','link'=>'/html5/apis/blackberry.widgetcache.CacheInformat
 )),
             
             
+array('title'=>'Connection','link'=>'/html5/apis/blackberry.connection.html','id'=>'Connection','children'=>array(
+    array('title'=>'Connection','link'=>'/html5/apis/blackberry.connection.html','id'=>'Connection','children'=>array())
+            
+        
+    
+
+    
+        
+            
+)),
+            
+            
 array('title'=>'Data Storage','link'=>'/html5/apis/Database.html','id'=>'Data Storage','children'=>array(
     array('title'=>'HTML5 Database','link'=>'/html5/apis/Database.html','id'=>'HTML5 Database','children'=>array())
             
