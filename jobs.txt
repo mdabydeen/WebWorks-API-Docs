@@ -15,4 +15,3 @@ WebWorks-API-Docs-next-BB10-invoke
 WebWorks-API-Docs-next-BB10-signatureChanges
 WebWorks-API-Docs-master-microsite-template-update
 WebWorks-API-Docs-next-BB10-dialog_standard_ext
->>>>>>> cea3ad7a2f8173c13c97ba22c13e4ea19d73446f
