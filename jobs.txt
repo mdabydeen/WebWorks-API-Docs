@@ -7,13 +7,13 @@ WebWorks-API-Docs-smartphone-ripple-comments
 WebWorks-API-Docs-tablet
 WebWorks-API-Docs-api-updates
 WebWorks-API-Docs-next-BB10
-WebWorks-API-Docs-next-BB10-push-APIs-temp
 WebWorks-API-Docs-master_apidoccleanup
 WebWorks-API-Docs-next-BB10-push-APIs
-WebWorks-API-Docs-next-BB10-push-APIs-proposal
 WebWorks-API-Docs-next-BB10-app-api
 WebWorks-API-Docs-next-BB10-identity-uuid
 WebWorks-API-Docs-next-BB10-invoke
-WebWorks-API-Docs-next-BB10-push-APIs-2.0
 WebWorks-API-Docs-next-BB10-signatureChanges
 WebWorks-API-Docs-master-microsite-template-update
+=======
+WebWorks-API-Docs-next-BB10-dialog_standard_ext
+>>>>>>> cea3ad7a2f8173c13c97ba22c13e4ea19d73446f

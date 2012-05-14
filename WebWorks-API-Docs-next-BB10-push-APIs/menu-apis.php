@@ -146,6 +146,18 @@ array('title'=>'Device Motion','link'=>'/html5/apis/Acceleration.html','id'=>'De
 )),
             
             
+array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event','children'=>array(
+    array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event','children'=>array())
+            
+        
+    
+
+    
+        
+            
+)),
+            
+            
 array('title'=>'GPS','link'=>'/html5/apis/Coordinates.html','id'=>'GPS','children'=>array(
     array('title'=>'HTML5 Coordinates','link'=>'/html5/apis/Coordinates.html','id'=>'HTML5 Coordinates','children'=>array())
             
@@ -503,6 +515,18 @@ array('title'=>'Push','link'=>'/html5/apis/blackberry.push.Data.html','id'=>'Pus
     
             
     ,array('title'=>'Push','link'=>'/html5/apis/blackberry.push.html','id'=>'Push','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'PushPayload','link'=>'/html5/apis/blackberry.push.PushPayload.html','id'=>'PushPayload','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'PushService','link'=>'/html5/apis/blackberry.push.PushService.html','id'=>'PushService','children'=>array())
         
     
 
