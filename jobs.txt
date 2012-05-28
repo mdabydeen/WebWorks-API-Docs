@@ -12,3 +12,4 @@ WebWorks-API-Docs-next-BB10-push-APIs
 WebWorks-API-Docs-next-BB10-signatureChanges
 WebWorks-API-Docs-master-microsite-template-update
 WebWorks-API-Docs-next-BB10-refactor-event
+WebWorks-API-Docs-next-BB10-onInvoked
