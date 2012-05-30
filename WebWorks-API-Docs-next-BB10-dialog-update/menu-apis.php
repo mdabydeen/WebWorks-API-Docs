@@ -86,6 +86,18 @@ array('title'=>'Cache','link'=>'/html5/apis/blackberry.widgetcache.CacheInformat
 )),
             
             
+array('title'=>'Connection','link'=>'/html5/apis/blackberry.connection.html','id'=>'Connection','children'=>array(
+    array('title'=>'Connection','link'=>'/html5/apis/blackberry.connection.html','id'=>'Connection','children'=>array())
+            
+        
+    
+
+    
+        
+            
+)),
+            
+            
 array('title'=>'Data Storage','link'=>'/html5/apis/Database.html','id'=>'Data Storage','children'=>array(
     array('title'=>'HTML5 Database','link'=>'/html5/apis/Database.html','id'=>'HTML5 Database','children'=>array())
             
@@ -137,6 +149,18 @@ array('title'=>'Device Motion','link'=>'/html5/apis/Acceleration.html','id'=>'De
     
             
     ,array('title'=>'HTML5 Device Motion Event','link'=>'/html5/apis/DeviceMotionEvent.html','id'=>'HTML5 Device Motion Event','children'=>array())
+        
+    
+
+    
+        
+            
+)),
+            
+            
+array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event','children'=>array(
+    array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event','children'=>array())
+            
         
     
 

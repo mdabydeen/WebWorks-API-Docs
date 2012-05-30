@@ -85,6 +85,18 @@
 ]},
             
             
+{ "title":"Connection", "id":"Connection", "link":"/html5/apis/blackberry.connection.html", "children":[    
+    { "title":"Connection", "id":"Connection", "link":"/html5/apis/blackberry.connection.html", "children":[]}
+            
+        
+    
+
+    
+        
+            
+]},
+            
+            
 { "title":"Data Storage", "id":"Data Storage", "link":"/html5/apis/Database.html", "children":[    
     { "title":"HTML5 Database", "id":"HTML5 Database", "link":"/html5/apis/Database.html", "children":[]}
             
@@ -136,6 +148,18 @@
     
         
     ,{ "title":"HTML5 Device Motion Event", "id":"HTML5 Device Motion Event", "link":"/html5/apis/DeviceMotionEvent.html", "children":[]}
+        
+    
+
+    
+        
+            
+]},
+            
+            
+{ "title":"Event", "id":"Event", "link":"/html5/apis/blackberry.event.html", "children":[    
+    { "title":"Event", "id":"Event", "link":"/html5/apis/blackberry.event.html", "children":[]}
+            
         
     
 

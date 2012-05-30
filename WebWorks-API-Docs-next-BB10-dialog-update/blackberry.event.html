@@ -36,14 +36,14 @@
 
         <h1>
             
-                TimeRanges
+                Event
             
         </h1>
 
 
         
             <p>
-                Objects implementing the TimeRanges interface represent a list of ranges (periods) of time. <br/><br/>When a TimeRanges object is said to be a normalized TimeRanges object, the ranges it represents must obey the following criteria:The start of a range must be greater than the end of all earlier ranges.The start of a range must be less than the end of that same range.In other words, the ranges in such an object are ordered, don't overlap, aren't empty, and don't touch (adjacent ranges are folded into one bigger range).
+                The event Object contains functions for dealing with specific events.
             </p>
         
 
@@ -62,7 +62,7 @@
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 6.0+<br />- BlackBerry PlayBook 1.0+<br />- Ripple Emulator</pre>
+            <pre>- BlackBerry 10</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -71,39 +71,27 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="TimeRanges.html#end">end</a>
+                                <a href="blackberry.event.html#.addEventListener">addEventListener</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="TimeRanges.html#start">start</a>
+                                <a href="blackberry.event.html#.removeEventListener">removeEventListener</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="TimeRanges.html#length">length</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -151,18 +139,18 @@
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="TimeRanges.html#end">end</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.event.html#.addEventListener">addEventListener</a>
                                 
                             </li>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="TimeRanges.html#start">start</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.event.html#.removeEventListener">removeEventListener</a>
                                 
                             </li>
                         
@@ -176,22 +164,6 @@
         
     
         
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="TimeRanges.html#length">length</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
         
     
         
@@ -213,10 +185,10 @@
 
     
         
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h2>
-                    <a name="end"></a>
-                    end
+                    <a name=".addEventListener"></a>
+                    addEventListener
                 </h2>
                 <hr/>
                  
@@ -226,11 +198,12 @@
                         <tr><td>
                             
                                 
-                                                  
-                                    Number
+                                    static              
+                                    
+                                        void
                                     
                                     
-                                        end(index : Number)
+                                        addEventListener(eventName : String, yourCallbackFunction : function)
                                                               
                                 
                             
@@ -250,29 +223,16 @@
                               
                     <h3>Supported Platform(s)</h3>      
                     
-                        &nbsp;- BlackBerry OS 6.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
+                        &nbsp;- BlackBerry 10
                         <br />
                                   
                                    
                 <br />
                         
                 <h3>Description</h3>
-                <p>Returns the position of the end of the indexth range represented by the object, in seconds measured from the start of the timeline that the object covers</p>
+                <p>Allows you to attach a callback function to an event. You can attach multuple callback functions to a single event.</p>
                 <br />
                         
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Returns the time for the end of the range with the given index. </p>
-                    
-                    <br />
                 
                         
                 
@@ -296,16 +256,32 @@
                         
                             
                             <tr>
-                                <td><b>index</b></td>
+                                <td><b>eventName</b></td>
                                 <td>
                                     
-                                        Number
+                                        String
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    Indexth range represented by the object                         
+                                    The event you want to attach the callback function to.                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will execute when the event occurs.                         
                                     
                                 </td>
                             </tr>
@@ -322,10 +298,10 @@
     
             </div>
         
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
                 <h2>
-                    <a name="start"></a>
-                    start
+                    <a name=".removeEventListener"></a>
+                    removeEventListener
                 </h2>
                 <hr/>
                  
@@ -335,11 +311,12 @@
                         <tr><td>
                             
                                 
-                                                  
-                                    Number
+                                    static              
+                                    
+                                        void
                                     
                                     
-                                        start(index : Number)
+                                        removeEventListener(eventName : String, yourCallbackFunction : function)
                                                               
                                 
                             
@@ -359,29 +336,16 @@
                               
                     <h3>Supported Platform(s)</h3>      
                     
-                        &nbsp;- BlackBerry OS 6.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
+                        &nbsp;- BlackBerry 10
                         <br />
                                   
                                    
                 <br />
                         
                 <h3>Description</h3>
-                <p>Return the position of the start of the indexth range represented by the object, in seconds measured from the start of the timeline that the object covers</p>
+                <p>Allows you to remove a callback function from an event.</p>
                 <br />
                         
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Returns the time for the start of the range with the given index. </p>
-                    
-                    <br />
                 
                         
                 
@@ -405,16 +369,32 @@
                         
                             
                             <tr>
-                                <td><b>index</b></td>
+                                <td><b>eventName</b></td>
                                 <td>
                                     
-                                        Number
+                                        String
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    Indexth range represented by the object                         
+                                    The event you want to remove the callback function from.                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be removed from the event.                         
                                     
                                 </td>
                             </tr>
@@ -448,95 +428,6 @@
 
     
     
-       
-        <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-            <h2>Properties:</h2>
-            <hr/>
-
-                     
-            
-                
-                
-                    
-                    <br />
-                
-            
- 
-            <table>
-                <thead><tr>
-                    <th>
-                    Property
-                   
-                    </th>
-                    <th>
-                       Type
-                       
-                    </th>
-                    <th>
-                       Description
-                       
-                    </th>
-                    <th>
-                       Supported Platform(s)            
-                       
-                    </th>
-                </tr></thead>
-                
-                
-                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <td>
-                            <a name="length">length</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                Number
-                            
-                            
-                            
-                                
-                                
-                                    <br /> Readonly
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Return the number of ranges represented by the object.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-            </table>
-            
-            
-				
-                
-    
-            
-        </div>
-    
 
     
     
@@ -553,9 +444,43 @@
 
 
         
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb10x">
             
                 
+
+	<h2>Code Example(s)</h2><hr/>
+	
+		<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;WebWorks Pause Example&lt;/title&gt;
+
+&lt;script type="text/javascript" charset="utf-8" src="webworks.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" charset="utf-8"&gt;
+
+// Call onWebworksReady when WebWorks is loaded.
+//
+function onLoad() {
+   document.addEventListener("webworksready", onWebworksReady, false);
+}
+
+// WebWorks is loaded and it is now safe to make calls WebWorks API
+//
+function onWebworksReady() {
+   // Make sure "blackberry.app" is declared in config.xml if you intend to use the "pause" event
+   blackberry.event.addEventListener("pause", onPause);
+}
+
+// Handle the pause event
+//
+function onPause() {
+}
+
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="onLoad()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+	
   
             </div>
         
@@ -564,7 +489,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed May 30 2012 16:13:07 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed May 30 2012 16:13:03 GMT-0400 (EDT)
         </div>
 
     </div>

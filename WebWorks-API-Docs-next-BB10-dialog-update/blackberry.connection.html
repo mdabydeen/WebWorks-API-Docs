@@ -36,57 +36,24 @@
 
         <h1>
             
-                Banner
+                Connection
             
         </h1>
 
 
         
             <p>
-                The Banner object is an advertising banner that will be created and automatically added into a specified div in your html.
+                The Connection object gives access to the device's cellular and wifi connection information.
             </p>
         
 
 
         
             
-                
-                    <div class="note">                        
-                        <h3>Please Note:</h3>
-                        
-Minimum requirement is BlackBerry&reg; WebWorks SDK 2.1.<br>
-Set access to "blackberry.advertising" and "www.blackberry.com" in the app config.xml
-<br> <br>
-<code>
-&lt;xml version="1.0" encoding="UTF-8" ?&gt; <br>
-&lt;widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="2.1" rim:header="RIM-Widget: rim/widget"&gt; <br>
-  &nbsp;&nbsp;&nbsp;&lt;access subdomains="true" uri="http://www.blackberry.com/"&gt; <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;feature id="blackberry.advertising" required="true" version="1.0.0" /&gt; <br>
-  &nbsp;&nbsp;&nbsp;&lt;/access&gt; <br>
-  &nbsp;&nbsp;&nbsp;&lt;accesss subdomains="true" uri="*" /&gt; <br>
-&lt;/widget&gt; <br>
-</code>                        
-                    </div>
-                
-            
             <br />
         
 
 
-        
-            <div class="note">                
-                <h3>Beta Notice:</h3>
-                This API is considered to be in Beta.
-                The function and property signatures listed below could change at anytime.
-                Once the API moves out of Beta it will be distributed as part of the core API.
-                <br /><br />
-                
-                    <a href="https://adservices.blackberry.com/register">Sign up</a> for the BlackBerry&reg; Advertising Service <br>
-<a href="http://docs.blackberry.com/en/developers/deliverables/34109/index.jsp?name=Development+Guide+-+Advertising+Service+for+BlackBerry+WebWorksAdvertising+Service1.0+Beta&language=English&userType=21&category=BlackBerry+WebWorks+for+Smartphones&subCategory="> Development Guide - Advertising Service for BlackBerry WebWorks </a>
-                
-                <br /><br />
-                <i>Last Updated: Wed May 30 2012 16:13:01 GMT-0400 (EDT)</i>                
-            </div>
         
 
 
@@ -95,7 +62,7 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 6.0+</pre>
+            <pre>- BlackBerry 10</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -103,102 +70,136 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                        
-                            <tr x-ww-support="bb6.0|bb7.0">
-                                <td>
-                                    <a href="blackberry.advertising.Banner.html">blackberry.advertising.Banner</a>
-                                    <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                </td>
-                            </tr>
-                        
                     
-                    
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#bannerTransitions">bannerTransitions</a>
+                                <a href="blackberry.connection.html#.type">type</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#focusBorderColor">focusBorderColor</a>
+                                <a href="blackberry.connection.html#.BB">BB</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#focusBorderWidth">focusBorderWidth</a>
+                                <a href="blackberry.connection.html#.BLUETOOTH_DUN">BLUETOOTH_DUN</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#metadata">metadata</a>
+                                <a href="blackberry.connection.html#.CELLULAR">CELLULAR</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#mmaSize">mmaSize</a>
+                                <a href="blackberry.connection.html#.ETHERNET">ETHERNET</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#placeholder">placeholder</a>
+                                <a href="blackberry.connection.html#.NONE">NONE</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.advertising.Banner.html#refreshRate">refreshRate</a>
+                                <a href="blackberry.connection.html#.UNKNOWN">UNKNOWN</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.connection.html#.USB">USB</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.connection.html#.VPN">VPN</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.connection.html#.WIFI">WIFI</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.connection.html#.event:connectionchange">connectionchange</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -220,15 +221,15 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
                      
                          
                      
-                     <tr x-ww-support="bb6.0|bb7.0">
+                     <tr x-ww-support="bb10x">
                          <td>
-                             &lt;feature id="blackberry.advertising" /&gt;
+                             &lt;feature id="blackberry.connection" /&gt;
                              <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                          </td>
                      </tr>
                  
@@ -262,14 +263,20 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
     
         
         
+    
+        
+        
+    
+        
+        
             <br />
-            <div x-ww-support="bb6.0|bb7.0">
-                <h3> Constructors </h3>
+            <div x-ww-support="bb10x">
+                <h3> Events </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html">blackberry.advertising.Banner</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.event:connectionchange">connectionchange</a>
                                 
                             </li>
                         
@@ -281,50 +288,14 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
     
         
         
-    
-        
-        
-    
-        
-        
             <br />
-            <div x-ww-support="bb6.0|bb7.0">
+            <div x-ww-support="bb10x">
                 <h3> Properties </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#bannerTransitions">bannerTransitions</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#focusBorderColor">focusBorderColor</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#focusBorderWidth">focusBorderWidth</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#metadata">metadata</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#mmaSize">mmaSize</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#placeholder">placeholder</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0">
-                                <a href="blackberry.advertising.Banner.html#refreshRate">refreshRate</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.type">type</a>
                                 
                             </li>
                         
@@ -335,6 +306,62 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
         
     
         
+        
+            <br />
+            <div x-ww-support="bb10x">
+                <h3> Constants </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.BB">BB</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.BLUETOOTH_DUN">BLUETOOTH_DUN</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.CELLULAR">CELLULAR</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.ETHERNET">ETHERNET</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.NONE">NONE</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.UNKNOWN">UNKNOWN</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.USB">USB</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.VPN">VPN</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.WIFI">WIFI</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
         
     
         
@@ -350,32 +377,25 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
         
 
     
+
+    
+
+    
         
-            <div x-ww-support="bb6.0|bb7.0">
+            <div x-ww-support="bb10x">
                 <h2>
-                    <a name=".Banner"></a>
-                    blackberry.advertising.Banner
+                    <a name=".event:connectionchange"></a>
+                    connectionchange
                 </h2>
                 <hr/>
                  
                 
                 
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    blackberry.advertising.Banner
-                                    
-                                        (zoneId : Number, divId : String, <i>[properties: JSON]</i>)
-                                    
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
                         
                 
+                
+                    
+                    <br />
                 
                 
                            
@@ -383,14 +403,15 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
                               
                     <h3>Supported Platform(s)</h3>      
                     
-                        &nbsp;- BlackBerry OS 6.0+
+                        &nbsp;- BlackBerry 10
                         <br />
                                   
                                    
                 <br />
                         
                 <h3>Description</h3>
-                <p>Creates a new Banner Object with the given properties and automatically inserts it into the div with the specified id.</p>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br/>
+The <b>connectionchange</b> event is triggered whenever the network connection type changes.</p>
                 <br />
                         
                 
@@ -416,71 +437,27 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
                         
                             
                             <tr>
-                                <td><b>zoneId</b></td>
+                                <td><b>yourCallbackFunction</b></td>
                                 <td>
                                     
-                                        Number
+                                        function(info : Object)
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    The Zone Id given to the developer by the BlackBerry Advertising Service on registration.                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>divId</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The id attribute of the div tag to which the banner will be inserted.                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>properties</b></td>
-                                <td>
-                                    
-                                        JSON
-                                    
-                                    <br /><i>Optional</i>                                                    
-                                </td>
-                                <td>
-                                    
-                                    A set of options to further customize the advertising banner.                         
+                                    The callback function that will be invoked on the connectionchange event.                         
                                     
                                         <br />
                                         
                                             <br />
-                                            <b>bannerTransitions:</b> Sets the <a href="blackberry.advertising.Banner.html#bannerTransitions">bannerTransitions</a> property.
+                                            <b>info:</b> An object with the pertinent information.
                                         
                                             <br />
-                                            <b>focusBorderColor:</b> Sets the <a href="blackberry.advertising.Banner.html#focusBorderColor">focusBorderColor</a> property.
+                                            <b>info.oldType:</b> The network connection type prior to the event.
                                         
                                             <br />
-                                            <b>focusBorderWidth:</b> Sets the <a href="blackberry.advertising.Banner.html#focusBorderWidth">focusBorderWidth</a> property.
-                                        
-                                            <br />
-                                            <b>metadata:</b> Sets the <a href="blackberry.advertising.Banner.html#metadata">metadata</a> property.
-                                        
-                                            <br />
-                                            <b>mmaSize:</b> Sets the <a href="blackberry.advertising.Banner.html#mmaSize">mmaSize</a> property.
-                                        
-                                            <br />
-                                            <b>placeholder:</b> Sets the <a href="blackberry.advertising.Banner.html#placeholder">placeholder</a> property.
-                                        
-                                            <br />
-                                            <b>refreshRate:</b> Sets the <a href="blackberry.advertising.Banner.html#refreshRate">refreshRate</a> property.
+                                            <b>info.newType:</b> The new network connection type.
                                         
                                     
                                 </td>
@@ -498,44 +475,19 @@ Set access to "blackberry.advertising" and "www.blackberry.com" in the app confi
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>Include Advertising SDK JavaScript and API code into all the HTML pages as shown below:
-Example 1:
+		<pre>&lt;script type="text/javascript"&gt;
 
-&lt;script type="text/javascript" src="http://www.blackberry.com/app_includes/asdk/adBanner.js"&gt;&lt;/script&gt;
- 
-&lt;center&gt; &lt;div id='bannerDiv'&gt;     &lt;/div&gt; &lt;/center&gt;
+function onChange(info) {
+  alert("The network connection type used to be: " + info.oldType + " and is now: " + info.newType);
+}
 
-&lt;script type="text/javascript"&gt;
-  //Adding Banner with default Banner properties
- var banner1 = new blackberry.advertising.Banner(31848, "bannerDiv");   
-&lt;/script&gt;</pre>
-	
-		<pre>Example 2: 
-&lt;script type="text/javascript" src="http://www.blackberry.com/app_includes/asdk/adBanner.js"&gt;&lt;/script&gt;
- 
-&lt;center&gt; &lt;div id='bannerDiv'&gt;     &lt;/div&gt; &lt;/center&gt;
+blackberry.event.addEventListener("connectionchange", onChange);
 
-&lt;script type="text/javascript"&gt;
- //Adding Banner with custom Banner properties
- var banner1 = new blackberry.advertising.Banner(31848, "bannerDiv", {"bannerTransitions" : true,
-                                                                "mmaSize" : "extralarge",
-                                                                "focusBorderColor" : "blue",
-                                                                "focusBorderWidth" : "2px",
-                                                                "refreshRate" : 6000,
-                                                                "placeholder" : "http://test.com/placeholder.jpg"},
-                                                                "metadata": {"age" : "12",
-                                                                             "gender" : "male",
-                                                                             "city" : "SanFrancisco"}
-                                                               };
 &lt;/script&gt;</pre>
 	
     
             </div>
         
-    
-
-    
-
     
 
 
@@ -552,11 +504,111 @@ Example 1:
     
     
        
-        <div x-ww-support="bb6.0|bb7.0">
+        <div x-ww-support="bb10x">
             <h2>Properties:</h2>
             <hr/>
 
                      
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".type">type</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The type of network connection that is being used by the application.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+        </div>
+    
+
+    
+    
+       
+        <div x-ww-support="bb10x">
+            <h2>Constants:</h2>
+            <hr/>
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
             
                 
                 
@@ -622,270 +674,10 @@ Example 1:
                 </tr></thead>
                 
                 
-                    <tr x-ww-support="bb6.0|bb7.0">
+                    <tr x-ww-support="bb10x">
                         <td>
-                            <a name="bannerTransitions">bannerTransitions</a>
+                            <a name=".BB">BB</a>
 
-                            
-                                
-                                
-                                    <br/>
-                                    <b>default: false</b>
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                Boolean
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Determines whether banner transitions will be enabled.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb6.0|bb7.0">
-                        <td>
-                            <a name="focusBorderColor">focusBorderColor</a>
-
-                            
-                                
-                                
-                                    <br/>
-                                    <b>default: 'blue'</b>
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Specifies the focus border colour of the Advertising Banner. Both RGB (ie #667766) and colour names (ie blue) are valid.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb6.0|bb7.0">
-                        <td>
-                            <a name="focusBorderWidth">focusBorderWidth</a>
-
-                            
-                                
-                                
-                                    <br/>
-                                    <b>default: '2px'</b>
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Sets the border width of the banner when focused.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb6.0|bb7.0">
-                        <td>
-                            <a name="metadata">metadata</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                JSON
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Specify the metadata (key/value pairs) for more targeted Advertisement.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb6.0|bb7.0">
-                        <td>
-                            <a name="mmaSize">mmaSize</a>
-
-                            
-                                
-                                
-                                    <br/>
-                                    <b>default: "auto"</b>
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Specify the size of the banner. Should be one of;
-<ul>
-<li>"small"</li>
-<li>"medium"</li>
-<li>"large"</li>
-<li>"extralarge"</li>
-<li>"extraextralarge"</li>
-<li>"auto"</li>
-</ul>
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb6.0|bb7.0">
-                        <td>
-                            <a name="placeholder">placeholder</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Set temporary place holder URL for the banner.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb6.0|bb7.0">
-                        <td>
-                            <a name="refreshRate">refreshRate</a>
-
-                            
-                                
-                                
-                                    <br/>
-                                    <b>default: 60000</b>
-                                
                             
                         </td>
                         <td>
@@ -894,13 +686,10 @@ Example 1:
                             
                             
                             
-                                
-                                
-                            
                         </td>
                         
                         <td >
-                            Set the banner refresh time in miliseconds. The timer cannot be set to less than 60000 ms.
+                            BlackBerry Bridge connection
                             
                                 <br />
                                 
@@ -912,7 +701,279 @@ Example 1:
                         <td class="tdNoWrap">
                             
                                 
-                                    &nbsp;- BlackBerry OS 6.0+
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".BLUETOOTH_DUN">BLUETOOTH_DUN</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Bluetooth tethering connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".CELLULAR">CELLULAR</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Cellular connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".ETHERNET">ETHERNET</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Wired ethernet connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".NONE">NONE</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            No connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".UNKNOWN">UNKNOWN</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Unknown connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".USB">USB</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            USB connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".VPN">VPN</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            VPN connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".WIFI">WIFI</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Wi-fi connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
                                     <br />
                                                   
                             
@@ -950,12 +1011,17 @@ Example 1:
                 
     
             
+				
+                
+    
+            
+				
+                
+    
+            
         </div>
     
 
-    
-    
-
 
 
 
@@ -967,13 +1033,19 @@ Example 1:
 
 
 
+        
+            <div x-ww-support="bb10x">
+            
+                
+  
+            </div>
         
 
 
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed May 30 2012 16:13:01 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed May 30 2012 16:13:02 GMT-0400 (EDT)
         </div>
 
     </div>
