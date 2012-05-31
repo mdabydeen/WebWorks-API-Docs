@@ -170,6 +170,19 @@
 
 
         
+            <div class="note">                
+                <h3>Beta Notice:</h3>
+                This API is considered to be in Beta.
+                The function and property signatures listed below could change at anytime.
+                Once the API moves out of Beta it will be distributed as part of the core API.
+                <br /><br />
+                
+                    
+                
+                <br /><br />
+                <i>Last Updated: Thu May 31 2012 06:53:30 GMT-0400 (EDT)</i>                
+            </div>
+        
 
 
         
@@ -224,7 +237,31 @@
                     
                         <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.connection.html#.CELLULAR">CELLULAR</a>
+                                <a href="blackberry.connection.html#.CELL_2G">CELL_2G</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.connection.html#.CELL_3G">CELL_3G</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.connection.html#.CELL_4G">CELL_4G</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -439,7 +476,17 @@
                             </li>
                         
                             <li x-ww-support="bb10x">
-                                <a href="blackberry.connection.html#.CELLULAR">CELLULAR</a>
+                                <a href="blackberry.connection.html#.CELL_2G">CELL_2G</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.CELL_3G">CELL_3G</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.connection.html#.CELL_4G">CELL_4G</a>
                                 
                             </li>
                         
@@ -661,7 +708,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -675,7 +722,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         
                         <td >
-                            The type of network connection that is being used by the application.
+                            The type of network connection that is being used by the application. Note that CELL_4G is always returned for cellular connection.
                             
                                 <br />
                                 
@@ -767,6 +814,18 @@ blackberry.event.addEventListener("connectionchange", onChange);
                     <br />
                 
             
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
  
             <table>
                 <thead><tr>
@@ -797,7 +856,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -831,7 +890,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -859,20 +918,88 @@ blackberry.event.addEventListener("connectionchange", onChange);
                 
                     <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".CELLULAR">CELLULAR</a>
+                            <a name=".CELL_2G">CELL_2G</a>
 
                             
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
                         </td>
                         
                         <td >
-                            Cellular connection
+                            Cellular 2G connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".CELL_3G">CELL_3G</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Cellular 3G connection
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".CELL_4G">CELL_4G</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Cellular 4G connection
                             
                                 <br />
                                 
@@ -899,7 +1026,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -933,7 +1060,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -967,7 +1094,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -1001,7 +1128,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -1035,7 +1162,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -1069,7 +1196,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
                         </td>
                         <td>
                             
-                                Number
+                                String
                             
                             
                             
@@ -1134,6 +1261,14 @@ blackberry.event.addEventListener("connectionchange", onChange);
                 
     
             
+				
+                
+    
+            
+				
+                
+    
+            
         </div>
     
 
@@ -1160,7 +1295,7 @@ blackberry.event.addEventListener("connectionchange", onChange);
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri May 25 2012 13:48:34 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu May 31 2012 06:53:30 GMT-0400 (EDT)
         </div>
 
     </div>
