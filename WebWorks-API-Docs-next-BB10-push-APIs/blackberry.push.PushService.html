@@ -217,7 +217,7 @@
                     
                         <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.push.PushService.html#.DEVICE_PIN_NOT_FOUND">DEVICE_PIN_NOT_FOUND</a>
+                                <a href="blackberry.push.PushService.html#.PPG_SUBSCRIBER_NOT_FOUND">PPG_SUBSCRIBER_NOT_FOUND</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -545,7 +545,7 @@
                             </li>
                         
                             <li x-ww-support="bb10x">
-                                <a href="blackberry.push.PushService.html#.DEVICE_PIN_NOT_FOUND">DEVICE_PIN_NOT_FOUND</a>
+                                <a href="blackberry.push.PushService.html#.PPG_SUBSCRIBER_NOT_FOUND">PPG_SUBSCRIBER_NOT_FOUND</a>
                                 
                             </li>
                         
@@ -1530,7 +1530,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for an invalid device PIN.   </p><p>Operations this error can occur on: createChannel</p><p>Recommended action: Retrying the operation might not be helpful since this is most likely an unrecoverable error that is out of control of the application.  It might make sense to communicate this issue up to the user.</p>
+                            <p>Result error code for an invalid device PIN as determined by the PPG.</p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public/BIS PPG)</p><p>Recommended action: Retrying the operation might not be helpful since this is most likely an unrecoverable error that is out of control of the application.  It might make sense to communicate this issue up to the user.</p>
                             
                                 <br />
                                 
@@ -1687,7 +1687,7 @@
                 
                     <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".DEVICE_PIN_NOT_FOUND">DEVICE_PIN_NOT_FOUND</a>
+                            <a name=".PPG_SUBSCRIBER_NOT_FOUND">PPG_SUBSCRIBER_NOT_FOUND</a>
 
                             
                         </td>
@@ -1700,7 +1700,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for when the device PIN could not be determined.  </p><p>Operations this error can occur on: createChannel (only if using public/BIS PPG)</p><p>Recommended action: Retrying the operation might correct the issue.</p>
+                            <p>Result error code for when a destroy channel operation fails because the subscriber could not be found on the PPG's end.  </p><p>Operations this error can occur on: destroyChannel (only if using public/BIS PPG)</p><p>Recommended action: This error can most likely be ignored since if the subscriber could not be found on the PPG's end, thendestroying the channel will have no effect anyway (it is as if they were never registered with the PPG using create channel).</p>
                             
                                 <br />
                                 
@@ -1972,7 +1972,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code when a create channel or destroy channel operation has failed due to network issues.</p><p>Operations this error can occur on: createChannel, destroyChannel</p><p>Recommended action: Retrying the operation might correct the issue.  This error can also occur when the user's wireless connection (e.g. Wi-Fi, Mobile Network) is off or temporarily down,so it might make sense to communicate this issue up to the user.</p>
+                            <p>Result error code when a create channel or destroy channel operation has failed due to network issues.</p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public/BIS PPG)</p><p>Recommended action: Retrying the operation might correct the issue.  This error can also occur when the user's wireless connection (e.g. Wi-Fi, Mobile Network) is off or temporarily down,so it might make sense to communicate this issue up to the user.</p>
                             
                                 <br />
                                 
@@ -2108,7 +2108,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code as a result of an issue on a create channel operation obtaining a subscription return code from the PPG.</p><p>Operations this error can occur on: createChannel</p><p>Recommended action: Retrying the operation might correct the issue.</p>
+                            <p>Result error code as a result of an issue on a create channel operation obtaining a subscription return code from the PPG.</p><p>Operations this error can occur on: createChannel (only if using public/BIS PPG)</p><p>Recommended action: Retrying the operation might correct the issue.</p>
                             
                                 <br />
                                 
@@ -2142,7 +2142,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code when a create channel or destroy channel operation has failed due to a failure to communicate with the PPG.</p><p>Operations this error can occur on: createChannel, destroyChannel</p><p>Recommended action: Retrying the operation might correct the issue.It also might make sense to communicate this issue up to the user telling them to try again later when the PPG is available again.</p>
+                            <p>Result error code when a create channel or destroy channel operation has failed due to a failure to communicate with the PPG.</p><p>Operations this error can occur on: createChannel, destroyChannel (only if using public/BIS PPG)</p><p>Recommended action: Retrying the operation might correct the issue.It also might make sense to communicate this issue up to the user telling them to try again later when the PPG is available again.</p>
                             
                                 <br />
                                 
@@ -2312,7 +2312,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed May 30 2012 09:08:53 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu May 31 2012 14:27:51 GMT-0400 (EDT)
         </div>
 
     </div>
