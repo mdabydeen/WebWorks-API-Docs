@@ -11,97 +11,55 @@
 * distributed under the License is distributed on an "AS IS" BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
-* limitations under the License.-->
+* limitations under the License.
+-->
 
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- ============================== header ================================= -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>
-        
-            index
-        
-        - BlackBerry WebWorks
-    </title>
+<div>
+<h1>API Reference</h1>
+	<p>Creating your first HTML5 application that utilizes BlackBerry WebWorks APIs is quite simple.  The steps below will demonstrate the pattern to use when creating an
+	HTML5 application using BlackBerry APIs.
+	</p>
+	<h2>Building Your First HTML5 App Using BlackBerry WebWorks APIs</h2>
+	<p>
+	<i>NOTE: The steps outlined below are the same for Windows and Mac OS X.  However, the path examples given are sample Windows paths.</i>
+	</p>
+	
+	<ol>
+		<li>Create the main HTML file for your application by creating a directory that includes an index.html file.<br/>
+<pre>C:\MyDirectory\index.html</pre>
+Then add a simple BlackBerry WebWorks specific API to your application's source code:
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport" id="viewport" content="height=device-height,width=device-width,user-scalable=no"/&gt;
+    <b>&lt;script type="text/javascript"&gt;
+      function doAlert() {
+        alert('The name of my app is: ' + blackberry.app.name);
+      }
+    &lt;/script&gt;</b>
+  &lt;/head&gt;
+  &lt;body <b>onload="doAlert()"</b>&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+		</li>
+		<li>Now create a config.xml file for your app:<br/>
+<pre>C:\MyDirectory\config.xml</pre>
+Edit your config.xml file to include a &lt;feature&gt; declaration for your desired API:
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.0.0"&gt;
+  &lt;name&gt;My App&lt;/name&gt;
+  &lt;author&gt;Me&lt;/author&gt;
+  &lt;content src="index.html"/&gt;
+  <b>&lt;feature id="blackberry.app"/&gt;</b>
+&lt;/widget&gt;
+</pre>
+		</li>
+		<li>Open up your index.html file in <a href="downloads">the Ripple Emulator</a> to test your application.</li>
+		<li>Package your application using <a href="downloads/sdk">BlackBerry WebWorks</a> to load your app on a device or distribute through BlackBerry App World</li>
+	
+	</ol>
 
-    <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/main.min.js"></script>
-
-      <link href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main.min.css" type="text/css" rel="stylesheet" />
-
-      <script type="text/javascript">
-
-        global.init('https://bdsc.webapps.blackberry.com/html5/', 'apis', 'index', '', 'https://bdsc.webapps.blackberry.com/html5/webroot/');
-
-      </script>
-
-       <!--[if lt IE 9]>
-
-        <link rel="stylesheet" type="text/css" href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main-ie7.min.css" />
-
-      <script src="https://bdsc.webapps.blackberry.com/html5/webroot/js/html5.js" type="text/javascript"></script>
-
-      <![endif]-->
-
-            <!--[if lte IE 9]>
-
-                <link rel="stylesheet" type="text/css" href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main-ie.min.css" />
-
-            <![endif]-->
-
-            <!--[if IE 9]>
-
-        <style type="text/css">
-
-          #carousel-news .carousel-item .link {
-
-            background-position: 0 3px;
-
-          }
-
-          .highlights .highlight .link {
-
-            background-position: 0 3px;
-
-
-
-          }
-
-
-
-          .shortcuts .column .meta .link { background-position: 0 12px; }
-
-          .shortcuts .column a:hover .meta .link { background-position: 0 -12px; }
-
-          .extra-item .meta .link {}
-
-        </style>
-
-      <![endif]-->
-
-
-
-          <!--[if IE 7]>
-
-        <script type="text/javascript">
-
-          $(document).ready(function() {
-
-            $('a[name]').css('color', '#363636');
-
-            $('a[name]').hover(function () { $(this).css('text-decoration', 'none') });
-
-          });
-
-        </script>
-
-    <![endif]-->
-
-
-
-</head>
-
-<body>
-    <div class="site_container clearfix guide-container">
-
+</div>
