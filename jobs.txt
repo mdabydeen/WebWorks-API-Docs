@@ -11,4 +11,3 @@ WebWorks-API-Docs-master_apidoccleanup
 WebWorks-API-Docs-next-BB10-push-APIs
 WebWorks-API-Docs-master-microsite-template-update
 WebWorks-API-Docs-next-BB10-onInvoked
-WebWorks-API-Docs-next-BB10-conn-constants
