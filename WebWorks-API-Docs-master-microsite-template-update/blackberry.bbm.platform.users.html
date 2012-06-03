@@ -328,7 +328,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.inviteToBBM">inviteToBBM</a>
@@ -338,7 +340,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">inviteToBBMFromConnections</a>
@@ -348,7 +352,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.inviteToDownload">inviteToDownload</a>
@@ -358,7 +364,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.pickUsers">pickUsers</a>
@@ -368,7 +376,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.sendFile">sendFile</a>
@@ -378,7 +388,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.shareContent">shareContent</a>
@@ -388,7 +400,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.startBBMChat">startBBMChat</a>
@@ -416,7 +430,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.event:onsharecontent">onsharecontent</a>
@@ -426,7 +442,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       
+                                        
+                                            void
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.event:onupdate">onupdate</a>
@@ -454,7 +472,9 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                       <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]
+                                        
+                                            <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]
+                                        
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.contactsWithApp">contactsWithApp</a>
@@ -508,7 +528,8 @@ application.
                                             void
                                         
                                         
-                                            inviteToBBM(onComplete : Function, invitations : Object[])
+                                            inviteToBBM
+                                            
                                                                   
                                     
                                 
@@ -660,7 +681,8 @@ blackberry.bbm.platform.users.inviteToBBM(onComplete, invitations);
                                             void
                                         
                                         
-                                            inviteToBBMFromConnections(onComplete : Function, <i>[connection : <a href="blackberry.bbm.platform.io.Connection.html">blackberry.bbm.platform.io.Connection</a>]</i>)
+                                            inviteToBBMFromConnections
+                                            
                                                                   
                                     
                                 
@@ -784,7 +806,8 @@ blackberry.bbm.platform.users.inviteToBBMFromConnections(function () {
                                             void
                                         
                                         
-                                            inviteToDownload(onComplete: function(result : String))
+                                            inviteToDownload
+                                            
                                                                   
                                     
                                 
@@ -891,7 +914,8 @@ maximum of 10 download invitations per minute is allowed.
                                             void
                                         
                                         
-                                            pickUsers(options : Object, onComplete: function(users : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]))
+                                            pickUsers
+                                            
                                                                   
                                     
                                 
@@ -1034,7 +1058,8 @@ blackberry.bbm.platform.users.pickUsers( {
                                             void
                                         
                                         
-                                            sendFile(fileURI : String, comment : String, onFailure: function(reason : String), <i>[contact : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>]</i>)
+                                            sendFile
+                                            
                                                                   
                                     
                                 
@@ -1208,7 +1233,8 @@ function getFileFailureString(reason) {
                                             void
                                         
                                         
-                                            shareContent(content : String, description : String, onComplete : Function, <i>[options : Object]</i>)
+                                            shareContent
+                                            
                                                                   
                                     
                                 
@@ -1407,7 +1433,8 @@ blackberry.bbm.platform.register({
                                             void
                                         
                                         
-                                            startBBMChat(onComplete : Function, message : String, <i>[users : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]]</i>)
+                                            startBBMChat
+                                            
                                                                   
                                     
                                 
@@ -1543,7 +1570,8 @@ blackberry.bbm.platform.users.startBBMChat(function() {
                                             void
                                         
                                         
-                                            onsharecontent(sender : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, content : String, description : String, timestamp : Date)
+                                            onsharecontent
+                                            
                                                                   
                                     
                                 
@@ -1663,7 +1691,8 @@ is registered with BBM Social Platform.
                                             void
                                         
                                         
-                                            onupdate(user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, event : String)
+                                            onupdate
+                                            
                                                                   
                                     
                                 
@@ -1802,7 +1831,8 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
                                         <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]
                                         
                                         
-                                            contactsWithApp()
+                                            contactsWithApp
+                                            
                                                                   
                                     
                                 
@@ -1872,7 +1902,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu May 31 2012 10:42:42 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:57 GMT-0400 (EDT)
         </div>
 
     </div>
