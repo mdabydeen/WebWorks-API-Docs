@@ -118,7 +118,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="navigator.geolocation.html#.clearWatch">clearWatch</a>
+                                        <a href="navigator.geolocation.html#.clearWatch">navigator.geolocation.clearWatch</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -130,7 +130,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="navigator.geolocation.html#.getCurrentPosition">getCurrentPosition</a>
+                                        <a href="navigator.geolocation.html#.getCurrentPosition">navigator.geolocation.getCurrentPosition</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -142,7 +142,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="navigator.geolocation.html#.watchPosition">watchPosition</a>
+                                        <a href="navigator.geolocation.html#.watchPosition">navigator.geolocation.watchPosition</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -232,7 +232,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="navigator.geolocation.html#.clearWatch">clearWatch</a>
+                                        <a href="navigator.geolocation.html#.clearWatch">navigator.geolocation.clearWatch</a>
                                         
                                     </td>
                                 </tr>
@@ -244,7 +244,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="navigator.geolocation.html#.getCurrentPosition">getCurrentPosition</a>
+                                        <a href="navigator.geolocation.html#.getCurrentPosition">navigator.geolocation.getCurrentPosition</a>
                                         
                                     </td>
                                 </tr>
@@ -256,7 +256,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="navigator.geolocation.html#.watchPosition">watchPosition</a>
+                                        <a href="navigator.geolocation.html#.watchPosition">navigator.geolocation.watchPosition</a>
                                         
                                     </td>
                                 </tr>
@@ -310,10 +310,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            clearWatch
+                                            navigator.geolocation.clearWatch
+                                            
+                                                
+                                                    (watchId : long)
+                                                
                                             
                                                                   
                                     
@@ -372,7 +377,7 @@
                                             <td><b>watchId</b></td>
                                             <td>
                                                 
-                                                A unique identifier return from <a href="navigator.geolocation.html#.watchPosition">watchPosition</a>.                         
+                                                A unique identifier return from <a href="navigator.geolocation.html#.watchPosition">navigator.geolocation.watchPosition</a>.                         
                                                 
                                             </td>
                                         </tr>
@@ -387,6 +392,9 @@
                             
                             
                             
+                            
+                            
+
                             
                             
                 
@@ -405,10 +413,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            getCurrentPosition
+                                            navigator.geolocation.getCurrentPosition
+                                            
+                                                
+                                                    (positionCallback: function(position : <a href="Position.html">Position</a>), <i>[positionErrorCallback: function(<i>[error: <a href="PositionError.html">PositionError</a>]</i>)]</i>, <i>[options : <a href="PositionOptions.html">PositionOptions</a>]</i>)
+                                                
                                             
                                                                   
                                     
@@ -516,6 +529,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -537,10 +553,15 @@
                                 
                                     
                                         static              
+                                        
                                         Long
                                         
                                         
-                                            watchPosition
+                                            navigator.geolocation.watchPosition
+                                            
+                                                
+                                                    (positionCallback: function(position : <a href="Position.html">Position</a>), <i>[positionErrorCallback: function(<i>[error: <a href="PositionError.html">PositionError</a>]</i>)]</i>, <i>[options : <a href="PositionOptions.html">PositionOptions</a>]</i>)
+                                                
                                             
                                                                   
                                     
@@ -649,12 +670,15 @@
                                 <span><b>Return:</b></span>
                                 
                                     
-                                        <p> Return a watchId so that it can be use in function <a href="navigator.geolocation.html#.clearWatch">clearWatch</a>. </p>
+                                        <p> Return a watchId so that it can be use in function <a href="navigator.geolocation.html#.clearWatch">navigator.geolocation.clearWatch</a>. </p>
                                     
                                 
                                 <br />
                             
                             
+                            
+                            
+
                             
                             
                 
@@ -685,7 +709,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:53 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:13 GMT-0400 (EDT)
         </div>
 
     </div>

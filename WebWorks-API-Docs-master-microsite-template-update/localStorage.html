@@ -104,7 +104,7 @@
                             
                                 <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="localStorage.html#.clear">clear</a>
+                                        <a href="localStorage.html#.clear">localStorage.clear</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -116,7 +116,7 @@
                             
                                 <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="localStorage.html#.getItem">getItem</a>
+                                        <a href="localStorage.html#.getItem">localStorage.getItem</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -128,7 +128,7 @@
                             
                                 <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="localStorage.html#.key">key</a>
+                                        <a href="localStorage.html#.key">localStorage.key</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -140,7 +140,7 @@
                             
                                 <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="localStorage.html#.removeItem">removeItem</a>
+                                        <a href="localStorage.html#.removeItem">localStorage.removeItem</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -152,7 +152,7 @@
                             
                                 <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="localStorage.html#.setItem">setItem</a>
+                                        <a href="localStorage.html#.setItem">localStorage.setItem</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -241,7 +241,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="localStorage.html#.clear">clear</a>
+                                        <a href="localStorage.html#.clear">localStorage.clear</a>
                                         
                                     </td>
                                 </tr>
@@ -253,7 +253,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="localStorage.html#.getItem">getItem</a>
+                                        <a href="localStorage.html#.getItem">localStorage.getItem</a>
                                         
                                     </td>
                                 </tr>
@@ -265,7 +265,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="localStorage.html#.key">key</a>
+                                        <a href="localStorage.html#.key">localStorage.key</a>
                                         
                                     </td>
                                 </tr>
@@ -277,7 +277,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="localStorage.html#.removeItem">removeItem</a>
+                                        <a href="localStorage.html#.removeItem">localStorage.removeItem</a>
                                         
                                     </td>
                                 </tr>
@@ -289,7 +289,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="localStorage.html#.setItem">setItem</a>
+                                        <a href="localStorage.html#.setItem">localStorage.setItem</a>
                                         
                                     </td>
                                 </tr>
@@ -370,10 +370,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            clear
+                                            localStorage.clear
+                                            
+                                                
+                                                    ()
+                                                
                                             
                                                                   
                                     
@@ -430,6 +435,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -445,10 +453,15 @@
                                 
                                     
                                         static              
+                                        
                                         Object
                                         
                                         
-                                            getItem
+                                            localStorage.getItem
+                                            
+                                                
+                                                    (key : String)
+                                                
                                             
                                                                   
                                     
@@ -533,6 +546,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -554,10 +570,15 @@
                                 
                                     
                                         static              
+                                        
                                         String
                                         
                                         
-                                            key
+                                            localStorage.key
+                                            
+                                                
+                                                    (index : Number)
+                                                
                                             
                                                                   
                                     
@@ -642,6 +663,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -658,10 +682,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            removeItem
+                                            localStorage.removeItem
+                                            
+                                                
+                                                    (key : String)
+                                                
                                             
                                                                   
                                     
@@ -737,6 +766,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -759,10 +791,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            setItem
+                                            localStorage.setItem
+                                            
+                                                
+                                                    (key : String, value : Object)
+                                                
                                             
                                                                   
                                     
@@ -883,6 +920,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -919,6 +959,7 @@
                                 
                                     
                                         static              
+                                        readonly
                                         Number
                                         
                                         
@@ -979,6 +1020,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1001,7 +1045,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:54 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:14 GMT-0400 (EDT)
         </div>
 
     </div>

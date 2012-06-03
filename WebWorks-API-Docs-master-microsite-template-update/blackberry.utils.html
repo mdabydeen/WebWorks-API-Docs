@@ -97,7 +97,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.utils.html#.blobToString">blobToString</a>
+                                        <a href="blackberry.utils.html#.blobToString">blackberry.utils.blobToString</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -109,7 +109,7 @@
                             
                                 <tr x-ww-support="bb5.0">
                                     <td class="first_column">
-                                        <a href="blackberry.utils.html#.documentToBlob">documentToBlob</a>
+                                        <a href="blackberry.utils.html#.documentToBlob">blackberry.utils.documentToBlob</a>
                                         <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -121,7 +121,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.utils.html#.generateUniqueId">generateUniqueId</a>
+                                        <a href="blackberry.utils.html#.generateUniqueId">blackberry.utils.generateUniqueId</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -133,7 +133,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.utils.html#.parseURL">parseURL</a>
+                                        <a href="blackberry.utils.html#.parseURL">blackberry.utils.parseURL</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -145,7 +145,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a>
+                                        <a href="blackberry.utils.html#.stringToBlob">blackberry.utils.stringToBlob</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -240,7 +240,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.utils.html#.blobToString">blobToString</a>
+                                        <a href="blackberry.utils.html#.blobToString">blackberry.utils.blobToString</a>
                                         
                                     </td>
                                 </tr>
@@ -252,7 +252,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.utils.html#.documentToBlob">documentToBlob</a>
+                                        <a href="blackberry.utils.html#.documentToBlob">blackberry.utils.documentToBlob</a>
                                         
                                             <span class="depricate">**</span>
                                             
@@ -267,7 +267,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.utils.html#.generateUniqueId">generateUniqueId</a>
+                                        <a href="blackberry.utils.html#.generateUniqueId">blackberry.utils.generateUniqueId</a>
                                         
                                     </td>
                                 </tr>
@@ -279,7 +279,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.utils.html#.parseURL">parseURL</a>
+                                        <a href="blackberry.utils.html#.parseURL">blackberry.utils.parseURL</a>
                                         
                                     </td>
                                 </tr>
@@ -291,7 +291,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a>
+                                        <a href="blackberry.utils.html#.stringToBlob">blackberry.utils.stringToBlob</a>
                                         
                                     </td>
                                 </tr>
@@ -348,10 +348,15 @@
                                 
                                     
                                         static              
+                                        
                                         String
                                         
                                         
-                                            blobToString
+                                            blackberry.utils.blobToString
+                                            
+                                                
+                                                    (blob : Blob, <i>[encoding : String]</i>)
+                                                
                                             
                                                                   
                                     
@@ -446,6 +451,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -467,10 +475,15 @@
                                 
                                     
                                         static              
+                                        
                                         Blob
                                         
                                         
-                                            documentToBlob
+                                            blackberry.utils.documentToBlob
+                                            
+                                                
+                                                    (doc : Document)
+                                                
                                             
                                                                   
                                     
@@ -489,7 +502,7 @@
                             
                                 <div class="notice warning">
                                     <h3>Deprecation Notice:</h3>
-                                    This API is deprecated, please use <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a> instead.<br/><br/>For example:<pre>var foo = blackberry.utils.stringToBlob( document.toString() );</pre>
+                                    This API is deprecated, please use <a href="blackberry.utils.html#.stringToBlob">blackberry.utils.stringToBlob</a> instead.<br/><br/>For example:<pre>var foo = blackberry.utils.stringToBlob( document.toString() );</pre>
                                 </div>                
                                        
                             
@@ -552,6 +565,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -567,10 +583,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
-                                            generateUniqueId
+                                            blackberry.utils.generateUniqueId
+                                            
+                                                
+                                                    ()
+                                                
                                             
                                                                   
                                     
@@ -636,6 +657,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -657,10 +681,15 @@
                                 
                                     
                                         static              
+                                        
                                         <a href="blackberry.utils.URL.html">blackberry.utils.URL</a>
                                         
                                         
-                                            parseURL
+                                            blackberry.utils.parseURL
+                                            
+                                                
+                                                    (url : String)
+                                                
                                             
                                                                   
                                     
@@ -745,6 +774,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -766,10 +798,15 @@
                                 
                                     
                                         static              
+                                        
                                         Blob
                                         
                                         
-                                            stringToBlob
+                                            blackberry.utils.stringToBlob
+                                            
+                                                
+                                                    (str : String, <i>[encoding : String]</i>)
+                                                
                                             
                                                                   
                                     
@@ -864,6 +901,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -898,7 +938,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:57 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:16 GMT-0400 (EDT)
         </div>
 
     </div>

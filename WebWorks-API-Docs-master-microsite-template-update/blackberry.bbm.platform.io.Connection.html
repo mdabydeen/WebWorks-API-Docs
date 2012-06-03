@@ -672,10 +672,15 @@
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             add
+                                            
+                                                
+                                                    (user : blackberry.bbm.platform.user.BBMPlatformUser, <i>[cookie : String]</i>)
+                                                
                                             
                                                                   
                                     
@@ -788,6 +793,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -804,10 +812,15 @@
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             inviteContacts
+                                            
+                                                
+                                                    (inviteMessage : String, <i>[options : Object]</i>)
+                                                
                                             
                                                                   
                                     
@@ -929,6 +942,9 @@ ends or leaves the connection.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -945,10 +961,15 @@ ends or leaves the connection.
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             remove
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a> | blackberry.bbm.platform.users.BBMPlatformUser[])
+                                                
                                             
                                                                   
                                     
@@ -1051,6 +1072,9 @@ ends or leaves the connection.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1091,10 +1115,15 @@ if(users.length > 0) {
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             removeAll
+                                            
+                                                
+                                                    ()
+                                                
                                             
                                                                   
                                     
@@ -1160,6 +1189,9 @@ if(users.length > 0) {
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1176,10 +1208,15 @@ if(users.length > 0) {
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             send
+                                            
+                                                
+                                                    (data : String, <i>[users : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]]</i>)
+                                                
                                             
                                                                   
                                     
@@ -1202,8 +1239,8 @@ if(users.length > 0) {
 who have not joined.
 <h3>Unreachable Users</h3>
 <p>If a user becomes unreachable then up to 50 packets (50 calls of <code>send()</code>) will be queued. A ContactUnreachableException will be thrown on the 51st call.
-<p>If the user later becomes reachable then <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">event:onuserreachable</a> will be invoked with the now-reachable user.
-<p>BBM Social Platform will continue to attempt to deliver the packets to an unreachable user for 24 hours. If the user does not become reachable within this time then the packets will expire, and <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">event:ondataexpired</a> will be invoked with unreachable user and the expired packets.</p>
+<p>If the user later becomes reachable then <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">blackberry.bbm.platform.io.event:onuserreachable</a> will be invoked with the now-reachable user.
+<p>BBM Social Platform will continue to attempt to deliver the packets to an unreachable user for 24 hours. If the user does not become reachable within this time then the packets will expire, and <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">blackberry.bbm.platform.io.event:ondataexpired</a> will be invoked with unreachable user and the expired packets.</p>
                             <br />
                             
                             
@@ -1334,6 +1371,9 @@ If not provided, data will be sent to all users on this connection.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1411,10 +1451,15 @@ try {
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             ondata
+                                            
+                                                
+                                                    (sender : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, data : String)
+                                                
                                             
                                                                   
                                     
@@ -1492,6 +1537,9 @@ try {
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1530,10 +1578,15 @@ connection1.ondata = function(user, data) {
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             onuserdeclined
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>)
+                                                
                                             
                                                                   
                                     
@@ -1601,6 +1654,9 @@ connection1.ondata = function(user, data) {
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1617,10 +1673,15 @@ connection1.ondata = function(user, data) {
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             onuserleft
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>)
+                                                
                                             
                                                                   
                                     
@@ -1688,6 +1749,9 @@ connection1.ondata = function(user, data) {
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1704,10 +1768,15 @@ connection1.ondata = function(user, data) {
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             onusersinvited
+                                            
+                                                
+                                                    (users : blackberry.bbm.platform.io.BBMPlatformUser[])
+                                                
                                             
                                                                   
                                     
@@ -1776,6 +1845,9 @@ called if the user invites others to download the application.</p>
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1792,10 +1864,15 @@ called if the user invites others to download the application.</p>
                                     
                                                       
                                         
+                                        
                                             void
                                         
                                         
                                             onusersjoined
+                                            
+                                                
+                                                    (users : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[], type : String, cookie : String)
+                                                
                                             
                                                                   
                                     
@@ -1888,6 +1965,9 @@ if no cookie was sent.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1915,6 +1995,7 @@ if no cookie was sent.
                                 
                                     
                                                       
+                                        readonly
                                         Number
                                         
                                         
@@ -1967,6 +2048,9 @@ if no cookie was sent.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1982,6 +2066,7 @@ if no cookie was sent.
                                 
                                     
                                                       
+                                        readonly
                                         <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]
                                         
                                         
@@ -2034,6 +2119,9 @@ if no cookie was sent.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -2049,6 +2137,7 @@ if no cookie was sent.
                                 
                                     
                                                       
+                                        readonly
                                         Number
                                         
                                         
@@ -2101,6 +2190,9 @@ if no cookie was sent.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -2128,10 +2220,17 @@ if no cookie was sent.
                                 
                                     
                                                       
+                                        
                                         Number
                                         
                                         
                                             MAX_USERS
+                                            
+                                                
+                                                    
+                                                        = 24 users
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -2182,6 +2281,9 @@ and will not allow more users to join.</p>
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -2197,10 +2299,17 @@ and will not allow more users to join.</p>
                                 
                                     
                                                       
+                                        
                                         Number
                                         
                                         
                                             MAX_COOKIE_LENGTH
+                                            
+                                                
+                                                    
+                                                        = 128 characters
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -2249,6 +2358,9 @@ and will not allow more users to join.</p>
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -2264,10 +2376,17 @@ and will not allow more users to join.</p>
                                 
                                     
                                                       
+                                        
                                         Number
                                         
                                         
                                             MAX_INVITE_MSG_LENGTH
+                                            
+                                                
+                                                    
+                                                        = 128 characters
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -2316,6 +2435,9 @@ and will not allow more users to join.</p>
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -2331,10 +2453,17 @@ and will not allow more users to join.</p>
                                 
                                     
                                                       
+                                        
                                         Number
                                         
                                         
                                             MAX_DATA_LENGTH
+                                            
+                                                
+                                                    
+                                                        = 61440 characters
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -2383,6 +2512,9 @@ and will not allow more users to join.</p>
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -2402,7 +2534,7 @@ and will not allow more users to join.</p>
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:52 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:12 GMT-0400 (EDT)
         </div>
 
     </div>

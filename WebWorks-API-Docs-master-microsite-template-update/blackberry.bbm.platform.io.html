@@ -51,7 +51,7 @@ The BBM Platform supports the following types of connections:
 <br/><a href="blackberry.bbm.platform.io.Session.html">blackberry.bbm.platform.io.Session</a>
 
 <h4>Creating a connections</h4>
-<p>Connections can be created using <a href="blackberry.bbm.platform.io.html#.createConnection">createConnection</a>.
+<p>Connections can be created using <a href="blackberry.bbm.platform.io.html#.createConnection">blackberry.bbm.platform.io.createConnection</a>.
 When a connection is created, the application should assign callbacks to it in order to be notified
 of various events.</p>
 
@@ -62,7 +62,7 @@ setConnectionCallbacks(conn, type);
 </pre>
 
 <h4>Accepting incoming connections</h4>
-When the current user accepts an invitation within BBM, <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">onconnectionaccepted</a>
+When the current user accepts an invitation within BBM, <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a>
 will be invoked with the connection on which the invitation was accepted. The application should
 assign callbacks to the connection within this method.
 <pre>
@@ -122,15 +122,15 @@ creator in order to invite users.
 If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connection.html#event:onusersinvited">onusersinvited</a> callback will be invoked on the inviter's side.</p>
 <p>Invitees receive the invitations within BBM.</p>
 <ul>
-<li>If they accept the invitation, <a href="blackberry.bbm.platform.io.Connection.html#event:onusersjoined">onusersjoined</a> is invoked on the inviter's side, and <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">onconnectionaccepted</a> is invoked on the invitee's side with the connection they just joined. 
+<li>If they accept the invitation, <a href="blackberry.bbm.platform.io.Connection.html#event:onusersjoined">onusersjoined</a> is invoked on the inviter's side, and <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a> is invoked on the invitee's side with the connection they just joined. 
 <li>If they decline the invitation, <a href="blackberry.bbm.platform.io.Connection.html#event:onuserdeclined">onuserdeclined</a> is invoked on the inviter's side.
 </ul>
 <br><image src="images/invite_to_join.png"><br>
 
 <h4>2. Hosting a public connection for non-contacts to join</h4>
 <p>An application user can also host an event within a public connection to let all application users join.</p>
-<p>When the application calls <a href="blackberry.bbm.platform.io.html#.host">host</a> a dialog will be shown for the user to allow or deny the decision. If the user allows, the application should then post the host's PIN and PPID to its discovery service. <b>The BBM platform does not provide a discovery service. This must be provided by the application developer.</b>
-<p>Peers should download host information (PIN and PPID) from the discovery service and then call <a href="blackberry.bbm.platform.io.html#.joinHost">joinHost</a>. The peer will also be presented with a dialog to allow or deny the decision.
+<p>When the application calls <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a> a dialog will be shown for the user to allow or deny the decision. If the user allows, the application should then post the host's PIN and PPID to its discovery service. <b>The BBM platform does not provide a discovery service. This must be provided by the application developer.</b>
+<p>Peers should download host information (PIN and PPID) from the discovery service and then call <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>. The peer will also be presented with a dialog to allow or deny the decision.
 <p>At this point the request is in the <code>"pending"</code> state. In this state the peer can <a href="blackberry.bbm.platform.io.OutgoingJoinRequest.html#cancel">cancel</a> the request, and the host can <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#accept">accept</a> or <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">decline</a>.</p>
 <br><image src="images/hosting.png"><br>
 </p>
@@ -183,7 +183,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.createConnection">createConnection</a>
+                                        <a href="blackberry.bbm.platform.io.html#.createConnection">blackberry.bbm.platform.io.createConnection</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -195,7 +195,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.host">host</a>
+                                        <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -207,7 +207,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.joinHost">joinHost</a>
+                                        <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -255,7 +255,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">onconnectionaccepted</a>
+                                        <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -267,7 +267,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">ondataexpired</a>
+                                        <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">blackberry.bbm.platform.io.ondataexpired</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -279,7 +279,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">onuserreachable</a>
+                                        <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">blackberry.bbm.platform.io.onuserreachable</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -374,7 +374,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.io.html#.createConnection">createConnection</a>
+                                        <a href="blackberry.bbm.platform.io.html#.createConnection">blackberry.bbm.platform.io.createConnection</a>
                                         
                                     </td>
                                 </tr>
@@ -386,7 +386,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.io.html#.host">host</a>
+                                        <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a>
                                         
                                     </td>
                                 </tr>
@@ -398,7 +398,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.io.html#.joinHost">joinHost</a>
+                                        <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>
                                         
                                     </td>
                                 </tr>
@@ -428,7 +428,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">onconnectionaccepted</a>
+                                        <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a>
                                         
                                     </td>
                                 </tr>
@@ -440,7 +440,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">ondataexpired</a>
+                                        <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">blackberry.bbm.platform.io.ondataexpired</a>
                                         
                                     </td>
                                 </tr>
@@ -452,7 +452,7 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">onuserreachable</a>
+                                        <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">blackberry.bbm.platform.io.onuserreachable</a>
                                         
                                     </td>
                                 </tr>
@@ -553,10 +553,15 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                 
                                     
                                         static              
+                                        
                                         <a href="blackberry.bbm.platform.io.Channel.html">blackberry.bbm.platform.io.Channel</a> | <a href="blackberry.bbm.platform.io.Session.html">blackberry.bbm.platform.io.Session</a>
                                         
                                         
-                                            createConnection
+                                            blackberry.bbm.platform.io.createConnection
+                                            
+                                                
+                                                    (type : String)
+                                                
                                             
                                                                   
                                     
@@ -634,6 +639,9 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -650,10 +658,15 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            host
+                                            blackberry.bbm.platform.io.host
+                                            
+                                                
+                                                    (connection : <a href="blackberry.bbm.platform.io.Connection.html">blackberry.bbm.platform.io.Connection</a>, onComplete: function(hosting : Boolean), onRequestReceived: function(request : <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html">blackberry.bbm.platform.io.IncomingJoinRequest</a>), onRequestCanceled: function(request : <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html">blackberry.bbm.platform.io.IncomingJoinRequest</a>, reason : String))
+                                                
                                             
                                                                   
                                     
@@ -785,6 +798,9 @@ a dialog to allow or deny hosting.</p>
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -801,10 +817,15 @@ a dialog to allow or deny hosting.</p>
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            joinHost
+                                            blackberry.bbm.platform.io.joinHost
+                                            
+                                                
+                                                    (hostPIN : String, hostPPID : String, onComplete: function(request : <a href="blackberry.bbm.platform.io.OutgoingJoinRequest.html">blackberry.bbm.platform.io.OutgoingJoinRequest</a>), onHostAccepted: function(request : <a href="blackberry.bbm.platform.io.OutgoingJoinRequest.html">blackberry.bbm.platform.io.OutgoingJoinRequest</a>, cookie : String), onHostDeclined: function(request : <a href="blackberry.bbm.platform.io.OutgoingJoinRequest.html">blackberry.bbm.platform.io.OutgoingJoinRequest</a>, reason : String), <i>[cookie : String]</i>)
+                                                
                                             
                                                                   
                                     
@@ -1003,6 +1024,9 @@ but still attempts to send another join request to the host.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1031,10 +1055,15 @@ but still attempts to send another join request to the host.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            onconnectionaccepted
+                                            blackberry.bbm.platform.io.onconnectionaccepted
+                                            
+                                                
+                                                    (connectionType : String, connection : <a href="blackberry.bbm.platform.io.Channel.html">blackberry.bbm.platform.io.Channel</a>|<a href="blackberry.bbm.platform.io.Session.html">blackberry.bbm.platform.io.Session</a>)
+                                                
                                             
                                                                   
                                     
@@ -1058,7 +1087,7 @@ but still attempts to send another join request to the host.
 <li>When an invitation is accepted in the BBM chat window.
 <li>When a host accepts a join request.
 </ul>
-<p>This callback is required when using either invitation framework. It must be assigned <b>before</b> the call to <a href="blackberry.bbm.platform.html#.register">register</a>. 
+<p>This callback is required when using either invitation framework. It must be assigned <b>before</b> the call to <a href="blackberry.bbm.platform.html#.register">blackberry.bbm.platform.register</a>. 
 <p><b>The application should assign callbacks to the connection in this method.</b></p></p>
                             <br />
                             
@@ -1118,6 +1147,9 @@ but still attempts to send another join request to the host.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1134,10 +1166,15 @@ but still attempts to send another join request to the host.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            ondataexpired
+                                            blackberry.bbm.platform.io.ondataexpired
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, data : String[])
+                                                
                                             
                                                                   
                                     
@@ -1216,6 +1253,9 @@ but still attempts to send another join request to the host.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1232,10 +1272,15 @@ but still attempts to send another join request to the host.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            onuserreachable
+                                            blackberry.bbm.platform.io.onuserreachable
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>)
+                                                
                                             
                                                                   
                                     
@@ -1304,6 +1349,9 @@ but still attempts to send another join request to the host.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1331,6 +1379,7 @@ but still attempts to send another join request to the host.
                                 
                                     
                                         static              
+                                        readonly
                                         <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html">blackberry.bbm.platform.io.IncomingJoinRequest</a>[]
                                         
                                         
@@ -1388,6 +1437,9 @@ and <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">declin
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1403,6 +1455,7 @@ and <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">declin
                                 
                                     
                                         static              
+                                        readonly
                                         <a href="blackberry.bbm.platform.io.Connection.html">blackberry.bbm.platform.io.Connection</a>
                                         
                                         
@@ -1426,7 +1479,7 @@ and <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">declin
                             
                             
                             <p>The connection being hosted. <code>undefined</code> if no connection is being hosted.
-<p>Use <a href="blackberry.bbm.platform.io.html#.host">host</a> to host an existing connection.</p>
+<p>Use <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a> to host an existing connection.</p>
                             <br />
                             
                             
@@ -1456,6 +1509,9 @@ and <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">declin
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1471,6 +1527,7 @@ and <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">declin
                                 
                                     
                                         static              
+                                        readonly
                                         <a href="blackberry.bbm.platform.io.OutgoingJoinRequest.html">blackberry.bbm.platform.io.OutgoingJoinRequest</a>[]
                                         
                                         
@@ -1493,7 +1550,7 @@ and <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">declin
                                        
                             
                             
-                            <p>Requests that the current user (peer) has sent to hosts using <a href="blackberry.bbm.platform.io.html#.joinHost">joinHost</a>.
+                            <p>Requests that the current user (peer) has sent to hosts using <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>.
 <p>Requests in this list are in the pending state. New requests will be added to this list
 automatically. Requests that are accepted, denied, or canceled will be removed from this
 list automatically.
@@ -1527,6 +1584,9 @@ list automatically.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1549,7 +1609,7 @@ list automatically.
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:54 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:14 GMT-0400 (EDT)
         </div>
 
     </div>

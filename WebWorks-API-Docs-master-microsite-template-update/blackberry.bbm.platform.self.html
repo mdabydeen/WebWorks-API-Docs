@@ -93,7 +93,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.self.html#.setDisplayPicture">setDisplayPicture</a>
+                                        <a href="blackberry.bbm.platform.self.html#.setDisplayPicture">blackberry.bbm.platform.self.setDisplayPicture</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -105,7 +105,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.self.html#.setPersonalMessage">setPersonalMessage</a>
+                                        <a href="blackberry.bbm.platform.self.html#.setPersonalMessage">blackberry.bbm.platform.self.setPersonalMessage</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -117,7 +117,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.self.html#.setStatus">setStatus</a>
+                                        <a href="blackberry.bbm.platform.self.html#.setStatus">blackberry.bbm.platform.self.setStatus</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -212,7 +212,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.self.html#.setDisplayPicture">setDisplayPicture</a>
+                                        <a href="blackberry.bbm.platform.self.html#.setDisplayPicture">blackberry.bbm.platform.self.setDisplayPicture</a>
                                         
                                     </td>
                                 </tr>
@@ -224,7 +224,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.self.html#.setPersonalMessage">setPersonalMessage</a>
+                                        <a href="blackberry.bbm.platform.self.html#.setPersonalMessage">blackberry.bbm.platform.self.setPersonalMessage</a>
                                         
                                     </td>
                                 </tr>
@@ -236,7 +236,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.self.html#.setStatus">setStatus</a>
+                                        <a href="blackberry.bbm.platform.self.html#.setStatus">blackberry.bbm.platform.self.setStatus</a>
                                         
                                     </td>
                                 </tr>
@@ -347,10 +347,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            setDisplayPicture
+                                            blackberry.bbm.platform.self.setDisplayPicture
+                                            
+                                                
+                                                    (displayPictureURI : String, onComplete: function(accepted : Boolean))
+                                                
                                             
                                                                   
                                     
@@ -442,6 +447,9 @@ the user to allow or deny the change.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -473,10 +481,15 @@ blackberry.bbm.platform.self.setDisplayPicture("local:///smiley.jpg", function(a
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            setPersonalMessage
+                                            blackberry.bbm.platform.self.setPersonalMessage
+                                            
+                                                
+                                                    (personalMessage : String, onComplete: function(accepted : Boolean))
+                                                
                                             
                                                                   
                                     
@@ -564,6 +577,9 @@ will be cleared.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -580,10 +596,15 @@ will be cleared.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            setStatus
+                                            blackberry.bbm.platform.self.setStatus
+                                            
+                                                
+                                                    (status : String, <i>[message : String]</i>, onComplete: function(accepted : Boolean))
+                                                
                                             
                                                                   
                                     
@@ -680,6 +701,9 @@ either "Available" or "Busy" will be used.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -723,7 +747,7 @@ blackberry.bbm.platform.self.setStatus("busy", "Playing Tic-Tac-Toe!", function(
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:56 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:15 GMT-0400 (EDT)
         </div>
 
     </div>

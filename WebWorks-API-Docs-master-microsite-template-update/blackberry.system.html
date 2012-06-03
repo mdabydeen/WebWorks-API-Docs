@@ -105,7 +105,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                     <td class="first_column">
-                                        <a href="blackberry.system.html#.hasCapability">hasCapability</a>
+                                        <a href="blackberry.system.html#.hasCapability">blackberry.system.hasCapability</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -117,7 +117,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.system.html#.hasDataCoverage">hasDataCoverage</a>
+                                        <a href="blackberry.system.html#.hasDataCoverage">blackberry.system.hasDataCoverage</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -129,7 +129,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                     <td class="first_column">
-                                        <a href="blackberry.system.html#.hasPermission">hasPermission</a>
+                                        <a href="blackberry.system.html#.hasPermission">blackberry.system.hasPermission</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -141,7 +141,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.system.html#.isMassStorageActive">isMassStorageActive</a>
+                                        <a href="blackberry.system.html#.isMassStorageActive">blackberry.system.isMassStorageActive</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -153,7 +153,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.system.html#.setHomeScreenBackground">setHomeScreenBackground</a>
+                                        <a href="blackberry.system.html#.setHomeScreenBackground">blackberry.system.setHomeScreenBackground</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -320,7 +320,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.html#.hasCapability">hasCapability</a>
+                                        <a href="blackberry.system.html#.hasCapability">blackberry.system.hasCapability</a>
                                         
                                     </td>
                                 </tr>
@@ -332,7 +332,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.html#.hasDataCoverage">hasDataCoverage</a>
+                                        <a href="blackberry.system.html#.hasDataCoverage">blackberry.system.hasDataCoverage</a>
                                         
                                     </td>
                                 </tr>
@@ -344,7 +344,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.html#.hasPermission">hasPermission</a>
+                                        <a href="blackberry.system.html#.hasPermission">blackberry.system.hasPermission</a>
                                         
                                     </td>
                                 </tr>
@@ -356,7 +356,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.html#.isMassStorageActive">isMassStorageActive</a>
+                                        <a href="blackberry.system.html#.isMassStorageActive">blackberry.system.isMassStorageActive</a>
                                         
                                     </td>
                                 </tr>
@@ -368,7 +368,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.html#.setHomeScreenBackground">setHomeScreenBackground</a>
+                                        <a href="blackberry.system.html#.setHomeScreenBackground">blackberry.system.setHomeScreenBackground</a>
                                         
                                     </td>
                                 </tr>
@@ -538,10 +538,15 @@
                                 
                                     
                                         static              
+                                        
                                         Boolean
                                         
                                         
-                                            hasCapability
+                                            blackberry.system.hasCapability
+                                            
+                                                
+                                                    (capability : String)
+                                                
                                             
                                                                   
                                     
@@ -630,6 +635,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -645,10 +653,15 @@
                                 
                                     
                                         static              
+                                        
                                         Boolean
                                         
                                         
-                                            hasDataCoverage
+                                            blackberry.system.hasDataCoverage
+                                            
+                                                
+                                                    ()
+                                                
                                             
                                                                   
                                     
@@ -667,7 +680,7 @@
                                        
                             
                             
-                            <p>This method returns true so long as the device is connected to any network. This can be used in conjunction with the <a href="blackberry.html#.network">network</a> property to find out what kind of coverage it is in. On the smartphone this can be used in conjunction with <a href="blackberry.system.event.html#.onCoverageChange">onCoverageChange</a> to track changes.</p>
+                            <p>This method returns true so long as the device is connected to any network. This can be used in conjunction with the <a href="blackberry.html#.network">network</a> property to find out what kind of coverage it is in. On the smartphone this can be used in conjunction with <a href="blackberry.system.event.html#.onCoverageChange">blackberry.system.event.onCoverageChange</a> to track changes.</p>
                             <br />
                             
                             
@@ -714,6 +727,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -729,10 +745,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
-                                            hasPermission
+                                            blackberry.system.hasPermission
+                                            
+                                                
+                                                    (module : String)
+                                                
                                             
                                                                   
                                     
@@ -821,6 +842,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -836,10 +860,15 @@
                                 
                                     
                                         static              
+                                        
                                         Boolean
                                         
                                         
-                                            isMassStorageActive
+                                            blackberry.system.isMassStorageActive
+                                            
+                                                
+                                                    ()
+                                                
                                             
                                                                   
                                     
@@ -905,6 +934,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -921,10 +953,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            setHomeScreenBackground
+                                            blackberry.system.setHomeScreenBackground
+                                            
+                                                
+                                                    (uri : String)
+                                                
                                             
                                                                   
                                     
@@ -996,6 +1033,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1026,6 +1066,7 @@
                                 
                                     
                                         static              
+                                        readonly
                                         String
                                         
                                         
@@ -1086,6 +1127,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1101,6 +1145,7 @@
                                 
                                     
                                         static              
+                                        readonly
                                         String
                                         
                                         
@@ -1161,6 +1206,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1176,6 +1224,7 @@
                                 
                                     
                                         static              
+                                        readonly
                                         String
                                         
                                         
@@ -1236,6 +1285,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1263,10 +1315,17 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             ALLOW
+                                            
+                                                
+                                                    
+                                                        = 0
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1327,6 +1386,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1342,10 +1404,17 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             DENY
+                                            
+                                                
+                                                    
+                                                        = 1
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1404,6 +1473,9 @@
                             
                             
                             
+                            
+                            
+
                             
                             
                 
@@ -1492,6 +1564,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1514,7 +1589,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:56 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:16 GMT-0400 (EDT)
         </div>
 
     </div>

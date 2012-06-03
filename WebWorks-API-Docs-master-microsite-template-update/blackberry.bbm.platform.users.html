@@ -47,29 +47,29 @@
 <a href="blackberry.bbm.platform.self.html">blackberry.bbm.platform.self</a>.
 
 <h3>Picking Users</h3>
-<p>The application can display a Contact Picker to the user with <a href="blackberry.bbm.platform.users.html#.pickUsers">pickUsers</a>.
+<p>The application can display a Contact Picker to the user with <a href="blackberry.bbm.platform.users.html#.pickUsers">blackberry.bbm.platform.users.pickUsers</a>.
 This is generally part of a larger use case. For example, <code>pickUsers()</code> might be used
 so that the current user can select players to remove from a connection.
 
 <p><b>The Contact Picker will be displayed for all methods in this namespace.</b> The Contact Picker can be
-avoided in <a href="blackberry.bbm.platform.users.html#.sendFile">sendFile</a> and <a href="blackberry.bbm.platform.users.html#.startBBMChat">startBBMChat</a>
+avoided in <a href="blackberry.bbm.platform.users.html#.sendFile">blackberry.bbm.platform.users.sendFile</a> and <a href="blackberry.bbm.platform.users.html#.startBBMChat">blackberry.bbm.platform.users.startBBMChat</a>
 by providing a <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a> in the method call.
 
 <h3>File Transfer, Invite to Download, Starting a BBM Chat, and Sharing Content</h3>
 <p>The current user can send files, start a chat in BBM, invite others to download the
 application, and share content using the following methods:
 <ul>
-<li><a href="blackberry.bbm.platform.users.html#.sendFile">sendFile</a>
-<li><a href="blackberry.bbm.platform.users.html#.startBBMChat">startBBMChat</a>
-<li><a href="blackberry.bbm.platform.users.html#.inviteToDownload">inviteToDownload</a>
-<li><a href="blackberry.bbm.platform.users.html#.shareContent">shareContent</a>
+<li><a href="blackberry.bbm.platform.users.html#.sendFile">blackberry.bbm.platform.users.sendFile</a>
+<li><a href="blackberry.bbm.platform.users.html#.startBBMChat">blackberry.bbm.platform.users.startBBMChat</a>
+<li><a href="blackberry.bbm.platform.users.html#.inviteToDownload">blackberry.bbm.platform.users.inviteToDownload</a>
+<li><a href="blackberry.bbm.platform.users.html#.shareContent">blackberry.bbm.platform.users.shareContent</a>
 </ul>
 </p>
 
 <h3>Inviting users to BBM contact list</h3>
 <p>Inviting users to the current user's contact list is also supported. You can invite anonymous
-users by PIN using <a href="blackberry.bbm.platform.users.html#.inviteToBBM">inviteToBBM</a>. Alternatively you can invite
-users from open connection(s) using <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">inviteToBBMFromConnections</a>.
+users by PIN using <a href="blackberry.bbm.platform.users.html#.inviteToBBM">blackberry.bbm.platform.users.inviteToBBM</a>. Alternatively you can invite
+users from open connection(s) using <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">blackberry.bbm.platform.users.inviteToBBMFromConnections</a>.
 
 <h3>BBM Social Graph</h3>
 <p>Applications can also obtain access to the user's social graph.
@@ -77,7 +77,7 @@ users from open connection(s) using <a href="blackberry.bbm.platform.users.html#
 contacts who have the application installed.
 
 <p>Applications can also listen for changes in the social graph by assigning a callback to
-<a href="blackberry.bbm.platform.users.html#.event:onupdate">onupdate</a>. Events are fired for both the current user
+<a href="blackberry.bbm.platform.users.html#.event:onupdate">blackberry.bbm.platform.users.onupdate</a>. Events are fired for both the current user
 and their contacts who have the application installed. You can listen for user profile property
 changes, such as display name and display picture, and also when a user installs/uninstalls your
 application.
@@ -130,7 +130,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBM">inviteToBBM</a>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBM">blackberry.bbm.platform.users.inviteToBBM</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -142,7 +142,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">inviteToBBMFromConnections</a>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">blackberry.bbm.platform.users.inviteToBBMFromConnections</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -154,7 +154,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.inviteToDownload">inviteToDownload</a>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToDownload">blackberry.bbm.platform.users.inviteToDownload</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -166,7 +166,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.pickUsers">pickUsers</a>
+                                        <a href="blackberry.bbm.platform.users.html#.pickUsers">blackberry.bbm.platform.users.pickUsers</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -178,7 +178,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.sendFile">sendFile</a>
+                                        <a href="blackberry.bbm.platform.users.html#.sendFile">blackberry.bbm.platform.users.sendFile</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -190,7 +190,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.shareContent">shareContent</a>
+                                        <a href="blackberry.bbm.platform.users.html#.shareContent">blackberry.bbm.platform.users.shareContent</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -202,7 +202,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.startBBMChat">startBBMChat</a>
+                                        <a href="blackberry.bbm.platform.users.html#.startBBMChat">blackberry.bbm.platform.users.startBBMChat</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -226,7 +226,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.event:onsharecontent">onsharecontent</a>
+                                        <a href="blackberry.bbm.platform.users.html#.event:onsharecontent">blackberry.bbm.platform.users.onsharecontent</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -238,7 +238,7 @@ application.
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.bbm.platform.users.html#.event:onupdate">onupdate</a>
+                                        <a href="blackberry.bbm.platform.users.html#.event:onupdate">blackberry.bbm.platform.users.onupdate</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -333,7 +333,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBM">inviteToBBM</a>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBM">blackberry.bbm.platform.users.inviteToBBM</a>
                                         
                                     </td>
                                 </tr>
@@ -345,7 +345,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">inviteToBBMFromConnections</a>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToBBMFromConnections">blackberry.bbm.platform.users.inviteToBBMFromConnections</a>
                                         
                                     </td>
                                 </tr>
@@ -357,7 +357,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.inviteToDownload">inviteToDownload</a>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToDownload">blackberry.bbm.platform.users.inviteToDownload</a>
                                         
                                     </td>
                                 </tr>
@@ -369,7 +369,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.pickUsers">pickUsers</a>
+                                        <a href="blackberry.bbm.platform.users.html#.pickUsers">blackberry.bbm.platform.users.pickUsers</a>
                                         
                                     </td>
                                 </tr>
@@ -381,7 +381,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.sendFile">sendFile</a>
+                                        <a href="blackberry.bbm.platform.users.html#.sendFile">blackberry.bbm.platform.users.sendFile</a>
                                         
                                     </td>
                                 </tr>
@@ -393,7 +393,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.shareContent">shareContent</a>
+                                        <a href="blackberry.bbm.platform.users.html#.shareContent">blackberry.bbm.platform.users.shareContent</a>
                                         
                                     </td>
                                 </tr>
@@ -405,7 +405,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.startBBMChat">startBBMChat</a>
+                                        <a href="blackberry.bbm.platform.users.html#.startBBMChat">blackberry.bbm.platform.users.startBBMChat</a>
                                         
                                     </td>
                                 </tr>
@@ -435,7 +435,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.event:onsharecontent">onsharecontent</a>
+                                        <a href="blackberry.bbm.platform.users.html#.event:onsharecontent">blackberry.bbm.platform.users.onsharecontent</a>
                                         
                                     </td>
                                 </tr>
@@ -447,7 +447,7 @@ application.
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.users.html#.event:onupdate">onupdate</a>
+                                        <a href="blackberry.bbm.platform.users.html#.event:onupdate">blackberry.bbm.platform.users.onupdate</a>
                                         
                                     </td>
                                 </tr>
@@ -525,10 +525,15 @@ application.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            inviteToBBM
+                                            blackberry.bbm.platform.users.inviteToBBM
+                                            
+                                                
+                                                    (onComplete : Function, invitations : Object[])
+                                                
                                             
                                                                   
                                     
@@ -643,6 +648,9 @@ included in the dialog.</p>
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -678,10 +686,15 @@ blackberry.bbm.platform.users.inviteToBBM(onComplete, invitations);
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            inviteToBBMFromConnections
+                                            blackberry.bbm.platform.users.inviteToBBMFromConnections
+                                            
+                                                
+                                                    (onComplete : Function, <i>[connection : <a href="blackberry.bbm.platform.io.Connection.html">blackberry.bbm.platform.io.Connection</a>]</i>)
+                                                
                                             
                                                                   
                                     
@@ -765,6 +778,9 @@ has open (who are not in the user's contact list) will be shown in the dialog.</
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -803,10 +819,15 @@ blackberry.bbm.platform.users.inviteToBBMFromConnections(function () {
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            inviteToDownload
+                                            blackberry.bbm.platform.users.inviteToDownload
+                                            
+                                                
+                                                    (onComplete: function(result : String))
+                                                
                                             
                                                                   
                                     
@@ -883,6 +904,9 @@ maximum of 10 download invitations per minute is allowed.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -911,10 +935,15 @@ maximum of 10 download invitations per minute is allowed.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            pickUsers
+                                            blackberry.bbm.platform.users.pickUsers
+                                            
+                                                
+                                                    (options : Object, onComplete: function(users : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]))
+                                                
                                             
                                                                   
                                     
@@ -1020,6 +1049,9 @@ users. <code>users.length == 0</code> if no users were selected.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1055,10 +1087,15 @@ blackberry.bbm.platform.users.pickUsers( {
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            sendFile
+                                            blackberry.bbm.platform.users.sendFile
+                                            
+                                                
+                                                    (fileURI : String, comment : String, onFailure: function(reason : String), <i>[contact : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>]</i>)
+                                                
                                             
                                                                   
                                     
@@ -1180,6 +1217,9 @@ must be in the current user's contact list.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1230,10 +1270,15 @@ function getFileFailureString(reason) {
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            shareContent
+                                            blackberry.bbm.platform.users.shareContent
+                                            
+                                                
+                                                    (content : String, description : String, onComplete : Function, <i>[options : Object]</i>)
+                                                
                                             
                                                                   
                                     
@@ -1258,7 +1303,7 @@ the user to select recipients of the content.
 <p>The content will not appear in BBM but is received by the recipient's application. The
 application does not need to be running in order to receive shared content. Once
 the application is launched and registered with BBM Social Platform, the callback
-<a href="blackberry.bbm.platform.users.html#.event:onsharecontent">onsharecontent</a> will be invoked for the
+<a href="blackberry.bbm.platform.users.html#.event:onsharecontent">blackberry.bbm.platform.users.onsharecontent</a> will be invoked for the
 application to handle the content.
 
 <h3>Users without BBM 6.1.0 or the application installed</h3>
@@ -1274,7 +1319,7 @@ be passed the content after registering with BBM Social Platform.
 <h3>Application icon splat when shared content is received</h3>
 <p>Applications can enable their icon to be splatted when shared content is received, in
 order to notify the user of the new content. To enable splatting, add the property
-<code>shareContentSplat: true</code> to the options object passed into <a href="blackberry.bbm.platform.html#.register">register</a>.</p>
+<code>shareContentSplat: true</code> to the options object passed into <a href="blackberry.bbm.platform.html#.register">blackberry.bbm.platform.register</a>.</p>
                             <br />
                             
                             
@@ -1390,6 +1435,9 @@ dialog. If not provided then all contacts are shown in the dialog.
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1430,10 +1478,15 @@ blackberry.bbm.platform.register({
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            startBBMChat
+                                            blackberry.bbm.platform.users.startBBMChat
+                                            
+                                                
+                                                    (onComplete : Function, message : String, <i>[users : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]]</i>)
+                                                
                                             
                                                                   
                                     
@@ -1526,6 +1579,9 @@ Must not contain <a href="blackberry.bbm.platform.self.html">blackberry.bbm.plat
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1567,10 +1623,15 @@ blackberry.bbm.platform.users.startBBMChat(function() {
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            onsharecontent
+                                            blackberry.bbm.platform.users.onsharecontent
+                                            
+                                                
+                                                    (sender : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, content : String, description : String, timestamp : Date)
+                                                
                                             
                                                                   
                                     
@@ -1592,8 +1653,8 @@ blackberry.bbm.platform.users.startBBMChat(function() {
                             <p>Invoked when shared content arrives at the recipient. If the application is not
 running when content is received, then this will be invoked after the application starts and
 is registered with BBM Social Platform.
-<p>This callback must be assigned <b>before</b> the call to <a href="blackberry.bbm.platform.html#.register">register</a>.
-<p>See <a href="blackberry.bbm.platform.users.html#.shareContent">shareContent</a></p>
+<p>This callback must be assigned <b>before</b> the call to <a href="blackberry.bbm.platform.html#.register">blackberry.bbm.platform.register</a>.
+<p>See <a href="blackberry.bbm.platform.users.html#.shareContent">blackberry.bbm.platform.users.shareContent</a></p>
                             <br />
                             
                             
@@ -1672,6 +1733,9 @@ is registered with BBM Social Platform.
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1688,10 +1752,15 @@ is registered with BBM Social Platform.
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            onupdate
+                                            blackberry.bbm.platform.users.onupdate
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, event : String)
+                                                
                                             
                                                                   
                                     
@@ -1781,6 +1850,9 @@ who have joined in an application connection with the current user.</p>
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -1828,6 +1900,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
                                 
                                     
                                         static              
+                                        readonly
                                         <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>[]
                                         
                                         
@@ -1880,6 +1953,9 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1902,7 +1978,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:57 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:16 GMT-0400 (EDT)
         </div>
 
     </div>

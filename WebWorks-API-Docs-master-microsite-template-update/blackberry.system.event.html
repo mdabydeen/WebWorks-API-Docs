@@ -97,7 +97,7 @@
                             
                                 <tr x-ww-support="pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.system.event.html#.deviceBatteryLevelChange">deviceBatteryLevelChange</a>
+                                        <a href="blackberry.system.event.html#.deviceBatteryLevelChange">blackberry.system.event.deviceBatteryLevelChange</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -109,7 +109,7 @@
                             
                                 <tr x-ww-support="pb1.0|pb2.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.system.event.html#.deviceBatteryStateChange">deviceBatteryStateChange</a>
+                                        <a href="blackberry.system.event.html#.deviceBatteryStateChange">blackberry.system.event.deviceBatteryStateChange</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -121,7 +121,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                                     <td class="first_column">
-                                        <a href="blackberry.system.event.html#.onCoverageChange">onCoverageChange</a>
+                                        <a href="blackberry.system.event.html#.onCoverageChange">blackberry.system.event.onCoverageChange</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -133,7 +133,7 @@
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
                                     <td class="first_column">
-                                        <a href="blackberry.system.event.html#.onHardwareKey">onHardwareKey</a>
+                                        <a href="blackberry.system.event.html#.onHardwareKey">blackberry.system.event.onHardwareKey</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -324,7 +324,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.event.html#.deviceBatteryLevelChange">deviceBatteryLevelChange</a>
+                                        <a href="blackberry.system.event.html#.deviceBatteryLevelChange">blackberry.system.event.deviceBatteryLevelChange</a>
                                         
                                     </td>
                                 </tr>
@@ -336,7 +336,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.event.html#.deviceBatteryStateChange">deviceBatteryStateChange</a>
+                                        <a href="blackberry.system.event.html#.deviceBatteryStateChange">blackberry.system.event.deviceBatteryStateChange</a>
                                         
                                     </td>
                                 </tr>
@@ -348,7 +348,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.event.html#.onCoverageChange">onCoverageChange</a>
+                                        <a href="blackberry.system.event.html#.onCoverageChange">blackberry.system.event.onCoverageChange</a>
                                         
                                     </td>
                                 </tr>
@@ -360,7 +360,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.system.event.html#.onHardwareKey">onHardwareKey</a>
+                                        <a href="blackberry.system.event.html#.onHardwareKey">blackberry.system.event.onHardwareKey</a>
                                         
                                     </td>
                                 </tr>
@@ -525,10 +525,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            deviceBatteryLevelChange
+                                            blackberry.system.event.deviceBatteryLevelChange
+                                            
+                                                
+                                                    (onBatteryLevelChange: function(level : Number))
+                                                
                                             
                                                                   
                                     
@@ -543,7 +548,7 @@
                                     
                                         <div class="notice note">                        
                                             <h3>BB10 API Changes</h3>
-                                             This function has been migrated to <a href="blackberry.event.html#.event:batterystatus">batterystatus</a>, <a href="blackberry.event.html#.event:batterylow">batterylow</a>, and <a href="blackberry.event.html#.event:batterycritical">batterycritical</a> in BlackBerry 10.                        
+                                             This function has been migrated to <a href="blackberry.event.html#.event:batterystatus">blackberry.event.batterystatus</a>, <a href="blackberry.event.html#.event:batterylow">blackberry.event.batterylow</a>, and <a href="blackberry.event.html#.event:batterycritical">blackberry.event.batterycritical</a> in BlackBerry 10.                        
                                         </div>
                                     
                                 
@@ -613,6 +618,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -635,10 +643,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            deviceBatteryStateChange
+                                            blackberry.system.event.deviceBatteryStateChange
+                                            
+                                                
+                                                    (onBatteryStateChange: function(state : Number))
+                                                
                                             
                                                                   
                                     
@@ -653,7 +666,7 @@
                                     
                                         <div class="notice note">                        
                                             <h3>BB10 API Changes</h3>
-                                             This function has been migrated to <a href="blackberry.event.html#.event:batterystatus">batterystatus</a>, <a href="blackberry.event.html#.event:batterylow">batterylow</a>, and <a href="blackberry.event.html#.event:batterycritical">batterycritical</a> in BlackBerry 10.                        
+                                             This function has been migrated to <a href="blackberry.event.html#.event:batterystatus">blackberry.event.batterystatus</a>, <a href="blackberry.event.html#.event:batterylow">blackberry.event.batterylow</a>, and <a href="blackberry.event.html#.event:batterycritical">blackberry.event.batterycritical</a> in BlackBerry 10.                        
                                         </div>
                                     
                                 
@@ -723,6 +736,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -745,10 +761,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            onCoverageChange
+                                            blackberry.system.event.onCoverageChange
+                                            
+                                                
+                                                    (onSystemEvent: function())
+                                                
                                             
                                                                   
                                     
@@ -820,6 +841,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -836,10 +860,15 @@
                                     
                                         static              
                                         
+                                        
                                             void
                                         
                                         
-                                            onHardwareKey
+                                            blackberry.system.event.onHardwareKey
+                                            
+                                                
+                                                    (key : Number, onSystemEvent: function())
+                                                
                                             
                                                                   
                                     
@@ -917,6 +946,9 @@
                             
                             
                             
+
+                            
+                            
                 
 
     <br />
@@ -956,10 +988,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_BACK
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1012,6 +1049,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1027,10 +1067,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_MENU
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1083,6 +1128,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1098,10 +1146,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_CONVENIENCE_1
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1154,6 +1207,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1169,10 +1225,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_CONVENIENCE_2
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1225,6 +1286,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1240,10 +1304,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_STARTCALL
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1296,6 +1365,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1311,10 +1383,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_ENDCALL
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1367,6 +1444,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1382,10 +1462,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_VOLUMEDOWN
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1438,6 +1523,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1453,10 +1541,15 @@
                                 
                                     
                                         static              
+                                        
                                         Number
                                         
                                         
                                             KEY_VOLUMEUP
+                                            
+                                                
+                                                    
+                                                
                                             
                                                                   
                                     
@@ -1509,6 +1602,9 @@
                             
                             
                             
+
+                            
+                            
                 
   
 
@@ -1528,7 +1624,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 02 2012 21:07:53 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jun 03 2012 10:53:13 GMT-0400 (EDT)
         </div>
 
     </div>
