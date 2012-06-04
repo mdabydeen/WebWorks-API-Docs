@@ -328,13 +328,13 @@ array('title'=>'IO','link'=>'/html5/apis/blackberry.io.dir.html','id'=>'IO','chi
 
     
             
-    ,array('title'=>'File Transfer','link'=>'/html5/apis/blackberry.io.filetransfer.html','id'=>'File Transfer','children'=>array())
+    ,array('title'=>'FileProperties','link'=>'/html5/apis/blackberry.io.file.FileProperties.html','id'=>'FileProperties','children'=>array())
         
     
 
     
             
-    ,array('title'=>'FileProperties','link'=>'/html5/apis/blackberry.io.file.FileProperties.html','id'=>'FileProperties','children'=>array())
+    ,array('title'=>'FileTransfer','link'=>'/html5/apis/blackberry.io.filetransfer.html','id'=>'FileTransfer','children'=>array())
         
     
 

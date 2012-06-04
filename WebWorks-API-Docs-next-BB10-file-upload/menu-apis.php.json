@@ -327,13 +327,13 @@
 
     
         
-    ,{ "title":"File Transfer", "id":"File Transfer", "link":"/html5/apis/blackberry.io.filetransfer.html", "children":[]}
+    ,{ "title":"FileProperties", "id":"FileProperties", "link":"/html5/apis/blackberry.io.file.FileProperties.html", "children":[]}
         
     
 
     
         
-    ,{ "title":"FileProperties", "id":"FileProperties", "link":"/html5/apis/blackberry.io.file.FileProperties.html", "children":[]}
+    ,{ "title":"FileTransfer", "id":"FileTransfer", "link":"/html5/apis/blackberry.io.filetransfer.html", "children":[]}
         
     
 
