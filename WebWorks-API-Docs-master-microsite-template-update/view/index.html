@@ -11,6 +11,63 @@
 * distributed under the License is distributed on an "AS IS" BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
+* limitations under the License.-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ============================== header ================================= -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>
+        
+            index
+        
+        - BlackBerry WebWorks
+    </title>
+
+    <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
+    <link href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main.min.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="site_container clearfix guide-container">
+        <section  class="page_container references">
+            <div class="row">
+                <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
+                    <div id="sticky-anchor"> </div>
+                    <div class="side-nav-wrapper" id="sticky">
+                        <div class="side-nav-content clearfix" id="none">
+                            <div class="side-nav-section clearfix" id="side-nav-title">
+                                <h3>API Reference</h3>
+                            </div>
+                            <div class="side-nav-section loading clearfix" id="side-nav-parents"> 
+                            </div>
+                            <div class="side-nav-section clearfix" id="side-nav-filter"> 
+                            </div>
+                            <div class="side-nav-section loading clearfix" id="side-nav-children"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-navspacer-bottom"> </div>
+                </nav>
+
+                <div class="column grid_8">
+                        <div class="row">
+                            <article id="main" class="column grid_8" role="main">
+                                <!--
+* Copyright 2010-2011 Research In Motion Limited.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
 * limitations under the License.
 -->
 
@@ -63,3 +120,77 @@ Edit your config.xml file to include a &lt;feature&gt; declaration for your desi
 	</ol>
 
 </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageend.min.js"></script>
+<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/jquery.carouFredSel-4.4.1-packed.js"></script>
+<script type="text/javascript" src="https://client.akamai.com/dlm/dlm.js"></js>
+<script> 
+    global.init('/html5/', 'apis', 'index', '', '/html5/webroot/');
+</script>
+<script>
+var menu, menu_id_str, selected, siblings;
+    menu = null;
+    menu_id_str = $('.side-nav-content').attr('id');
+    if (menu_id_str !== 'none') {
+        menu = menu_id_str;
+    }
+    $(document).ready(function () {
+        stage.initiate();
+        stage.add_measurement('footer_top', function () {
+            var m = $('#main');
+            stage.footer_top = m.offset().top + m.height();
+        }, false);
+        stage.add_measurement('art_height', function () {
+            stage.art_height = $('#main').height();
+        }, false);
+        stage.initiate();
+        sticky.initiate();
+        sizer.initiate(); /* Initiates resizing of menu on pages where it is relevant */
+
+        selected = $('.no_children.item_active').first();
+        selected.siblings().addClass('active_sibling');
+        $("#main a").each(function () {
+            $(this).bind('click', function () {
+                sticky.scrollEvent();
+            });
+        });
+
+    });
+    $(window).load(function () {
+        var container, scrollTo;
+        initMenu(window.location.pathname, menu);
+        reset_size_and_scroll();
+        $(function () {
+            container = $('#side-nav-children');
+            scrollTo = $('.active', container);
+            if (scrollTo.length > 0) {
+                container.scrollTop(scrollTo.offset().top - container.offset().top + container.scrollTop() - 80);
+            }
+        });
+    });
+
+    $(window).resize(function (e) {
+        if (e) { e.stopPropagation(); }
+        reset_size_and_scroll();
+    });
+    $(window).scroll(function (e) {
+        if (e) { e.stopPropagation(); }
+        reset_size_and_scroll();
+    });
+</script>
+<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageload.min.js"></script>
+<script type="text/javascript" src="nav.js"></script>
+
+
+
+</body>
+</html>
+
