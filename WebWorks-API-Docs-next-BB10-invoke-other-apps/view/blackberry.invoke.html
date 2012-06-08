@@ -158,9 +158,9 @@
 
         
             <p>
-                The Invoke object contains methods that interact with other applications.<p/>The invoke() method on the invoke object allows you to pass arguments to the target application. </br>The types of arguments can be one of: <a href="blackberry.invoke.AddressBookArguments.html">blackberry.invoke.AddressBookArguments</a>, <a href="blackberry.invoke.BrowserArguments.html">blackberry.invoke.BrowserArguments</a>,
+                The Invoke object contains methods that interact with other applications.<p/>On BlackBerry OS 5.0+ and BlackBerry PlayBook 1.0+, the <a href="blackberry.invoke.html#.invoke^2">invoke</a> method on the invoke object allows you to pass arguments to the target application. </br>The types of arguments can be one of: <a href="blackberry.invoke.AddressBookArguments.html">blackberry.invoke.AddressBookArguments</a>, <a href="blackberry.invoke.BrowserArguments.html">blackberry.invoke.BrowserArguments</a>,
  <a href="blackberry.invoke.CalendarArguments.html">blackberry.invoke.CalendarArguments</a>, <a href="blackberry.invoke.CameraArguments.html">blackberry.invoke.CameraArguments</a>, <a href="blackberry.invoke.JavaArguments.html">blackberry.invoke.JavaArguments</a>, <a href="blackberry.invoke.MapsArguments.html">blackberry.invoke.MapsArguments</a>, <a href="blackberry.invoke.MemoArguments.html">blackberry.invoke.MemoArguments</a>, <a href="blackberry.invoke.MessageArguments.html">blackberry.invoke.MessageArguments</a>,
- <a href="blackberry.invoke.PhoneArguments.html">blackberry.invoke.PhoneArguments</a>, <a href="blackberry.invoke.SearchArguments.html">blackberry.invoke.SearchArguments</a>, and <a href="blackberry.invoke.TaskArguments.html">blackberry.invoke.TaskArguments</a>.
+ <a href="blackberry.invoke.PhoneArguments.html">blackberry.invoke.PhoneArguments</a>, <a href="blackberry.invoke.SearchArguments.html">blackberry.invoke.SearchArguments</a>, and <a href="blackberry.invoke.TaskArguments.html">blackberry.invoke.TaskArguments</a>.<p/>On BlackBerry 10, the <a href="blackberry.invoke.html#.invoke">invoke</a> method will take arguments in the form of JavaScript object literal.
             </p>
         
 
@@ -673,7 +673,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Invokes another application on the BlackBerry Playbook.</p>
+                <p>Invokes another application on the BlackBerry PlayBook or Blackberry OS 5.0+.</p>
                 <br />
                         
                 
@@ -762,6 +762,11 @@
 
                 
                 
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt; function startCameraApp() {     var args = new blackberry.invoke.CameraArguments();     args.view = blackberry.invoke.CameraArguments.VIEW_RECORDER;     blackberry.invoke.invoke(blackberry.invoke.APP_CAMERA, args); } startCameraApp(); &lt;/script&gt;</pre>
+	
     
             </div>
         
@@ -783,7 +788,7 @@
                                         void
                                     
                                     
-                                        invoke(request : Object, <i>[onInvokeResponse: function]</i>)
+                                        invoke(request : Object, onSuccess : function, onError : function)
                                                               
                                 
                             
@@ -859,13 +864,13 @@
                                             <b>action:</b> The action to be performed by the target.
                                         
                                             <br />
-                                            <b>type:</b> MIME type of data to be acted on. If the mime type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
+                                            <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
                                         
                                             <br />
                                             <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
                                         
                                             <br />
-                                            <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or an error will be thrown.
+                                            <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
                                         
                                     
                                 </td>
@@ -873,21 +878,37 @@
                         
                             
                             <tr>
-                                <td><b>onInvokeResponse</b></td>
+                                <td><b>onSuccess</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess().                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onError</b></td>
                                 <td>
                                     
                                         function(<i>[error: String]</i>)
                                     
-                                    <br /><i>Optional</i>                                                    
+                                                                                        
                                 </td>
                                 <td>
                                     
-                                     Optional callback function that will be called when the invocation framework responds to the request. Expected signature: function onInvokeResponse(error).                         
+                                    Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
                                     
                                         <br />
                                         
                                             <br />
-                                            <b>error:</b>  A String that describes the error if the invocation is not successful, an empty String is returned if the invocation is successful.
+                                            <b>error:</b>  A String that describes the error.
                                         
                                     
                                 </td>
@@ -897,30 +918,6 @@
                                    
                         
                 
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Throws
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                        
-                            <tr>
-                                <td>
-                                    Exception                                                
-                                </td>
-                                <td>
-                                    If request data is a String that contains unicode characters.
-                                </td>
-                            </tr>
-                        
-                    </table>
-                
 
                 
 
@@ -929,7 +926,7 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function openWebLink() {    // open link with any application that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    });}function openWebLinkInBrowser() {    // open link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    });}function openMP3File() {    // open mp3 file with any application that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    });}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    });}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    });}&lt;/script"&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre>
 	
     
             </div>
@@ -1897,11 +1894,6 @@
             <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             
                 
-
-	<h2>Code Example(s)</h2><hr/>
-	
-		<pre>&lt;script type="text/javascript"&gt;function startCameraApp() {             var args = new blackberry.invoke.CameraArguments();             args.view = blackberry.invoke.CameraArguments.VIEW_RECORDER;             blackberry.invoke.invoke(blackberry.invoke.APP_CAMERA, args);} startCameraApp();&lt;/script&gt;</pre>
-	
   
             </div>
         
@@ -1910,7 +1902,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 07 2012 18:33:03 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jun 08 2012 16:55:51 GMT-0400 (EDT)
         </div>
 
     </div>
