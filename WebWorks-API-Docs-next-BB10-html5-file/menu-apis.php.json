@@ -169,9 +169,21 @@
 ]},
             
             
-{ "title":"File", "id":"File", "link":"/html5/apis/fileEntry.html", "children":[    
-    { "title":"HTML5 FileEntry", "id":"HTML5 FileEntry", "link":"/html5/apis/fileEntry.html", "children":[]}
+{ "title":"File", "id":"File", "link":"/html5/apis/File.html", "children":[    
+    { "title":"HTML5 File", "id":"HTML5 File", "link":"/html5/apis/File.html", "children":[]}
             
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileEntry", "id":"HTML5 FileEntry", "link":"/html5/apis/fileEntry.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 Window", "id":"HTML5 Window", "link":"/html5/apis/window.html", "children":[]}
         
     
 
@@ -562,12 +574,6 @@
     
         
     ,{ "title":"HTML5 Web Workers", "id":"HTML5 Web Workers", "link":"/html5/apis/Worker.html", "children":[]}
-        
-    
-
-    
-        
-    ,{ "title":"HTML5 Web Workers", "id":"HTML5 Web Workers", "link":"/html5/apis/window.html", "children":[]}
         
     
 

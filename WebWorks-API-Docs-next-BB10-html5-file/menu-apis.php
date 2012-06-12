@@ -170,9 +170,21 @@ array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event'
 )),
             
             
-array('title'=>'File','link'=>'/html5/apis/fileEntry.html','id'=>'File','children'=>array(
-    array('title'=>'HTML5 FileEntry','link'=>'/html5/apis/fileEntry.html','id'=>'HTML5 FileEntry','children'=>array())
+array('title'=>'File','link'=>'/html5/apis/File.html','id'=>'File','children'=>array(
+    array('title'=>'HTML5 File','link'=>'/html5/apis/File.html','id'=>'HTML5 File','children'=>array())
             
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 FileEntry','link'=>'/html5/apis/fileEntry.html','id'=>'HTML5 FileEntry','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 Window','link'=>'/html5/apis/window.html','id'=>'HTML5 Window','children'=>array())
         
     
 
@@ -563,12 +575,6 @@ array('title'=>'System','link'=>'/html5/apis/blackberry.app.html','id'=>'System'
     
             
     ,array('title'=>'HTML5 Web Workers','link'=>'/html5/apis/Worker.html','id'=>'HTML5 Web Workers','children'=>array())
-        
-    
-
-    
-            
-    ,array('title'=>'HTML5 Web Workers','link'=>'/html5/apis/window.html','id'=>'HTML5 Web Workers','children'=>array())
         
     
 
