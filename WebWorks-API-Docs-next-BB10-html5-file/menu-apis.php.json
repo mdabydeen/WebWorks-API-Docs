@@ -169,9 +169,21 @@
 ]},
             
             
-{ "title":"File", "id":"File", "link":"/html5/apis/File.html", "children":[    
-    { "title":"HTML5 File", "id":"HTML5 File", "link":"/html5/apis/File.html", "children":[]}
+{ "title":"File", "id":"File", "link":"/html5/apis/directoryEntry.html", "children":[    
+    { "title":"HTML5 directoryEntry", "id":"HTML5 directoryEntry", "link":"/html5/apis/directoryEntry.html", "children":[]}
             
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 directoryReader", "id":"HTML5 directoryReader", "link":"/html5/apis/directoryReader.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 File", "id":"HTML5 File", "link":"/html5/apis/File.html", "children":[]}
         
     
 
