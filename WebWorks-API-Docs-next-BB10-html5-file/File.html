@@ -97,6 +97,18 @@
                     
                         <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                             <td>
+                                <a href="File.html#FileSystem">FileSystem</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
                                 <a href="File.html#.copyTo">copyTo</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -317,6 +329,11 @@
                     <ul>
                         
                             <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="File.html#FileSystem">FileSystem</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                                 <a href="File.html#.copyTo">copyTo</a>
                                 
                             </li>
@@ -524,6 +541,129 @@
         
             <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                 <h2>
+                    <a name="FileSystem"></a>
+                    FileSystem
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        FileSystem(message : Object)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>The postMessage() method on Web Workers objects invoked the method of the same name on the port, with the same arguments, and returned the same return value.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>message</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    A message to post when worker is created.                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>Main script:
+
+&lt;script type="text/javascript"&gt;
+  var worker = new Worker('doWork.js');
+
+  worker.addEventListener('message', function(e) {
+       console.log('Worker said: ', e.data);
+   }, false);
+
+&lt;/script&gt;
+
+doWork.js (the worker):
+
+  self.addEventListener('message', function(e) {
+       self.postMessage(e.data);
+   }, false);</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
                     <a name=".copyTo"></a>
                     copyTo
                 </h2>
@@ -602,7 +742,7 @@
                                 <td><b>DirectoryEntry</b></td>
                                 <td>
                                     
-                                        DirectoryEntry
+                                        <a href="DirectoryEntry.html">DirectoryEntry</a>
                                     
                                                                                         
                                 </td>
@@ -1265,7 +1405,7 @@ doWork.js (the worker):
                                 <td><b>DirectoryEntry</b></td>
                                 <td>
                                     
-                                        DirectoryEntry
+                                        <a href="DirectoryEntry.html">DirectoryEntry</a>
                                     
                                                                                         
                                 </td>
@@ -1877,7 +2017,7 @@ doWork.js (the worker):
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 14 2012 14:40:04 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 14 2012 14:44:07 GMT-0400 (EDT)
         </div>
 
     </div>

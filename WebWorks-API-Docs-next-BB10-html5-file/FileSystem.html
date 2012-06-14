@@ -36,14 +36,14 @@
 
         <h1>
             
-                HTML5 Window
+                HTML5 FileSystem
             
         </h1>
 
 
         
             <p>
-                Web Workers objects act as if they had an implicit MessagePort associated with them. This port is part of a channel that is set up when the worker is created and never be garbage collected before the Web Workers object. Only DedicatedWorker is supported.
+                File objects act as if they had an implicit MessagePort associated with them. This port is part of a channel that is set up when the worker is created and never be garbage collected before the Web Workers object. Only DedicatedWorker is supported.
             </p>
         
 
@@ -83,7 +83,7 @@
                         
                             <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                 <td>
-                                    <a href="window.html">window</a>
+                                    <a href="FileSystem.html">FileSystem</a>
                                     <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -95,12 +95,12 @@
                         
                     
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                             <td>
-                                <a href="window.html#.PERSISTENT">PERSISTENT</a>
+                                <a href="FileSystem.html#.name">name</a>
                                 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
@@ -109,7 +109,7 @@
                     
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                             <td>
-                                <a href="window.html#.TEMPORARY">TEMPORARY</a>
+                                <a href="FileSystem.html#.root">root</a>
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -166,7 +166,7 @@
                     <ul>
                         
                             <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                                <a href="window.html">window</a>
+                                <a href="FileSystem.html">FileSystem</a>
                                 
                             </li>
                         
@@ -190,13 +190,13 @@
                 
                     <ul>
                         
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
-                                <a href="window.html#.PERSISTENT">PERSISTENT</a>
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="FileSystem.html#.name">name</a>
                                 
                             </li>
                         
                             <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                                <a href="window.html#.TEMPORARY">TEMPORARY</a>
+                                <a href="FileSystem.html#.root">root</a>
                                 
                             </li>
                         
@@ -225,8 +225,8 @@
         
             <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                 <h2>
-                    <a name="window"></a>
-                    window
+                    <a name="FileSystem"></a>
+                    FileSystem
                 </h2>
                 <hr/>
                  
@@ -236,7 +236,7 @@
                         <tr><td>
                             
                                 
-                                    window
+                                    FileSystem
                                     
                                         (fileName : String)
                                     
@@ -271,7 +271,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Creates a new Worker object.</p>
+                <p>creates a new File Object</p>
                 <br />
                         
                 
@@ -383,15 +383,15 @@
                 </tr></thead>
                 
                 
-                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                         <td>
-                            <a name=".PERSISTENT">PERSISTENT</a>
+                            <a name=".name">name</a>
 
                             
                         </td>
                         <td>
                             
-                                <a href="ApplicationCache.html">ApplicationCache</a>
+                                String
                             
                             
                             
@@ -403,7 +403,7 @@
                         </td>
                         
                         <td >
-                            PERSISTENT storage cannot cleared unless explicitly authorized by the user or the app and requires the user to grant quota to your app
+                            The name of the file system
                             
                                 <br />
                                 
@@ -414,9 +414,6 @@
                         
                         <td class="tdNoWrap">
                             
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
                                 
                                     &nbsp;- BlackBerry PlayBook 1.0+
                                     <br />
@@ -433,13 +430,13 @@
                 
                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                         <td>
-                            <a name=".TEMPORARY">TEMPORARY</a>
+                            <a name=".root">root</a>
 
                             
                         </td>
                         <td>
                             
-                                
+                                <a href="DirectoryEntry.html">DirectoryEntry</a>
                             
                             
                             
@@ -451,7 +448,7 @@
                         </td>
                         
                         <td >
-                            Data stored using TEMPORARY can be removed at the browser's discretion (for example if more space is needed)
+                            The root directory of the file system
                             
                                 <br />
                                 
@@ -513,7 +510,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 14 2012 14:44:30 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 14 2012 14:44:07 GMT-0400 (EDT)
         </div>
 
     </div>
