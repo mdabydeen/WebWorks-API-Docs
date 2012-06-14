@@ -195,13 +195,19 @@
 
     
         
-    ,{ "title":"HTML5 FileError", "id":"HTML5 FileError", "link":"/html5/apis/fileError.html", "children":[]}
+    ,{ "title":"HTML5 FileError", "id":"HTML5 FileError", "link":"/html5/apis/FileError.html", "children":[]}
         
     
 
     
         
-    ,{ "title":"HTML5 FileError", "id":"HTML5 FileError", "link":"/html5/apis/FileError.html", "children":[]}
+    ,{ "title":"HTML5 FileReader", "id":"HTML5 FileReader", "link":"/html5/apis/FileReader.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileWriter", "id":"HTML5 FileWriter", "link":"/html5/apis/FileWriter.html", "children":[]}
         
     
 
