@@ -196,6 +196,18 @@ array('title'=>'File','link'=>'/html5/apis/directoryEntry.html','id'=>'File','ch
 
     
             
+    ,array('title'=>'HTML5 FileError','link'=>'/html5/apis/fileError.html','id'=>'HTML5 FileError','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 FileError','link'=>'/html5/apis/FileError.html','id'=>'HTML5 FileError','children'=>array())
+        
+    
+
+    
+            
     ,array('title'=>'HTML5 Window','link'=>'/html5/apis/window.html','id'=>'HTML5 Window','children'=>array())
         
     
