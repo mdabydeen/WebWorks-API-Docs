@@ -97,6 +97,18 @@
                     
                         <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                             <td>
+                                <a href="FileWriter.html#postMessage">postMessage</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
                                 <a href="FileWriter.html#.fileName">fileName</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -261,6 +273,22 @@
         
     
         
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h3> Functions </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="FileWriter.html#postMessage">postMessage</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
         
     
         
@@ -441,6 +469,131 @@
         
     
 
+    
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name="postMessage"></a>
+                    postMessage
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        postMessage(message : Object)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>The postMessage() method on Web Workers objects invoked the method of the same name on the port, with the same arguments, and returned the same return value.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>message</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    A message to post when worker is created.                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>Main script:
+
+&lt;script type="text/javascript"&gt;
+  var worker = new Worker('doWork.js');
+
+  worker.addEventListener('message', function(e) {
+       console.log('Worker said: ', e.data);
+   }, false);
+
+&lt;/script&gt;
+
+doWork.js (the worker):
+
+  self.addEventListener('message', function(e) {
+       self.postMessage(e.data);
+   }, false);</pre>
+	
+    
+            </div>
+        
     
 
     
@@ -1008,7 +1161,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 14 2012 00:18:21 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 14 2012 00:33:24 GMT-0400 (EDT)
         </div>
 
     </div>
