@@ -802,6 +802,30 @@
                                    
                         
                 
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Throws
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                        
+                            <tr>
+                                <td>
+                                    String                                                
+                                </td>
+                                <td>
+                                    An exception is thrown if <code>create</code> is called more than once with different values for <code>options.invokeTargetId</code> and/or <code>options.appId</code>.
+                                </td>
+                            </tr>
+                        
+                    </table>
+                
 
                 
 
@@ -810,7 +834,7 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target', appId : 'appId1', ppgUrl : 'https://cpcontprovId1.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // or, with an application ID, var ops = { invokeTargetId : 'com.sample.pushtest.target', appId : 'appId1' };blackberry.push.PushService.create(ops, successCallback, failCallback, simChangeCallback);function successCallback(pushService) {   // The create operation was a success   // Use the pushService object to now perform a launchApplicationOnPush, createChannel, destroyChannel, etc.   pushService.createChannel(createChannelCallback);}function failCallback(result) {   // The create operation failed   // You should compare the result code against the error constants in this PushService class that apply for create and   // take the recommended action for that constant   if (result == blackberry.push.PushService.INTERNAL_ERROR) {       // Retry the create up to a certain number of attempts and then display an error to the user   }   // ... handle the other possible error constants from the PushService class}function simChangeCallback() {   // The SIM card was changed and the channel has been destroyed since a new user might be using the device.   // It is recommended that the user of this application be re-authenticated with the Push Initiator    // (if your Push Initiator implementation supports subscription) followed by a call to createChannel.}</pre>
+		<pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target', appId : 'appId1', ppgUrl : 'https://cpcontprovId1.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // or, with an application ID, var ops = { invokeTargetId : 'com.sample.pushtest.target', appId : 'appId1' };try {    blackberry.push.PushService.create(ops, successCallback, failCallback, simChangeCallback);} catch (err) {    console.log("Create was called more than once with different values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {   // The create operation was a success   // Use the pushService object to now perform a launchApplicationOnPush, createChannel, destroyChannel, etc.   pushService.createChannel(createChannelCallback);}function failCallback(result) {   // The create operation failed   // You should compare the result code against the error constants in this PushService class that apply for create and   // take the recommended action for that constant   if (result == blackberry.push.PushService.INTERNAL_ERROR) {       // Retry the create up to a certain number of attempts and then display an error to the user   }   // ... handle the other possible error constants from the PushService class}function simChangeCallback() {   // The SIM card was changed and the channel has been destroyed since a new user might be using the device.   // It is recommended that the user of this application be re-authenticated with the Push Initiator    // (if your Push Initiator implementation supports subscription) followed by a call to createChannel.}</pre>
 	
     
             </div>
@@ -1137,7 +1161,7 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>var pushPayload = pushService.extractPushPayload(invokeRequest);</pre>
+		<pre>var pushPayload = pushService.extractPushPayload(invokeRequest);// pushPayload.data is of type Blob// If the Blob is known to contain text, then do something like this:blobToText(pushPayload.data, "UTF-8", textConversionCallback);// If the Blob is known to contain binary, then do something like this to get an ArrayBuffer:blobToArrayBuffer(pushPayload.data, binaryConversionCallback);function blobToText(blob, encoding, callback) {    var reader = new FileReader();   	     reader.onloadend = function(evt) {         if (evt.target.readyState == FileReader.DONE) {             if (evt.target.error == null) {                 // No errors, get the result and call the callback                 callback(e.target.result);             } else {                 console.log("Error converting Blob to string: " + evt.target.error);             }        }    };          reader.readAsText(blob, encoding);}function textConversionCallback(str) {    console.log("Data received: " + str);}function blobToArrayBuffer(blob, callback) {    var reader = new FileReader();   	    reader.onloadend = function(evt) {        if (evt.target.readyState == FileReader.DONE) {            if (evt.target.error == null) {                // No errors, get the result and call the callback                callback(e.target.result);            } else {                console.log("Error converting Blob to ArrayBuffer: " + evt.target.error);            }        }    };           reader.readAsArrayBuffer(blob);}function binaryConversionCallback(arrayBuffer) {    // Process the ArrayBuffer containing binary content as needed}</pre>
 	
     
             </div>
@@ -2312,7 +2336,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jun 15 2012 09:23:40 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jun 15 2012 15:58:29 GMT-0400 (EDT)
         </div>
 
     </div>
