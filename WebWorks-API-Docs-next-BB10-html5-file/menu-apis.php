@@ -208,25 +208,31 @@ array('title'=>'File','link'=>'/html5/apis/DirectoryEntry.html','id'=>'File','ch
 
     
             
+    ,array('title'=>'HTML5 FileSystem','link'=>'/html5/apis/FileSystem.html','id'=>'HTML5 FileSystem','children'=>array())
+        
+    
+
+    
+            
     ,array('title'=>'HTML5 FileWriter','link'=>'/html5/apis/FileWriter.html','id'=>'HTML5 FileWriter','children'=>array())
         
     
 
     
             
-    ,array('title'=>'HTML5 Window','link'=>'/html5/apis/window.html','id'=>'HTML5 Window','children'=>array())
+    ,array('title'=>'HTML5 LocalFileSystem','link'=>'/html5/apis/LocalFileSystem.html','id'=>'HTML5 LocalFileSystem','children'=>array())
         
     
 
     
+            
+    ,array('title'=>'HTML5 Metadata','link'=>'/html5/apis/Metadata.html','id'=>'HTML5 Metadata','children'=>array())
         
+    
+
+    
             
-)),
-            
-            
-array('title'=>'FileSystem','link'=>'/html5/apis/FileSystem.html','id'=>'FileSystem','children'=>array(
-    array('title'=>'HTML5 FileSystem','link'=>'/html5/apis/FileSystem.html','id'=>'HTML5 FileSystem','children'=>array())
-            
+    ,array('title'=>'HTML5 Window','link'=>'/html5/apis/window.html','id'=>'HTML5 Window','children'=>array())
         
     
 
