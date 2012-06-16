@@ -71,66 +71,6 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                            <td>
-                                <a href="blackberry.widgetcache.html#.clearAll">clearAll</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                            <td>
-                                <a href="blackberry.widgetcache.html#.clearCache">clearCache</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                            <td>
-                                <a href="blackberry.widgetcache.html#.getCacheInformation">getCacheInformation</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                            <td>
-                                <a href="blackberry.widgetcache.html#.getCurrentSize">getCurrentSize</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                            <td>
-                                <a href="blackberry.widgetcache.html#.hasCache">hasCache</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
                 </table>
             </div>
         
@@ -190,63 +130,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.widgetcache.html#.clearAll">clearAll</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.widgetcache.html#.clearCache">clearCache</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.widgetcache.html#.getCacheInformation">getCacheInformation</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.widgetcache.html#.getCurrentSize">getCurrentSize</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.widgetcache.html#.hasCache">hasCache</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -317,7 +200,14 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type=&quot;text/javascript&quot;&gt;  // Clears the cache if its size is over 9000.  function cleanUp() {    if(blackberry.widgetcache.getCurrentSize()&gt;9000) {      blackberry.widgetcache.clearAll();    }  }&lt;/script&gt;</pre>
+		<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+  // Clears the cache if its size is over 9000.
+  function cleanUp() {
+    if(blackberry.widgetcache.getCurrentSize()&gt;9000) {
+      blackberry.widgetcache.clearAll();
+    }
+  }
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -700,7 +590,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:48:14 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:30 GMT-0400 (EDT)
         </div>
 
     </div>

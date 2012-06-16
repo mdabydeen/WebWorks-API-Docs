@@ -43,7 +43,9 @@
 
         
             <p>
-                The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own.
+                The source element allows authors to specify multiple alternative 
+media resources for media elements. It does not represent anything 
+on its own.
             </p>
         
 
@@ -85,54 +87,6 @@
                         
                     
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLSourceElement.html#media">media</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLSourceElement.html#src">src</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLSourceElement.html#track">track</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLSourceElement.html#type">type</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
                 </table>
             </div>
         
@@ -172,74 +126,6 @@
 <h2>API Summary</h2>
     
         
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLSourceElement.html#.documentConstructor">document.createElement("source")</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLSourceElement.html#media">media</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLSourceElement.html#src">src</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLSourceElement.html#track">track</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLSourceElement.html#type">type</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -447,7 +333,9 @@
                         </td>
                         
                         <td >
-                            The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.
+                            The src attribute gives the address of the media resource. The value 
+must be a valid non-empty URL potentially surrounded by spaces. This 
+attribute must be present.
                             
                                 <br />
                                 
@@ -492,7 +380,8 @@
                         </td>
                         
                         <td >
-                            Returns the TextTrack object corresponding to the text track of the track element.
+                            Returns the TextTrack object corresponding to the text track of 
+the track element.
                             
                                 <br />
                                 
@@ -603,7 +492,12 @@
 
 	<h2>Code Example(s)</h2><hr/>
 	
-		<pre>&lt;video controls autoplay&gt; &lt;source src=\&#039;video.mp4\&#039; type=\&#039;video/mp4; codecs=\&quot;avc1.42E01E, mp4a.40.2\&quot;\&#039;&gt; &lt;source src=\&#039;video.ogv\&#039; type=\&#039;video/ogg; codecs=\&quot;theora, vorbis\&quot;\&#039;         onerror=\&quot;fallback(parentNode)\&quot;&gt; ...&lt;/video&gt;</pre>
+		<pre>&lt;video controls autoplay&gt;
+ &lt;source src=\&#039;video.mp4\&#039; type=\&#039;video/mp4; codecs=\&quot;avc1.42E01E, mp4a.40.2\&quot;\&#039;&gt;
+ &lt;source src=\&#039;video.ogv\&#039; type=\&#039;video/ogg; codecs=\&quot;theora, vorbis\&quot;\&#039;
+         onerror=\&quot;fallback(parentNode)\&quot;&gt;
+ ...
+&lt;/video&gt;</pre>
 	
   
             </div>
@@ -613,7 +507,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:51 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:06 GMT-0400 (EDT)
         </div>
 
     </div>

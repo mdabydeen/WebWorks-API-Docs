@@ -85,54 +85,6 @@
                         
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Database.html#changeVersion">changeVersion</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Database.html#readTransaction">readTransaction</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Database.html#transaction">transaction</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Database.html#version">version</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
                 </table>
             </div>
         
@@ -172,85 +124,6 @@
 <h2>API Summary</h2>
     
         
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Database.html#.openDatabase">window.openDatabase</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Database.html#changeVersion">changeVersion</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Database.html#readTransaction">readTransaction</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Database.html#transaction">transaction</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Database.html#version">version</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -306,7 +179,9 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Creates a new database object. If the database already exists, the existing database will be returned and the creation callback will not be invoked.<br><p>Note: A SD card is the required method of storage for databases for 5.x devices</p></p>
+                <p>Creates a new database object. 
+If the database already exists, the existing database will be returned and the creation callback will not be invoked.<br>
+<p>Note: A SD card is the required method of storage for databases for 5.x devices</p></p>
                 <br />
                         
                 
@@ -430,7 +305,40 @@
 	
 		<pre>Database db = window.openDatabase('documents', '1.0', 'Offline document storage', 5*1024*1024);</pre>
 	
-		<pre>/**//Create a namespace to hold our database variableif (typeof mynamespace === 'undefined') {    mynamespace = {};}(function () {    //This method is only called once (the first time the database is created)    function onDBCreate(database) {        //Attach the database because "window.openDatabase" would not have returned it        mynamespace.db = database;        //Create the table in the database        database.transaction(            function (tx) {tx.executeSql('CREATE TABLE tbl_name (key int unique, name text)',                [],                function (tx, res) {                    alert("Table Created Successfully");                },                function (tx, err) {                    alert("ERROR - Table creation failed - code: " + err.code + ", message: " + err.message);                });            }        );    }    if (window.openDatabase) {        //Will either return the existing database or null and call our creation callback onDBCreate        mynamespace.db = window.openDatabase('awesome', '1.0', 'The most awesome database ever', 5 * 1024 * 1024, onDBCreate);    } else {        alert("This device does not have HTML5 Database support");    }}());</pre>
+		<pre>/**
+
+//Create a namespace to hold our database variable
+if (typeof mynamespace === 'undefined') {
+    mynamespace = {};
+}
+
+(function () {
+
+    //This method is only called once (the first time the database is created)
+    function onDBCreate(database) {
+        //Attach the database because "window.openDatabase" would not have returned it
+        mynamespace.db = database;
+        //Create the table in the database
+        database.transaction(
+            function (tx) {tx.executeSql('CREATE TABLE tbl_name (key int unique, name text)',
+                [],
+                function (tx, res) {
+                    alert("Table Created Successfully");
+                },
+                function (tx, err) {
+                    alert("ERROR - Table creation failed - code: " + err.code + ", message: " + err.message);
+                });
+            }
+        );
+    }
+
+    if (window.openDatabase) {
+        //Will either return the existing database or null and call our creation callback onDBCreate
+        mynamespace.db = window.openDatabase('awesome', '1.0', 'The most awesome database ever', 5 * 1024 * 1024, onDBCreate);
+    } else {
+        alert("This device does not have HTML5 Database support");
+    }
+}());</pre>
 	
     
             </div>
@@ -770,7 +678,21 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>function showDocCount(db, span) {	db.<b>readTransaction</b>(		function (t) {			t.executeSql('SELECT COUNT(*) AS c FROM docids', [], 				function (t, r) {					span.textContent = r.rows[0].c;				}, 				function (t, e) {					// couldn't read database					span.textContent = '(unknown: ' + e.message + ')';				}			);		}	);}</pre>
+		<pre>function showDocCount(db, span) {
+	db.<b>readTransaction</b>(
+		function (t) {
+			t.executeSql('SELECT COUNT(*) AS c FROM docids', [], 
+				function (t, r) {
+					span.textContent = r.rows[0].c;
+				}, 
+				function (t, e) {
+					// couldn't read database
+					span.textContent = '(unknown: ' + e.message + ')';
+				}
+			);
+		}
+	);
+}</pre>
 	
     
             </div>
@@ -1055,7 +977,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:50 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:05 GMT-0400 (EDT)
         </div>
 
     </div>

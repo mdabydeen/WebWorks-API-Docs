@@ -43,7 +43,14 @@
 
         
             <p>
-                The track element allows authors to specify explicit external timed text tracks for media elements. It does not represent anything on its own. <br/><br/>There must not be two track element children of the same media element whose kind attributes are in the same state, whose srclang attributes are both missing or have values that represent the same language, and whose label attributes are again both missing or both have the same value.
+                The track element allows authors to specify explicit external timed 
+text tracks for media elements. It does not represent anything 
+on its own. <br/><br/>
+There must not be two track element children of the same media 
+element whose kind attributes are in the same state, whose 
+srclang attributes are both missing or have values that represent 
+the same language, and whose label attributes are again both 
+missing or both have the same value.
             </p>
         
 
@@ -85,66 +92,6 @@
                         
                     
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLTrackElement.html#default">default</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLTrackElement.html#kind">kind</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLTrackElement.html#label">label</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLTrackElement.html#src">src</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="HTMLTrackElement.html#srclang">srclang</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
                 </table>
             </div>
         
@@ -184,79 +131,6 @@
 <h2>API Summary</h2>
     
         
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLTrackElement.html#.documentConstructor">document.createElement("track")</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLTrackElement.html#default">default</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLTrackElement.html#kind">kind</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLTrackElement.html#label">label</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLTrackElement.html#src">src</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLTrackElement.html#srclang">srclang</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -326,7 +200,8 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>var track = document.createElement("track");</pre>
+		<pre>
+var track = document.createElement("track");</pre>
 	
     
             </div>
@@ -427,7 +302,11 @@
                         </td>
                         
                         <td >
-                            The default attribute, if specified, indicates that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate. There must not be more than one track element with the same parent node with the default attribute specified.
+                            The default attribute, if specified, indicates that the track is 
+to be enabled if the user's preferences do not indicate that 
+another track would be more appropriate. There must not be more 
+than one track element with the same parent node with the default 
+attribute specified.
                             
                                 <br />
                                 
@@ -470,7 +349,8 @@
                         </td>
                         
                         <td >
-                            kind is one of the following strings "subtitles", "captions", "descriptions", "chapters", "metadata"
+                            kind is one of the following strings "subtitles", "captions", 
+"descriptions", "chapters", "metadata"
                             
                                 <br />
                                 
@@ -513,7 +393,12 @@
                         </td>
                         
                         <td >
-                            The label attribute gives a user-readable title for the track. This title is used by user agents when listing subtitle, caption, and audio description tracks in their user interface<br/><br/>The value of the label attribute, if the attribute is present, must not be the empty string.
+                            The label attribute gives a user-readable title for the track. This 
+title is used by user agents when listing subtitle, caption, 
+and audio description tracks in their user interface<br/><br/>
+
+The value of the label attribute, if the attribute is present, 
+must not be the empty string.
                             
                                 <br />
                                 
@@ -556,7 +441,9 @@
                         </td>
                         
                         <td >
-                            The src attribute gives the address of the text track data. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be presen
+                            The src attribute gives the address of the text track data. The 
+value must be a valid non-empty URL potentially surrounded by 
+spaces. This attribute must be presen
                             
                                 <br />
                                 
@@ -599,7 +486,9 @@
                         </td>
                         
                         <td >
-                            The srclang attribute gives the language of the text track data. The value must be a valid BCP 47 language tag. This attribute must be present if the element's kind attribute is in the subtitles state.
+                            The srclang attribute gives the language of the text track data. 
+The value must be a valid BCP 47 language tag. This attribute must 
+be present if the element's kind attribute is in the subtitles state.
                             
                                 <br />
                                 
@@ -671,7 +560,12 @@
 
 	<h2>Code Example(s)</h2><hr/>
 	
-		<pre>&lt;video src=\&quot;brave.webm\&quot;&gt; &lt;track kind=subtitles src=brave.en.vtt srclang=en label=\&quot;English\&quot;&gt; &lt;track kind=captions src=brave.en.vtt srclang=en label=\&quot;English for the Hard of Hearing\&quot;&gt; &lt;track kind=subtitles src=brave.fr.vtt srclang=fr label=\&quot;Fran&ccedil;ais\&quot;&gt; &lt;track kind=subtitles src=brave.de.vtt srclang=de label=\&quot;Deutsch\&quot;&gt;&lt;/video&gt;</pre>
+		<pre>&lt;video src=\&quot;brave.webm\&quot;&gt;
+ &lt;track kind=subtitles src=brave.en.vtt srclang=en label=\&quot;English\&quot;&gt;
+ &lt;track kind=captions src=brave.en.vtt srclang=en label=\&quot;English for the Hard of Hearing\&quot;&gt;
+ &lt;track kind=subtitles src=brave.fr.vtt srclang=fr label=\&quot;Fran&ccedil;ais\&quot;&gt;
+ &lt;track kind=subtitles src=brave.de.vtt srclang=de label=\&quot;Deutsch\&quot;&gt;
+&lt;/video&gt;</pre>
 	
   
             </div>
@@ -681,7 +575,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:51 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:06 GMT-0400 (EDT)
         </div>
 
     </div>

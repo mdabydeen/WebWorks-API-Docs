@@ -43,7 +43,17 @@
 
         
             <p>
-                Acceleration data is given in meters per second squared and uses the body axes defined in the device orientation event. Acceleration data (without the effect of gravity) cannot be provided when there is a lack of a gyroscope. Implementations that are unable to provide acceleration data without the effect of gravity may instead supply the acceleration including the effect of gravity. <p>The values reported are equal to the acceleration of the device, plus an acceleration equal and opposite to the acceleration due to gravity.This is less useful in many applications but is provided as a means of providing best-effort support. These values can be stored and manipulated in variables outside the event scope. These values can be used to control the motion of objects defined on the DOM by the device's gyroscope and accelerometer. <br><br> <image src="images/xyz.jpg"> <br><br><p>Data Examples= A device lying flat on a horizontal surface with the screen upmost has an acceleration of zero and the following value for accelerationIncludingGravity=    <p><i> {x= 0,     y= 0,     z= 9.81};</i></p></p>
+                Acceleration data is given in meters per second squared and uses the body axes defined in the device orientation event. Acceleration data (without the effect of gravity) cannot be provided when there is a lack of a gyroscope. 
+Implementations that are unable to provide acceleration data without the effect of gravity may instead supply the acceleration including the effect of gravity. 
+<p>The values reported are equal to the acceleration of the device, plus an acceleration equal and opposite to the acceleration due to gravity.
+This is less useful in many applications but is provided as a means of providing best-effort support. 
+These values can be stored and manipulated in variables outside the event scope. These values can be used to control the motion of objects defined on the DOM by the device's gyroscope and accelerometer. 
+<br><br> <image src="images/xyz.jpg"> <br><br>
+<p>Data Examples= 
+A device lying flat on a horizontal surface with the screen upmost has an acceleration of zero and the following value for accelerationIncludingGravity=
+    <p><i> {x= 0,
+     y= 0,
+     z= 9.81};</i></p></p>
             </p>
         
 
@@ -70,42 +80,6 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                    
-                        <tr x-ww-support="pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Acceleration.html#x">x</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Acceleration.html#y">y</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Acceleration.html#z">z</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
                     
                 </table>
             </div>
@@ -146,53 +120,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|ripple">
-                                <a href="Acceleration.html#x">x</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|ripple">
-                                <a href="Acceleration.html#y">y</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|ripple">
-                                <a href="Acceleration.html#z">z</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -434,7 +361,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:48 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:02 GMT-0400 (EDT)
         </div>
 
     </div>

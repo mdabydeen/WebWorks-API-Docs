@@ -43,7 +43,8 @@
 
         
             <p>
-                HTML Element<br/><br/>The touchstart, touchend, touchmove, touchenter, touchleave, touchcancel events must be defined on an element.
+                HTML Element<br/><br/>
+The touchstart, touchend, touchmove, touchenter, touchleave, touchcancel events must be defined on an element.
             </p>
         
 
@@ -86,78 +87,6 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="Element.html#event:ontouchcancel">ontouchcancel</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="Element.html#event:ontouchend">ontouchend</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="Element.html#event:ontouchenter">ontouchenter</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="Element.html#event:ontouchleave">ontouchleave</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="Element.html#event:ontouchmove">ontouchmove</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="Element.html#event:ontouchstart">ontouchstart</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
                 </table>
             </div>
         
@@ -197,68 +126,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                <h3> Events </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="Element.html#event:ontouchcancel">ontouchcancel</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="Element.html#event:ontouchend">ontouchend</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="Element.html#event:ontouchenter">ontouchenter</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="Element.html#event:ontouchleave">ontouchleave</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="Element.html#event:ontouchmove">ontouchmove</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="Element.html#event:ontouchstart">ontouchstart</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -318,7 +185,14 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>A user agent must dispatch this event type to indicate when a touch point has been disrupted in an implementation-specific manner, such as a synchronous event or action originating from the UA canceling the touch, or the touch point leaving the document window into a non-document area which is capable of handling user interactions. (e.g. The UA's native user interface, plug-ins) A user agent may also dispatch this event type when the user places more touch points on the touch surface than the device or implementation is configured to store, in which case the earliest Touch object in the TouchList should be removed.</p>
+                <p>A user agent must dispatch this event type to indicate when a touch point has been 
+disrupted in an implementation-specific manner, such as a synchronous event or action 
+originating from the UA canceling the touch, or the touch point leaving the document 
+window into a non-document area which is capable of handling user interactions. 
+(e.g. The UA's native user interface, plug-ins) A user agent may also dispatch this 
+event type when the user places more touch points on the touch surface than the device 
+or implementation is configured to store, in which case the earliest Touch object in 
+the TouchList should be removed.</p>
                 <br />
                         
                 
@@ -418,7 +292,16 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>A user agent must dispatch this event type to indicate when the user removes a touch point from the touch surface, also including cases where the touch point physically leaves the touch surface, such as being dragged off of the screen. <br/><br/>The target of this event must be the same Element that received the touchstart event when this touch point was placed on the surface, even if the touch point has since moved outside the interactive area of the target element.<br/><br/>The touch point or points that were removed must be included in the changedTouches attribute of the TouchEvent, and must not be included in the touches and targetTouches attributes.</p>
+                <p>A user agent must dispatch this event type to indicate when the user removes a touch point 
+from the touch surface, also including cases where the touch point physically leaves the 
+touch surface, such as being dragged off of the screen. <br/><br/>
+
+The target of this event must be the same Element that received the touchstart event when 
+this touch point was placed on the surface, even if the touch point has since moved outside 
+the interactive area of the target element.<br/><br/>
+
+The touch point or points that were removed must be included in the changedTouches attribute 
+of the TouchEvent, and must not be included in the touches and targetTouches attributes.</p>
                 <br />
                         
                 
@@ -518,7 +401,8 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>A user agent must dispatch this event type to indicate when a touch point moves onto the interactive area defined by a DOM element. Events of this type must not bubble.</p>
+                <p>A user agent must dispatch this event type to indicate when a touch point moves onto the 
+interactive area defined by a DOM element. Events of this type must not bubble.</p>
                 <br />
                         
                 
@@ -618,7 +502,8 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>A user agent must dispatch this event type to indicate when a touch point moves off the interactive area defined by a DOM element. Events of this type must not bubble.</p>
+                <p>A user agent must dispatch this event type to indicate when a touch point moves off the 
+interactive area defined by a DOM element. Events of this type must not bubble.</p>
                 <br />
                         
                 
@@ -718,7 +603,19 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>A user agent must dispatch this event type to indicate when the user moves a touch point along the touch surface.<br/><br/>The target of this event must be the same Element that received the touchstart event when this touch point was placed on the surface, even if the touch point has since moved outside the interactive area of the target element.<br/><br/>If the values of radiusX, radiusY, rotationAngle, or force are known, then the user agent also must dispatch this event type to indicate when any of these attributes of a touch point have changed.<br/><br/>Note that the rate at which the user agent sends touchmove events is implementation-defined, and may depend on hardware capabilities and other implementation details.</p>
+                <p>A user agent must dispatch this event type to indicate when the user moves a touch point along 
+the touch surface.<br/><br/>
+
+The target of this event must be the same Element that received the touchstart event when this 
+touch point was placed on the surface, even if the touch point has since moved outside the 
+interactive area of the target element.<br/><br/>
+
+If the values of radiusX, radiusY, rotationAngle, or force are known, then the user agent 
+also must dispatch this event type to indicate when any of these attributes of a touch point 
+have changed.<br/><br/>
+
+Note that the rate at which the user agent sends touchmove events is implementation-defined, 
+and may depend on hardware capabilities and other implementation details.</p>
                 <br />
                         
                 
@@ -818,7 +715,9 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>A user agent must dispatch this event type to indicate when the user places a touch point on the touch surface. <br/><br/>The target of this event must be an Element.</p>
+                <p>A user agent must dispatch this event type to indicate when the user places a touch point 
+on the touch surface. <br/><br/>
+The target of this event must be an Element.</p>
                 <br />
                         
                 
@@ -907,11 +806,31 @@
 
 	<h2>Code Example(s)</h2><hr/>
 	
-		<pre>&lt;html&gt;&lt;head&gt;&lt;title&gt;sample&lt;/title&gt;&lt;/head&gt;  &lt;body&gt;    &lt;img src=&quot;button.png&quot; ontouchstart=&quot;alert(event.target)&quot; /&gt;  &lt;/body&gt;&lt;/html&gt;</pre>
+		<pre>&lt;html&gt;&lt;head&gt;&lt;title&gt;sample&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;button.png&quot; ontouchstart=&quot;alert(event.target)&quot; /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 	
-		<pre>var img = document.createElement('img');img.ontouchstart=function(e) { for(var i = 0; I < e. touches.length; i++){   var touch = touches[i];   var x = touch.clientX;   var y = touch.clientY;   // do something}</pre>
+		<pre>var img = document.createElement('img');
+img.ontouchstart=function(e) { 
+
+for(var i = 0; I < e. touches.length; i++)
+{
+   var touch = touches[i];
+
+   var x = touch.clientX;
+   var y = touch.clientY;
+
+   // do something
+}</pre>
 	
-		<pre>preventMove = function(e) {   evt.preventDefault();   window.scroll(0, 0);   return false;};window.document.addEventListener('touchmove', preventMove, false);</pre>
+		<pre>preventMove = function(e) {
+   evt.preventDefault();
+   window.scroll(0, 0);
+   return false;
+};
+window.document.addEventListener('touchmove', preventMove, false);</pre>
 	
   
             </div>
@@ -921,7 +840,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:51 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:05 GMT-0400 (EDT)
         </div>
 
     </div>

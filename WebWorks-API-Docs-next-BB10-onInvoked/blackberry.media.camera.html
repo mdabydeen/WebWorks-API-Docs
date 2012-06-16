@@ -43,7 +43,9 @@
 
         
             <p>
-                <p>Using Camera API allows to invoke the native camera application to record video or take a picture and receive a path to the file stored.</p><p>The methods are static and don't required to create an instance of a camera.</p><p>Note that the application will require the user to grant it input simulation and file api permissions for this extension to work on the BlackBerry.</p>
+                <p>Using Camera API allows to invoke the native camera application to record video or take a picture and receive a path to the file stored.</p>
+<p>The methods are static and don't required to create an instance of a camera.</p>
+<p>Note that the application will require the user to grant it input simulation and file api permissions for this extension to work on the BlackBerry.</p>
             </p>
         
 
@@ -70,42 +72,6 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                            <td>
-                                <a href="blackberry.media.camera.html#.close">close</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="blackberry.media.camera.html#.takePicture">takePicture</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="blackberry.media.camera.html#.takeVideo">takeVideo</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
                     
                 </table>
             </div>
@@ -179,53 +145,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.media.camera.html#.close">close</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="blackberry.media.camera.html#.takePicture">takePicture</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="blackberry.media.camera.html#.takeVideo">takeVideo</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -296,7 +215,18 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>function takeVideo() {  try {    blackberry.media.camera.takeVideo(successCB);  } catch(e) {    alert("Error in supported: " + e);  }}function successCB(filePath) {  blackberry.media.camera.close();  // do something with filePath}</pre>
+		<pre>function takeVideo() {
+  try {
+    blackberry.media.camera.takeVideo(successCB);
+  } catch(e) {
+    alert("Error in supported: " + e);
+  }
+}
+
+function successCB(filePath) {
+  blackberry.media.camera.close();
+  // do something with filePath
+}</pre>
 	
     
             </div>
@@ -589,7 +519,25 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>function takeVideo() {  try {    blackberry.media.camera.takeVideo(successCB, closedCB, errorCB);  } catch(e) {    alert("Error in supported: " + e);  }}function successCB(filePath) {  alert("Succeed: " + filePath);}function closedCB() {  alert("Camera closed event");}function errorCB(e) {  alert("Error occured: " + e);}</pre>
+		<pre>function takeVideo() {
+  try {
+    blackberry.media.camera.takeVideo(successCB, closedCB, errorCB);
+  } catch(e) {
+    alert("Error in supported: " + e);
+  }
+}
+
+function successCB(filePath) {
+  alert("Succeed: " + filePath);
+}
+
+function closedCB() {
+  alert("Camera closed event");
+}
+
+function errorCB(e) {
+  alert("Error occured: " + e);
+}</pre>
 	
     
             </div>
@@ -638,7 +586,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:49 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:03 GMT-0400 (EDT)
         </div>
 
     </div>

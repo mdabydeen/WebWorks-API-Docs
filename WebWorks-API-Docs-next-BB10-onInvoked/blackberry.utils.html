@@ -71,66 +71,6 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.utils.html#.blobToString">blobToString</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0">
-                            <td>
-                                <a href="blackberry.utils.html#.documentToBlob">documentToBlob</a>
-                                <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.utils.html#.generateUniqueId">generateUniqueId</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.utils.html#.parseURL">parseURL</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
                 </table>
             </div>
         
@@ -190,70 +130,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.html#.blobToString">blobToString</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0">
-                                <a href="blackberry.utils.html#.documentToBlob">documentToBlob</a>
-                                
-                                    <span class="depricate">**</span>
-                                    
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.html#.generateUniqueId">generateUniqueId</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.html#.parseURL">parseURL</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-        <div x-ww-support="bb5.0">
-            <h4>** Marked for Deprecation</h4>
-        </div>
-    
-</div>
-
 
 
         
@@ -355,7 +231,12 @@
                                 </td>
                                 <td>
                                     
-                                    The Blob object to be converted.<br>The acceptable blob size is documented below:<br><table class="confluenceTable">  <tr><th class="confluenceTh">&nbsp;</th><th class="confluenceTh">OS 5.0</th><th class="confluenceTh">OS 6.0</th><th class="confluenceTh">OS 7.0</th></tr>  <tr><td class="confluenceTd">BASE64</td><td class="confluenceTd" colspan="3" style="text-align:center">&lt;= 89,678 bytes</td></tr>  <tr><td class="confluenceTd">Other Encodings</td><td class="confluenceTd">&lt;= 524,288 bytes (512KB)</td><td class="confluenceTd">&lt;= 2,097,152 bytes (2MB)</td><td class="confluenceTd">&lt;= 524,236 bytes (511KB)</td></tr>	 	 </table>                         
+                                    The Blob object to be converted.<br>The acceptable blob size is documented below:<br>
+<table class="confluenceTable">
+  <tr><th class="confluenceTh">&nbsp;</th><th class="confluenceTh">OS 5.0</th><th class="confluenceTh">OS 6.0</th><th class="confluenceTh">OS 7.0</th></tr>
+  <tr><td class="confluenceTd">BASE64</td><td class="confluenceTd" colspan="3" style="text-align:center">&lt;= 89,678 bytes</td></tr>
+  <tr><td class="confluenceTd">Other Encodings</td><td class="confluenceTd">&lt;= 524,288 bytes (512KB)</td><td class="confluenceTd">&lt;= 2,097,152 bytes (2MB)</td><td class="confluenceTd">&lt;= 524,236 bytes (511KB)</td></tr>	 	 
+</table>                         
                                     
                                 </td>
                             </tr>
@@ -388,7 +269,25 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt; var fileName = "local:///data/fooFile.txt"; function handleOpenedFile(fullPath, blobData) // callback function that is passed when using the blackberry.io.file.readFile API {   xmlString = blackberry.utils.blobToString(blobData);  } try{     if (blackberry.io.file.exists(fileName)) {		    blackberry.io.file.readFile(fileName, handleOpenedFile);     }  } catch (ex) {     alert("exist: " + ex.toString(0)); }&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;
+
+ var fileName = "local:///data/fooFile.txt";
+
+ function handleOpenedFile(fullPath, blobData) // callback function that is passed when using the blackberry.io.file.readFile API
+ {
+   xmlString = blackberry.utils.blobToString(blobData); 
+ }
+
+ try{
+     if (blackberry.io.file.exists(fileName)) {
+		    blackberry.io.file.readFile(fileName, handleOpenedFile);
+     } 
+ }
+ catch (ex) {
+     alert("exist: " + ex.toString(0));
+ }
+
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -429,7 +328,9 @@
                     <table>
                         <tr><td>
                             <h3>Deprecation Notice:</h3>
-                            This API is deprecated, please use <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a> instead.<br/><br/>For example:<pre>var foo = blackberry.utils.stringToBlob( document.toString() );</pre>
+                            This API is deprecated, please use <a href="blackberry.utils.html#.stringToBlob">stringToBlob</a> instead.<br/><br/>
+For example:
+<pre>var foo = blackberry.utils.stringToBlob( document.toString() );</pre>
                         </td></tr>
                     </table>                
                            
@@ -576,7 +477,11 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;var myID = blackberry.utils.generateUniqueId();&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;
+
+var myID = blackberry.utils.generateUniqueId();
+
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -690,7 +595,13 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;var myURL = "https://bdsc.webapps.blackberry.com/html5/";var URLObj = blackberry.utils.URL(myURL); &lt;/script&gt;</pre>
+		<pre>
+&lt;script type="text/javascript"&gt;
+var myURL = "https://bdsc.webapps.blackberry.com/html5/";
+
+var URLObj = blackberry.utils.URL(myURL); 
+
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -787,7 +698,12 @@
                                 </td>
                                 <td>
                                     
-                                    The string to be converted.<br>The acceptable string length is documented below:<br><table class="confluenceTable">  <tr><th class="confluenceTh">&nbsp;</th><th class="confluenceTh">OS 5.0</th><th class="confluenceTh">OS 6.0</th><th class="confluenceTh">OS 7.0</th></tr>  <tr><td class="confluenceTd">BASE64</td><td class="confluenceTd" colspan="3" style="text-align:center">&lt;= 65,535</td></tr>  <tr><td class="confluenceTd">Other Encodings</td><td class="confluenceTd">&lt;= 524,288</td><td class="confluenceTd">&lt;= 2,097,152</td><td class="confluenceTd">&lt;= 524,236</td></tr>	 	 </table>                         
+                                    The string to be converted.<br>The acceptable string length is documented below:<br>
+<table class="confluenceTable">
+  <tr><th class="confluenceTh">&nbsp;</th><th class="confluenceTh">OS 5.0</th><th class="confluenceTh">OS 6.0</th><th class="confluenceTh">OS 7.0</th></tr>
+  <tr><td class="confluenceTd">BASE64</td><td class="confluenceTd" colspan="3" style="text-align:center">&lt;= 65,535</td></tr>
+  <tr><td class="confluenceTd">Other Encodings</td><td class="confluenceTd">&lt;= 524,288</td><td class="confluenceTd">&lt;= 2,097,152</td><td class="confluenceTd">&lt;= 524,236</td></tr>	 	 
+</table>                         
                                     
                                 </td>
                             </tr>
@@ -820,7 +736,45 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;var myBlob = blackberry.utils.stringToBlob ("This is some sort of string that I would like to encode", "UTF-8");var filePath, fileDir;// Check what device you are usingvar OSversion = blackberry.system.softwareVersion; // Note: On the Playbook, only the OS Version will actually say the what type of device it is. For handheld device, blackberry.system.model will return the actual model (ie. 9780)// Establishing where to save my file depending on which device I haveif (OSversion.indexOf("Playbook") == -1) { // Device is BlackBerry       //Now need to check if there is a SD card on the device   if (blackberry.io.dir.exists("file:///SDCard")) { //The only way to see if the SDCard is inserted into the device is by checking to see if the directory is there.         fileDir = "file:///SDCard/dir1";         blackberry.io.dir.createNewDir(fileDir);   } else { // Apparently there no SD card, so we're saving the blob on the local device         fileDir = "file:///store/dir1";         blackberry.io.dir.createNewDir(fileDir);   }} else {   // Device is Playbook   // To make this example easier, I did not turn on "File Sharing" and choosing to save in the app storage area.	    fileDir = blackberry.io.dir.appDirs.app.storage.path + "/dir1";                                                        blackberry.io.dir.createNewDir(fileDir);}try {   blackberry.io.file.saveFile(filedir + "/blob.txt", myBlob);} catch (e) {   alert('e.message = ' + e.message);}			&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;
+
+var myBlob = blackberry.utils.stringToBlob ("This is some sort of string that I would like to encode", "UTF-8");
+var filePath, fileDir;
+
+// Check what device you are using
+var OSversion = blackberry.system.softwareVersion; // Note: On the Playbook, only the OS Version will actually say the what type of device it is. For handheld device, blackberry.system.model will return the actual model (ie. 9780)
+
+// Establishing where to save my file depending on which device I have
+if (OSversion.indexOf("Playbook") == -1) { // Device is BlackBerry
+    
+   //Now need to check if there is a SD card on the device
+   if (blackberry.io.dir.exists("file:///SDCard")) { //The only way to see if the SDCard is inserted into the device is by checking to see if the directory is there.
+
+         fileDir = "file:///SDCard/dir1";
+         blackberry.io.dir.createNewDir(fileDir);
+
+   } else { // Apparently there no SD card, so we're saving the blob on the local device
+
+         fileDir = "file:///store/dir1";
+         blackberry.io.dir.createNewDir(fileDir);
+
+   }
+} else {
+   // Device is Playbook
+
+   // To make this example easier, I did not turn on "File Sharing" and choosing to save in the app storage area.	 
+   fileDir = blackberry.io.dir.appDirs.app.storage.path + "/dir1";  
+                                                   
+   blackberry.io.dir.createNewDir(fileDir);
+}
+
+try {
+   blackberry.io.file.saveFile(filedir + "/blob.txt", myBlob);
+} catch (e) {
+   alert('e.message = ' + e.message);
+}			
+
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -869,7 +823,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:55 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:09 GMT-0400 (EDT)
         </div>
 
     </div>

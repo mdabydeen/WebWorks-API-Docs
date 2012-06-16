@@ -43,7 +43,11 @@
 
         
             <p>
-                All media elements have an associated error status, which records the last error the element encountered since its resource selection algorithm was last invoked. The error attribute, on getting, must return the MediaError object created for this last error, or null if there has not been an error.
+                All media elements have an associated error status, which records 
+the last error the element encountered since its resource selection 
+algorithm was last invoked. The error attribute, on getting, must 
+return the MediaError object created for this last error, or null if 
+there has not been an error.
             </p>
         
 
@@ -70,66 +74,6 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="MediaError.html#code">code</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="MediaError.html#.MEDIA_ERR_ABORTED">MEDIA_ERR_ABORTED</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="MediaError.html#.MEDIA_ERR_NETWORK">MEDIA_ERR_NETWORK</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="MediaError.html#.MEDIA_ERR_DECODE">MEDIA_ERR_DECODE</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="MediaError.html#.MEDIA_ERR_SRC_NOT_SUPPORTED">MEDIA_ERR_SRC_NOT_SUPPORTED</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
                     
                 </table>
             </div>
@@ -170,74 +114,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="MediaError.html#code">code</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Constants </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="MediaError.html#.MEDIA_ERR_ABORTED">MEDIA_ERR_ABORTED</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="MediaError.html#.MEDIA_ERR_NETWORK">MEDIA_ERR_NETWORK</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="MediaError.html#.MEDIA_ERR_DECODE">MEDIA_ERR_DECODE</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="MediaError.html#.MEDIA_ERR_SRC_NOT_SUPPORTED">MEDIA_ERR_SRC_NOT_SUPPORTED</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -317,7 +193,8 @@
                         </td>
                         
                         <td >
-                            The code attribute of a MediaError object must return the code for the error
+                            The code attribute of a MediaError object must return the code for 
+the error
                             
                                 <br />
                                 
@@ -422,7 +299,8 @@
                         </td>
                         
                         <td >
-                            The fetching process for the media resource was aborted by the user agent at the user's request.
+                            The fetching process for the media resource was aborted by the user 
+agent at the user's request.
                             
                                 <br />
                                 
@@ -462,7 +340,9 @@
                         </td>
                         
                         <td >
-                            A network error of some description caused the user agent to stop fetching the media resource, after the resource was established to be usable.
+                            A network error of some description caused the user agent to stop 
+fetching the media resource, after the resource was established to 
+be usable.
                             
                                 <br />
                                 
@@ -502,7 +382,8 @@
                         </td>
                         
                         <td >
-                            An error of some description occurred while decoding the media resource, after the resource was established to be usable.
+                            An error of some description occurred while decoding the media 
+resource, after the resource was established to be usable.
                             
                                 <br />
                                 
@@ -612,7 +493,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:52 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:06 GMT-0400 (EDT)
         </div>
 
     </div>

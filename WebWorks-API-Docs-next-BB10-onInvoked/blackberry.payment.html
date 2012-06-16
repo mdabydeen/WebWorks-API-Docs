@@ -43,7 +43,15 @@
 
         
             <p>
-                Entry point for purchasing digital goods.<p>API that permits BlackBerry device users to initiate the purchase of digital goods from within your application. For example, this API can be used to allow users to purchase additional levels in a gaming application, music from a radio application, or any other digital good registered on the Vendor Portal for BlackBerry App World. The digital good being purchased must be associated with the calling application in the Vendor Portal for BlackBerry App World.<p>Purchases are initiated via the purchase method. The amount of time that elapses before a response is returned depends on how quickly the user completes the purchase process (which may include steps such as signing in to their BlackBerry ID account and setting up their preferred billing method). The purchase method dispatches a callbackOnSuccess on success, or dispatches a callbackOnFailure on failure.<p>When calling the purchase method only the ID or SKU of the digital good to be purchased is required; it is not necessary to provide both, and all other arguments are optional. If both the ID and SKU are provided, then the ID takes precedence; the SKU is only used if the digital good could not be located on the Payment Service server based on the ID.<p>If an application requires a list of its digital goods that have already been purchased by the user (for example, to avoid offering for sale a digital good the user already owns), such a list can be obtained with the <a href="blackberry.payment.html#.getExistingPurchases">getExistingPurchases</a> method. This method requires the same user interaction as the purchase method, so it can also be a long-running method.
+                Entry point for purchasing digital goods.
+<p>
+API that permits BlackBerry device users to initiate the purchase of digital goods from within your application. For example, this API can be used to allow users to purchase additional levels in a gaming application, music from a radio application, or any other digital good registered on the Vendor Portal for BlackBerry App World. The digital good being purchased must be associated with the calling application in the Vendor Portal for BlackBerry App World.
+<p>
+Purchases are initiated via the purchase method. The amount of time that elapses before a response is returned depends on how quickly the user completes the purchase process (which may include steps such as signing in to their BlackBerry ID account and setting up their preferred billing method). The purchase method dispatches a callbackOnSuccess on success, or dispatches a callbackOnFailure on failure.
+<p>
+When calling the purchase method only the ID or SKU of the digital good to be purchased is required; it is not necessary to provide both, and all other arguments are optional. If both the ID and SKU are provided, then the ID takes precedence; the SKU is only used if the digital good could not be located on the Payment Service server based on the ID.
+<p>
+If an application requires a list of its digital goods that have already been purchased by the user (for example, to avoid offering for sale a digital good the user already owns), such a list can be obtained with the <a href="blackberry.payment.html#.getExistingPurchases">getExistingPurchases</a> method. This method requires the same user interaction as the purchase method, so it can also be a long-running method.
             </p>
         
 
@@ -70,42 +78,6 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="blackberry.payment.html#.getExistingPurchases">getExistingPurchases</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="blackberry.payment.html#.purchase">purchase</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="blackberry.payment.html#.developmentMode">developmentMode</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
                     
                 </table>
             </div>
@@ -166,64 +138,6 @@
 <h2>API Summary</h2>
     
         
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="blackberry.payment.html#.getExistingPurchases">getExistingPurchases</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="blackberry.payment.html#.purchase">purchase</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="blackberry.payment.html#.developmentMode">developmentMode</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-    
-
-    
-</div>
-
 
 
         
@@ -337,7 +251,23 @@
                                         <br />
                                         
                                             <br />
-                                            <b>data:</b> A string representing a literal array of <a href="Purchase.html">Purchase</a> items is passed as a parameter in the form below:<pre>[{"transactionID": "00000001","digitalGoodID": "123","date": "1234567891011","digitalGoodSKU": "SKU_1","licenseKey": null,"metaData": "My Metadata"},{"transactionID": "00000002","digitalGoodID": "456","date": "1234567891011","digitalGoodSKU": "SKU_2","licenseKey": null,"metaData": "My Metadata"}]</pre>
+                                            <b>data:</b> A string representing a literal array of <a href="Purchase.html">Purchase</a> items is passed as a parameter in the form below:
+<pre>[{
+"transactionID": "00000001",
+"digitalGoodID": "123",
+"date": "1234567891011",
+"digitalGoodSKU": "SKU_1",
+"licenseKey": null,
+"metaData": "My Metadata"
+},
+{
+"transactionID": "00000002",
+"digitalGoodID": "456",
+"date": "1234567891011",
+"digitalGoodSKU": "SKU_2",
+"licenseKey": null,
+"metaData": "My Metadata"
+}]</pre>
                                         
                                     
                                 </td>
@@ -362,7 +292,15 @@
                                             <b>errorText:</b> Retrieves the message set for an error. In addition to descriptive text, error code may appear at the end of the message.
                                         
                                             <br />
-                                            <b>errorID:</b> Contains the reference number associated with the specific error in corresponding to the following values.<ul><li> User Cancelled = 1</li><li> Payment System Busy = 2</li><li> General Payment System Error  = 3</li><li> Digital Good not Found = 4</li><li> Illegal Application Error = 5 [BlackBerry OS 5.0+ only]</li></ul><b>Note:</b> The actual values may be different when <a href="blackberry.payment.html#.developmentMode">developmentMode</a> equals true.
+                                            <b>errorID:</b> Contains the reference number associated with the specific error in corresponding to the following values.
+<ul>
+<li> User Cancelled = 1</li>
+<li> Payment System Busy = 2</li>
+<li> General Payment System Error  = 3</li>
+<li> Digital Good not Found = 4</li>
+<li> Illegal Application Error = 5 [BlackBerry OS 5.0+ only]</li>
+</ul>
+<b>Note:</b> The actual values may be different when <a href="blackberry.payment.html#.developmentMode">developmentMode</a> equals true.
                                         
                                     
                                 </td>
@@ -530,7 +468,14 @@
                                             <b>errorText:</b> Retrieves the message set for an error. In addition to descriptive text, error code may appear at the end of the message.
                                         
                                             <br />
-                                            <b>errorID:</b> Contains the reference number associated with the specific error in corresponding to the following values.<ul><li> User Cancelled = 1</li><li> Payment System Busy = 2</li><li> General Payment System Error  = 3</li><li> Digital Good not Found = 4</li><li> Illegal Application Error = 5 [BlackBerry OS 5.0+ only]</li></ul>
+                                            <b>errorID:</b> Contains the reference number associated with the specific error in corresponding to the following values.
+<ul>
+<li> User Cancelled = 1</li>
+<li> Payment System Busy = 2</li>
+<li> General Payment System Error  = 3</li>
+<li> Digital Good not Found = 4</li>
+<li> Illegal Application Error = 5 [BlackBerry OS 5.0+ only]</li>
+</ul>
                                         
                                     
                                 </td>
@@ -548,7 +493,34 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;  function pay() {    try{      blackberry.payment.purchase({      "digitalGoodID":"123",      "digitalGoodSKU":"someSKU",      "digitalGoodName":"SomeName",      "metaData":"metadata",      "purchaseAppName":"WebWorks APP",      "purchaseAppIcon":null},      success,failure);   }catch (e){     alert ("Error" + e);   } } function success(purchase) {   var purchasedItem = JSON.parse(purchase);   var transId = purchasedItem.transactionID;   var sku = purchasedItem.digitalGoodSKU;   var dgId = purchasedItem.digitalGoodID;   alert("Purchased Item: " + transId + "," + sku +  "," + dgId); } function failure(errorText, errorId) {   alert("Error occured: " + errorText + ", " + errorId); }&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;
+  function pay() {
+    try{
+      blackberry.payment.purchase({
+      "digitalGoodID":"123",
+      "digitalGoodSKU":"someSKU",
+      "digitalGoodName":"SomeName",
+      "metaData":"metadata",
+      "purchaseAppName":"WebWorks APP",
+      "purchaseAppIcon":null},
+      success,failure);
+   }catch (e){
+     alert ("Error" + e);
+   }
+ }
+
+ function success(purchase) {
+   var purchasedItem = JSON.parse(purchase);
+   var transId = purchasedItem.transactionID;
+   var sku = purchasedItem.digitalGoodSKU;
+   var dgId = purchasedItem.digitalGoodID;
+   alert("Purchased Item: " + transId + "," + sku +  "," + dgId);
+ }
+
+ function failure(errorText, errorId) {
+   alert("Error occured: " + errorText + ", " + errorId);
+ }
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -689,7 +661,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 10:47:52 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 18:58:07 GMT-0400 (EDT)
         </div>
 
     </div>
