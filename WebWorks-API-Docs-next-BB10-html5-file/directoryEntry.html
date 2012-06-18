@@ -42,10 +42,6 @@
 
 
         
-            <p>
-                DirectoryEntry
-            </p>
-        
 
 
         
@@ -70,36 +66,10 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
-                        
-                            <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <td>
-                                    <a href="DirectoryEntry.html">DirectoryEntry</a>
-                                    <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                                </td>
-                            </tr>
-                        
-                    
                     
                         <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                             <td>
                                 <a href="DirectoryEntry.html#.copyTo">copyTo</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                            <td>
-                                <a href="DirectoryEntry.html#.createReader">createReader</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -195,7 +165,7 @@
                     
                         <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                             <td>
-                                <a href="DirectoryEntry.html#.toURI">toURI</a>
+                                <a href="DirectoryEntry.html#.toURL">toURL</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -293,22 +263,6 @@
     
         
         
-            <br />
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <a href="DirectoryEntry.html">DirectoryEntry</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
     
         
         
@@ -320,11 +274,6 @@
                         
                             <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                                 <a href="DirectoryEntry.html#.copyTo">copyTo</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <a href="DirectoryEntry.html#.createReader">createReader</a>
                                 
                             </li>
                         
@@ -364,7 +313,7 @@
                             </li>
                         
                             <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <a href="DirectoryEntry.html#.toURI">toURI</a>
+                                <a href="DirectoryEntry.html#.toURL">toURL</a>
                                 
                             </li>
                         
@@ -426,105 +375,6 @@
         
         
 
-    
-        
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                <h2>
-                    <a name="DirectoryEntry"></a>
-                    DirectoryEntry
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    DirectoryEntry
-                                    
-                                        (fileName : String)
-                                    
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Creates a new Worker object.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>fileName</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The name of the javascript file to be executed by the worker.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
     
 
     
@@ -682,125 +532,6 @@
         
             <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                 <h2>
-                    <a name=".createReader"></a>
-                    createReader
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    static              
-                                    
-                                        void
-                                    
-                                    
-                                        createReader(successCallback : function, errorCallback : function)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Return a File object that represents the current state of the file that this FileEntry represents.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>successCallback</b></td>
-                                <td>
-                                    
-                                        function
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    function that is called with a File object. (Function)                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>errorCallback</b></td>
-                                <td>
-                                    
-                                        function
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    function to execute when there is an error during creating the File object. Invoked with a FileError object. (Function)                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                <h2>
                     <a name=".getDirectory"></a>
                     getDirectory
                 </h2>
@@ -817,7 +548,7 @@
                                         void
                                     
                                     
-                                        getDirectory(successCallback : function, errorCallback : function)
+                                        getDirectory(The : String, Options : flags, successCallback : function, errorCallback : function)
                                                               
                                 
                             
@@ -873,6 +604,38 @@
                             </th>
                         </tr></thead>
                                        
+                        
+                            
+                            <tr>
+                                <td><b>The</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    path of the directory to be looked up or created                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>Options</b></td>
+                                <td>
+                                    
+                                        flags
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    to specify whether the directory is to be created if it doesn't exist                         
+                                    
+                                </td>
+                            </tr>
                         
                             
                             <tr>
@@ -936,7 +699,7 @@
                                         void
                                     
                                     
-                                        getFile(successCallback : function, errorCallback : function)
+                                        getFile(Path : String, Options : flags, successCallback : function, errorCallback : function)
                                                               
                                 
                             
@@ -969,7 +732,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Create or look up a file.</p>
+                <p>Creates or look up a file.</p>
                 <br />
                         
                 
@@ -992,6 +755,38 @@
                             </th>
                         </tr></thead>
                                        
+                        
+                            
+                            <tr>
+                                <td><b>Path</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    - path of the file to be looked up or created.                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>Options</b></td>
+                                <td>
+                                    
+                                        flags
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    - options to specify whether the file is created if it doesn't exist                         
+                                    
+                                </td>
+                            </tr>
                         
                             
                             <tr>
@@ -1212,7 +1007,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p></p>
+                <p>returns the parent DirectoryEntry</p>
                 <br />
                         
                 
@@ -1298,7 +1093,7 @@
                                         void
                                     
                                     
-                                        moveTo(DirectoryEntry : DirectoryEntry, The : String, successCallback : function, errorCallback : function)
+                                        moveTo(The : DirectoryEntry, The : String, successCallback : function, errorCallback : function)
                                                               
                                 
                             
@@ -1331,7 +1126,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p></p>
+                <p>Moves a directory to a different location. When moving the directory to a location where the name already exists, <b>moveTo</b> will attempt to overwrite it.</p>
                 <br />
                         
                 
@@ -1357,7 +1152,7 @@
                         
                             
                             <tr>
-                                <td><b>DirectoryEntry</b></td>
+                                <td><b>The</b></td>
                                 <td>
                                     
                                         <a href="DirectoryEntry.html">DirectoryEntry</a>
@@ -1366,7 +1161,7 @@
                                 </td>
                                 <td>
                                     
-                                                             
+                                    directory that you want to move                         
                                     
                                 </td>
                             </tr>
@@ -1487,7 +1282,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p></p>
+                <p>function to delete a directory.</p>
                 <br />
                         
                 
@@ -1676,8 +1471,8 @@
         
             <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                 <h2>
-                    <a name=".toURI"></a>
-                    toURI
+                    <a name=".toURL"></a>
+                    toURL
                 </h2>
                 <hr/>
                  
@@ -1691,7 +1486,7 @@
                                     string
                                     
                                     
-                                        toURI()
+                                        toURL()
                                                               
                                 
                             
@@ -1724,7 +1519,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Returns a URI that can be used to locate the file.</p>
+                <p>Returns a URL that can be used to locate the directory.</p>
                 <br />
                         
                 
@@ -1908,7 +1703,7 @@
                         </td>
                         <td>
                             
-                                <a href="File.html">File</a>
+                                boolean
                             
                             
                             
@@ -1920,7 +1715,7 @@
                         </td>
                         
                         <td >
-                            Value is always true. {boolean}
+                            Returns whether the object is a directory or not. Value is always true. {boolean}
                             
                                 <br />
                                 
@@ -1953,7 +1748,7 @@
                         </td>
                         <td>
                             
-                                <a href="File.html">File</a>
+                                boolean
                             
                             
                             
@@ -1965,7 +1760,7 @@
                         </td>
                         
                         <td >
-                            Value is always false. {boolean}
+                            Returns whether the object is a file or not. Value is always false. {boolean}
                             
                                 <br />
                                 
@@ -2027,12 +1822,18 @@
 
 
         
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            
+                
+  
+            </div>
+        
 
 
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 21:11:57 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jun 18 2012 10:25:28 GMT-0400 (EDT)
         </div>
 
     </div>

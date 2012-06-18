@@ -170,9 +170,15 @@ array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event'
 )),
             
             
-array('title'=>'File','link'=>'/html5/apis/File.html','id'=>'File','children'=>array(
-    array('title'=>'HTML5 File','link'=>'/html5/apis/File.html','id'=>'HTML5 File','children'=>array())
+array('title'=>'File','link'=>'/html5/apis/DirectoryEntry.html','id'=>'File','children'=>array(
+    array('title'=>'HTML5 DirectoryEntry','link'=>'/html5/apis/DirectoryEntry.html','id'=>'HTML5 DirectoryEntry','children'=>array())
             
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 File','link'=>'/html5/apis/File.html','id'=>'HTML5 File','children'=>array())
         
     
 

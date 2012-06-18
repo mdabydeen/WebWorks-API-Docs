@@ -169,9 +169,15 @@
 ]},
             
             
-{ "title":"File", "id":"File", "link":"/html5/apis/File.html", "children":[    
-    { "title":"HTML5 File", "id":"HTML5 File", "link":"/html5/apis/File.html", "children":[]}
+{ "title":"File", "id":"File", "link":"/html5/apis/DirectoryEntry.html", "children":[    
+    { "title":"HTML5 DirectoryEntry", "id":"HTML5 DirectoryEntry", "link":"/html5/apis/DirectoryEntry.html", "children":[]}
             
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 File", "id":"HTML5 File", "link":"/html5/apis/File.html", "children":[]}
         
     
 
