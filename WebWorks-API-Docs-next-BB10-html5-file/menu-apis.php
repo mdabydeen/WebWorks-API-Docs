@@ -178,13 +178,55 @@ array('title'=>'File','link'=>'/html5/apis/DirectoryEntry.html','id'=>'File','ch
 
     
             
+    ,array('title'=>'HTML5 DirectoryReader','link'=>'/html5/apis/DirectoryReader.html','id'=>'HTML5 DirectoryReader','children'=>array())
+        
+    
+
+    
+            
     ,array('title'=>'HTML5 File','link'=>'/html5/apis/File.html','id'=>'HTML5 File','children'=>array())
         
     
 
     
             
+    ,array('title'=>'HTML5 FileEntry','link'=>'/html5/apis/fileEntry.html','id'=>'HTML5 FileEntry','children'=>array())
+        
+    
+
+    
+            
     ,array('title'=>'HTML5 FileError','link'=>'/html5/apis/FileError.html','id'=>'HTML5 FileError','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 FileReader','link'=>'/html5/apis/FileReader.readyState.html','id'=>'HTML5 FileReader','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 FileSystem','link'=>'/html5/apis/FileSystem.html','id'=>'HTML5 FileSystem','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 FileWriter','link'=>'/html5/apis/FileWriter.html','id'=>'HTML5 FileWriter','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 Flags','link'=>'/html5/apis/Flags.html','id'=>'HTML5 Flags','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'HTML5 LocalFileSystem','link'=>'/html5/apis/LocalFileSystem.html','id'=>'HTML5 LocalFileSystem','children'=>array())
         
     
 

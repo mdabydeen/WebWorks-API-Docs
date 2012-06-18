@@ -42,10 +42,6 @@
 
 
         
-            <p>
-                This object provides a way to obtain root file systems.
-            </p>
-        
 
 
         
@@ -69,20 +65,6 @@
             <div class="APISupportTable" id="APISupportTable">
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
-                    
-                        
-                            <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <td>
-                                    <a href="LocalFileSystem.html">LocalFileSystem</a>
-                                    <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                                </td>
-                            </tr>
-                        
                     
                     
                         <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
@@ -173,22 +155,6 @@
     
         
         
-            <br />
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <a href="LocalFileSystem.html">LocalFileSystem</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
     
         
         
@@ -256,69 +222,6 @@
         
         
 
-    
-        
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                <h2>
-                    <a name="LocalFileSystem"></a>
-                    LocalFileSystem
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    LocalFileSystem
-                                    
-                                        ()
-                                    
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>This object provides a way to obtain root file systems.</p>
-                <br />
-                        
-                
-                        
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
     
 
     
@@ -453,7 +356,7 @@
                                         void
                                     
                                     
-                                        resolveLocalFileSystemURI(message : Object)
+                                        resolveLocalFileSystemURI(The : LocalFileSystem.constant, size : integer, callback : successCallback, Optional : errorCallback)
                                                               
                                 
                             
@@ -512,16 +415,64 @@
                         
                             
                             <tr>
-                                <td><b>message</b></td>
+                                <td><b>The</b></td>
                                 <td>
                                     
-                                        Object
+                                        LocalFileSystem.constant
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    A message to post when worker is created.                         
+                                    type of storage requested (ie. temporary or persistent)                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>size</b></td>
+                                <td>
+                                    
+                                        integer
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    (in bytes) the app will require for storage                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>callback</b></td>
+                                <td>
+                                    
+                                        successCallback
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    function that is invoked on successful request of a file system. Argument passed in is the FileSystem object                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>Optional</b></td>
+                                <td>
+                                    
+                                        errorCallback
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    callback for handling errors or when the request to obtain the file system is denied. Argument passed in is the FileError object                         
                                     
                                 </td>
                             </tr>
@@ -542,7 +493,11 @@
 
 &lt;script type="text/javascript"&gt;
 
-&lt;/script&gt;</pre>
+function onSuccess(fileEntry) {
+		console.log(fileEntry.name);
+}
+
+window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    * &lt;/script&gt;</pre>
 	
     
             </div>
@@ -696,12 +651,18 @@
 
 
         
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            
+                
+  
+            </div>
+        
 
 
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 16 2012 21:11:58 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jun 18 2012 10:40:31 GMT-0400 (EDT)
         </div>
 
     </div>
