@@ -184,18 +184,6 @@ array('title'=>'File','link'=>'/html5/apis/File.html','id'=>'File','children'=>a
 
     
             
-    ,array('title'=>'HTML5 FileSystem','link'=>'/html5/apis/FileSystem.html','id'=>'HTML5 FileSystem','children'=>array())
-        
-    
-
-    
-            
-    ,array('title'=>'HTML5 FileWriter','link'=>'/html5/apis/FileWriter.html','id'=>'HTML5 FileWriter','children'=>array())
-        
-    
-
-    
-            
     ,array('title'=>'HTML5 Metadata','link'=>'/html5/apis/Metadata.html','id'=>'HTML5 Metadata','children'=>array())
         
     
