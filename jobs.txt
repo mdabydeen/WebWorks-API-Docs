@@ -16,3 +16,4 @@ WebWorks-API-Docs-next-BB10-invoke-other-apps
 WebWorks-API-Docs-next-BB10-html5-file
 WebWorks-API-Docs-next-BB10-invoke-query
 WebWorks-API-Docs-app-exit
+WebWorks-API-Docs-next-BB10-device
