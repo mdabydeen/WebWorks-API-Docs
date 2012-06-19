@@ -36,14 +36,14 @@
 
         <h1>
             
-                blackberry.bbm.platform.io.JoinRequest
+                Device
             
         </h1>
 
 
         
             <p>
-                Provides basic request functionality including a request ID and status.
+                The Device object allows you to get access to device level attributes of the BlackBerry Smartphone<br> The Device object is static; all of its properties are used directly from the object.
             </p>
         
 
@@ -62,7 +62,7 @@
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 5.0+</pre>
+            <pre>- BlackBerry 10</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -71,27 +71,27 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.bbm.platform.io.JoinRequest.html#id">id</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                <a href="blackberry.device.html#.hardwareId">hardwareId</a>
+                                <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.bbm.platform.io.JoinRequest.html#status">status</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                <a href="blackberry.device.html#.softwareVersion">softwareVersion</a>
+                                <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -113,15 +113,15 @@
                      
                          
                      
-                     <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                     <tr x-ww-support="bb10x">
                          <td>
-                             &lt;feature id="blackberry.bbm.platform" /&gt;
-                             <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                             &lt;feature id="blackberry.device" /&gt;
+                             <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                          </td>
                      </tr>
                  
@@ -165,18 +165,18 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0">
+            <div x-ww-support="bb10x">
                 <h3> Properties </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.bbm.platform.io.JoinRequest.html#id">id</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.device.html#.hardwareId">hardwareId</a>
                                 
                             </li>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0">
-                                <a href="blackberry.bbm.platform.io.JoinRequest.html#status">status</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.device.html#.softwareVersion">softwareVersion</a>
                                 
                             </li>
                         
@@ -221,7 +221,7 @@
     
     
        
-        <div x-ww-support="bb5.0|bb6.0|bb7.0">
+        <div x-ww-support="bb10x">
             <h2>Properties:</h2>
             <hr/>
 
@@ -261,46 +261,9 @@
                 </tr></thead>
                 
                 
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                    <tr x-ww-support="bb10x">
                         <td>
-                            <a name="id">id</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                Number
-                            
-                            
-                            
-                                
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            The unique ID.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                        <td>
-                            <a name="status">status</a>
+                            <a name=".hardwareId">hardwareId</a>
 
                             
                         </td>
@@ -311,18 +274,16 @@
                             
                             
                                 
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
                                 
                             
                         </td>
                         
                         <td >
-                            The status.
-<ul>
-<li><code>"pending"</code>: The request has not been accepted or denied by the host, or canceled by the peer.
-<li><code>"accepted"</code>: The request has been accepted by the host.
-<li><code>"declined"</code>: The request has been declined by the host.
-<li><code>"canceled"</code>: The request has been canceled by the peer.
-</ul>
+                            Contains the hardware identifier for the device.
                             
                                 <br />
                                 
@@ -334,7 +295,48 @@
                         <td class="tdNoWrap">
                             
                                 
-                                    &nbsp;- BlackBerry OS 5.0+
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".softwareVersion">softwareVersion</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Contains the software version of the operating system, for example, 1.0.0.0.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
                                     <br />
                                                   
                             
@@ -370,7 +372,7 @@
 
 
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0">
+            <div x-ww-support="bb10x">
             
                 
   
@@ -381,7 +383,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jun 19 2012 13:47:30 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jun 19 2012 13:47:29 GMT-0400 (EDT)
         </div>
 
     </div>

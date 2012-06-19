@@ -158,6 +158,18 @@ array('title'=>'Device Motion','link'=>'/html5/apis/Acceleration.html','id'=>'De
 )),
             
             
+array('title'=>'Device','link'=>'/html5/apis/blackberry.device.html','id'=>'Device','children'=>array(
+    array('title'=>'Device','link'=>'/html5/apis/blackberry.device.html','id'=>'Device','children'=>array())
+            
+        
+    
+
+    
+        
+            
+)),
+            
+            
 array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event','children'=>array(
     array('title'=>'Event','link'=>'/html5/apis/blackberry.event.html','id'=>'Event','children'=>array())
             
