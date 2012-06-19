@@ -202,7 +202,7 @@ array('title'=>'File','link'=>'/html5/apis/DirectoryEntry.html','id'=>'File','ch
 
     
             
-    ,array('title'=>'HTML5 FileReader','link'=>'/html5/apis/FileReader.readyState.html','id'=>'HTML5 FileReader','children'=>array())
+    ,array('title'=>'HTML5 FileReader','link'=>'/html5/apis/FileReader.html','id'=>'HTML5 FileReader','children'=>array())
         
     
 
