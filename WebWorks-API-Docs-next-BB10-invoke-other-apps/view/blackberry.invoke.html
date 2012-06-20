@@ -212,6 +212,42 @@
                             </td>
                         </tr>
                     
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.ACTION_OPEN">ACTION_OPEN</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.ACTION_SHARE">ACTION_SHARE</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.ACTION_VIEW">ACTION_VIEW</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                             <td>
                                 <a href="blackberry.invoke.html#.APP_ADDRESSBOOK">APP_ADDRESSBOOK</a>
@@ -510,10 +546,25 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                 <h3> Constants </h3>
                 
                     <ul>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.ACTION_OPEN">ACTION_OPEN</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.ACTION_SHARE">ACTION_SHARE</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.ACTION_VIEW">ACTION_VIEW</a>
+                                
+                            </li>
                         
                             <li x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                                 <a href="blackberry.invoke.html#.APP_ADDRESSBOOK">APP_ADDRESSBOOK</a>
@@ -861,7 +912,7 @@
                                             <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
                                         
                                             <br />
-                                            <b>action:</b> The action to be performed by the target.
+                                            <b>action:</b> The action to be performed by the target. You can use the ACTION_* constants or other known action strings.
                                         
                                             <br />
                                             <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
@@ -926,7 +977,7 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function viewPicture() {    // view picture    blackberry.invoke.invoke({        uri: &lt;path to jpg file&gt;,        action: blackberry.invoke.ACTION_VIEW    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre>
 	
     
             </div>
@@ -952,11 +1003,29 @@
     
     
        
-        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             <h2>Constants:</h2>
             <hr/>
 
                      
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
             
                 
                 
@@ -1081,6 +1150,117 @@
                     </th>
                 </tr></thead>
                 
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".ACTION_OPEN">ACTION_OPEN</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Constant for the OPEN action: open associated content in target application. Should be used in all cases where a full context switch will take place.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".ACTION_SHARE">ACTION_SHARE</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Constant for the SHARE action: share associated content.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".ACTION_VIEW">ACTION_VIEW</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Constant for the VIEW action: view associated content in target application.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
                 
                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                         <td>
@@ -1876,6 +2056,18 @@
                 
     
             
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
         </div>
     
 
@@ -1902,7 +2094,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jun 08 2012 16:55:51 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jun 20 2012 14:12:44 GMT-0400 (EDT)
         </div>
 
     </div>
