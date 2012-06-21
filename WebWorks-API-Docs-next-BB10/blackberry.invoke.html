@@ -43,9 +43,9 @@
 
         
             <p>
-                The Invoke object contains methods that interact with other applications on a BlackBerry PlayBook. <p/>The invoke() method on the invoke object allows you to pass arguments to the target application. </br>The types of arguments can be one of: <a href="blackberry.invoke.AddressBookArguments.html">blackberry.invoke.AddressBookArguments</a>, <a href="blackberry.invoke.BrowserArguments.html">blackberry.invoke.BrowserArguments</a>,
+                The Invoke object contains methods that interact with other applications.<p/>On BlackBerry OS 5.0+ and BlackBerry PlayBook 1.0+, the <a href="blackberry.invoke.html#.invoke^2">invoke</a> method on the invoke object allows you to pass arguments to the target application. </br>The types of arguments can be one of: <a href="blackberry.invoke.AddressBookArguments.html">blackberry.invoke.AddressBookArguments</a>, <a href="blackberry.invoke.BrowserArguments.html">blackberry.invoke.BrowserArguments</a>,
  <a href="blackberry.invoke.CalendarArguments.html">blackberry.invoke.CalendarArguments</a>, <a href="blackberry.invoke.CameraArguments.html">blackberry.invoke.CameraArguments</a>, <a href="blackberry.invoke.JavaArguments.html">blackberry.invoke.JavaArguments</a>, <a href="blackberry.invoke.MapsArguments.html">blackberry.invoke.MapsArguments</a>, <a href="blackberry.invoke.MemoArguments.html">blackberry.invoke.MemoArguments</a>, <a href="blackberry.invoke.MessageArguments.html">blackberry.invoke.MessageArguments</a>,
- <a href="blackberry.invoke.PhoneArguments.html">blackberry.invoke.PhoneArguments</a>, <a href="blackberry.invoke.SearchArguments.html">blackberry.invoke.SearchArguments</a>, and <a href="blackberry.invoke.TaskArguments.html">blackberry.invoke.TaskArguments</a>.
+ <a href="blackberry.invoke.PhoneArguments.html">blackberry.invoke.PhoneArguments</a>, <a href="blackberry.invoke.SearchArguments.html">blackberry.invoke.SearchArguments</a>, and <a href="blackberry.invoke.TaskArguments.html">blackberry.invoke.TaskArguments</a>.<p/>On BlackBerry 10, the <a href="blackberry.invoke.html#.invoke">invoke</a> method will take arguments in the form of JavaScript object literal.
             </p>
         
 
@@ -56,6 +56,19 @@
         
 
 
+        
+            <div class="note">                
+                <h3>Beta Notice:</h3>
+                This API is considered to be in Beta.
+                The function and property signatures listed below could change at anytime.
+                Once the API moves out of Beta it will be distributed as part of the core API.
+                <br /><br />
+                
+                    
+                
+                <br /><br />
+                <i>Last Updated: Thu Jun 21 2012 17:48:30 GMT-0400 (EDT)</i>                
+            </div>
         
 
 
@@ -73,14 +86,62 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
-                                <a href="blackberry.invoke.html#.invoke">invoke</a>
+                                <a href="blackberry.invoke.html#.invoke^2">invoke</a>
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.invoke">invoke</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.ACTION_OPEN">ACTION_OPEN</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.ACTION_SHARE">ACTION_SHARE</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.ACTION_VIEW">ACTION_VIEW</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
@@ -217,7 +278,7 @@
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
                                 <a href="blackberry.invoke.html#.APP_BROWSER">APP_BROWSER</a>
                                 <td class="apiYes">Y</td>
@@ -225,7 +286,7 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
@@ -319,7 +380,7 @@
                      
                          
                      
-                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                          <td>
                              &lt;feature id="blackberry.invoke" /&gt;
                              <td class="apiYes">Y</td>
@@ -365,12 +426,17 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <a href="blackberry.invoke.html#.invoke^2">invoke</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
                                 <a href="blackberry.invoke.html#.invoke">invoke</a>
                                 
                             </li>
@@ -406,10 +472,25 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                 <h3> Constants </h3>
                 
                     <ul>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.ACTION_OPEN">ACTION_OPEN</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.ACTION_SHARE">ACTION_SHARE</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.ACTION_VIEW">ACTION_VIEW</a>
+                                
+                            </li>
                         
                             <li x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                                 <a href="blackberry.invoke.html#.APP_ADDRESSBOOK">APP_ADDRESSBOOK</a>
@@ -466,7 +547,7 @@
                                 
                             </li>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                 <a href="blackberry.invoke.html#.APP_BROWSER">APP_BROWSER</a>
                                 
                             </li>
@@ -518,9 +599,9 @@
 
     
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h2>
-                    <a name=".invoke"></a>
+                    <a name=".invoke^2"></a>
                     invoke
                 </h2>
                 <hr/>
@@ -562,9 +643,6 @@
                         &nbsp;- BlackBerry PlayBook 1.0+
                         <br />
                     
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
                         &nbsp;- Ripple Emulator
                         <br />
                                   
@@ -572,7 +650,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Invokes another application on the BlackBerry Playbook.</p>
+                <p>Invokes another application on the BlackBerry PlayBook or Blackberry OS 5.0+.</p>
                 <br />
                         
                 
@@ -661,6 +739,172 @@
 
                 
                 
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt; function startCameraApp() {     var args = new blackberry.invoke.CameraArguments();     args.view = blackberry.invoke.CameraArguments.VIEW_RECORDER;     blackberry.invoke.invoke(blackberry.invoke.APP_CAMERA, args); } startCameraApp(); &lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".invoke"></a>
+                    invoke
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        invoke(request : Object, onSuccess : function, onError : function)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Invokes another application</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>request</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Object literal that specifies what to invoke. None of the fields are required. Refer to the example code for more information.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
+                                        
+                                            <br />
+                                            <b>action:</b> The action to be performed by the target. You can use the ACTION_* constants or other known action strings.
+                                        
+                                            <br />
+                                            <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
+                                        
+                                            <br />
+                                            <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
+                                        
+                                            <br />
+                                            <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onSuccess</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess().                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onError</b></td>
+                                <td>
+                                    
+                                        function(<i>[error: String]</i>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>error:</b>  A String that describes the error.
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function viewPicture() {    // view picture    blackberry.invoke.invoke({        uri: &lt;path to jpg file&gt;,        action: blackberry.invoke.ACTION_VIEW    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre>
+	
     
             </div>
         
@@ -797,11 +1041,29 @@ The <b>invoked</b> event is triggered by the system when the application is invo
     
     
        
-        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             <h2>Constants:</h2>
             <hr/>
 
                      
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
             
                 
                 
@@ -926,6 +1188,117 @@ The <b>invoked</b> event is triggered by the system when the application is invo
                     </th>
                 </tr></thead>
                 
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".ACTION_OPEN">ACTION_OPEN</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Constant for the OPEN action: open associated content in target application. Should be used in all cases where a full context switch will take place.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".ACTION_SHARE">ACTION_SHARE</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Constant for the SHARE action: share associated content.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".ACTION_VIEW">ACTION_VIEW</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            Constant for the VIEW action: view associated content in target application.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
                 
                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
                         <td>
@@ -1395,7 +1768,7 @@ The <b>invoked</b> event is triggered by the system when the application is invo
                         </td>
                     </tr>
                 
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                         <td>
                             <a name=".APP_BROWSER">APP_BROWSER</a>
 
@@ -1431,9 +1804,6 @@ The <b>invoked</b> event is triggered by the system when the application is invo
                                     <br />
                                 
                                     &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry 10
                                     <br />
                                 
                                     &nbsp;- Ripple Emulator
@@ -1724,6 +2094,18 @@ The <b>invoked</b> event is triggered by the system when the application is invo
                 
     
             
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
         </div>
     
 
@@ -1739,14 +2121,9 @@ The <b>invoked</b> event is triggered by the system when the application is invo
 
 
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             
                 
-
-	<h2>Code Example(s)</h2><hr/>
-	
-		<pre>&lt;script type="text/javascript"&gt;function startCameraApp() {             var args = new blackberry.invoke.CameraArguments();             args.view = blackberry.invoke.CameraArguments.VIEW_RECORDER;             blackberry.invoke.invoke(blackberry.invoke.APP_CAMERA, args);} startCameraApp();&lt;/script&gt;</pre>
-	
   
             </div>
         
@@ -1755,7 +2132,7 @@ The <b>invoked</b> event is triggered by the system when the application is invo
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jun 19 2012 22:58:41 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 21 2012 17:48:30 GMT-0400 (EDT)
         </div>
 
     </div>
