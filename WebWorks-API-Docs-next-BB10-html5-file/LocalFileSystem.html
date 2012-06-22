@@ -244,7 +244,7 @@
                                         void
                                     
                                     
-                                        requestFileSystem(message : Object)
+                                        requestFileSystem(String : string, callback : successCallback, callback : errorCallback)
                                                               
                                 
                             
@@ -277,7 +277,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>The postMessage() method on Web Workers objects invoked the method of the same name on the port, with the same arguments, and returned the same return value.</p>
+                <p>Requests the filesystem.</p>
                 <br />
                         
                 
@@ -303,16 +303,48 @@
                         
                             
                             <tr>
-                                <td><b>message</b></td>
+                                <td><b>String</b></td>
                                 <td>
                                     
-                                        Object
+                                        string
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    A message to post when worker is created.                         
+                                    to indicate the LocalFileSystem.type (ie. LocalFileSystem.PERSISTENT or LocalFileSystem.TEMPORARY)                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>callback</b></td>
+                                <td>
+                                    
+                                        successCallback()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    function that is invoked on successful request of a file system. Argument passed in is the FileSystem object                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>callback</b></td>
+                                <td>
+                                    
+                                        errorCallback()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    function for handling errors or when the request to obtain the file system is denied. Argument passed in is the FileError object                         
                                     
                                 </td>
                             </tr>
@@ -332,6 +364,12 @@
 		<pre>Main script:
 
 &lt;script type="text/javascript"&gt;
+function onInitFs(fs) {
+		console.log('Opened file system: ' + fs.name);
+}
+
+window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);    // 5*1024*1024 = 5MB
+
 
 &lt;/script&gt;</pre>
 	
@@ -356,7 +394,7 @@
                                         void
                                     
                                     
-                                        resolveLocalFileSystemURI(The : LocalFileSystem.constant, size : integer, callback : successCallback, Optional : errorCallback)
+                                        resolveLocalFileSystemURI(Full : String, size : integer, callback : successCallback, Optional : errorCallback)
                                                               
                                 
                             
@@ -415,16 +453,16 @@
                         
                             
                             <tr>
-                                <td><b>The</b></td>
+                                <td><b>Full</b></td>
                                 <td>
                                     
-                                        LocalFileSystem.constant
+                                        String
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    type of storage requested (ie. temporary or persistent)                         
+                                    path and name of file                         
                                     
                                 </td>
                             </tr>
@@ -450,7 +488,7 @@
                                 <td><b>callback</b></td>
                                 <td>
                                     
-                                        successCallback
+                                        successCallback()
                                     
                                                                                         
                                 </td>
@@ -466,7 +504,7 @@
                                 <td><b>Optional</b></td>
                                 <td>
                                     
-                                        errorCallback
+                                        errorCallback()
                                     
                                                                                         
                                 </td>
@@ -662,7 +700,7 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jun 18 2012 20:16:56 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jun 22 2012 17:13:01 GMT-0400 (EDT)
         </div>
 
     </div>
