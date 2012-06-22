@@ -399,12 +399,6 @@ array('title'=>'IO','link'=>'/html5/apis/blackberry.io.dir.html','id'=>'IO','chi
     
 
     
-            
-    ,array('title'=>'HTML5 Window','link'=>'/html5/apis/window.html','id'=>'HTML5 Window','children'=>array())
-        
-    
-
-    
         
             
 )),
