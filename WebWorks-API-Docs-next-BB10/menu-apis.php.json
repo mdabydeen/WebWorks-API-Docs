@@ -333,6 +333,78 @@
 
     
         
+    ,{ "title":"HTML5 DirectoryEntry", "id":"HTML5 DirectoryEntry", "link":"/html5/apis/DirectoryEntry.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 DirectoryReader", "id":"HTML5 DirectoryReader", "link":"/html5/apis/DirectoryReader.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 File", "id":"HTML5 File", "link":"/html5/apis/File.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileEntry", "id":"HTML5 FileEntry", "link":"/html5/apis/fileEntry.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileError", "id":"HTML5 FileError", "link":"/html5/apis/FileError.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileReader", "id":"HTML5 FileReader", "link":"/html5/apis/FileReader.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileSystem", "id":"HTML5 FileSystem", "link":"/html5/apis/FileSystem.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 FileWriter", "id":"HTML5 FileWriter", "link":"/html5/apis/FileWriter.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 Flags", "id":"HTML5 Flags", "link":"/html5/apis/Flags.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 LocalFileSystem", "id":"HTML5 LocalFileSystem", "link":"/html5/apis/LocalFileSystem.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"HTML5 Metadata", "id":"HTML5 Metadata", "link":"/html5/apis/Metadata.html", "children":[]}
+        
+    
+
+    
+        
+    ,{ "title":"IO", "id":"IO", "link":"/html5/apis/blackberry.io.html", "children":[]}
+        
+    
+
+    
+        
             
 ]},
             

@@ -1,0 +1,1141 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                HTML5 FileReader
+            
+        </h1>
+
+
+        
+            <p>
+                Object to allow reading of files
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- BlackBerry 10</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                    
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                            <td>
+                                <a href="FileReader.html#abort">abort</a>
+                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                            <td>
+                                <a href="FileReader.html#readAsDataURL">readAsDataURL</a>
+                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#readAsText">readAsText</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.error">error</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.readyState">readyState</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.result">result</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.event:onabort">onabort</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.event:onerror">onerror</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.event:onload">onload</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.event:onloadend">onloadend</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                            <td>
+                                <a href="FileReader.html#.event:onloadstart">onloadstart</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+            <br />
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                <h3> Functions </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                                <a href="FileReader.html#abort">abort</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                                <a href="FileReader.html#readAsDataURL">readAsDataURL</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#readAsText">readAsText</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h3> Events </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.event:onabort">onabort</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.event:onerror">onerror</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.event:onload">onload</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.event:onloadend">onloadend</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.event:onloadstart">onloadstart</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h3> Properties </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.error">error</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.readyState">readyState</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x">
+                                <a href="FileReader.html#.result">result</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+
+    
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                <h2>
+                    <a name="abort"></a>
+                    abort
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        abort()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry OS 5.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>function to abort the fileReading process</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function win(file) {
+      var reader = new FileReader();
+      reader.onloadend = function(evt) {
+          console.log("read success");
+          console.log(evt.target.result);
+      };
+
+     reader.readAsText(file);
+     reader.abort();
+};
+
+function fail(error) {
+     console.log(error.code);
+}
+
+entry.file(win, fail);</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                <h2>
+                    <a name="readAsDataURL"></a>
+                    readAsDataURL
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        readAsDataURL()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry OS 5.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>function to read the file and return the data as a base64 encoded data url</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h2>
+                    <a name="readAsText"></a>
+                    readAsText
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        readAsText()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>function to read the text file and returns the data as text</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+    
+
+    
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h2>
+                    <a name=".event:onabort"></a>
+                    onabort
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onabort()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>function that is called when the read has been aborted</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h2>
+                    <a name=".event:onerror"></a>
+                    onerror
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onerror()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>assigned to the function that will be executed when there is an error</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h2>
+                    <a name=".event:onload"></a>
+                    onload
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onload()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>assigned to the function that is called when the read starts</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h2>
+                    <a name=".event:onloadend"></a>
+                    onloadend
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onloadend()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>function that is called when file reading has been completed</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x">
+                <h2>
+                    <a name=".event:onloadstart"></a>
+                    onloadstart
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onloadstart()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>the function that is called when the read starts</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+       
+        <div x-ww-support="pb1.0|pb2.0|bb10x">
+            <h2>Properties:</h2>
+            <hr/>
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                        <td>
+                            <a name=".error">error</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            An object containing errors. (FileError)
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                        <td>
+                            <a name=".readyState">readyState</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Description of what state the reader can be. File Reader can be one of three states: EMPTY, LOADING or DONE
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x">
+                        <td>
+                            <a name=".result">result</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The contents of the file that has been read.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+        </div>
+    
+
+    
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jun 27 2012 17:48:00 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>
