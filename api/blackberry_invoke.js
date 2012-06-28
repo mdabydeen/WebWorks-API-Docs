@@ -114,7 +114,7 @@ blackberry.invoke = {
          *        "winid": "viewer#001",
          *        "height": 600,
          *        "width": 600     
-         *     }, onSuccess, onError);
+         *     }, onInvokeSuccess, onInvokeError);
          * }
 		 *
 		 * &lt;/script&gt;
