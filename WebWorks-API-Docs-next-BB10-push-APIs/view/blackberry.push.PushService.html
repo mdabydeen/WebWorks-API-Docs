@@ -368,7 +368,7 @@
                     
                         <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.push.PushService.html#.TOO_MANY_DEVICES_WITH_ACTIVE_CREATE_CHANNELS">TOO_MANY_DEVICES_WITH_ACTIVE_CREATE_CHANNELS</a>
+                                <a href="blackberry.push.PushService.html#.PPG_SUBSCRIBER_LIMIT_REACHED">PPG_SUBSCRIBER_LIMIT_REACHED</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -675,7 +675,7 @@
                             </li>
                         
                             <li x-ww-support="bb10x">
-                                <a href="blackberry.push.PushService.html#.TOO_MANY_DEVICES_WITH_ACTIVE_CREATE_CHANNELS">TOO_MANY_DEVICES_WITH_ACTIVE_CREATE_CHANNELS</a>
+                                <a href="blackberry.push.PushService.html#.PPG_SUBSCRIBER_LIMIT_REACHED">PPG_SUBSCRIBER_LIMIT_REACHED</a>
                                 
                             </li>
                         
@@ -1300,7 +1300,7 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>try {    var pushPayload = pushService.extractPushPayload(invokeRequest);    // pushPayload.data is of type Blob    // If the Blob is known to contain text, then do something like this:    blobToText(pushPayload.data, "UTF-8", textConversionCallback);    // If the Blob is known to contain binary, then do something like this to get an ArrayBuffer:    // blobToArrayBuffer(pushPayload.data, binaryConversionCallback);} catch (err) {    console.log("Was unable to parse the invoke request.");    console.log(err);}function blobToText(blob, encoding, callback) {    var reader = new FileReader();   	     reader.onloadend = function(evt) {         if (evt.target.readyState == FileReader.DONE) {             if (evt.target.error == null) {                 // No errors, get the result and call the callback                 callback(evt.target.result);             } else {                 console.log("Error converting Blob to string: " + evt.target.error);             }        }    };          reader.readAsText(blob, encoding);}function textConversionCallback(str) {    console.log("Data received: " + str);}function blobToArrayBuffer(blob, callback) {    var reader = new FileReader();   	    reader.onloadend = function(evt) {        if (evt.target.readyState == FileReader.DONE) {            if (evt.target.error == null) {                // No errors, get the result and call the callback                callback(evt.target.result);            } else {                console.log("Error converting Blob to ArrayBuffer: " + evt.target.error);            }        }    };           reader.readAsArrayBuffer(blob);}function binaryConversionCallback(arrayBuffer) {    // Process the ArrayBuffer containing binary content as needed}</pre>
+		<pre>try {    var pushPayload = pushService.extractPushPayload(invokeRequest);    // pushPayload.data is of type Blob    // If the Blob is known to contain text, then do something like this:    blobToText(pushPayload.data, "UTF-8", textConversionCallback);    // If the Blob is known to contain binary, then do something like this to get an ArrayBuffer:    // blobToArrayBuffer(pushPayload.data, binaryConversionCallback);} catch (err) {    console.log("Was unable to parse the invoke request.");    console.log(err);}function blobToText(blob, encoding, callback) {    var reader = new FileReader();  	    reader.onload = function(evt) {        // No errors, get the result and call the callback        callback(evt.target.result);    };   	    reader.onerror = function(evt) {        console.log("Error converting Blob to string: " + evt.target.error);    };           reader.readAsText(blob, encoding);}function textConversionCallback(str) {    console.log("Data received: " + str);}function blobToArrayBuffer(blob, callback) {    var reader = new FileReader();   	    reader.onload = function(evt) {        // No errors, get the result and call the callback        callback(evt.target.result);    };   	    reader.onerror = function(evt) {        console.log("Error converting Blob to ArrayBuffer: " + evt.target.error);    };           reader.readAsArrayBuffer(blob);}function binaryConversionCallback(arrayBuffer) {    // Process the ArrayBuffer containing binary content as needed}</pre>
 	
     
             </div>
@@ -1952,7 +1952,7 @@
                 
                     <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".TOO_MANY_DEVICES_WITH_ACTIVE_CREATE_CHANNELS">TOO_MANY_DEVICES_WITH_ACTIVE_CREATE_CHANNELS</a>
+                            <a name=".PPG_SUBSCRIBER_LIMIT_REACHED">PPG_SUBSCRIBER_LIMIT_REACHED</a>
 
                             
                         </td>
@@ -1965,7 +1965,7 @@
                         </td>
                         
                         <td >
-                            <p>Result error code for when too many devices have already performed a create channel for the provider application ID.The create channel is described as still "active" because no destroy channel has been done for it.</p><p>Operations this error can occur on: createChannel (only if using public/BIS PPG)</p><p>Recommended action: No action can be taken by the application for this error, but it should somehow be communicated  back to the content provider and then to RIM to try to increase the allowed subscription limit.  </p>
+                            <p>Result error code for when too many devices have already performed a create channel for the provider application ID.(A create channel will effectively register a user with the PPG for public/BIS.)</p><p>Operations this error can occur on: createChannel (only if using public/BIS PPG)</p><p>Recommended action: No action can be taken by the application for this error, but it should somehow be communicated  back to the content provider and then to RIM to try to increase the allowed subscription limit.  </p>
                             
                                 <br />
                                 
@@ -2475,7 +2475,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jun 23 2012 11:28:26 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jun 29 2012 11:14:55 GMT-0400 (EDT)
         </div>
 
     </div>
