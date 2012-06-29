@@ -15,3 +15,4 @@ WebWorks-API-Docs-next-BB10-invoke-query
 WebWorks-API-Docs-next-BB10-device
 WebWorks-API-Docs-next-BB10-filetransfer
 WebWorks-API-Docs-next-BB10-invoke-viewer
+WebWorks-API-Docs-html5Notification
