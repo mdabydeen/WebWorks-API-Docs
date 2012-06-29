@@ -333,6 +333,12 @@
 
     
         
+    ,{ "title":"FileTransfer", "id":"FileTransfer", "link":"/html5/apis/blackberry.io.filetransfer.html", "children":[]}
+        
+    
+
+    
+        
     ,{ "title":"HTML5 DirectoryEntry", "id":"HTML5 DirectoryEntry", "link":"/html5/apis/DirectoryEntry.html", "children":[]}
         
     

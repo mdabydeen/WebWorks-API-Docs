@@ -36,11 +36,15 @@
 
         <h1>
             
-                HTML5 LocalFileSystem
+                FileTransfer
             
         </h1>
 
 
+        
+            <p>
+                The FileTransfer object contains functions for uploading and downloading files to/from a remote server.
+            </p>
         
 
 
@@ -58,7 +62,7 @@
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
+            <pre>- BlackBerry 10</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -67,51 +71,51 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="LocalFileSystem.html#requestFileSystem">requestFileSystem</a>
+                                <a href="blackberry.io.filetransfer.html#.upload">upload</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="LocalFileSystem.html#resolveLocalFileSystemURI">resolveLocalFileSystemURI</a>
+                                <a href="blackberry.io.filetransfer.html#.FILE_NOT_FOUND_ERR">FILE_NOT_FOUND_ERR</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="LocalFileSystem.html#.PERSISTENT">PERSISTENT</a>
+                                <a href="blackberry.io.filetransfer.html#.INVALID_URL_ERR">INVALID_URL_ERR</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="">
+                        <tr x-ww-support="bb10x">
                             <td>
-                                <a href="LocalFileSystem.html#.TEMPORARY">TEMPORARY</a>
+                                <a href="blackberry.io.filetransfer.html#.CONNECTION_ERR">CONNECTION_ERR</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -124,8 +128,28 @@
         <h2>Configuration Document Settings</h2>
         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
         
-            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
             <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="bb10x">
+                         <td>
+                             &lt;feature id="blackberry.io.filetransfer" /&gt;
+                             <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                         </td>
+                     </tr>
+                 
+            </table>
         
 
 
@@ -159,18 +183,13 @@
         
         
             <br />
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            <div x-ww-support="bb10x">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <a href="LocalFileSystem.html#requestFileSystem">requestFileSystem</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                                <a href="LocalFileSystem.html#resolveLocalFileSystemURI">resolveLocalFileSystemURI</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.filetransfer.html#.upload">upload</a>
                                 
                             </li>
                         
@@ -189,18 +208,23 @@
         
         
             <br />
-            <div x-ww-support="">
+            <div x-ww-support="bb10x">
                 <h3> Constants </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="">
-                                <a href="LocalFileSystem.html#.PERSISTENT">PERSISTENT</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.filetransfer.html#.FILE_NOT_FOUND_ERR">FILE_NOT_FOUND_ERR</a>
                                 
                             </li>
                         
-                            <li x-ww-support="">
-                                <a href="LocalFileSystem.html#.TEMPORARY">TEMPORARY</a>
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.filetransfer.html#.INVALID_URL_ERR">INVALID_URL_ERR</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.filetransfer.html#.CONNECTION_ERR">CONNECTION_ERR</a>
                                 
                             </li>
                         
@@ -226,10 +250,10 @@
 
     
         
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            <div x-ww-support="bb10x">
                 <h2>
-                    <a name="requestFileSystem"></a>
-                    requestFileSystem
+                    <a name=".upload"></a>
+                    upload
                 </h2>
                 <hr/>
                  
@@ -239,12 +263,12 @@
                         <tr><td>
                             
                                 
-                                                  
+                                    static              
                                     
                                         void
                                     
                                     
-                                        requestFileSystem(String : string, callback : successCallback, callback : errorCallback)
+                                        upload(filePath : String, server : String, successCallback : function, errorCallback : function, <i>[options: Object]</i>)
                                                               
                                 
                             
@@ -264,20 +288,15 @@
                               
                     <h3>Supported Platform(s)</h3>      
                     
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
                         &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
                         <br />
                                   
                                    
                 <br />
                         
                 <h3>Description</h3>
-                <p>Requests the filesystem.</p>
+                <p>Uploads a file from the device to a remote server. <br/>
+The function is an asynchronous call and will not block execution.</p>
                 <br />
                         
                 
@@ -303,157 +322,7 @@
                         
                             
                             <tr>
-                                <td><b>String</b></td>
-                                <td>
-                                    
-                                        string
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    to indicate the LocalFileSystem.type (ie. LocalFileSystem.PERSISTENT or LocalFileSystem.TEMPORARY)                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>callback</b></td>
-                                <td>
-                                    
-                                        successCallback()
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    function that is invoked on successful request of a file system. Argument passed in is the FileSystem object                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>callback</b></td>
-                                <td>
-                                    
-                                        errorCallback()
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    function for handling errors or when the request to obtain the file system is denied. Argument passed in is the FileError object                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>Main script:
-
-&lt;script type="text/javascript"&gt;
-function onInitFs(fs) {
-		console.log('Opened file system: ' + fs.name);
-}
-
-window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);    // 5*1024*1024 = 5MB
-
-
-&lt;/script&gt;</pre>
-	
-    
-            </div>
-        
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
-                <h2>
-                    <a name="resolveLocalFileSystemURI"></a>
-                    resolveLocalFileSystemURI
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                                  
-                                    
-                                        void
-                                    
-                                    
-                                        resolveLocalFileSystemURI(Full : String, size : integer, callback : successCallback, Optional : errorCallback)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Requests the DirectoryEntry or FileEntry Object using local URI.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>Full</b></td>
+                                <td><b>filePath</b></td>
                                 <td>
                                     
                                         String
@@ -462,55 +331,119 @@ window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);
                                 </td>
                                 <td>
                                     
-                                    path and name of file                         
+                                    Full path of the file on the device.                         
                                     
                                 </td>
                             </tr>
                         
                             
                             <tr>
-                                <td><b>size</b></td>
+                                <td><b>server</b></td>
                                 <td>
                                     
-                                        integer
+                                        String
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    (in bytes) the app will require for storage                         
+                                    URL of the remote server that will receive the file.                         
                                     
                                 </td>
                             </tr>
                         
                             
                             <tr>
-                                <td><b>callback</b></td>
+                                <td><b>successCallback</b></td>
                                 <td>
                                     
-                                        successCallback()
+                                        function(info : Object)
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    function that is invoked on successful request of a file system. Argument passed in is the FileSystem object                         
+                                    Callback function that will be invoked if the file upload is successful.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>info:</b> Object containing information about the upload.
+                                        
+                                            <br />
+                                            <b>info.bytesSent:</b> Total number of bytes sent to the server.
+                                        
+                                            <br />
+                                            <b>info.responseCode:</b> HTTP response code returned by the server.
+                                        
+                                            <br />
+                                            <b>info.response:</b> Response returned by the server.
+                                        
                                     
                                 </td>
                             </tr>
                         
                             
                             <tr>
-                                <td><b>Optional</b></td>
+                                <td><b>errorCallback</b></td>
                                 <td>
                                     
-                                        errorCallback()
+                                        function(info : Object)
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    callback for handling errors or when the request to obtain the file system is denied. Argument passed in is the FileError object                         
+                                    Callback function that will be invoked if the file upload fails.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>info:</b> Object containing information about the failed upload request.
+                                        
+                                            <br />
+                                            <b>info.code:</b> Error code indicating the type of error that occurred.
+                                        
+                                            <br />
+                                            <b>info.source:</b> Path of the original file.
+                                        
+                                            <br />
+                                            <b>info.target:</b> URL of the remote server.
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>options</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                    <br /><i>Optional</i>                                                    
+                                </td>
+                                <td>
+                                    
+                                    Optional Object literal that allows the user to customize the file key, file name, MIME type, parameters, and chunked mode of the upload request. It is not required to provide all parameters, and these do not have to be specified in any particular order.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>fileKey:</b> Name of the form element. If not set, this defaults to "file".
+                                        
+                                            <br />
+                                            <b>fileName:</b> Name that the file will be saved as on the remote server. If not set, this defaults to "image.jpg".
+                                        
+                                            <br />
+                                            <b>mimeType:</b> MIME type of the data being uploaded. If not set, this defaults to "image/jpeg".
+                                        
+                                            <br />
+                                            <b>params:</b> A set of optional key/value pairs to be passed along in the HTTP request.
+                                        
+                                            <br />
+                                            <b>chunkedMode:</b> Specifies whether the data should be uploaded in chunked streaming mode.  If not set, this defaults to true.
+                                        
                                     
                                 </td>
                             </tr>
@@ -527,15 +460,27 @@ window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>Main script:
+		<pre>&lt;script type="text/javascript"&gt;
 
-&lt;script type="text/javascript"&gt;
-
-function onSuccess(fileEntry) {
-		console.log(fileEntry.name);
+function uploadSuccess(result) {
+  alert("Upload was successful.  Bytes sent = " + result.bytesSent + ", Response code = " + result.responseCode + ", Response = " + result.response);
 }
 
-window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    * &lt;/script&gt;</pre>
+function uploadError(result) {
+  alert("Upload failed.  Error code = " + result.code + ", Source = " + result.source + ", Target = " + result.target);
+}
+
+function fileUpload() {
+  try {
+    var parameters = { app : "webworks" };
+    var options = { fileKey : "file", fileName : "blackberry.jpg", mimeType : "image/jpeg", params : parameters, chunkedMode : true };
+    blackberry.io.filetransfer.upload("/accounts/1000/shared/camera/image_123.jpg", "http://www.blackberry.com/upload", uploadSuccess, uploadError, options);
+  } catch(e) {
+    alert("Exception in fileUpload: " + e);
+  }
+}
+
+&lt;/script&gt;</pre>
 	
     
             </div>
@@ -561,11 +506,17 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
     
     
        
-        <div x-ww-support="">
+        <div x-ww-support="bb10x">
             <h2>Constants:</h2>
             <hr/>
 
                      
+            
+                
+                
+                    
+                    <br />
+                
             
                 
                 
@@ -601,22 +552,27 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
                 </tr></thead>
                 
                 
-                    <tr x-ww-support="">
+                    <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".PERSISTENT">PERSISTENT</a>
+                            <a name=".FILE_NOT_FOUND_ERR">FILE_NOT_FOUND_ERR</a>
 
+                            
+                                
+                                     = 1
+                                
+                                
                             
                         </td>
                         <td>
                             
-                                String
+                                Number
                             
                             
                             
                         </td>
                         
                         <td >
-                            Localstorage that will persists after application has been completed.
+                            The file was not found.
                             
                                 <br />
                                 
@@ -627,27 +583,35 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
                         
                         <td class="tdNoWrap">
                             
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
                                                   
                             
                         </td>
                     </tr>
                 
-                    <tr x-ww-support="">
+                    <tr x-ww-support="bb10x">
                         <td>
-                            <a name=".TEMPORARY">TEMPORARY</a>
+                            <a name=".INVALID_URL_ERR">INVALID_URL_ERR</a>
 
+                            
+                                
+                                     = 2
+                                
+                                
                             
                         </td>
                         <td>
                             
-                                String
+                                Number
                             
                             
                             
                         </td>
                         
                         <td >
-                            Localstorage that is temporary
+                            The URL of the server was invalid.
                             
                                 <br />
                                 
@@ -658,6 +622,48 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
                         
                         <td class="tdNoWrap">
                             
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".CONNECTION_ERR">CONNECTION_ERR</a>
+
+                            
+                                
+                                     = 3
+                                
+                                
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            The upload failed due to a connection error.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
                                                   
                             
                         </td>
@@ -665,6 +671,10 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
                 
             </table>
             
+            
+				
+                
+    
             
 				
                 
@@ -689,7 +699,7 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
 
 
         
-            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            <div x-ww-support="bb10x">
             
                 
   
@@ -700,7 +710,7 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);    
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 28 2012 20:48:39 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jun 28 2012 20:48:37 GMT-0400 (EDT)
         </div>
 
     </div>

@@ -334,6 +334,12 @@ array('title'=>'IO','link'=>'/html5/apis/blackberry.io.dir.html','id'=>'IO','chi
 
     
             
+    ,array('title'=>'FileTransfer','link'=>'/html5/apis/blackberry.io.filetransfer.html','id'=>'FileTransfer','children'=>array())
+        
+    
+
+    
+            
     ,array('title'=>'HTML5 DirectoryEntry','link'=>'/html5/apis/DirectoryEntry.html','id'=>'HTML5 DirectoryEntry','children'=>array())
         
     
