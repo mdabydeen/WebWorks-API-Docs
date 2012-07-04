@@ -16,5 +16,4 @@ WebWorks-API-Docs-next-BB10-filetransfer
 WebWorks-API-Docs-next-BB10-invoke-viewer
 WebWorks-API-Docs-html5Notification
 WebWorks-API-Docs-next-BB10-invoke-cards
-WebWorks-API-Docs-next-BB10-invoked-split
 WebWorks-API-Docs-html5-Navigator
