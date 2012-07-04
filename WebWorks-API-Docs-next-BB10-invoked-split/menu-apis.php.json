@@ -261,25 +261,13 @@
 
     
         
-            
-]},
-            
-            
-{ "title":"Invoked", "id":"Invoked", "link":"/html5/apis/blackberry.invoked.html", "children":[    
-    { "title":"Invoked", "id":"Invoked", "link":"/html5/apis/blackberry.invoked.html", "children":[]}
-            
+    ,{ "title":"Invoke", "id":"Invoke", "link":"/html5/apis/blackberry.invoke.html", "children":[]}
         
     
 
     
         
-            
-]},
-            
-            
-{ "title":"Invoke", "id":"Invoke", "link":"/html5/apis/blackberry.invoke.html", "children":[    
-    { "title":"Invoke", "id":"Invoke", "link":"/html5/apis/blackberry.invoke.html", "children":[]}
-            
+    ,{ "title":"Invoked", "id":"Invoked", "link":"/html5/apis/blackberry.invoked.html", "children":[]}
         
     
 

@@ -261,26 +261,14 @@ array('title'=>'Invoke','link'=>'/html5/apis/blackberry.invoke.AddressBookArgume
     
 
     
-        
             
-)),
-            
-            
-array('title'=>'Invoked','link'=>'/html5/apis/blackberry.invoked.html','id'=>'Invoked','children'=>array(
-    array('title'=>'Invoked','link'=>'/html5/apis/blackberry.invoked.html','id'=>'Invoked','children'=>array())
-            
+    ,array('title'=>'Invoke','link'=>'/html5/apis/blackberry.invoke.html','id'=>'Invoke','children'=>array())
         
     
 
     
-        
             
-)),
-            
-            
-array('title'=>'Invoke','link'=>'/html5/apis/blackberry.invoke.html','id'=>'Invoke','children'=>array(
-    array('title'=>'Invoke','link'=>'/html5/apis/blackberry.invoke.html','id'=>'Invoke','children'=>array())
-            
+    ,array('title'=>'Invoked','link'=>'/html5/apis/blackberry.invoked.html','id'=>'Invoked','children'=>array())
         
     
 
