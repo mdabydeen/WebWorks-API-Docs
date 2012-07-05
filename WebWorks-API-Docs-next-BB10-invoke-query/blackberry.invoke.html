@@ -67,7 +67,7 @@
                     
                 
                 <br /><br />
-                <i>Last Updated: Thu Jul 05 2012 10:58:58 GMT-0400 (EDT)</i>                
+                <i>Last Updated: Thu Jul 05 2012 17:24:22 GMT-0400 (EDT)</i>                
             </div>
         
 
@@ -864,7 +864,7 @@
                                         void
                                     
                                     
-                                        query(request : Object, onError : function)
+                                        query(request : Object, onSuccess : function, onError : function)
                                                               
                                 
                             
@@ -954,16 +954,65 @@
                         
                             
                             <tr>
-                                <td><b>onError</b></td>
+                                <td><b>onSuccess</b></td>
                                 <td>
                                     
-                                        function
+                                        function()
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    The callback to be performed if there was an error processing the query.                         
+                                    The callback function that will be triggerd if the query is successful.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>response.action:</b> The action that is supported for the specified query.
+                                        
+                                            <br />
+                                            <b>response.icon:</b> The path of the icon file that may be used to represent the action.
+                                        
+                                            <br />
+                                            <b>response.label:</b> The label that can be used to represent the action.
+                                        
+                                            <br />
+                                            <b>response.default:</b> The name of the target that should be considered as the default provider for the action. If the attribute is omitted then there is no default.
+                                        
+                                            <br />
+                                            <b>response.targets:</b> An array of objects containing information about targets that correspond to the action. Each object has key, icon, splash, label, and type properties.
+                                        
+                                            <br />
+                                            <b>response.targets.key:</b> An identifier of target that supports the invocation.
+                                        
+                                            <br />
+                                            <b>response.targets.icon:</b> The path of the icon that may be used to represent the target.
+                                        
+                                            <br />
+                                            <b>response.targets.splash:</b> The path of the icon that may be used to represent the viewer while loading. This field is mandatory if the type property is VIEWER and is otherwise omitted.
+                                        
+                                            <br />
+                                            <b>response.targets.label:</b> The label that may be used to represent the target.
+                                        
+                                            <br />
+                                            <b>response.targets.type:</b> Indication of the type of the invocation target. Possible values are "APPLICATION", "VIEWER" or "SERVICE".
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onError</b></td>
+                                <td>
+                                    
+                                        function(<i>[error: String]</i>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be triggered if there was an error processing the query.                         
                                     
                                         <br />
                                         
@@ -986,7 +1035,7 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt; function onSuccess(response) {     alert("response: " + JSON.stringify(response, null, 2); } function onError(error) {     alert("error: " + error); } function performQuery() {     var request = {             "action": bb.action.open,             "type": image/*,             "target_type": ["APPLICATION", "VIEWER"],             "action_type": "MENU"         };     blackberry.invoke.query(request, onSuccess, onError); }&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt; function onSuccess(response) {     alert("response: " + JSON.stringify(response, null, 2); } function onError(error) {     alert("error: " + error); } function findAllTargetsThatCanOpenJPEGImages() {     var request = {             "action": "bb.action.OPEN",             "type": "image/jpeg",             "uri": "file://",             "target_type": ["APPLICATION", "VIEWER"],             "action_type": "ALL"         };     blackberry.invoke.query(request, onSuccess, onError); } function findViewersThatCanViewPDFDocs()     var request = {             "action": "bb.action.VIEW",             "type": "application/pdf",             "uri": "file://",             "target_type": ["VIEWERS"],             "action_type": "ALL"         };     blackberry.invoke.query(request, onSuccess, onError); } function findApplicationsThatCanOpenAudioFiles()     var request = {             "action": "bb.action.OPEN",             "type": "audio/*",             "uri": "file://",             "target_type": ["APPLICATION"],             "action_type": "ALL"         };     blackberry.invoke.query(request, onSuccess, onError); } function findAllTargetsThatCanHandleAllVideoFiles()     var request = {             "type": "video/*",             "uri": "file://",             "target_type": ["APPLICATION", "VIEWER"],             "action_type": "ALL"         };     blackberry.invoke.query(request, onSuccess, onError); }&lt;/script&gt;</pre>
 	
     
             </div>
@@ -1962,7 +2011,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 05 2012 10:58:58 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 05 2012 17:24:22 GMT-0400 (EDT)
         </div>
 
     </div>
