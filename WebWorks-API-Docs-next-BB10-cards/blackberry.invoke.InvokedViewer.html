@@ -1,0 +1,1110 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                InvokedViewer
+            
+        </h1>
+
+
+        
+            <p>
+                The InvokedViewer object provides access to the viewer object that is invoked by the host application.
+This object cannot be created by the new keyword.  It is generated only by <code>blackberry.invoke.invokeViewer</code>
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry 10<br />- Ripple Emulator</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.close">close</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.refresh">refresh</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.send">send</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.setPosition">setPosition</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.setSize">setSize</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.setVisibility">setVisibility</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.setZOrder">setZOrder</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="bb10x|ripple">
+                         <td>
+                             &lt;feature id="blackberry.invoke" /&gt;
+                             <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                         </td>
+                     </tr>
+                 
+            </table>
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb10x|ripple">
+                <h3> Functions </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.close">close</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.refresh">refresh</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.send">send</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.setPosition">setPosition</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.setSize">setSize</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.setVisibility">setVisibility</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.setZOrder">setZOrder</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+
+    
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".close"></a>
+                    close
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        close()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Close the viewer window</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+// Close the viewer window if CloseViewer button is clicked
+function onCloseViewerButtonClicked() {
+    // viewer object is stored from onInvokeViewerSuccess callback
+    viewer.close();
+}
+
+&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".refresh"></a>
+                    refresh
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        refresh()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Refresh the viewer window</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+// Refresh the viewer window
+function refreshViewer() {
+    // viewer object is stored from onInvokeViewerSuccess callback
+    viewer.refresh();
+}
+
+&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".send"></a>
+                    send
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        send(message : String, callback : function)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Send a message to the viewer and set the callback when viewer responds to the message</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>message</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe the message that will be sent to viewer                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>callback</b></td>
+                                <td>
+                                    
+                                        function(<i>[message: String]</i>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Optional. Callback function that will be triggered when viewer responds to the message                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>message:</b>  Describe the message that is sent from the viewer that responds to the host's message
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+// Set the new size of viewer window to 400 by 600
+function viewerRespondToSave(message) {
+    if (message == "saved") {
+        alert("The content of viewer is saved.");
+    } else {
+        alert("Cannot save the content of viewer.");
+    }
+}
+
+function sendSaveMessageToViewer() {
+    // viewer object is stored from onInvokeViewerSuccess callback
+    viewer.send("save", viewerRespondToSave);
+}
+
+&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".setPosition"></a>
+                    setPosition
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        setPosition(x : Number, y : Number)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Set the position of the viewer window</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>x</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe x-coodinate of the top left point for the viewer window                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>y</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe y-coodinate of the top left point for the viewer window                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".setSize"></a>
+                    setSize
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        setSize(width : Number, height : Number)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Set the new size for the viewer window</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>width</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe new width for the viewer window                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>height</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe new height for the viewer window                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+// Set the new size of viewer window to 400 by 600
+function setNewSize() {
+    // viewer object is stored from onInvokeViewerSuccess callback
+    viewer.setSize(400, 600);
+}
+
+&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".setVisibility"></a>
+                    setVisibility
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        setVisibility(visibility : Boolean)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Set the visibility of the viewer window</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>visibility</b></td>
+                                <td>
+                                    
+                                        Boolean
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe visibility for the viewer window                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".setZOrder"></a>
+                    setZOrder
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        setZOrder(z : Number)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Set z-order of the viewer window</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>z</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Mandatory. Describe value of z-order for the viewer window                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+function onInvokeViewerSuccess(viewer) {
+    viewer.setPosition(0, 0);
+    viewer.setVisibility(true);
+    viewer.setZOrder(10);
+}
+
+function onInvokeViewerError(error) {
+    alert("Invocation failed, error: " + error);
+}
+
+function invokeViewer() {
+    // To invoke a Viewer, you need provide width and height fields
+    blackberry.invoke.invokeViewer({
+        target: "a.viewer.app", // The target should point to the "Viewer" target entry point of an application
+        width: 600,
+        height: 600
+    }, onInvokeViewerSuccess, onInvokeViewerError);
+}
+
+&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+    
+
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="bb10x|ripple">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 05 2012 18:08:23 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,735 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                HTML5 File
+            
+        </h1>
+
+
+        
+            <p>
+                File objects  provides functionatlity to be able to read, write and navigate file system hierarchies
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                        
+                            <tr x-ww-support="">
+                                <td>
+                                    <a href="File.html#.file">FileEntry.file</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                                </td>
+                            </tr>
+                        
+                    
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="File.html#fullPath">fullPath</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="File.html#lastModifiedDate">lastModifiedDate</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="File.html#name">name</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="File.html#size">size</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="File.html#type">type</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+            <br />
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h3> Constructors </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="">
+                                <a href="File.html#.file">FileEntry.file</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h3> Properties </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="File.html#fullPath">fullPath</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="File.html#lastModifiedDate">lastModifiedDate</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="File.html#name">name</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="File.html#size">size</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="File.html#type">type</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+        
+            <div x-ww-support="">
+                <h2>
+                    <a name=".file"></a>
+                    FileEntry.file
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    FileEntry.file
+                                    
+                                        (successCallBack : function, errorCallBack : function)
+                                    
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>returns the file object associated to the fileEntry</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>successCallBack</b></td>
+                                <td>
+                                    
+                                        function(File : <a href="File.html">File</a>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    function to be executed when successful                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>File:</b> The new File object
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>errorCallBack</b></td>
+                                <td>
+                                    
+                                        function(FileError : <a href="FileError.html">FileError</a>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    function to be executed when an error is encountered                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>FileError:</b> Invoked with a FileError object
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+    
+            </div>
+        
+    
+
+    
+
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+       
+        <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            <h2>Properties:</h2>
+            <hr/>
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <td>
+                            <a name="fullPath">fullPath</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                <a href="File.html">File</a>
+                            
+                            
+                            
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The full path of the file including the file name
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <td>
+                            <a name="lastModifiedDate">lastModifiedDate</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                <a href="File.html">File</a>
+                            
+                            
+                            
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            lists the date that it was last modified
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <td>
+                            <a name="name">name</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                <a href="File.html">File</a>
+                            
+                            
+                            
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The name of the file
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <td>
+                            <a name="size">size</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                <a href="File.html">File</a>
+                            
+                            
+                            
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            size of file in bytes
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                        <td>
+                            <a name="type">type</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                <a href="File.html">File</a>
+                            
+                            
+                            
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The mime type of the file
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+        </div>
+    
+
+    
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 05 2012 18:08:22 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>
