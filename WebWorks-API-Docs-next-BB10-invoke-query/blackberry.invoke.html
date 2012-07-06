@@ -67,7 +67,7 @@
                     
                 
                 <br /><br />
-                <i>Last Updated: Thu Jul 05 2012 18:03:53 GMT-0400 (EDT)</i>                
+                <i>Last Updated: Fri Jul 06 2012 13:44:24 GMT-0400 (EDT)</i>                
             </div>
         
 
@@ -110,7 +110,7 @@
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb10x">
+                        <tr x-ww-support="bb10x|ripple">
                             <td>
                                 <a href="blackberry.invoke.html#.query">query</a>
                                 <td class="apiNo">&nbsp;</td>
@@ -118,7 +118,7 @@
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
@@ -405,7 +405,7 @@
                                 
                             </li>
                         
-                            <li x-ww-support="bb10x">
+                            <li x-ww-support="bb10x|ripple">
                                 <a href="blackberry.invoke.html#.query">query</a>
                                 
                             </li>
@@ -846,7 +846,7 @@
     
             </div>
         
-            <div x-ww-support="bb10x">
+            <div x-ww-support="bb10x|ripple">
                 <h2>
                     <a name=".query"></a>
                     query
@@ -885,6 +885,9 @@
                     <h3>Supported Platform(s)</h3>      
                     
                         &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
                         <br />
                                   
                                    
@@ -957,7 +960,7 @@
                                 <td><b>onSuccess</b></td>
                                 <td>
                                     
-                                        function()
+                                        function(response : <a href="QueryResponse.html">QueryResponse</a>[])
                                     
                                                                                         
                                 </td>
@@ -968,34 +971,7 @@
                                         <br />
                                         
                                             <br />
-                                            <b>response.action:</b> The action that is supported for the specified query.
-                                        
-                                            <br />
-                                            <b>response.icon:</b> The path of the icon file that may be used to represent the action.
-                                        
-                                            <br />
-                                            <b>response.label:</b> The label that can be used to represent the action.
-                                        
-                                            <br />
-                                            <b>response.default:</b> The name of the target that should be considered as the default provider for the action. If the attribute is omitted then there is no default.
-                                        
-                                            <br />
-                                            <b>response.targets:</b> An array of objects containing information about targets that correspond to the action. Each object has key, icon, splash, label, and type properties.
-                                        
-                                            <br />
-                                            <b>response.targets.key:</b> An identifier of target that supports the invocation.
-                                        
-                                            <br />
-                                            <b>response.targets.icon:</b> The path of the icon that may be used to represent the target.
-                                        
-                                            <br />
-                                            <b>response.targets.splash:</b> The path of the icon that may be used to represent the viewer while loading. This field is mandatory if the type property is VIEWER and is otherwise omitted.
-                                        
-                                            <br />
-                                            <b>response.targets.label:</b> The label that may be used to represent the target.
-                                        
-                                            <br />
-                                            <b>response.targets.type:</b> Indication of the type of the invocation target. Possible values are "APPLICATION", "VIEWER" or "SERVICE".
+                                            <b>response:</b> An array which contains the result of the query.
                                         
                                     
                                 </td>
@@ -2011,7 +1987,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 05 2012 18:03:53 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jul 06 2012 13:44:24 GMT-0400 (EDT)
         </div>
 
     </div>
