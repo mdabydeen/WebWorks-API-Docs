@@ -10,7 +10,6 @@ WebWorks-API-Docs-next-BB10
 WebWorks-API-Docs-master_apidoccleanup
 WebWorks-API-Docs-master-microsite-template-update
 WebWorks-API-Docs-next-BB10-dialog-correction
-WebWorks-API-Docs-next-BB10-invoke-query
 WebWorks-API-Docs-next-BB10-device
 WebWorks-API-Docs-next-BB10-filetransfer
 WebWorks-API-Docs-next-BB10-invoke-viewer
