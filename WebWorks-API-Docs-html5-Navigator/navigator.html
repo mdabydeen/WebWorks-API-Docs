@@ -36,14 +36,14 @@
 
         <h1>
             
-                URL
+                HTML5 Navigator
             
         </h1>
 
 
         
             <p>
-                A URL Utility object contains information about a URL string.
+                This Navigator API provides functionality to return the online status of the browser.
             </p>
         
 
@@ -62,7 +62,7 @@
 
         
             <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- Ripple Emulator</pre>
+            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
             <p>
                 <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
             </p>
@@ -70,10 +70,24 @@
                 <table class="apiTable">
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
+                        
+                            <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <td>
+                                    <a href="navigator.html#.navigator">window.navigator</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                </td>
+                            </tr>
+                        
+                    
                     
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
-                                <a href="blackberry.utils.URL.html#getURLParameter">getURLParameter</a>
+                                <a href="navigator.html#onLine">onLine</a>
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -85,7 +99,7 @@
                     
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
-                                <a href="blackberry.utils.URL.html#getURLParameterByIndex">getURLParameterByIndex</a>
+                                <a href="navigator.html#event:offline">offline</a>
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -97,19 +111,7 @@
                     
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
-                                <a href="blackberry.utils.URL.html#host">host</a>
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.utils.URL.html#port">port</a>
+                                <a href="navigator.html#event:online">online</a>
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -128,28 +130,8 @@
         <h2>Configuration Document Settings</h2>
         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
         
+            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
             <br />
-            <p>You must declare the feature element(s) below in your configuration document:</p>
-            <table>
-                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
-                 
-                     
-                     
-                         
-                     
-                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                         <td>
-                             &lt;feature id="blackberry.utils" /&gt;
-                             <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                         </td>
-                     </tr>
-                 
-            </table>
         
 
 
@@ -179,22 +161,14 @@
     
         
         
-    
-        
-        
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Functions </h3>
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <h3> Constructors </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.URL.html#getURLParameter">getURLParameter</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.URL.html#getURLParameterByIndex">getURLParameterByIndex</a>
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="navigator.html#.navigator">window.navigator</a>
                                 
                             </li>
                         
@@ -211,17 +185,36 @@
         
             <br />
             <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                <h3> Events </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <a href="navigator.html#event:offline">offline</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <a href="navigator.html#event:online">online</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h3> Properties </h3>
                 
                     <ul>
                         
                             <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.URL.html#host">host</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.utils.URL.html#port">port</a>
+                                <a href="navigator.html#onLine">onLine</a>
                                 
                             </li>
                         
@@ -247,13 +240,11 @@
         
 
     
-
-    
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
                 <h2>
-                    <a name="getURLParameter"></a>
-                    getURLParameter
+                    <a name=".navigator"></a>
+                    window.navigator
                 </h2>
                 <hr/>
                  
@@ -263,17 +254,76 @@
                         <tr><td>
                             
                                 
-                                                  
-                                    String
+                                    window.navigator
                                     
+                                        ()
                                     
-                                        getURLParameter(key : String)
-                                                              
                                 
                             
                         </td></tr>
                     </table>
                     <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Returns the Navigator object.</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function supportNavigator() {  if(window.navigator) {   alert("supported");  } else {   alert("unsupported");  }}</pre>
+	
+    
+            </div>
+        
+    
+
+    
+
+    
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                <h2>
+                    <a name="event:offline"></a>
+                    offline
+                </h2>
+                <hr/>
+                 
+                
                 
                         
                 
@@ -300,16 +350,9 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Obtain the value of a parameter by key.</p>
+                <p>The <b>offline</b> event is triggered whenever browser switches to offline</p>
                 <br />
                         
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> An undefined object is returned if the key does not exist in the URL query. </p>
-                    
-                    <br />
                 
                         
                 
@@ -333,16 +376,32 @@
                         
                             
                             <tr>
-                                <td><b>key</b></td>
+                                <td><b>CallbackFunction</b></td>
                                 <td>
                                     
-                                        String
+                                        function()
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    The key of the parameter to be retrieved.                         
+                                    The callback function that will be invoked on the offline event                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>useCapture</b></td>
+                                <td>
+                                    
+                                        Boolean
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    A boolean that indicates whether the user wishes to initiate capture                         
                                     
                                 </td>
                             </tr>
@@ -356,33 +415,22 @@
 
                 
                 
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function onOffline() {}  document.body.addEventListener("offline", function() { alert("offline")}, false);}</pre>
+	
     
             </div>
         
             <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h2>
-                    <a name="getURLParameterByIndex"></a>
-                    getURLParameterByIndex
+                    <a name="event:online"></a>
+                    online
                 </h2>
                 <hr/>
                  
                 
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                                  
-                                    String
-                                    
-                                    
-                                        getURLParameterByIndex(index : Number)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
                 
                         
                 
@@ -409,16 +457,9 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Obtain the value of a parameter by index. The values are stored in the order they appear in the URL string.</p>
+                <p>The <b>online</b> event is triggered whenever browser switches to online</p>
                 <br />
                         
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> An undefined object is returned if the index is invalid. </p>
-                    
-                    <br />
                 
                         
                 
@@ -442,16 +483,32 @@
                         
                             
                             <tr>
-                                <td><b>index</b></td>
+                                <td><b>CallbackFunction</b></td>
                                 <td>
                                     
-                                        Number
+                                        function()
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    The index of the parameter to be retrieved.                         
+                                    The callback function that will be invoked on the online event                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>useCapture</b></td>
+                                <td>
+                                    
+                                        Boolean
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    A boolean that indicates whether the user wishes to initiate capture                         
                                     
                                 </td>
                             </tr>
@@ -465,11 +522,14 @@
 
                 
                 
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function onOnline() {}  document.body.addEventListener("online", function() { alert("online")}, false);}</pre>
+	
     
             </div>
         
-    
-
     
 
 
@@ -491,12 +551,6 @@
             <hr/>
 
                      
-            
-                
-                
-                    
-                    <br />
-                
             
                 
                 
@@ -528,13 +582,13 @@
                 
                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                         <td>
-                            <a name="host">host</a>
+                            <a name="onLine">onLine</a>
 
                             
                         </td>
                         <td>
                             
-                                String
+                                Boolean
                             
                             
                             
@@ -546,52 +600,7 @@
                         </td>
                         
                         <td >
-                            Host address in the URL string.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <td>
-                            <a name="port">port</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                Number
-                            
-                            
-                            
-                                
-                                
-                                    <br /> Readonly
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Port number in the URL string.
+                            The property returns a boolean value to indicate the status online or offline
                             
                                 <br />
                                 
@@ -621,10 +630,11 @@
             
 				
                 
-    
-            
-				
-                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function supportNavigatorOnline() { if(window.navigator.onLine) {   alert("onLine"); } else {   alert("offline"); }}</pre>
+	
     
             
         </div>
@@ -645,7 +655,7 @@
 
 
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
             
                 
   
@@ -656,7 +666,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 07 2012 15:09:42 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 07 2012 15:09:40 GMT-0400 (EDT)
         </div>
 
     </div>

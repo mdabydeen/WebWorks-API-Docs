@@ -609,7 +609,7 @@
 
     
         
-    ,{ "title":"HTML5 Navigator", "id":"HTML5 Navigator", "link":"/html5/apis/webkitNavigator.html", "children":[]}
+    ,{ "title":"HTML5 Navigator", "id":"HTML5 Navigator", "link":"/html5/apis/navigator.html", "children":[]}
         
     
 

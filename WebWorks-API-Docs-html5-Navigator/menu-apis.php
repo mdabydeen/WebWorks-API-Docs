@@ -610,7 +610,7 @@ array('title'=>'User Interface','link'=>'/html5/apis/blackberry.ui.dialog.html',
 
     
             
-    ,array('title'=>'HTML5 Navigator','link'=>'/html5/apis/webkitNavigator.html','id'=>'HTML5 Navigator','children'=>array())
+    ,array('title'=>'HTML5 Navigator','link'=>'/html5/apis/navigator.html','id'=>'HTML5 Navigator','children'=>array())
         
     
 
