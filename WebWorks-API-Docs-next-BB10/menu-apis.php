@@ -304,6 +304,18 @@ array('title'=>'Invoke','link'=>'/html5/apis/blackberry.invoke.AddressBookArgume
 
     
             
+    ,array('title'=>'Query Response','link'=>'/html5/apis/QueryResponse.html','id'=>'Query Response','children'=>array())
+        
+    
+
+    
+            
+    ,array('title'=>'Query Response Target','link'=>'/html5/apis/QueryResponseTarget.html','id'=>'Query Response Target','children'=>array())
+        
+    
+
+    
+            
     ,array('title'=>'SearchArguments','link'=>'/html5/apis/blackberry.invoke.SearchArguments.html','id'=>'SearchArguments','children'=>array())
         
     
