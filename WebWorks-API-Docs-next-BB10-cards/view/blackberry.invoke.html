@@ -182,7 +182,7 @@
                     
                 
                 <br /><br />
-                <i>Last Updated: Thu Jul 05 2012 18:08:23 GMT-0400 (EDT)</i>                
+                <i>Last Updated: Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)</i>                
             </div>
         
 
@@ -240,30 +240,6 @@
                         <tr x-ww-support="bb10x|ripple">
                             <td>
                                 <a href="blackberry.invoke.html#.invokeViewer">invokeViewer</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb10x|ripple">
-                            <td>
-                                <a href="blackberry.invoke.html#.CARD_PEEK_TYPE_CONTENT">CARD_PEEK_TYPE_CONTENT</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb10x|ripple">
-                            <td>
-                                <a href="blackberry.invoke.html#.CARD_PEEK_TYPE_ROOT">CARD_PEEK_TYPE_ROOT</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -454,27 +430,6 @@
         
     
         
-        
-            <br />
-            <div x-ww-support="bb10x|ripple">
-                <h3> Constants </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb10x|ripple">
-                                <a href="blackberry.invoke.html#.CARD_PEEK_TYPE_CONTENT">CARD_PEEK_TYPE_CONTENT</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb10x|ripple">
-                                <a href="blackberry.invoke.html#.CARD_PEEK_TYPE_ROOT">CARD_PEEK_TYPE_ROOT</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
         
     
         
@@ -953,7 +908,7 @@
                                 </td>
                                 <td>
                                     
-                                    Object literal that specifies what to invoke. None of the fields are required. Refer to the example code for more information.                         
+                                    Object literal that specifies what to invoke. Refer to the example code for more information.                         
                                     
                                         <br />
                                         
@@ -1206,13 +1161,19 @@ The <b>onCardEndPeek</b> event is fired by the navigator to notify the parent th
                                 <td><b>yourCallbackFunction</b></td>
                                 <td>
                                     
-                                        function()
+                                        function(peekType : String)
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
                                     The callback function that will be invoked on the onCardEndPeek event                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>peekType:</b> Describes the type of peek to be performed as a peek to the content of the parent or a peek to the content of the root. It is either "content" or "root".
+                                        
                                     
                                 </td>
                             </tr>
@@ -1229,7 +1190,7 @@ The <b>onCardEndPeek</b> event is fired by the navigator to notify the parent th
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function onCardEndPeekHandler() {   // The Card stopped peeking   console.log("I am no longer being peeked at.");   if (peekType == CARD_PEEK_TYPE_ROOT) {       updateContent(false);   }}blackberry.event.addEventListener("onCardEndPeek", onCardEndPeekHandler);&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;function onCardEndPeekHandler(peekType) {   // The Card stopped peeking   console.log("I am no longer being peeked at.");   if (peekType == "root") {       updateContent(false);   }}blackberry.event.addEventListener("onCardEndPeek", onCardEndPeekHandler);&lt;/script&gt;</pre>
 	
     
             </div>
@@ -1303,7 +1264,7 @@ The <b>onCardStartPeek</b> event is fired by the navigator to notify the parent 
                                         <br />
                                         
                                             <br />
-                                            <b>peekType:</b> Describes the type of peek to be performed as a peek to the content of the parent or a peek to the content of the root. It is one of the CARD_PEEK_TYPE_* constants.
+                                            <b>peekType:</b> Describes the type of peek to be performed as a peek to the content of the parent or a peek to the content of the root. It is either "content" or "root".
                                         
                                     
                                 </td>
@@ -1321,7 +1282,7 @@ The <b>onCardStartPeek</b> event is fired by the navigator to notify the parent 
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function onCardStartPeekHandler(peekType) {   // The Card started peeking   console.log("The card started peeking.");   if (peekType == CARD_PEEK_TYPE_ROOT) {       updateContent(true);   }}blackberry.event.addEventListener("onCardStartPeek", onCardStartPeekHandler);&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;function onCardStartPeekHandler(peekType) {   // The Card started peeking   console.log("The card started peeking.");   if (peekType == "root") {       updateContent(true);   }}blackberry.event.addEventListener("onCardStartPeek", onCardStartPeekHandler);&lt;/script&gt;</pre>
 	
     
             </div>
@@ -1355,7 +1316,7 @@ The <b>onCardStartPeek</b> event is fired by the navigator to notify the parent 
                         
                 <h3>Description</h3>
                 <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
-The <b>onViewerRelayMessage</b> event is used to pass control message from viewer targets to the host.</p>
+The <b>onViewerRelayMessage</b> event is used to pass control message from viewer targets to the host and vice versa.</p>
                 <br />
                         
                 
@@ -1390,12 +1351,12 @@ The <b>onViewerRelayMessage</b> event is used to pass control message from viewe
                                 </td>
                                 <td>
                                     
-                                    The callback function that will be invoked on the onViewerRelayMessage event                         
+                                    The callback function that will be invoked on the onViewerRelayMessage event.                         
                                     
                                         <br />
                                         
                                             <br />
-                                            <b>message:</b> The message string sent from the invoked viewer.
+                                            <b>message:</b> The message string sent from the invoked viewer to the host.
                                         
                                     
                                 </td>
@@ -1436,144 +1397,6 @@ The <b>onViewerRelayMessage</b> event is used to pass control message from viewe
 
     
     
-       
-        <div x-ww-support="bb10x|ripple">
-            <h2>Constants:</h2>
-            <hr/>
-
-                     
-            
-                
-                
-                    
-                    <br />
-                
-            
-                
-                
-                    
-                    <br />
-                
-            
- 
-            <table>
-                <thead><tr>
-                    <th>
-                    Property
-                   
-                    </th>
-                    <th>
-                       Type
-                       
-                    </th>
-                    <th>
-                       Description
-                       
-                    </th>
-                    <th>
-                       Supported Platform(s)            
-                       
-                    </th>
-                </tr></thead>
-                
-                
-                    <tr x-ww-support="bb10x|ripple">
-                        <td>
-                            <a name=".CARD_PEEK_TYPE_CONTENT">CARD_PEEK_TYPE_CONTENT</a>
-
-                            
-                                
-                                     = "content"
-                                
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                        </td>
-                        
-                        <td >
-                            Constant for a peek to the content of the parent
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry 10
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb10x|ripple">
-                        <td>
-                            <a name=".CARD_PEEK_TYPE_ROOT">CARD_PEEK_TYPE_ROOT</a>
-
-                            
-                                
-                                     = "root"
-                                
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                        </td>
-                        
-                        <td >
-                            Constant for a peek to the content of the root
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry 10
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-            </table>
-            
-            
-				
-                
-    
-            
-				
-                
-    
-            
-        </div>
-    
 
 
 
@@ -1598,7 +1421,7 @@ The <b>onViewerRelayMessage</b> event is used to pass control message from viewe
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 05 2012 18:08:23 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)
         </div>
 
     </div>
