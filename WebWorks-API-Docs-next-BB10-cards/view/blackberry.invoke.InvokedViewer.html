@@ -201,18 +201,6 @@ This object cannot be created by the new keyword.  It is generated only by <code
                     
                         <tr x-ww-support="bb10x|ripple">
                             <td>
-                                <a href="blackberry.invoke.InvokedViewer.html#.refresh">refresh</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb10x|ripple">
-                            <td>
                                 <a href="blackberry.invoke.InvokedViewer.html#.send">send</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -262,6 +250,42 @@ This object cannot be created by the new keyword.  It is generated only by <code
                         <tr x-ww-support="bb10x|ripple">
                             <td>
                                 <a href="blackberry.invoke.InvokedViewer.html#.setZOrder">setZOrder</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.update">update</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.onCancel">onCancel</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.InvokedViewer.html#.onClose">onClose</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -346,11 +370,6 @@ This object cannot be created by the new keyword.  It is generated only by <code
                             </li>
                         
                             <li x-ww-support="bb10x|ripple">
-                                <a href="blackberry.invoke.InvokedViewer.html#.refresh">refresh</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb10x|ripple">
                                 <a href="blackberry.invoke.InvokedViewer.html#.send">send</a>
                                 
                             </li>
@@ -375,6 +394,11 @@ This object cannot be created by the new keyword.  It is generated only by <code
                                 
                             </li>
                         
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.update">update</a>
+                                
+                            </li>
+                        
                     </ul>
                 
                 
@@ -385,6 +409,27 @@ This object cannot be created by the new keyword.  It is generated only by <code
         
     
         
+        
+            <br />
+            <div x-ww-support="bb10x|ripple">
+                <h3> Properties </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.onCancel">onCancel</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.InvokedViewer.html#.onClose">onClose</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
         
     
         
@@ -476,83 +521,6 @@ This object cannot be created by the new keyword.  It is generated only by <code
 function onCloseViewerButtonClicked() {
     // viewer object is stored from onInvokeViewerSuccess callback
     viewer.close();
-}
-
-&lt;/script&gt;</pre>
-	
-    
-            </div>
-        
-            <div x-ww-support="bb10x|ripple">
-                <h2>
-                    <a name=".refresh"></a>
-                    refresh
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    static              
-                                    
-                                        void
-                                    
-                                    
-                                        refresh()
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Refresh the viewer window</p>
-                <br />
-                        
-                
-                        
-                                   
-                        
-                
-
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&lt;script type="text/javascript"&gt;
-
-// Refresh the viewer window
-function refreshViewer() {
-    // viewer object is stored from onInvokeViewerSuccess callback
-    viewer.refresh();
 }
 
 &lt;/script&gt;</pre>
@@ -1145,28 +1113,79 @@ function setNewSize() {
 
                 
                 
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".update"></a>
+                    update
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        update()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Update the viewer window</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
 
 	<br /><h3>Code Example(s)</h3>
 	
 		<pre>&lt;script type="text/javascript"&gt;
 
-function onInvokeViewerSuccess(viewer) {
-    viewer.setPosition(0, 0);
-    viewer.setVisibility(true);
-    viewer.setZOrder(10);
-}
-
-function onInvokeViewerError(error) {
-    alert("Invocation failed, error: " + error);
-}
-
-function invokeViewer() {
-    // To invoke a Viewer, you need provide width and height fields
-    blackberry.invoke.invokeViewer({
-        target: "a.viewer.app", // The target should point to the "Viewer" target entry point of an application
-        width: 600,
-        height: 600
-    }, onInvokeViewerSuccess, onInvokeViewerError);
+// Update the viewer window
+function updateViewer() {
+    // viewer object is stored from onInvokeViewerSuccess callback
+    viewer.update();
 }
 
 &lt;/script&gt;</pre>
@@ -1190,6 +1209,180 @@ function invokeViewer() {
 
 
     
+    
+       
+        <div x-ww-support="bb10x|ripple">
+            <h2>Properties:</h2>
+            <hr/>
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".onCancel">onCancel</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                callback
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The callback function that will be triggered when the viewer is cancelled.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x|ripple">
+                        <td>
+                            <a name=".onClose">onClose</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                callback
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The callback function that will be triggered when the viewer is closed.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+				
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+function onViewClosed() {
+    alert("The Viewer window was closed.");
+}
+
+function onViewCancelled() {
+    alert("The Viewer was cancelled.");
+}
+
+function onInvokeViewerSuccess(viewer) {
+    viewer.setPosition(0, 0);
+    viewer.setVisibility(true);
+    viewer.setZOrder(10);
+    viewer.onClose = onViewClosed;
+    viewer.onCancel = onViewCancelled;
+}
+
+function onInvokeViewerError(error) {
+    alert("Invocation failed, error: " + error);
+}
+
+function invokeViewer() {
+    // To invoke a Viewer, you need provide width and height fields
+    blackberry.invoke.invokeViewer({
+        target: "a.viewer.app", // The target should point to the "Viewer" target entry point of an application
+        width: 600,
+        height: 600
+    }, onInvokeViewerSuccess, onInvokeViewerError);
+}
+
+&lt;/script&gt;</pre>
+	
+    
+            
+        </div>
     
 
     
@@ -1218,7 +1411,7 @@ function invokeViewer() {
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 13:50:32 GMT-0400 (EDT)
         </div>
 
     </div>

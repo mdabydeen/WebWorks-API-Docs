@@ -180,7 +180,7 @@
                     
                 
                 <br /><br />
-                <i>Last Updated: Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)</i>                
+                <i>Last Updated: Tue Jul 10 2012 13:50:32 GMT-0400 (EDT)</i>                
             </div>
         
 
@@ -262,18 +262,6 @@
                         <tr x-ww-support="bb10x">
                             <td>
                                 <a href="blackberry.invoked.html#.event:onCardResize">onCardResize</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb10x">
-                            <td>
-                                <a href="blackberry.invoked.html#.event:onViewerRelayMessage">onViewerRelayMessage</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -393,11 +381,6 @@
                         
                             <li x-ww-support="bb10x">
                                 <a href="blackberry.invoked.html#.event:onCardResize">onCardResize</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb10x">
-                                <a href="blackberry.invoked.html#.event:onViewerRelayMessage">onViewerRelayMessage</a>
                                 
                             </li>
                         
@@ -1110,110 +1093,6 @@ blackberry.event.addEventListener("onCardResize", onCardResizeHandler);
     
             </div>
         
-            <div x-ww-support="bb10x">
-                <h2>
-                    <a name=".event:onViewerRelayMessage"></a>
-                    onViewerRelayMessage
-                </h2>
-                <hr/>
-                 
-                
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br/>
-The <b>onViewerRelayMessage</b> event is used to pass control message from the host to viewer targets and vice versa.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>yourCallbackFunction</b></td>
-                                <td>
-                                    
-                                        function(message : String)
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The callback function that will be invoked on the onViewerRelayMessage event.                         
-                                    
-                                        <br />
-                                        
-                                            <br />
-                                            <b>message:</b> The message string sent from the host to the invoked viewer.
-                                        
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&lt;script type="text/javascript"&gt;
-
-function onViewerRelayMessageHandler(message) {
-   // If received a "doSomething" message from the host,
-   // call doSomething() method.
-   if (message == "doSomething") {
-       doSomething();
-   }
-}
-
-blackberry.event.addEventListener("onViewerRelayMessage", onViewerRelayMessageHandler);
-
-&lt;/script&gt;</pre>
-	
-    
-            </div>
-        
     
 
 
@@ -1256,7 +1135,7 @@ blackberry.event.addEventListener("onViewerRelayMessage", onViewerRelayMessageHa
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 13:50:32 GMT-0400 (EDT)
         </div>
 
     </div>

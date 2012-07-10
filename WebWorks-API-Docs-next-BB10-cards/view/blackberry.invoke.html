@@ -182,7 +182,7 @@
                     
                 
                 <br /><br />
-                <i>Last Updated: Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)</i>                
+                <i>Last Updated: Tue Jul 10 2012 13:50:32 GMT-0400 (EDT)</i>                
             </div>
         
 
@@ -287,7 +287,7 @@
                     
                         <tr x-ww-support="bb10x">
                             <td>
-                                <a href="blackberry.invoke.html#.event:onViewerRelayMessage">onViewerRelayMessage</a>
+                                <a href="blackberry.invoke.html#.event:onViewerMessageReceived">onViewerMessageReceived</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -416,7 +416,7 @@
                             </li>
                         
                             <li x-ww-support="bb10x">
-                                <a href="blackberry.invoke.html#.event:onViewerRelayMessage">onViewerRelayMessage</a>
+                                <a href="blackberry.invoke.html#.event:onViewerMessageReceived">onViewerMessageReceived</a>
                                 
                             </li>
                         
@@ -873,7 +873,7 @@
                 <br />
                         
                 <h3>Description</h3>
-                <p>Invokes another application</p>
+                <p>Invokes a Viewer</p>
                 <br />
                         
                 
@@ -942,7 +942,7 @@
                                 <td><b>onSuccess</b></td>
                                 <td>
                                     
-                                        function(<i>[viewer: blackberry.invoke.invokedViewer]</i>)
+                                        function(viewer : blackberry.invoke.invokedViewer)
                                     
                                                                                         
                                 </td>
@@ -953,7 +953,7 @@
                                         <br />
                                         
                                             <br />
-                                            <b>viewer:</b>  The <code>blackberry.invoke.invokedViewer</code> object that allows the invoker to set the vairous properties and communicate to the invoked viewer.
+                                            <b>viewer:</b> The <code>blackberry.invoke.invokedViewer</code> object that allows the invoker to set the vairous properties and communicate to the invoked viewer.
                                         
                                     
                                 </td>
@@ -1289,8 +1289,8 @@ The <b>onCardStartPeek</b> event is fired by the navigator to notify the parent 
         
             <div x-ww-support="bb10x">
                 <h2>
-                    <a name=".event:onViewerRelayMessage"></a>
-                    onViewerRelayMessage
+                    <a name=".event:onViewerMessageReceived"></a>
+                    onViewerMessageReceived
                 </h2>
                 <hr/>
                  
@@ -1316,7 +1316,7 @@ The <b>onCardStartPeek</b> event is fired by the navigator to notify the parent 
                         
                 <h3>Description</h3>
                 <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
-The <b>onViewerRelayMessage</b> event is used to pass control message from viewer targets to the host and vice versa.</p>
+The <b>onViewerMessageReceived</b> event is used to pass control message from viewer targets to the host.</p>
                 <br />
                         
                 
@@ -1345,15 +1345,18 @@ The <b>onViewerRelayMessage</b> event is used to pass control message from viewe
                                 <td><b>yourCallbackFunction</b></td>
                                 <td>
                                     
-                                        function(message : String)
+                                        function(viewer : blackberry.invoke.invokedViewer, message : String)
                                     
                                                                                         
                                 </td>
                                 <td>
                                     
-                                    The callback function that will be invoked on the onViewerRelayMessage event.                         
+                                    The callback function that will be invoked on the onViewerMessageReceived event.                         
                                     
                                         <br />
+                                        
+                                            <br />
+                                            <b>viewer:</b> Indicates the <code>blackberry.invoke.invokedViewer</code> object that has sent the message.
                                         
                                             <br />
                                             <b>message:</b> The message string sent from the invoked viewer to the host.
@@ -1374,7 +1377,7 @@ The <b>onViewerRelayMessage</b> event is used to pass control message from viewe
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function onViewerRelayMessageHandler(message) {   // If received a "doSomething" message from the viewer,   // call doSomething() method.   if (message == "doSomething") {       doSomething();   }}blackberry.event.addEventListener("onViewerRelayMessage", onViewerRelayMessageHandler);&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;function onViewerMessageReceivedHandler(viewer, message) {   // If received a "doSomething" message from the viewer,   // call doSomething() method.   if (message == "doSomething") {       doSomething();   }}blackberry.event.addEventListener("onViewerMessageReceived", onViewerMessageReceivedHandler);&lt;/script&gt;</pre>
 	
     
             </div>
@@ -1421,7 +1424,7 @@ The <b>onViewerRelayMessage</b> event is used to pass control message from viewe
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jul 09 2012 14:48:44 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 13:50:32 GMT-0400 (EDT)
         </div>
 
     </div>
