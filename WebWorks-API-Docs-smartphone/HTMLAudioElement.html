@@ -1,5 +1,30 @@
 
 
+<section  class="page_container references">
+	<div class="row">
+        <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
+            <div id="sticky-anchor"> </div>
+            <div class="side-nav-wrapper" id="sticky">
+                <div class="side-nav-content clearfix" id="none">
+                    <div class="side-nav-section clearfix" id="side-nav-title">
+                        <h3>API Reference</h3>
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-parents"> 
+                    </div>
+                    <div class="side-nav-section clearfix" id="side-nav-filter"> 
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-children"> 
+                    </div>
+                </div>
+            </div>
+            <div class="side-navspacer-bottom"> </div>
+        </nav>
+
+        <div class="column grid_8">
+                <div class="row">
+                    <article id="main" class="column grid_8" role="main">
+                        
+
 <section>
 
     <script type="text/javascript">
@@ -44,6 +69,16 @@
         
             <p>
                 An audio element represents a sound or audio stream.
+
+
+                
+                    <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                    
+                
+  
+
+                    </div>
+                
             </p>
         
 
@@ -61,70 +96,95 @@
 
 
         
-            <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 6.0+<br />- BlackBerry PlayBook 1.0+<br />- Ripple Emulator</pre>
-            <p>
-                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
-            </p>
-            <div class="APISupportTable" id="APISupportTable">
-                <table class="apiTable">
-                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+            <div class="ref-sect ref-index">
+                <div class="ref-sect-title">
+                    <h2>Supported Platform(s)</h2>
+                </div>
+                <div class="ref-sect-content">
                     
-                        
-                            <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <td>
-                                    <a href="HTMLAudioElement.html#.documentConstructor">document.createElement("audio")</a>
-                                    <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                </td>
-                            </tr>
-                        
-                            <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <td>
-                                    <a href="HTMLAudioElement.html#.audioConstructor">new Audio([String: url])</a>
-                                    <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                </td>
-                            </tr>
-                        
+                        <table>
+                            <tbody>
+                            
+                                <tr><td>- BlackBerry OS 6.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry 10</td></tr>
+                            
+                                <tr><td>- Ripple Emulator</td></tr>
+                            
+                            </tbody>
+                        </table>
                     
-                    
-                </table>
+                    <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+                    <div class="APISupportTable" id="APISupportTable">
+                        <table class="apiTable">
+                            <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                            
+                                
+                                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                        <td>
+                                            <a href="HTMLAudioElement.html#.documentConstructor">document.createElement("audio")</a>
+                                            <td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                        <td>
+                                            <a href="HTMLAudioElement.html#.audioConstructor">new Audio([String: url])</a>
+                                            <td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                        </td>
+                                    </tr>
+                                
+                            
+                            
+                        </table>
+                    </div>
+                </div>
             </div>
         
 
 
-        <br />
-        <h2>Configuration Document Settings</h2>
-        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
-        
-            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-            <br />
-        
-
-
-        <div x-ww-support="pb1.0|pb2.0">
-            
-
-            <table>
-                <tr>
-                    <th>Permission Elements (PlayBook Only)</th>
-                </tr>
-                
+        <div class="ref-sect ref-index">
+            <div class="ref-sect-title">
+                <h2>Configuration Document Settings</h2>
+            </div>
+            <div class="ref-sect-content">
+                <table><tbody>
                     <tr><td>
-                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
-                    <br />
+                    
+                    <tr><td>
+                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr></tbody></table>
                 
-            </table>
+
+                <div x-ww-support="pb1.0|pb2.0">
+                    
+                    <table>
+                        <tr>
+                            <th>Permission Elements (PlayBook Only)</th>
+                        </tr>
+                        
+                            <tr><td>
+                                This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                            </td></tr>
+                            <br />
+                        
+                    </table>
+                </div>
+            </div>
         </div>
 
 
@@ -133,69 +193,90 @@
 
 
 <div>
-<h2>API Summary</h2>
     
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLAudioElement.html#.documentConstructor">document.createElement("audio")</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="HTMLAudioElement.html#.audioConstructor">new Audio([String: url])</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
+            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <div class="ref-sect-title">
+                    <h2> Constructors </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="HTMLAudioElement.html#.documentConstructor">document.createElement("audio")</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="HTMLAudioElement.html#.audioConstructor">new Audio([String: url])</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
             </div>
         
     
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Functions </h3>
-                
-                
-                    <dl class="inheritsList">
-                        
-                            <dt> Functions inherited from class <a href="HTMLMediaElement.html">HTMLMediaElement</a>:  </dt>
-                            <dd>
-                                
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#addTrack">addTrack</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#canPlayType">canPlayType</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#load">load</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#pause">pause</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0">
-                                        <a href="HTMLMediaElement.html#play">play</a>
-                                    </span>
-                                
-                            </dd>
-                        
-                    </dl>
-                
+            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <div class="ref-sect-title">
+                    <h2> Functions </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                    
+                        <table><tbody><tr><td><dl class="inheritsList">
+                            
+                                <dt> Functions inherited from class <a href="HTMLMediaElement.html">HTMLMediaElement</a>:  </dt>
+                                <dd>
+                                    
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#addTrack">addTrack</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#canPlayType">canPlayType</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#load">load</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#pause">pause</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                            <a href="HTMLMediaElement.html#play">play</a>
+                                        </span>
+                                    
+                                </dd>
+                            
+                        </dl></td></tr></tbody></table>
+                    
+                </div>
             </div>
         
     
@@ -205,112 +286,116 @@
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                
-                    <dl class="inheritsList">
-                        
-                            <dt> Properties inherited from class <a href="HTMLMediaElement.html">HTMLMediaElement</a>:  </dt>
-                            <dd>
-                                
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#autoplay">autoplay</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#controls">controls</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#currentSRC">currentSRC</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#currentTime">currentTime</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#defaultPlaybackRate">defaultPlaybackRate</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#duration">duration</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#ended">ended</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#error">error</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#initialTime">initialTime</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#loop">loop</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#muted">muted</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#networkState">networkState</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#paused">paused</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#playbackRate">playbackRate</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#played">played</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#preload">preload</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#readyState">readyState</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#seekable">seekable</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#seeking">seeking</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#src">src</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#startOffsetTime">startOffsetTime</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#textTracks">textTracks</a>
-                                    </span>
-                                
-                                    <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                        <a href="HTMLMediaElement.html#volume">volume</a>
-                                    </span>
-                                
-                            </dd>
-                        
-                    </dl>
-                
+            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                    
+                        <table><tbody><tr><td><dl class="inheritsList">
+                            
+                                <dt> Properties inherited from class <a href="HTMLMediaElement.html">HTMLMediaElement</a>:  </dt>
+                                <dd>
+                                    
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#autoplay">autoplay</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#controls">controls</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#currentSRC">currentSRC</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#currentTime">currentTime</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#defaultPlaybackRate">defaultPlaybackRate</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#duration">duration</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#ended">ended</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#error">error</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#initialTime">initialTime</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#loop">loop</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#muted">muted</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#networkState">networkState</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#paused">paused</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#playbackRate">playbackRate</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#played">played</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#preload">preload</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#readyState">readyState</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#seekable">seekable</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#seeking">seeking</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#src">src</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#startOffsetTime">startOffsetTime</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#textTracks">textTracks</a>
+                                        </span>
+                                    
+                                        <span x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                            <a href="HTMLMediaElement.html#volume">volume</a>
+                                        </span>
+                                    
+                                </dd>
+                            
+                        </dl></td></tr></tbody></table>
+                    
+                </div>
             </div>
         
     
@@ -330,227 +415,230 @@
         
 
     
-        
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name=".documentConstructor"></a>
-                    document.createElement("audio")
-                </h2>
-                <hr/>
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Constructors</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                        <h3>
+                            <a name=".documentConstructor"></a>
                  
-                
-                
-                    <table>
-                        <tr><td>
+                            
                             
                                 
                                     document.createElement("audio")
                                     
                                 
                             
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
                     
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 6.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Creates an HTMLAudioElement</p>
-                <br />
-                        
-                
-                        
-                                   
-                        
+                            
+                                       
+                            
+                            
+                            <p>Creates an HTMLAudioElement</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 6.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
                 
 
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>var audio = document.createElement('audio');audio.src = 'audio.wav';audio.controls = true;document.body.appendChild(audio);</pre>
-	
+    <br />
+    <b>Code Example:</b>
     
-            </div>
-        
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name=".audioConstructor"></a>
-                    new Audio([String: url])
-                </h2>
-                <hr/>
+        <table><tbody><td class="code"><code><pre>var audio = document.createElement('audio');audio.src = 'audio.wav';audio.controls = true;document.body.appendChild(audio);</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                        <h3>
+                            <a name=".audioConstructor"></a>
                  
-                
-                
-                    <table>
-                        <tr><td>
+                            
                             
                                 
                                     new Audio([String: url])
                                     
                                 
                             
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 6.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>An HTMLAudioElement can also be created using the named constructor Audio().</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
+                            <br />
+                        </h3>
+                        <div class="detailed description">
                             
-                            <tr>
-                                <td><b>url</b></td>
-                                <td>
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>An HTMLAudioElement can also be created using the named constructor Audio().</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
                                     
-                                        String
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 6.0+
+                                        </td></tr>
                                     
-                                    <br /><i>Optional</i>                                                    
-                                </td>
-                                <td>
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
                                     
-                                    URL of the source                         
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
                                     
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>url</b></td>
+                                            <td>
+                                                
+                                                URL of the source                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
                 
 
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>var audio = new Audio();audio.src = 'audio.wav';</pre>
-	
-		<pre>var audio = new Audio('audio.wav');</pre>
-	
+    <br />
+    <b>Code Example:</b>
     
-            </div>
-        
+        <table><tbody><td class="code"><code><pre>var audio = new Audio();audio.src = 'audio.wav';</pre></code></td></tbody></table>
     
-
+        <table><tbody><td class="code"><code><pre>var audio = new Audio('audio.wav');</pre></code></td></tbody></table>
     
-
-    
-
-
-
-
-        
-        
-
-
-
-
-
-
-    
-    
-
-    
-    
-
-
-
-
-        
-        
-
-    
-
-
-
-
-        
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-            
-                
   
+
+                        </div>
+                    </div>
+                
             </div>
-        
+        </div>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
 
 
-        <hr />
+
+
+
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Apr 28 2012 01:13:03 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 01:32:11 GMT-0400 (EDT)
         </div>
 
+    </div>
+</section>
+
+                    </article>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
