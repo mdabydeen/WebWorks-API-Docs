@@ -1,0 +1,1316 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                Invoke
+            
+        </h1>
+
+
+        
+            <p>
+                The Invoke object contains methods that interact with other applications.<p/>On BlackBerry OS 5.0+ and BlackBerry PlayBook 1.0+, the <a href="blackberry.invoke.html#.invoke^2">invoke</a> method on the invoke object allows you to pass arguments to the target application. </br>The types of arguments can be one of: <a href="blackberry.invoke.AddressBookArguments.html">blackberry.invoke.AddressBookArguments</a>, <a href="blackberry.invoke.BrowserArguments.html">blackberry.invoke.BrowserArguments</a>,
+ <a href="blackberry.invoke.CalendarArguments.html">blackberry.invoke.CalendarArguments</a>, <a href="blackberry.invoke.CameraArguments.html">blackberry.invoke.CameraArguments</a>, <a href="blackberry.invoke.JavaArguments.html">blackberry.invoke.JavaArguments</a>, <a href="blackberry.invoke.MapsArguments.html">blackberry.invoke.MapsArguments</a>, <a href="blackberry.invoke.MemoArguments.html">blackberry.invoke.MemoArguments</a>, <a href="blackberry.invoke.MessageArguments.html">blackberry.invoke.MessageArguments</a>,
+ <a href="blackberry.invoke.PhoneArguments.html">blackberry.invoke.PhoneArguments</a>, <a href="blackberry.invoke.SearchArguments.html">blackberry.invoke.SearchArguments</a>, and <a href="blackberry.invoke.TaskArguments.html">blackberry.invoke.TaskArguments</a>.<p/>On BlackBerry 10, the <a href="blackberry.invoke.html#.invoke">invoke</a> method will take arguments in the form of JavaScript object literal.
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+            <div class="note">                
+                <h3>Beta Notice:</h3>
+                This API is considered to be in Beta.
+                The function and property signatures listed below could change at anytime.
+                Once the API moves out of Beta it will be distributed as part of the core API.
+                <br /><br />
+                
+                    
+                
+                <br /><br />
+                <i>Last Updated: Tue Jul 10 2012 13:56:39 GMT-0400 (EDT)</i>                
+            </div>
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.closeChildCard">closeChildCard</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.invoke^2">invoke</a>
+                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.invoke">invoke</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x|ripple">
+                            <td>
+                                <a href="blackberry.invoke.html#.invokeViewer">invokeViewer</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.invoke.html#.event:onChildCardClosed">onChildCardClosed</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.invoke.html#.event:onChildCardEndPeek">onChildCardEndPeek</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.invoke.html#.event:onChildCardStartPeek">onChildCardStartPeek</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.invoke.html#.event:onViewerMessageReceived">onViewerMessageReceived</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                         <td>
+                             &lt;feature id="blackberry.invoke" /&gt;
+                             <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                         </td>
+                     </tr>
+                 
+            </table>
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <h3> Functions </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.closeChildCard">closeChildCard</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <a href="blackberry.invoke.html#.invoke^2">invoke</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.invoke">invoke</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x|ripple">
+                                <a href="blackberry.invoke.html#.invokeViewer">invokeViewer</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb10x">
+                <h3> Events </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.invoke.html#.event:onChildCardClosed">onChildCardClosed</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.invoke.html#.event:onChildCardEndPeek">onChildCardEndPeek</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.invoke.html#.event:onChildCardStartPeek">onChildCardStartPeek</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.invoke.html#.event:onViewerMessageReceived">onViewerMessageReceived</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+
+    
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".closeChildCard"></a>
+                    closeChildCard
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    void
+                                    
+                                    
+                                        closeChildCard()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>As a parent, close the child Card</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function closeChildCard() {    // Close the child Card for some reason    blackberry.invoke.closeChildCard();}&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                <h2>
+                    <a name=".invoke^2"></a>
+                    invoke
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        invoke(appType : Number, <i>[args: Object]</i>)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry OS 5.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Invokes another application on the BlackBerry PlayBook or Blackberry OS 5.0+.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>appType</b></td>
+                                <td>
+                                    
+                                        Number
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    an integer value representing the type of application to launch. Must be one of the 'APP_*' constants.                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>args</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                    <br /><i>Optional</i>                                                    
+                                </td>
+                                <td>
+                                    
+                                    An arguments object specifying information for the application being invoked.                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Throws
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                        
+                            <tr>
+                                <td>
+                                    Exception                                                
+                                </td>
+                                <td>
+                                    If values supplied are not correct.
+                                </td>
+                            </tr>
+                        
+                    </table>
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt; function startCameraApp() {     var args = new blackberry.invoke.CameraArguments();     args.view = blackberry.invoke.CameraArguments.VIEW_RECORDER;     blackberry.invoke.invoke(blackberry.invoke.APP_CAMERA, args); } startCameraApp(); &lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".invoke"></a>
+                    invoke
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        invoke(request : Object, onSuccess : function, onError : function)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Invokes another application</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>request</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Object literal that specifies what to invoke. None of the fields are required. Refer to the example code for more information.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
+                                        
+                                            <br />
+                                            <b>action:</b> The action to be performed by the target. You can use the ACTION_* constants or other known action strings.
+                                        
+                                            <br />
+                                            <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
+                                        
+                                            <br />
+                                            <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
+                                        
+                                            <br />
+                                            <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onSuccess</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess().                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onError</b></td>
+                                <td>
+                                    
+                                        function(<i>[error: String]</i>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>error:</b>  A String that describes the error.
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function viewPicture() {    // view picture    blackberry.invoke.invoke({        uri: &lt;path to jpg file&gt;,        action: blackberry.invoke.ACTION_VIEW    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}function invokeCard() {    // invoking Card is the same as invoking an application, except the target specified should point to the "Card" target entry point    blackberry.invoke.invoke({        target: "an.app.that.supports.card", // The target should point to the "Card" target entry point of an application        type: "text/plain",        data: "{'myData': 'Some data'}"    }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x|ripple">
+                <h2>
+                    <a name=".invokeViewer"></a>
+                    invokeViewer
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        invokeViewer(request : Object, onSuccess : function, onError : function)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Invokes a Viewer</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>request</b></td>
+                                <td>
+                                    
+                                        Object
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Object literal that specifies what to invoke. Refer to the example code for more information.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
+                                        
+                                            <br />
+                                            <b>action:</b> The action to be performed by the target. You can use the ACTION_* constants or other known action strings.
+                                        
+                                            <br />
+                                            <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
+                                        
+                                            <br />
+                                            <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
+                                        
+                                            <br />
+                                            <b>width:</b> Mandatory. The number of pixels of width that the viewer should conform to when initializing
+                                        
+                                            <br />
+                                            <b>height:</b> Mandatory. The number of pixels of height that the viewer should conform to when initializing
+                                        
+                                            <br />
+                                            <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onSuccess</b></td>
+                                <td>
+                                    
+                                        function(viewer : blackberry.invoke.invokedViewer)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess(viewer).                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>viewer:</b> The <code>blackberry.invoke.invokedViewer</code> object that allows the invoker to set the vairous properties and communicate to the invoked viewer.
+                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>onError</b></td>
+                                <td>
+                                    
+                                        function(<i>[error: String]</i>)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>error:</b>  A String that describes the error.
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onInvokeViewerSuccess(viewer) {    viewer.setPosition(0, 0);    viewer.setVisibility(true);    viewer.setZOrder(10);}function onInvokeViewerError(error) {    alert("Invocation failed, error: " + error);}function invokeViewer() {    // To invoke a Viewer, you need provide width and height fields    blackberry.invoke.invokeViewer({        target: "a.viewer.app", // The target should point to the "Viewer" target entry point of an application        width: 600,        height: 600    }, onInvokeViewerSuccess, onInvokeViewerError);}&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+    
+
+    
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:onChildCardClosed"></a>
+                    onChildCardClosed
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
+The <b>onChildCardClosed</b> event is fired by the navigator to notify the parent that a card is closed. The event includes any response data sent by the card (if the card requested its own closure).</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function(request : JSON)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the onChildCardClosed event                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>request:</b> An object that includes any response data sent by the card (if the card requested closure).
+                                        
+                                            <br />
+                                            <b>request.reason:</b> Describes application level description of why the card was closed. In the case that the close was due to a navigation Navigator will insert the value "navigation"
+                                        
+                                            <br />
+                                            <b>request.type:</b> Describes the type and encoding of the value in the data attributes
+                                        
+                                            <br />
+                                            <b>request.data:</b> Describes the data that will be returned to the parent
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onChildCardClosedHandler(request) {   // The child Card is closed and reason is "OK", process the closure data;   // otherwise do nothing.   if (request.reason == "OK") {       processCardClosureData(request.type, request.data);   }}blackberry.event.addEventListener("onChildCardClosed", onChildCardClosedHandler);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:onChildCardEndPeek"></a>
+                    onChildCardEndPeek
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
+The <b>onChildCardEndPeek</b> event is fired by the navigator to notify the parent that it is no longer being peeked at.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function(peekType : String)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the onChildCardEndPeek event                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>peekType:</b> Describes the type of peek to be performed as a peek to the content of the parent or a peek to the content of the root. It is either "content" or "root".
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onChildCardEndPeekHandler(peekType) {   // The Card stopped peeking   console.log("I am no longer being peeked at.");   if (peekType == "root") {       updateContent(false);   }}blackberry.event.addEventListener("onChildCardEndPeek", onChildCardEndPeekHandler);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:onChildCardStartPeek"></a>
+                    onChildCardStartPeek
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
+The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the parent that it is being peeked at and describe the type of peek being performed</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function(peekType : String)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the onChildCardStartPeek event                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>peekType:</b> Describes the type of peek to be performed as a peek to the content of the parent or a peek to the content of the root. It is either "content" or "root".
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onChildCardStartPeekHandler(peekType) {   // The Card started peeking   console.log("The card started peeking.");   if (peekType == "root") {       updateContent(true);   }}blackberry.event.addEventListener("onChildCardStartPeek", onChildCardStartPeekHandler);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:onViewerMessageReceived"></a>
+                    onViewerMessageReceived
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
+The <b>onViewerMessageReceived</b> event is used to pass control message from viewer targets to the host.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function(viewer : blackberry.invoke.invokedViewer, message : String)
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the onViewerMessageReceived event.                         
+                                    
+                                        <br />
+                                        
+                                            <br />
+                                            <b>viewer:</b> Indicates the <code>blackberry.invoke.invokedViewer</code> object that has sent the message.
+                                        
+                                            <br />
+                                            <b>message:</b> The message string sent from the invoked viewer to the host.
+                                        
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onViewerMessageReceivedHandler(viewer, message) {   // If received a "doSomething" message from the viewer,   // call doSomething() method.   if (message == "doSomething") {       doSomething();   }}blackberry.event.addEventListener("onViewerMessageReceived", onViewerMessageReceivedHandler);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 13:56:39 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>

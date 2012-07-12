@@ -1,0 +1,1110 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                HTML5 Web Notification
+            
+        </h1>
+
+
+        
+            <p>
+                This Notification API provides functionality to display notifications to users.
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                        
+                            <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <td>
+                                    <a href="webkitNotifications.html#.webkitNotifications">window.webkitNotifications</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                </td>
+                            </tr>
+                        
+                    
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#checkPermission">checkPermission</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#createHTMLNotification">createHTMLNotification</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#createNotification">createNotification</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#requestPermission">requestPermission</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#show">show</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#PERMISSION_ALLOWED">PERMISSION_ALLOWED</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#PERMISSION_NOT_ALLOWED">PERMISSION_NOT_ALLOWED</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="pb1.0|pb2.0|ripple">
+                            <td>
+                                <a href="webkitNotifications.html#PERMISSION_DENIED">PERMISSION_DENIED</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+            <br />
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h3> Constructors </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="webkitNotifications.html#.webkitNotifications">window.webkitNotifications</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h3> Functions </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="webkitNotifications.html#checkPermission">checkPermission</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="webkitNotifications.html#createHTMLNotification">createHTMLNotification</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="webkitNotifications.html#createNotification">createNotification</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="webkitNotifications.html#requestPermission">requestPermission</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                                <a href="webkitNotifications.html#show">show</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="pb1.0|pb2.0|ripple">
+                <h3> Constants </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|ripple">
+                                <a href="webkitNotifications.html#PERMISSION_ALLOWED">PERMISSION_ALLOWED</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|ripple">
+                                <a href="webkitNotifications.html#PERMISSION_NOT_ALLOWED">PERMISSION_NOT_ALLOWED</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="pb1.0|pb2.0|ripple">
+                                <a href="webkitNotifications.html#PERMISSION_DENIED">PERMISSION_DENIED</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name=".webkitNotifications"></a>
+                    window.webkitNotifications
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    window.webkitNotifications
+                                    
+                                        ()
+                                    
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>Returns the webkitNotifications object.</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function supportNotification() {  if (window.webkitNotifications) {    alert("Notifications are supported!");  } else {    alert("Notifications are not supported for this Browser/OS version yet.");  }}</pre>
+	
+    
+            </div>
+        
+    
+
+    
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name="checkPermission"></a>
+                    checkPermission
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    Number
+                                    
+                                    
+                                        checkPermission()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This function will check Permission.</p>
+                <br />
+                        
+                
+                    <br />
+                    <h3>Returns</h3>
+                    
+                        <p> checkedPermission The permission to access the notification </p>
+                    
+                    <br />
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre> function checkNotificationPermission() {  if (window.webkitNotifications.checkPermission() != 0) { // 0 is PERMISSION_ALLOWED    window.webkitNotifications.requestPermission();  }}</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name="createHTMLNotification"></a>
+                    createHTMLNotification
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        createHTMLNotification(url : String)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This function will create a web notification</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>url</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    URL of notification page                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function createWebNotificationInstance() { //window.webkitNotifications.createHTMLNotification('url of page') return window.webkitNotifications.createHTMLNotification('http://chart.apis.google.com/chart?cht=bvg&chs=150x90&chd=s:Monkeys&chxt=x,y&chxs=0,ff0000,12,0,lt|1,0000ff,10,1,lt');}</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name="createNotification"></a>
+                    createNotification
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        createNotification(icon : String, title : String, body : String)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This function will create a text notification.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>icon</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    notification icon                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>title</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    notification title                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>body</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    notification content                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function createSimpleNotificationInstance() {  //window.webkitNotifications.createNotification(icon,title,body)return window.webkitNotifications.createNotification('icon.png', 'Notification Test', 'Notification content');}</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name="requestPermission"></a>
+                    requestPermission
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        requestPermission()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This function will grant users permissions to a website</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>  function setNotificationPermission() {   window.webkitNotifications.requestPermission(); }</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+                <h2>
+                    <a name="show"></a>
+                    show
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                                  
+                                    
+                                        void
+                                    
+                                    
+                                        show()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This function will show web notification.</p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>function showWebNotification() {  var url = 'http://chart.apis.google.com/chart?cht=bvg&chs=150x90&chd=s:Monkeys&chxt=x,y&chxs=0,ff0000,12,0,lt|1,0000ff,10,1,lt';  if (window.webkitNotifications.checkPermission() == 0) {    window.webkitNotifications.createHTMLNotification(url).show();  } else {    alert("this page doesn't have permission to show notification");  }}</pre>
+	
+    
+            </div>
+        
+    
+
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+
+    
+    
+       
+        <div x-ww-support="pb1.0|pb2.0|ripple">
+            <h2>Constants:</h2>
+            <hr/>
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="pb1.0|pb2.0|ripple">
+                        <td>
+                            <a name="PERMISSION_ALLOWED">PERMISSION_ALLOWED</a>
+
+                            
+                                
+                                     = 0
+                                
+                                
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            The PERMISSION_ALLOWED
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|ripple">
+                        <td>
+                            <a name="PERMISSION_NOT_ALLOWED">PERMISSION_NOT_ALLOWED</a>
+
+                            
+                                
+                                     = 1
+                                
+                                
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            The PERMISSION_NOT_ALLOWED
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="pb1.0|pb2.0|ripple">
+                        <td>
+                            <a name="PERMISSION_DENIED">PERMISSION_DENIED</a>
+
+                            
+                                
+                                     = 2
+                                
+                                
+                            
+                        </td>
+                        <td>
+                            
+                                Number
+                            
+                            
+                            
+                        </td>
+                        
+                        <td >
+                            The PERMISSION_DENIED
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry PlayBook 1.0+
+                                    <br />
+                                
+                                    &nbsp;- Ripple Emulator
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+        </div>
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="pb1.0|pb2.0|bb10x|ripple">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 03 2012 10:18:46 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,585 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                IO
+            
+        </h1>
+
+
+        
+            <p>
+                The IO object provides the functionality to access un-sandboxed file system and other related attributes.
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            <pre>- BlackBerry 10</pre>
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.io.html#.SDCard">SDCard</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.io.html#.home">home</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.io.html#.sandbox">sandbox</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.io.html#.sharedFolder">sharedFolder</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="bb10x">
+                         <td>
+                             &lt;feature id="blackberry.io" /&gt;
+                             <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                         </td>
+                     </tr>
+                 
+            </table>
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="bb10x">
+                <h3> Properties </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.html#.SDCard">SDCard</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.html#.home">home</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.html#.sandbox">sandbox</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.io.html#.sharedFolder">sharedFolder</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+
+    
+
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+       
+        <div x-ww-support="bb10x">
+            <h2>Properties:</h2>
+            <hr/>
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
+            <table>
+                <thead><tr>
+                    <th>
+                    Property
+                   
+                    </th>
+                    <th>
+                       Type
+                       
+                    </th>
+                    <th>
+                       Description
+                       
+                    </th>
+                    <th>
+                       Supported Platform(s)            
+                       
+                    </th>
+                </tr></thead>
+                
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".SDCard">SDCard</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The full path of the SD card folder
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".home">home</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The full path of the application data folder
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".sandbox">sandbox</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                Boolean
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            Whether the file system is sandboxed. It is set to true by default.<br/>When sandbox is set to false, you must use absolute path to reference a file or directory, you can use <a href="blackberry.io.html#.sharedFolder">sharedFolder</a>, <a href="blackberry.io.html#.home">home</a> or <a href="blackberry.io.html#.SDCard">SDCard</a> to construct file paths.
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+                    <tr x-ww-support="bb10x">
+                        <td>
+                            <a name=".sharedFolder">sharedFolder</a>
+
+                            
+                        </td>
+                        <td>
+                            
+                                String
+                            
+                            
+                            
+                                
+                                    <br /> Static
+                                
+                                
+                                    <br /> Readonly
+                                
+                            
+                        </td>
+                        
+                        <td >
+                            The full path of the shared folder. In order to access this folder, you must specify the <code>access_shared</code> permission in config.xml
+                            
+                                <br />
+                                
+                            
+
+                                           
+                        </td>
+                        
+                        <td class="tdNoWrap">
+                            
+                                
+                                    &nbsp;- BlackBerry 10
+                                    <br />
+                                                  
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+				
+                
+    
+            
+        </div>
+    
+
+    
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="bb10x">
+            
+                
+
+	<h2>Code Example(s)</h2><hr/>
+	
+		<pre>&lt;script type="text/javascript"&gt;
+
+function readFile() {
+    // un-sandbox file system to access shared folder
+    blackberry.io.sandbox = false;
+
+    window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+
+    window.requestFileSystem(window.TEMPORARY, 1024 * 1024,
+        function (fs) {
+             // in order to access the shared folder,
+             // config.xml must declare the "access_shared" permission
+             // reference file by absolute path since file system is un-sandboxed
+             fs.root.getFile(blackberry.io.sharedFolder + '/documents/log.txt', {},
+                 function (fileEntry) {
+                     fileEntry.file(function (file) {
+                         var reader = new FileReader();
+
+                         reader.onloadend = function (e) {
+                             var txtArea = document.createElement('textarea');
+                             txtArea.value = this.result;
+                             document.body.appendChild(txtArea);
+                         };
+
+                         reader.readAsText(file);
+                    }, errorHandler);
+                 }, errorHandler);
+        });
+}
+
+function errorHandler(e) {
+    var msg = '';
+
+    switch (e.code) {
+    case FileError.QUOTA_EXCEEDED_ERR:
+        msg = 'QUOTA_EXCEEDED_ERR';
+        break;
+    case FileError.NOT_FOUND_ERR:
+        msg = 'NOT_FOUND_ERR';
+        break;
+    case FileError.SECURITY_ERR:
+         msg = 'SECURITY_ERR';
+         break;
+    case FileError.INVALID_MODIFICATION_ERR:
+         msg = 'INVALID_MODIFICATION_ERR';
+         break;
+    case FileError.INVALID_STATE_ERR:
+         msg = 'INVALID_STATE_ERR';
+         break;
+    default:
+         msg = 'Unknown Error';
+        break;
+    };
+
+    console.log('Error: ' + msg);
+}
+&lt;/script&gt;</pre>
+	
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 13:56:39 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>

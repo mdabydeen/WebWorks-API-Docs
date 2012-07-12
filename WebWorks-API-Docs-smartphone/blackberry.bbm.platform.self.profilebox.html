@@ -75,6 +75,9 @@ running. The invoking profile box item can be obtained by assigning a callback t
 
 
         
+            
+            <br />
+        
 
 
         
@@ -91,7 +94,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
             </p>
             <div class="APISupportTable" id="APISupportTable">
                 <table class="apiTable">
-                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0">
@@ -102,7 +105,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -114,7 +117,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -126,7 +129,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -138,7 +141,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -150,7 +153,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -166,7 +169,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
             <br />
             <p>You must declare the feature element(s) below in your configuration document:</p>
             <table>
-                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                  
                      
                      
@@ -180,7 +183,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                          </td>
                      </tr>
                  
@@ -188,7 +191,7 @@ running. The invoking profile box item can be obtained by assigning a callback t
         
 
 
-        <div x-ww-support="pb1.0">
+        <div x-ww-support="pb1.0|pb2.0">
             
 
             <table>
@@ -298,20 +301,30 @@ running. The invoking profile box item can be obtained by assigning a callback t
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                <a href="blackberry.bbm.platform.self.profilebox.ProfileBoxItem.html">blackberry.bbm.platform.self.profilebox.ProfileBoxItem</a>
                                 
-                                    addItem(options : Object)
-                                                          
+                                    static              
+                                    <a href="blackberry.bbm.platform.self.profilebox.ProfileBoxItem.html">blackberry.bbm.platform.self.profilebox.ProfileBoxItem</a>
+                                    
+                                    
+                                        addItem(options : Object)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -448,20 +461,31 @@ blackberry.bbm.platform.self.profilebox.addItem(options);
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    clearItems()
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        clearItems()
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -522,20 +546,31 @@ blackberry.bbm.platform.self.profilebox.addItem(options);
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    removeItem(item : blackberry.bbm.platform.self.profilebox.ProfileBoxItem)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        removeItem(item : blackberry.bbm.platform.self.profilebox.ProfileBoxItem)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -630,8 +665,11 @@ blackberry.bbm.platform.self.profilebox.addItem(options);
 
 
 
+
         
         
+
+
 
 
 
@@ -642,7 +680,22 @@ blackberry.bbm.platform.self.profilebox.addItem(options);
         <div x-ww-support="bb5.0|bb6.0|bb7.0">
             <h2>Properties:</h2>
             <hr/>
-          
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
             <table>
                 <thead><tr>
                     <th>
@@ -692,6 +745,7 @@ The profile box is not accessible when the device is in mass storage mode.
                                 <br />
                                 
                             
+
                                            
                         </td>
                         
@@ -732,6 +786,7 @@ The profile box is not accessible when the device is in mass storage mode.
                                 <br />
                                 
                             
+
                                            
                         </td>
                         
@@ -764,10 +819,12 @@ The profile box is not accessible when the device is in mass storage mode.
 
 
 
+
         
         
 
     
+
 
 
 
@@ -783,7 +840,7 @@ The profile box is not accessible when the device is in mass storage mode.
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Mar 06 2012 16:43:32 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Apr 28 2012 01:13:05 GMT-0400 (EDT)
         </div>
 
     </div>

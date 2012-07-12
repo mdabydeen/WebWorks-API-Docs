@@ -49,6 +49,9 @@
 
 
         
+            
+            <br />
+        
 
 
         
@@ -80,10 +83,10 @@
             </p>
             <div class="APISupportTable" id="APISupportTable">
                 <table class="apiTable">
-                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
                                 <a href="navigator.geolocation.html#.clearWatch">clearWatch</a>
                                 <td class="apiYes">Y</td>
@@ -91,11 +94,11 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
                                 <a href="navigator.geolocation.html#.getCurrentPosition">getCurrentPosition</a>
                                 <td class="apiYes">Y</td>
@@ -103,11 +106,11 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                             <td>
                                 <a href="navigator.geolocation.html#.watchPosition">watchPosition</a>
                                 <td class="apiYes">Y</td>
@@ -115,7 +118,7 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
@@ -133,7 +136,7 @@
         
 
 
-        <div x-ww-support="pb1.0">
+        <div x-ww-support="pb1.0|pb2.0">
             
                 
 
@@ -176,22 +179,22 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                 <a href="navigator.geolocation.html#.clearWatch">clearWatch</a>
                                 
                             </li>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                 <a href="navigator.geolocation.html#.getCurrentPosition">getCurrentPosition</a>
                                 
                             </li>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                 <a href="navigator.geolocation.html#.watchPosition">watchPosition</a>
                                 
                             </li>
@@ -227,7 +230,7 @@
 
     
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h2>
                     <a name=".clearWatch"></a>
                     clearWatch
@@ -235,20 +238,31 @@
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    clearWatch(watchId : long)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        clearWatch(watchId : long)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -319,7 +333,7 @@
     
             </div>
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h2>
                     <a name=".getCurrentPosition"></a>
                     getCurrentPosition
@@ -327,20 +341,31 @@
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    getCurrentPosition(positionCallback : function, <i>[positionErrorCallback: function]</i>, <i>[options: PositionOptions]</i>)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        getCurrentPosition(positionCallback : function, <i>[positionErrorCallback: function]</i>, <i>[options: PositionOptions]</i>)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -460,7 +485,7 @@
     
             </div>
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                 <h2>
                     <a name=".watchPosition"></a>
                     watchPosition
@@ -468,20 +493,30 @@
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                Long
                                 
-                                    watchPosition(positionCallback : function, <i>[positionErrorCallback: function]</i>, <i>[options: PositionOptions]</i>)
-                                                          
+                                    static              
+                                    Long
+                                    
+                                    
+                                        watchPosition(positionCallback : function, <i>[positionErrorCallback: function]</i>, <i>[options: PositionOptions]</i>)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -609,8 +644,11 @@
 
 
 
+
         
         
+
+
 
 
 
@@ -623,6 +661,7 @@
 
 
 
+
         
         
 
@@ -630,8 +669,9 @@
 
 
 
+
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple|common">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
             
                 
   
@@ -642,7 +682,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Mar 06 2012 16:43:30 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Apr 28 2012 01:13:03 GMT-0400 (EDT)
         </div>
 
     </div>

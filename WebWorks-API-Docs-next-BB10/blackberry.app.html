@@ -71,7 +71,7 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                             <td>
                                 <a href="blackberry.app.html#.exit">exit</a>
                                 <td class="apiYes">Y</td>
@@ -79,7 +79,7 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
@@ -299,6 +299,42 @@
                             </td>
                         </tr>
                     
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.app.html#.event:pause">pause</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.app.html#.event:resume">resume</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="bb10x">
+                            <td>
+                                <a href="blackberry.app.html#.event:swipedown">swipedown</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
                 </table>
             </div>
         
@@ -363,12 +399,12 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                 <a href="blackberry.app.html#.exit">exit</a>
                                 
                             </li>
@@ -410,6 +446,32 @@
         
     
         
+        
+            <br />
+            <div x-ww-support="bb10x">
+                <h3> Events </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.app.html#.event:pause">pause</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.app.html#.event:resume">resume</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="bb10x">
+                                <a href="blackberry.app.html#.event:swipedown">swipedown</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
         
     
         
@@ -516,7 +578,7 @@
 
     
         
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                 <h2>
                     <a name=".exit"></a>
                     exit
@@ -558,6 +620,9 @@
                         <br />
                     
                         &nbsp;- BlackBerry PlayBook 1.0+
+                        <br />
+                    
+                        &nbsp;- BlackBerry 10
                         <br />
                     
                         &nbsp;- Ripple Emulator
@@ -1123,6 +1188,266 @@ A banner indicator can have an optional numeric value that usually serves as a c
         
     
 
+    
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:pause"></a>
+                    pause
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br/>
+The <b>pause</b> event is triggered whenever the the application is put into the background.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the pause event                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onPause() {  alert("The app is about to be paused.");}blackberry.event.addEventListener("pause", onPause);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:resume"></a>
+                    resume
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br/>
+The <b>resume</b> event is triggered whenever the the application is retrieved from the background.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the resume event                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onResume() {  alert("The app is resumed.");}blackberry.event.addEventListener("resume", onResume);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+            <div x-ww-support="bb10x">
+                <h2>
+                    <a name=".event:swipedown"></a>
+                    swipedown
+                </h2>
+                <hr/>
+                 
+                
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br/>
+The <b>swipedown</b> event is triggered when the user swipes down from the top of the application.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>yourCallbackFunction</b></td>
+                                <td>
+                                    
+                                        function()
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    The callback function that will be invoked on the swipedown event                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function onSwipedown() {  alert("Swipe down event occured.");}blackberry.event.addEventListener("swipedown", onSwipedown);&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
     
 
 
@@ -1895,7 +2220,7 @@ A banner indicator can have an optional numeric value that usually serves as a c
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Apr 27 2012 15:58:19 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 07 2012 11:48:04 GMT-0400 (EDT)
         </div>
 
     </div>

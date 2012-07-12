@@ -1,0 +1,338 @@
+
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                ContextMenu
+            
+        </h1>
+
+
+        
+            <p>
+                The contextmenu namespace provides the facility<h3>Context Menu</h3><p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. Thecontextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, aswell as listen to specific events related to the context menu being triggered and displayed.<p><h4>Enabling</h4><p>The contextmenu can be enalbed by calling the blackberry.ui.contextmenu.enabled property. When set to true, thecontextmenu will capture the context menu events, and pass any events that the user has registered for. When set to falsethe contextmenu will default to the system, and the developer will have no access to the events described below.</p><h4>Events</h4>Developers can subscribe to the following events:</p><ul> <li>contextmenudisplayrequested</li> <li>contextmenuicondisplay</li> <li>contextmenufulldisplay</li> <li>contextmenuclosed</li></ul><p>These events allow developers to alter their user interface when the menu is triggered, as well asrelay the menu closing and opening to the underlying application.</p>
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <h2>Supported Platform(s)</h2>
+            
+            <p>
+                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+            </p>
+            <div class="APISupportTable" id="APISupportTable">
+                <table class="apiTable">
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                    
+                    
+                        <tr x-ww-support="">
+                            <td>
+                                <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </div>
+        
+
+
+        <br />
+        <h2>Configuration Document Settings</h2>
+        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+        
+            <br />
+            <p>You must declare the feature element(s) below in your configuration document:</p>
+            <table>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                 
+                     
+                     
+                         
+                     
+                     <tr x-ww-support="">
+                         <td>
+                             &lt;feature id="blackberry.ui.contextmenu" /&gt;
+                             <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                         </td>
+                     </tr>
+                 
+            </table>
+        
+
+
+        <div x-ww-support="pb1.0|pb2.0">
+            
+
+            <table>
+                <tr>
+                    <th>Permission Elements (PlayBook Only)</th>
+                </tr>
+                
+                    <tr><td>
+                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr>
+                    <br />
+                
+            </table>
+        </div>
+
+
+        
+        
+
+
+<div>
+<h2>API Summary</h2>
+    
+        
+        
+    
+        
+        
+            <br />
+            <div x-ww-support="">
+                <h3> Functions </h3>
+                
+                    <ul>
+                        
+                            <li x-ww-support="">
+                                <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+
+    
+        
+            <div x-ww-support="">
+                <h2>
+                    <a name=".enabled"></a>
+                    enabled
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        enabled(enabled : boolean)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>ContextMenuEnabled allows the developer to enabled and disable crosscut context menus for their application.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>enabled</b></td>
+                                <td>
+                                    
+                                        boolean
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    property that sets the contextmenu to enabled or disabled                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function disabledContextMenu() {blackberry.ui.contextmenu.enabled = false;}if(!blackberru.ui.contextmenu.enabled){    console.log("context menu is currently disabled");}&lt;/script&gt;</pre>
+	
+    
+            </div>
+        
+    
+
+    
+
+
+
+
+        
+        
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+        
+        
+
+    
+
+
+
+
+        
+            <div x-ww-support="">
+            
+                
+  
+            </div>
+        
+
+
+        <hr />
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 18:09:22 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>

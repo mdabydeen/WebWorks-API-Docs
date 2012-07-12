@@ -86,6 +86,9 @@ application.
 
 
         
+            
+            <br />
+        
 
 
         
@@ -102,7 +105,7 @@ application.
             </p>
             <div class="APISupportTable" id="APISupportTable">
                 <table class="apiTable">
-                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
                         <tr x-ww-support="bb5.0|bb6.0|bb7.0">
@@ -113,7 +116,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -125,7 +128,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -137,7 +140,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -149,7 +152,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -161,7 +164,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -173,7 +176,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -185,7 +188,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -197,7 +200,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -209,7 +212,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -221,7 +224,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                             </td>
                         </tr>
                     
@@ -237,7 +240,7 @@ application.
             <br />
             <p>You must declare the feature element(s) below in your configuration document:</p>
             <table>
-                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>Ripple</th></tr></thead>
+                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                  
                      
                      
@@ -251,7 +254,7 @@ application.
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                          </td>
                      </tr>
                  
@@ -259,7 +262,7 @@ application.
         
 
 
-        <div x-ww-support="pb1.0">
+        <div x-ww-support="pb1.0|pb2.0">
             
 
             <table>
@@ -405,20 +408,31 @@ application.
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    inviteToBBM(onComplete : Function, invitations : Object[])
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        inviteToBBM(onComplete : Function, invitations : Object[])
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -569,20 +583,31 @@ blackberry.bbm.platform.users.inviteToBBM(onComplete, invitations);
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    inviteToBBMFromConnections(onComplete : Function, <i>[connection: blackberry.bbm.platform.io.Connection]</i>)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        inviteToBBMFromConnections(onComplete : Function, <i>[connection: blackberry.bbm.platform.io.Connection]</i>)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -698,20 +723,31 @@ blackberry.bbm.platform.users.inviteToBBMFromConnections(function () {
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    inviteToDownload(onComplete : Function)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        inviteToDownload(onComplete : Function)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -804,20 +840,31 @@ maximum of 10 download invitations per minute is allowed.
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    pickUsers(options : Object, onComplete : Function)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        pickUsers(options : Object, onComplete : Function)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -952,20 +999,31 @@ blackberry.bbm.platform.users.pickUsers( {
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    sendFile(fileURI : String, comment : String, onFailure : Function, <i>[contact: blackberry.bbm.platform.users.BBMPlatformUser]</i>)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        sendFile(fileURI : String, comment : String, onFailure : Function, <i>[contact: blackberry.bbm.platform.users.BBMPlatformUser]</i>)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -1143,20 +1201,31 @@ function getFileFailureString(reason) {
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    shareContent(content : String, description : String, onComplete : Function, <i>[options: Object]</i>)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        shareContent(content : String, description : String, onComplete : Function, <i>[options: Object]</i>)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -1366,20 +1435,31 @@ blackberry.bbm.platform.register({
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    startBBMChat(onComplete : Function, message : String, <i>[users: blackberry.bbm.platform.users.BBMPlatformUser[]]</i>)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        startBBMChat(onComplete : Function, message : String, <i>[users: blackberry.bbm.platform.users.BBMPlatformUser[]]</i>)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -1505,20 +1585,31 @@ blackberry.bbm.platform.users.startBBMChat(function() {
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    onsharecontent(sender : blackberry.bbm.platform.users.BBMPlatformUser, content : String, description : String, timestamp : Date)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onsharecontent(sender : blackberry.bbm.platform.users.BBMPlatformUser, content : String, description : String, timestamp : Date)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -1643,20 +1734,31 @@ is registered with BBM Social Platform.
                 <hr/>
                  
                 
+                
                     <table>
                         <tr><td>
                             
-                                static              
-                                void
                                 
-                                    onupdate(user : blackberry.bbm.platform.users.BBMPlatformUser, event : String)
-                                                          
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        onupdate(user : blackberry.bbm.platform.users.BBMPlatformUser, event : String)
+                                                              
+                                
                             
                         </td></tr>
                     </table>
                     <br />
                 
                         
+                
+                
+                    
+                    <br />
+                
+                
                            
                         
                               
@@ -1772,8 +1874,11 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
 
 
 
+
         
         
+
+
 
 
 
@@ -1784,7 +1889,16 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
         <div x-ww-support="bb5.0|bb6.0|bb7.0">
             <h2>Properties:</h2>
             <hr/>
-          
+
+                     
+            
+                
+                
+                    
+                    <br />
+                
+            
+ 
             <table>
                 <thead><tr>
                     <th>
@@ -1833,6 +1947,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
                                 <br />
                                 
                             
+
                                            
                         </td>
                         
@@ -1861,10 +1976,12 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
 
 
 
+
         
         
 
     
+
 
 
 
@@ -1880,7 +1997,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Mar 06 2012 16:44:48 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Apr 28 2012 01:17:54 GMT-0400 (EDT)
         </div>
 
     </div>
