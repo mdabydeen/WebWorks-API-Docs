@@ -128,14 +128,14 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                     <a href="blackberry.app.html#.exit">blackberry.app.exit</a>
                                     <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
@@ -338,6 +338,16 @@
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.app.html#.event:swipedown">blackberry.app.swipedown</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
                         </table>
                     </div>
                 </div>
@@ -408,7 +418,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -416,7 +426,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                     <td class="first_column">
                                         
                                             void
@@ -538,6 +548,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.app.html#.event:resume">blackberry.app.resume</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.app.html#.event:swipedown">blackberry.app.swipedown</a>
                                         
                                     </td>
                                 </tr>
@@ -752,7 +774,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                         <h3>
                             <a name=".exit"></a>
                  
@@ -805,6 +827,10 @@
                                     
                                         <tr><td></td><td>
                                             &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -1597,6 +1623,96 @@ The <b>resume</b> event is triggered whenever the the application is retrieved f
     <b>Code Example:</b>
     
         <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onResume() {  alert("The app is resumed.");}blackberry.event.addEventListener("resume", onResume);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:swipedown"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.app.swipedown
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>swipedown</b> event is triggered when the user swipes down from the top of the application.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the swipedown event                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onSwipedown() {  alert("Swipe down event occured.");}blackberry.event.addEventListener("swipedown", onSwipedown);&lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -2591,7 +2707,7 @@ The <b>resume</b> event is triggered whenever the the application is retrieved f
                                 <span><b>Return:</b></span>
                                 
                                     
-                                        <pre> {	"data":{		"author":"John Doe",		"name":"My WebWorks Widget",		"authorEmail":"jdoe@company.com",		"authorURL":"www.company.com",		"description":"A sample widget",		"license":"Legal stuff goes here",		"id":"888",		"version":"1.0",		"copyright":"Company Ltd.",		"licenseURL":"www.company.com/license"	}} </pre>
+                                        <pre> {    "data": {        "author":"John Doe",        "name":"My WebWorks Widget",        "authorEmail":"jdoe@company.com",        "authorURL":"www.company.com",        "description":"A sample widget",        "license":"Legal stuff goes here",        "id":"888",        "version":"1.0",        "copyright":"Company Ltd.",        "licenseURL":"www.company.com/license"    }} </pre>
                                     
                                 
                                 <br />
@@ -2624,7 +2740,7 @@ The <b>resume</b> event is triggered whenever the the application is retrieved f
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 15:01:59 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 15:32:18 GMT-0400 (EDT)
         </div>
 
     </div>
