@@ -431,7 +431,7 @@ function onCloseViewerButtonClicked() {
                                         void
                                     
                                     
-                                        send(message : String, callback : function)
+                                        send(message : String, <i>[callback: function]</i>)
                                                               
                                 
                             
@@ -496,7 +496,7 @@ function onCloseViewerButtonClicked() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe the message that will be sent to viewer                         
+                                    Describe the message that will be sent to viewer                         
                                     
                                 </td>
                             </tr>
@@ -506,18 +506,18 @@ function onCloseViewerButtonClicked() {
                                 <td><b>callback</b></td>
                                 <td>
                                     
-                                        function(<i>[message: String]</i>)
+                                        function(message : String)
                                     
-                                                                                        
+                                    <br /><i>Optional</i>                                                    
                                 </td>
                                 <td>
                                     
-                                    Optional. Callback function that will be triggered when viewer responds to the message                         
+                                     Callback function that will be triggered when viewer responds to the message                         
                                     
                                         <br />
                                         
                                             <br />
-                                            <b>message:</b>  Describe the message that is sent from the viewer that responds to the host's message
+                                            <b>message:</b> Describe the message that is sent from the viewer that responds to the host's message
                                         
                                     
                                 </td>
@@ -639,7 +639,7 @@ function sendSaveMessageToViewer() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe x-coodinate of the top left point for the viewer window                         
+                                    Describe x-coodinate of the top left point for the viewer window                         
                                     
                                 </td>
                             </tr>
@@ -655,7 +655,7 @@ function sendSaveMessageToViewer() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe y-coodinate of the top left point for the viewer window                         
+                                    Describe y-coodinate of the top left point for the viewer window                         
                                     
                                 </td>
                             </tr>
@@ -755,7 +755,7 @@ function sendSaveMessageToViewer() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe new width for the viewer window                         
+                                    Describe new width for the viewer window                         
                                     
                                 </td>
                             </tr>
@@ -771,7 +771,7 @@ function sendSaveMessageToViewer() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe new height for the viewer window                         
+                                    Describe new height for the viewer window                         
                                     
                                 </td>
                             </tr>
@@ -884,7 +884,7 @@ function setNewSize() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe visibility for the viewer window                         
+                                    Describe visibility for the viewer window                         
                                     
                                 </td>
                             </tr>
@@ -984,7 +984,7 @@ function setNewSize() {
                                 </td>
                                 <td>
                                     
-                                    Mandatory. Describe value of z-order for the viewer window                         
+                                    Describe value of z-order for the viewer window                         
                                     
                                 </td>
                             </tr>
@@ -1296,7 +1296,7 @@ function invokeViewer() {
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 13:56:39 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 17:32:01 GMT-0400 (EDT)
         </div>
 
     </div>
