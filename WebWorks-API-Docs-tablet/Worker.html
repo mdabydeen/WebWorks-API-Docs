@@ -1,5 +1,30 @@
 
 
+<section  class="page_container references">
+	<div class="row">
+        <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
+            <div id="sticky-anchor"> </div>
+            <div class="side-nav-wrapper" id="sticky">
+                <div class="side-nav-content clearfix" id="none">
+                    <div class="side-nav-section clearfix" id="side-nav-title">
+                        <h3>API Reference</h3>
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-parents"> 
+                    </div>
+                    <div class="side-nav-section clearfix" id="side-nav-filter"> 
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-children"> 
+                    </div>
+                </div>
+            </div>
+            <div class="side-navspacer-bottom"> </div>
+        </nav>
+
+        <div class="column grid_8">
+                <div class="row">
+                    <article id="main" class="column grid_8" role="main">
+                        
+
 <section>
 
     <script type="text/javascript">
@@ -44,6 +69,9 @@
         
             <p>
                 Web Workers objects act as if they had an implicit MessagePort associated with them. This port is part of a channel that is set up when the worker is created and never be garbage collected before the Web Workers object. Only DedicatedWorker is supported.
+
+
+                
             </p>
         
 
@@ -58,107 +86,132 @@
 
 
         
-			<table class="learnTable">
-                <h2>Learning Resources:</h2>
-                
-                    <tr><td class="learnTd">
-                        <a href=http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Sample-Application-Using-HTML5-Web-Workers/ta-p/627078 target='_new'>Sample - Using HTML5 Web Worker</a>
-                        Sample that demonstrates how to use the HTML5 Web Workers API [BlackBerry Developer Resource Center].
-                    </td></tr>
-                
-            </table>
-        
-
-
-        
-            <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- Ripple Emulator</pre>
-            <p>
-                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
-            </p>
-            <div class="APISupportTable" id="APISupportTable">
-                <table class="apiTable">
-                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
-                    
+            <div class="ref-sect ref-index">
+                <div class="ref-sect-title">
+                    <h2>Learning Resources:</h2>
+                </div>
+                <div class="ref-sect-content">
+			        <table><tbody>
                         
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <td>
-                                    <a href="Worker.html">Worker</a>
+                            <tr><td class="notice note">
+                                <a href=http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Sample-Application-Using-HTML5-Web-Workers/ta-p/627078 target='_new'>Sample - Using HTML5 Web Worker</a>
+                                Sample that demonstrates how to use the HTML5 Web Workers API [BlackBerry Developer Resource Center].
+                            </td></tr>
+                        
+                    </tbody></table>
+                </div>
+            </div>
+        
+
+
+        
+            <div class="ref-sect ref-index">
+                <div class="ref-sect-title">
+                    <h2>Supported Platform(s)</h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table>
+                            <tbody>
+                            
+                                <tr><td>- BlackBerry OS 5.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry 10</td></tr>
+                            
+                                <tr><td>- Ripple Emulator</td></tr>
+                            
+                            </tbody>
+                        </table>
+                    
+                    <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+                    <div class="APISupportTable" id="APISupportTable">
+                        <table class="apiTable">
+                            <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                            
+                                
+                                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                        <td>
+                                            <a href="Worker.html">Worker</a>
+                                            <td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                        </td>
+                                    </tr>
+                                
+                            
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <a href="Worker.html#onmessage">onmessage</a>
                                     <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                </td>
-                            </tr>
-                        
-                    
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Worker.html#onmessage">onmessage</a>
-                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <a href="Worker.html#postMessage">postMessage</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Worker.html#postMessage">postMessage</a>
-                                <td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                    <a href="Worker.html#applicationCache">applicationCache</a>
+                                    <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="Worker.html#applicationCache">applicationCache</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                </table>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                </tr>
+                            
+                        </table>
+                    </div>
+                </div>
             </div>
         
 
 
-        <br />
-        <h2>Configuration Document Settings</h2>
-        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
-        
-            This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-            <br />
-        
-
-
-        <div x-ww-support="pb1.0|pb2.0">
-            
-
-            <table>
-                <tr>
-                    <th>Permission Elements (PlayBook Only)</th>
-                </tr>
-                
+        <div class="ref-sect ref-index">
+            <div class="ref-sect-title">
+                <h2>Configuration Document Settings</h2>
+            </div>
+            <div class="ref-sect-content">
+                <table><tbody>
                     <tr><td>
-                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
-                    <br />
+                    
+                    <tr><td>
+                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr></tbody></table>
                 
-            </table>
+
+                <div x-ww-support="pb1.0|pb2.0">
+                    
+                    <table>
+                        <tr>
+                            <th>Permission Elements (PlayBook Only)</th>
+                        </tr>
+                        
+                            <tr><td>
+                                This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                            </td></tr>
+                            <br />
+                        
+                    </table>
+                </div>
+            </div>
         </div>
 
 
@@ -167,48 +220,76 @@
 
 
 <div>
-<h2>API Summary</h2>
     
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Constructors </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Worker.html">Worker</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                <div class="ref-sect-title">
+                    <h2> Constructors </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="Worker.html">Worker</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
             </div>
         
     
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Worker.html#onmessage">onmessage</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Worker.html#postMessage">postMessage</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                <div class="ref-sect-title">
+                    <h2> Functions </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="Worker.html#onmessage">onmessage</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="Worker.html#postMessage">postMessage</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
             </div>
         
     
@@ -218,19 +299,30 @@
         
         
             <br />
-            <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="Worker.html#applicationCache">applicationCache</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
+            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            <a href="ApplicationCache.html">ApplicationCache</a>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="Worker.html#applicationCache">applicationCache</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
             </div>
         
     
@@ -250,18 +342,18 @@
         
 
     
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name="Worker"></a>
-                    Worker
-                </h2>
-                <hr/>
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Constructors</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name="Worker"></a>
                  
-                
-                
-                    <table>
-                        <tr><td>
+                            
                             
                                 
                                     Worker
@@ -270,458 +362,461 @@
                                     
                                 
                             
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
                     
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Creates a new Worker object.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
+                            
                                        
-                        
                             
-                            <tr>
-                                <td><b>fileName</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The name of the javascript file to be executed by the worker.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-    
-
-    
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name="onmessage"></a>
-                    onmessage
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
                             
-                                
-                                                  
-                                    
-                                        void
-                                    
-                                    
-                                        onmessage(<i>[messageText: String]</i>, <i>[senderId: String]</i>, <i>[messageObject: Object]</i>)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>The onmessage is the event handler as IDL attributes to Web Workers ojbect.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>messageText</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                    <br /><i>Optional</i>                                                    
-                                </td>
-                                <td>
-                                    
-                                    text message.                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>senderId</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                    <br /><i>Optional</i>                                                    
-                                </td>
-                                <td>
-                                    
-                                    sender ID.                         
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>messageObject</b></td>
-                                <td>
-                                    
-                                        Object
-                                    
-                                    <br /><i>Optional</i>                                                    
-                                </td>
-                                <td>
-                                    
-                                    message object when send.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name="postMessage"></a>
-                    postMessage
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                                  
-                                    
-                                        void
-                                    
-                                    
-                                        postMessage(message : Object)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>The postMessage() method on Web Workers objects invoked the method of the same name on the port, with the same arguments, and returned the same return value.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>message</b></td>
-                                <td>
-                                    
-                                        Object
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    A message to post when worker is created.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>Main script:&lt;script type="text/javascript"&gt;  var worker = new Worker('doWork.js');  worker.addEventListener('message', function(e) {       console.log('Worker said: ', e.data);   }, false);&lt;/script&gt;doWork.js (the worker):  self.addEventListener('message', function(e) {       self.postMessage(e.data);   }, false);</pre>
-	
-    
-            </div>
-        
-    
-
-    
-
-
-
-
-        
-        
-
-
-
-
-
-
-    
-    
-       
-        <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-            <h2>Properties:</h2>
-            <hr/>
-
-                     
-            
-                
-                
-                    
-                    <br />
-                
-            
- 
-            <table>
-                <thead><tr>
-                    <th>
-                    Property
-                   
-                    </th>
-                    <th>
-                       Type
-                       
-                    </th>
-                    <th>
-                       Description
-                       
-                    </th>
-                    <th>
-                       Supported Platform(s)            
-                       
-                    </th>
-                </tr></thead>
-                
-                
-                    <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <td>
-                            <a name="applicationCache">applicationCache</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                <a href="ApplicationCache.html">ApplicationCache</a>
+                            <p>Creates a new Worker object.</p>
+                            <br />
                             
                             
                             
-                                
-                                
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
                             
-                        </td>
-                        
-                        <td >
-                            The ApplicationCache object associated with this worker
+                            
                             
                                 <br />
-                                
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>fileName</b></td>
+                                            <td>
+                                                
+                                                The name of the javascript file to be executed by the worker.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
                             
 
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
                             
-                                
-                                    &nbsp;- BlackBerry OS 6.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
                             
-                        </td>
-                    </tr>
+                            
+                            
+                            
+
+                            
+                            
                 
-            </table>
-            
-            
-				
+  
+
+                        </div>
+                    </div>
                 
+            </div>
+        </div>
     
-            
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Functions</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name="onmessage"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            onmessage
+                                            
+                                                
+                                                    (<i>[messageText : String]</i>, <i>[senderId : String]</i>, <i>[messageObject : Object]</i>)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The onmessage is the event handler as IDL attributes to Web Workers ojbect.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>messageText</b></td>
+                                            <td>
+                                                
+                                                text message.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>senderId</b></td>
+                                            <td>
+                                                
+                                                sender ID.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>messageObject</b></td>
+                                            <td>
+                                                
+                                                message object when send.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name="postMessage"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            postMessage
+                                            
+                                                
+                                                    (message : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The postMessage() method on Web Workers objects invoked the method of the same name on the port, with the same arguments, and returned the same return value.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>message</b></td>
+                                            <td>
+                                                
+                                                A message to post when worker is created.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>Main script:&lt;script type="text/javascript"&gt;  var worker = new Worker('doWork.js');  worker.addEventListener('message', function(e) {       console.log('Worker said: ', e.data);   }, false);&lt;/script&gt;doWork.js (the worker):  self.addEventListener('message', function(e) {       self.postMessage(e.data);   }, false);</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
         </div>
     
 
     
     
 
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Properties</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                        <h3>
+                            <a name="applicationCache"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        <a href="ApplicationCache.html">ApplicationCache</a>
+                                        
+                                        
+                                            applicationCache
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The ApplicationCache object associated with this worker</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 6.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
 
+                            
+                            
+                            
 
+                            
+                            
+                            
+                            
+                            
 
-        
-        
+                            
+                            
+                
+  
 
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+
+    
     
 
 
 
 
-        
 
-
-        <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Apr 28 2012 01:18:14 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 01:43:29 GMT-0400 (EDT)
         </div>
 
+    </div>
+</section>
+
+                    </article>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

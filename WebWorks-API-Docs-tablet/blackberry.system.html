@@ -1,5 +1,30 @@
 
 
+<section  class="page_container references">
+	<div class="row">
+        <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
+            <div id="sticky-anchor"> </div>
+            <div class="side-nav-wrapper" id="sticky">
+                <div class="side-nav-content clearfix" id="none">
+                    <div class="side-nav-section clearfix" id="side-nav-title">
+                        <h3>API Reference</h3>
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-parents"> 
+                    </div>
+                    <div class="side-nav-section clearfix" id="side-nav-filter"> 
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-children"> 
+                    </div>
+                </div>
+            </div>
+            <div class="side-navspacer-bottom"> </div>
+        </nav>
+
+        <div class="column grid_8">
+                <div class="row">
+                    <article id="main" class="column grid_8" role="main">
+                        
+
 <section>
 
     <script type="text/javascript">
@@ -44,6 +69,22 @@
         
             <p>
                 The System object allows you to get access to system level functions and attributes of the BlackBerry PlayBook.<br><br> The System object is static; all of its functions and properties are used directly from the object.
+
+
+                
+                    <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                    
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// See if we are in coverage   if (!blackberry.system.hasDataCoverage()) {       alert("You are not in coverage, we will attempt to send later");   }   // Check if we have GPS capability   if (blackberry.system.hasCapability("location.gps")) {       alert("This PlayBook has a GPS.");   }&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                    </div>
+                
             </p>
         
 
@@ -61,196 +102,227 @@
 
 
         
-            <h2>Supported Platform(s)</h2>
-            <pre>- BlackBerry OS 5.0+<br />- BlackBerry PlayBook 1.0+<br />- BlackBerry 10<br />- Ripple Emulator</pre>
-            <p>
-                <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
-            </p>
-            <div class="APISupportTable" id="APISupportTable">
-                <table class="apiTable">
-                    <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+            <div class="ref-sect ref-index">
+                <div class="ref-sect-title">
+                    <h2>Supported Platform(s)</h2>
+                </div>
+                <div class="ref-sect-content">
                     
+                        <table>
+                            <tbody>
+                            
+                                <tr><td>- BlackBerry OS 5.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry 10</td></tr>
+                            
+                                <tr><td>- Ripple Emulator</td></tr>
+                            
+                            </tbody>
+                        </table>
                     
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                            <td>
-                                <a href="blackberry.system.html#.hasCapability">hasCapability</a>
-                                <td class="apiYes">Y</td>
+                    <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+                    <div class="APISupportTable" id="APISupportTable">
+                        <table class="apiTable">
+                            <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                            
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <a href="blackberry.system.html#.hasCapability">blackberry.system.hasCapability</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.system.html#.hasDataCoverage">hasDataCoverage</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <a href="blackberry.system.html#.hasDataCoverage">blackberry.system.hasDataCoverage</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                            <td>
-                                <a href="blackberry.system.html#.hasPermission">hasPermission</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <a href="blackberry.system.html#.hasPermission">blackberry.system.hasPermission</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.system.html#.isMassStorageActive">isMassStorageActive</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <a href="blackberry.system.html#.isMassStorageActive">blackberry.system.isMassStorageActive</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                            <td>
-                                <a href="blackberry.system.html#.setHomeScreenBackground">setHomeScreenBackground</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                    <a href="blackberry.system.html#.setHomeScreenBackground">blackberry.system.setHomeScreenBackground</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                            <td>
-                                <a href="blackberry.system.html#.get">http://localhost:8472/blackberry/system/get</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                                    <a href="blackberry.system.html#.get">http://localhost:8472/blackberry/system/get</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.system.html#.model">model</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <a href="blackberry.system.html#.model">model</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.system.html#.scriptApiVersion">scriptApiVersion</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <a href="blackberry.system.html#.scriptApiVersion">scriptApiVersion</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                            <td>
-                                <a href="blackberry.system.html#.softwareVersion">softwareVersion</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <a href="blackberry.system.html#.softwareVersion">softwareVersion</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                            <td>
-                                <a href="blackberry.system.html#.ALLOW">ALLOW</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <a href="blackberry.system.html#.ALLOW">ALLOW</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                            <td>
-                                <a href="blackberry.system.html#.DENY">DENY</a>
-                                <td class="apiYes">Y</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <a href="blackberry.system.html#.DENY">DENY</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
-                </table>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.system.html#.event:batterycritical">blackberry.system.batterycritical</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.system.html#.event:batterylow">blackberry.system.batterylow</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.system.html#.event:batterystatus">blackberry.system.batterystatus</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                        </table>
+                    </div>
+                </div>
             </div>
         
 
 
-        <br />
-        <h2>Configuration Document Settings</h2>
-        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
-        
-            <br />
-            <p>You must declare the feature element(s) below in your configuration document:</p>
-            <table>
-                 <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
-                 
-                     
-                     
-                         
-                     
-                     <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                         <td>
-                             &lt;feature id="blackberry.system" /&gt;
-                             <td class="apiYes">Y</td>
+        <div class="ref-sect ref-index">
+            <div class="ref-sect-title">
+                <h2>Configuration Document Settings</h2>
+            </div>
+            <div class="ref-sect-content">
+                <table><tbody>
+                    <tr><td>
+                        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+                    </td></tr>
+                    
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common"><td>
+                                &lt;feature id="blackberry.system" /&gt;
+                                <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
-                         </td>
-                     </tr>
-                 
-            </table>
-        
-
-
-        <div x-ww-support="pb1.0|pb2.0">
-            
-
-            <table>
-                <tr>
-                    <th>Permission Elements (PlayBook Only)</th>
-                </tr>
+                            </td></tr>
+                        
+                    </table>
                 
-                    <tr><td>
-                        This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr>
-                    <br />
-                
-            </table>
+
+                <div x-ww-support="pb1.0|pb2.0">
+                    
+                    <table>
+                        <tr>
+                            <th>Permission Elements (PlayBook Only)</th>
+                        </tr>
+                        
+                            <tr><td>
+                                This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                            </td></tr>
+                            <br />
+                        
+                    </table>
+                </div>
+            </div>
         </div>
 
 
@@ -259,7 +331,6 @@
 
 
 <div>
-<h2>API Summary</h2>
     
         
         
@@ -267,114 +338,258 @@
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                <h3> Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                                <a href="blackberry.system.html#.hasCapability">hasCapability</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.system.html#.hasDataCoverage">hasDataCoverage</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                                <a href="blackberry.system.html#.hasPermission">hasPermission</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.system.html#.isMassStorageActive">isMassStorageActive</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                <a href="blackberry.system.html#.setHomeScreenBackground">setHomeScreenBackground</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h3> Properties </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.system.html#.model">model</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.system.html#.scriptApiVersion">scriptApiVersion</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                <a href="blackberry.system.html#.softwareVersion">softwareVersion</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
-            </div>
-        
-    
-        
-        
-            <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                <h3> Constants </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                                <a href="blackberry.system.html#.ALLOW">ALLOW</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                                <a href="blackberry.system.html#.DENY">DENY</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                <div class="ref-sect-title">
+                    <h2> Functions </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            Boolean
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.hasCapability">blackberry.system.hasCapability</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <td class="first_column">
+                                        
+                                            Boolean
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.hasDataCoverage">blackberry.system.hasDataCoverage</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.hasPermission">blackberry.system.hasPermission</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <td class="first_column">
+                                        
+                                            Boolean
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.isMassStorageActive">blackberry.system.isMassStorageActive</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.setHomeScreenBackground">blackberry.system.setHomeScreenBackground</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
             </div>
         
     
         
         
             <br />
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                <h3> URI Functions </h3>
-                
-                    <ul>
-                        
-                            <li x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                                <a href="blackberry.system.html#.get">http://localhost:8472/blackberry/system/get</a>
-                                
-                            </li>
-                        
-                    </ul>
-                
-                
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
+                <div class="ref-sect-title">
+                    <h2> Events </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.event:batterycritical">blackberry.system.batterycritical</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.event:batterylow">blackberry.system.batterylow</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.event:batterystatus">blackberry.system.batterystatus</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
+    
+        
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.model">model</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.scriptApiVersion">scriptApiVersion</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.softwareVersion">softwareVersion</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
+    
+        
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                <div class="ref-sect-title">
+                    <h2> Constants </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.ALLOW">ALLOW</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.DENY">DENY</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
+    
+        
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                <div class="ref-sect-title">
+                    <h2> URI Functions </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                                    <td class="first_column">
+                                        
+                                            JSON of all the properties
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.get">http://localhost:8472/blackberry/system/get</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
             </div>
         
     
@@ -388,947 +603,1400 @@
         
 
     
+    
 
     
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                <h2>
-                    <a name=".hasCapability"></a>
-                    hasCapability
-                </h2>
-                <hr/>
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Functions</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name=".hasCapability"></a>
                  
-                
-                
-                    <table>
-                        <tr><td>
+                            
                             
                                 
-                                    static              
-                                    Boolean
                                     
+                                        static              
+                                        
+                                        Boolean
+                                        
+                                        
+                                            blackberry.system.hasCapability
+                                            
+                                                
+                                                    (capability : String)
+                                                
+                                            
+                                                                  
                                     
-                                        hasCapability(capability : String)
-                                                              
                                 
                             
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
                     
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>This method will determine if the BlackBerry PlayBook or the BlackBerry Smartphone device is capable of the given service.<br><br> hasCapability() returns true if the BlackBerry device is capable of the service; false otherwise. <br><br> The supported string values for 'capability' are:<br>input.keyboard.issuretype (returns if the user is currently using SureType),<br>input.touch,<br>media.audio.capture,<br>media.video.capture,<br>media.recording,<br>location.gps,<br>location.maps,<br>storage.memorycard (checks for an EXTERNAL SD card only),<br>network.bluetooth,<br>network.wlan (WLAN wireless family includes 802.11, 802.11a, 802.11b, 802.11g),<br>network.3gpp (3GPP wireless family includes GPRS, EDGE, UMTS, GERAN, UTRAN, and GAN),<br>network.cdma (CDMA wireless family includes CDMA1x and EVDO),<br>and network.iden.</p>
-                <br />
-                        
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Returns true if the device is capable of the given service. </p>
-                    
-                    <br />
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
+                            
                                        
-                        
                             
-                            <tr>
-                                <td><b>capability</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The capability being checked for.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name=".hasDataCoverage"></a>
-                    hasDataCoverage
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
                             
-                                
-                                    static              
-                                    Boolean
-                                    
-                                    
-                                        hasDataCoverage()
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>This method returns true so long as the device is connected to any network. This can be used in conjunction with the <a href="blackberry.html#.network">network</a> property to find out what kind of coverage it is in. On the smartphone this can be used in conjunction with <a href="blackberry.system.event.html#.onCoverageChange">onCoverageChange</a> to track changes.</p>
-                <br />
-                        
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Returns true if the BlackBerry PlayBook or the BlackBerry Smartphone device has any network interface active, otherwise returns false. Always returns true on the PlayBook simulator. Please note, that on the PlayBook device, there might be a small delay of 2-3 seconds between the time the device connects until the method returns true. </p>
-                    
-                    <br />
-                
-                        
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                <h2>
-                    <a name=".hasPermission"></a>
-                    hasPermission
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    static              
-                                    Number
-                                    
-                                    
-                                        hasPermission(module : String)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Determines the level of access to the requested module.</p>
-                <br />
-                        
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> The possible return values: 0 - ALLOW 1 - DENY </p>
-                    
-                    <br />
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>module</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The BlackBerry WebWorks namespace or class to check for access. For example blackberry.system, blackberry.app.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                <h2>
-                    <a name=".isMassStorageActive"></a>
-                    isMassStorageActive
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    static              
-                                    Boolean
-                                    
-                                    
-                                        isMassStorageActive()
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Returns whether USB MassStorage mode is active.</p>
-                <br />
-                        
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <p> Always returns false on the BlackBerry PlayBook since Mass Storage Mode is not supported. All memory is presented as a network share when connected by USB and is not blocked. </p>
-                    
-                    <br />
-                
-                        
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                <h2>
-                    <a name=".setHomeScreenBackground"></a>
-                    setHomeScreenBackground
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    static              
-                                    
-                                        void
-                                    
-                                    
-                                        setHomeScreenBackground(uri : String)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Set the image that appears as the background of the Home screen on a BlackBerry device.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>uri</b></td>
-                                <td>
-                                    
-                                        String
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    URI path to an image file that resides in flash memory or a microSD Card.                         
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-    
-            </div>
-        
-    
-
-    
-
-
-
-
-        
-        
-
-
-
-
-
-
-    
-    
-       
-        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-            <h2>Properties:</h2>
-            <hr/>
-
-                     
-            
-                
-                
-                    
-                    <br />
-                
-            
-                
-                
-                    
-                    <br />
-                
-            
-                
-                
-                    
-                    <br />
-                
-            
- 
-            <table>
-                <thead><tr>
-                    <th>
-                    Property
-                   
-                    </th>
-                    <th>
-                       Type
-                       
-                    </th>
-                    <th>
-                       Description
-                       
-                    </th>
-                    <th>
-                       Supported Platform(s)            
-                       
-                    </th>
-                </tr></thead>
-                
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <td>
-                            <a name=".model">model</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                String
+                            <p>This method will determine if the BlackBerry PlayBook or the BlackBerry Smartphone device is capable of the given service.<br><br> hasCapability() returns true if the BlackBerry device is capable of the service; false otherwise. <br><br> The supported string values for 'capability' are:<br>input.keyboard.issuretype (returns if the user is currently using SureType),<br>input.touch,<br>media.audio.capture,<br>media.video.capture,<br>media.recording,<br>location.gps,<br>location.maps,<br>storage.memorycard (checks for an EXTERNAL SD card only),<br>network.bluetooth,<br>network.wlan (WLAN wireless family includes 802.11, 802.11a, 802.11b, 802.11g),<br>network.3gpp (3GPP wireless family includes GPRS, EDGE, UMTS, GERAN, UTRAN, and GAN),<br>network.cdma (CDMA wireless family includes CDMA1x and EVDO),<br>and network.iden.</p>
+                            <br />
                             
                             
                             
-                                
-                                    <br /> Static
-                                
-                                
-                                    <br /> Readonly
-                                
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
                             
-                        </td>
-                        
-                        <td >
-                            Returns the model number of the BlackBerry PlayBook or the BlackBerry Smartphone device.
+                            
                             
                                 <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>capability</b></td>
+                                            <td>
+                                                
+                                                The capability being checked for.                         
+                                                
+                                            </td>
+                                        </tr>
                                                   
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <td>
-                            <a name=".scriptApiVersion">scriptApiVersion</a>
+                                </table>
+                                               
 
                             
-                        </td>
-                        <td>
-                            
-                                String
                             
                             
+
                             
-                                
-                                    <br /> Static
-                                
-                                
-                                    <br /> Readonly
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Returns the current version of the operating system, for example, 1.0.0.0.
                             
                                 <br />
+                                <span><b>Return:</b></span>
                                 
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
+                                    
+                                        <p> Returns true if the device is capable of the given service. </p>
+                                    
                                 
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <td>
-                            <a name=".softwareVersion">softwareVersion</a>
-
-                            
-                        </td>
-                        <td>
-                            
-                                String
-                            
-                            
-                            
-                                
-                                    <br /> Static
-                                
-                                
-                                    <br /> Readonly
-                                
-                            
-                        </td>
-                        
-                        <td >
-                            Returns the current version of the operating system, for example, 1.0.0.0.
-                            
                                 <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-            </table>
-            
-            
-				
-                
-    
-            
-				
-                
-    
-            
-				
-                
-    
-            
-        </div>
-    
-
-    
-    
-       
-        <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-            <h2>Constants:</h2>
-            <hr/>
-
-                     
-            
-                
-                
-                    
-                    <br />
-                
-            
-                
-                
-                    
-                    <br />
-                
-            
- 
-            <table>
-                <thead><tr>
-                    <th>
-                    Property
-                   
-                    </th>
-                    <th>
-                       Type
-                       
-                    </th>
-                    <th>
-                       Description
-                       
-                    </th>
-                    <th>
-                       Supported Platform(s)            
-                       
-                    </th>
-                </tr></thead>
-                
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                        <td>
-                            <a name=".ALLOW">ALLOW</a>
-
-                            
-                                
-                                     = 0
-                                
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                Number
                             
                             
                             
-                        </td>
-                        
-                        <td >
-                            Returned by hasPermission() indicating that the module requested is accessible.
-                            
-                                <br />
-                                
-                            
-
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
-                            
-                                
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry 10
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
-                            
-                        </td>
-                    </tr>
-                
-                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-                        <td>
-                            <a name=".DENY">DENY</a>
-
-                            
-                                
-                                     = 1
-                                
-                                
-                            
-                        </td>
-                        <td>
-                            
-                                Number
-                            
-                            
-                            
-                        </td>
-                        
-                        <td >
-                            Returned by hasPermission() indicating that the module is not accessible.
-                            
-                                <br />
-                                
                             
 
-                                           
-                        </td>
-                        
-                        <td class="tdNoWrap">
                             
-                                
-                                    &nbsp;- BlackBerry OS 5.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry PlayBook 1.0+
-                                    <br />
-                                
-                                    &nbsp;- BlackBerry 10
-                                    <br />
-                                
-                                    &nbsp;- Ripple Emulator
-                                    <br />
-                                                  
                             
-                        </td>
-                    </tr>
                 
-            </table>
-            
-            
-				
-                
-    
-            
-				
-                
-    
-            
-        </div>
-    
-
-
-
-
-        
-        
-
-    
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
-                <h2>
-                    <a name=".get"></a>
-                    http://localhost:8472/blackberry/system/get
-                </h2>
-                <hr/>
-                 
-                
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry OS 5.0+
-                        <br />
-                    
-                        &nbsp;- BlackBerry PlayBook 1.0+
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>The objects in hasPermission will always be ALLOW (0). They will correspond to all the entries in the whitelist. If they are not whitelisted, they are omitted from the list. Similarly, all of the objects in hasCapability will be true, otherwise they will be omitted.</p>
-                <br />
-                        
-                
-                        
-                                   
-                        
-                
-
-                
-                    <br />
-                    <h3>Returns</h3>
-                    
-                        <tr><td>
-                            <pre>{    "data":{        "hasCapability":[            "location.gps",            "media.audio.capture",            "media.video.capture",            "media.recording",            "network.bluetooth",            "network.wlan"        ],        "softwareVersion":"QNX",        "hasPermission":[            "blackberry.invoke",            "blackberry.system",            "blackberry.app",            "blackberry.app.event",            "blackberry.system.event",            "blackberry.ui.dialog",            "blackberry.utils"        ],        "model":100669958,        "hasDataCoverage":true,        "scriptApiVersion":"1.0.0.0",        "isMassStorageActive":false    }}</pre>
-                        </td></tr>
-                    
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&lt;html&gt;&lt;head&gt;    &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt;    &lt;script type="text/javascript" src="js/jquery.form.js" &gt;&lt;/script&gt;    &lt;script type="text/javascript" src="js/jquery.populate.js" &gt;&lt;/script&gt;    &lt;script type="text/javascript"&gt;         function getSystemData(){             $.ajax({                 type: "get",                 url: "http://localhost:8472/blackberry/system/get",                 success: function(msg){                     $('#mySystemDiv').populate(JSON.parse(msg).data);                 }              });          }     &lt;/script&gt;&lt;/head&gt;&lt;body&gt;   &lt;input type="button" onclick="getSystemData();" value="Populate - System"/&gt;   &lt;div id="mySystemDiv"&gt;       Software Version: &lt;span id="softwareVersion"&gt;&lt;/span&gt;&lt;br/&gt;       Mass Storage Active: &lt;span id="isMassStorageActive"&gt;&lt;/span&gt;   &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-	
-    
-            </div>
-        
-    
-
-
-
-
-        
-            <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
-            
-                
-
-	<h2>Code Example(s)</h2><hr/>
-	
-		<pre>&lt;script type="text/javascript"&gt;// See if we are in coverage   if (!blackberry.system.hasDataCoverage()) {       alert("You are not in coverage, we will attempt to send later");   }   // Check if we have GPS capability   if (blackberry.system.hasCapability("location.gps")) {       alert("This PlayBook has a GPS.");   }&lt;/script&gt;</pre>
-	
   
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <h3>
+                            <a name=".hasDataCoverage"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Boolean
+                                        
+                                        
+                                            blackberry.system.hasDataCoverage
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This method returns true so long as the device is connected to any network. This can be used in conjunction with the <a href="blackberry.html#.network">network</a> property to find out what kind of coverage it is in. On the smartphone this can be used in conjunction with <a href="blackberry.system.event.html#.onCoverageChange">blackberry.system.event.onCoverageChange</a> to track changes.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> Returns true if the BlackBerry PlayBook or the BlackBerry Smartphone device has any network interface active, otherwise returns false. Always returns true on the PlayBook simulator. Please note, that on the PlayBook device, there might be a small delay of 2-3 seconds between the time the device connects until the method returns true. </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name=".hasPermission"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            blackberry.system.hasPermission
+                                            
+                                                
+                                                    (module : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Determines the level of access to the requested module.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>module</b></td>
+                                            <td>
+                                                
+                                                The BlackBerry WebWorks namespace or class to check for access. For example blackberry.system, blackberry.app.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> The possible return values: 0 - ALLOW 1 - DENY </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <h3>
+                            <a name=".isMassStorageActive"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Boolean
+                                        
+                                        
+                                            blackberry.system.isMassStorageActive
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns whether USB MassStorage mode is active.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> Always returns false on the BlackBerry PlayBook since Mass Storage Mode is not supported. All memory is presented as a network share when connected by USB and is not blocked. </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                        <h3>
+                            <a name=".setHomeScreenBackground"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.system.setHomeScreenBackground
+                                            
+                                                
+                                                    (uri : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Set the image that appears as the background of the Home screen on a BlackBerry device.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>uri</b></td>
+                                            <td>
+                                                
+                                                URI path to an image file that resides in flash memory or a microSD Card.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
             </div>
-        
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Events</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:batterycritical"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.system.batterycritical
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>batterycritical</b> event is triggered whenever the battery level changes to the value lower than 5%.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the batterycritical event                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>info:</b> An object  the pertinent information
+                                                    
+                                                        <br />
+                                                        <b>info.level:</b> The percentage of the battery charge (0-100).
+                                                    
+                                                        <br />
+                                                        <b>info.isPlugged:</b> A boolean that represents whether or not the device is receiving a charge.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onBatteryCritical(info) {  alert("The battery level is critical: " + info.level + (info.isPlugged?".":" and will shutdown soon. Save your work or connect device to a charging source."));}blackberry.event.addEventListener("batterycritical", onBatteryCritical);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:batterylow"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.system.batterylow
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>batterylow</b> event is triggered whenever the battery level changes to the value lower than 15%.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the batterylow event                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>info:</b> An object  the pertinent information
+                                                    
+                                                        <br />
+                                                        <b>info.level:</b> The percentage of the battery charge (0-100).
+                                                    
+                                                        <br />
+                                                        <b>info.isPlugged:</b> A boolean that represents whether or not the device is receiving a charge.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onBatteryLow(info) {  alert("The battery level is low: " + info.level + (info.isPlugged?".":". Consider connecting your device to a charging source."));}blackberry.event.addEventListener("batterylow", onBatteryLow);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:batterystatus"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.system.batterystatus
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level changes</li><li>device starts to receive a charge</li><li>device stops receiving a charge</li></ul></p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the batterystatus event                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>info:</b> An object  the pertinent information
+                                                    
+                                                        <br />
+                                                        <b>info.level:</b> The percentage of the battery charge (0-100).
+                                                    
+                                                        <br />
+                                                        <b>info.isPlugged:</b> A boolean that represents whether or not the device is receiving a charge.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onBatteryStatusChange(info) {  alert("The playbook " + info.isPlugged?"is ":"is not " + "plugged in with " + info.level + "% battery remaining");}blackberry.event.addEventListener("batterystatus", onBatteryStatusChange);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Properties</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <h3>
+                            <a name=".model"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        readonly
+                                        String
+                                        
+                                        
+                                            model
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the model number of the BlackBerry PlayBook or the BlackBerry Smartphone device.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <h3>
+                            <a name=".scriptApiVersion"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        readonly
+                                        String
+                                        
+                                        
+                                            scriptApiVersion
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the current version of the operating system, for example, 1.0.0.0.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                        <h3>
+                            <a name=".softwareVersion"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        readonly
+                                        String
+                                        
+                                        
+                                            softwareVersion
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the current version of the operating system, for example, 1.0.0.0.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Constants</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name=".ALLOW"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            ALLOW
+                                            
+                                                
+                                                    
+                                                        = 0
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returned by hasPermission() indicating that the module requested is accessible.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                        <h3>
+                            <a name=".DENY"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            DENY
+                                            
+                                                
+                                                    
+                                                        = 1
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returned by hasPermission() indicating that the module is not accessible.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>URI Functions</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0">
+                        <h3>
+                            <a name=".get"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            http://localhost:8472/blackberry/system/get
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The objects in hasPermission will always be ALLOW (0). They will correspond to all the entries in the whitelist. If they are not whitelisted, they are omitted from the list. Similarly, all of the objects in hasCapability will be true, otherwise they will be omitted.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <pre> {    "data":{        "hasCapability":[            "location.gps",            "media.audio.capture",            "media.video.capture",            "media.recording",            "network.bluetooth",            "network.wlan"        ],        "softwareVersion":"QNX",        "hasPermission":[            "blackberry.invoke",            "blackberry.system",            "blackberry.app",            "blackberry.app.event",            "blackberry.system.event",            "blackberry.ui.dialog",            "blackberry.utils"        ],        "model":100669958,        "hasDataCoverage":true,        "scriptApiVersion":"1.0.0.0",        "isMassStorageActive":false    }} </pre>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;html&gt;&lt;head&gt;    &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt;    &lt;script type="text/javascript" src="js/jquery.form.js" &gt;&lt;/script&gt;    &lt;script type="text/javascript" src="js/jquery.populate.js" &gt;&lt;/script&gt;    &lt;script type="text/javascript"&gt;         function getSystemData(){             $.ajax({                 type: "get",                 url: "http://localhost:8472/blackberry/system/get",                 success: function(msg){                     $('#mySystemDiv').populate(JSON.parse(msg).data);                 }              });          }     &lt;/script&gt;&lt;/head&gt;&lt;body&gt;   &lt;input type="button" onclick="getSystemData();" value="Populate - System"/&gt;   &lt;div id="mySystemDiv"&gt;       Software Version: &lt;span id="softwareVersion"&gt;&lt;/span&gt;&lt;br/&gt;       Mass Storage Active: &lt;span id="isMassStorageActive"&gt;&lt;/span&gt;   &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
 
 
-        <hr />
+
+
+
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Apr 28 2012 01:17:53 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 01:41:01 GMT-0400 (EDT)
         </div>
 
+    </div>
+</section>
+
+                    </article>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
