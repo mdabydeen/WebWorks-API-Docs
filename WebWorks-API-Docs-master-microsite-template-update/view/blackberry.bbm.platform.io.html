@@ -167,14 +167,14 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
 <li>If they accept the invitation, <a href="blackberry.bbm.platform.io.Connection.html#event:onusersjoined">onusersjoined</a> is invoked on the inviter's side, and <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a> is invoked on the invitee's side with the connection they just joined. 
 <li>If they decline the invitation, <a href="blackberry.bbm.platform.io.Connection.html#event:onuserdeclined">onuserdeclined</a> is invoked on the inviter's side.
 </ul>
-<br><image src="/html5/files/apis/images/invite_to_join.png"><br>
+<br><img src="/html5/files/apis/images/invite_to_join.png" alt="invite_to_join.png" /><br>
 
 <h4>2. Hosting a public connection for non-contacts to join</h4>
 <p>An application user can also host an event within a public connection to let all application users join.</p>
 <p>When the application calls <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a> a dialog will be shown for the user to allow or deny the decision. If the user allows, the application should then post the host's PIN and PPID to its discovery service. <b>The BBM platform does not provide a discovery service. This must be provided by the application developer.</b>
 <p>Peers should download host information (PIN and PPID) from the discovery service and then call <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>. The peer will also be presented with a dialog to allow or deny the decision.
 <p>At this point the request is in the <code>"pending"</code> state. In this state the peer can <a href="blackberry.bbm.platform.io.OutgoingJoinRequest.html#cancel">cancel</a> the request, and the host can <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#accept">accept</a> or <a href="blackberry.bbm.platform.io.IncomingJoinRequest.html#decline">decline</a>.</p>
-<br><image src="/html5/files/apis/images/hosting.png"><br>
+<br><img src="/html5/files/apis/images/hosting.png" alt="hosting.png" /><br>
 </p>
 
 
@@ -224,111 +224,93 @@ If the user invites contacts then the <a href="blackberry.bbm.platform.io.Connec
                             
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.createConnection">blackberry.bbm.platform.io.createConnection</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.createConnection">blackberry.bbm.platform.io.createConnection</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.hostRequests">hostRequests</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.hostRequests">hostRequests</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.hostedConnection">hostedConnection</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.hostedConnection">hostedConnection</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.joinHostRequests">joinHostRequests</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.joinHostRequests">joinHostRequests</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.event:onconnectionaccepted">blackberry.bbm.platform.io.onconnectionaccepted</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">blackberry.bbm.platform.io.ondataexpired</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.event:ondataexpired">blackberry.bbm.platform.io.ondataexpired</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0">
-                                    <td class="first_column">
-                                        <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">blackberry.bbm.platform.io.onuserreachable</a>
-                                        <td class="apiYes">Y</td>
+                                    <a href="blackberry.bbm.platform.io.html#.event:onuserreachable">blackberry.bbm.platform.io.onuserreachable</a>
+                                    <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
-                                    </td>
                                 </tr>
                             
                         </table>
@@ -1651,7 +1633,7 @@ list automatically.
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jun 12 2012 17:42:10 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 01:21:08 GMT-0400 (EDT)
         </div>
 
     </div>

@@ -1,22 +1,5 @@
 
 
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>
-        Touch - BlackBerry WebWorks
-    </title>
-
-    <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
-    <link href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main.min.css" type="text/css" rel="stylesheet" />
-</head>
-
-<body>
-<div class="site_container clearfix guide-container">
-    
-
 <section  class="page_container references">
 	<div class="row">
         <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
@@ -78,18 +61,18 @@
 
         <h1>
             
-                Touch
+                Connection
             
         </h1>
 
 
         
             <p>
-                This interface defines an individual point of contact for a touch event.
+                The Connection object gives access to the device's cellular and wifi connection information.
 
 
                 
-                    <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                    <div x-ww-support="bb10x">
                     
                 
   
@@ -107,6 +90,21 @@
 
 
         
+            <div class="notice warning">                
+                <span><b>Beta Notice:</b></span>
+                <p>
+                    This API is considered to be in Beta.
+                    The function and property signatures listed below could change at anytime.
+                    Once the API moves out of Beta it will be distributed as part of the core API.
+                    <br /><br />
+                    
+                        
+                    
+                    <br /><br />
+                    <i>Last Updated: Thu Jul 12 2012 01:21:05 GMT-0400 (EDT)</i>
+                </p>
+            </div>
+        
 
 
         
@@ -122,10 +120,6 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry OS 6.0+</td></tr>
-                            
-                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
-                            
                                 <tr><td>- BlackBerry 10</td></tr>
                             
                             </tbody>
@@ -137,113 +131,133 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#clientX">clientX</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.type">type</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#clientY">clientY</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.BB">BB</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#force">force</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.BLUETOOTH_DUN">BLUETOOTH_DUN</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#identifier">identifier</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.CELL_2G">CELL_2G</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#pageX">pageX</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.CELL_3G">CELL_3G</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#pageY">pageY</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.CELL_4G">CELL_4G</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#radiusX">radiusX</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.ETHERNET">ETHERNET</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#radiusY">radiusY</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.NONE">NONE</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#rotationAngle">rotationAngle</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.UNKNOWN">UNKNOWN</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#screenX">screenX</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.USB">USB</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                                    <a href="Touch.html#screenY">screenY</a>
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.VPN">VPN</a>
                                     <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.WIFI">WIFI</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.connection.html#.event:connectionchange">blackberry.connection.connectionchange</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
@@ -264,9 +278,27 @@
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                    <tr><td>
-                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr></tbody></table>
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support="bb10x"><td>
+                                &lt;feature id="blackberry.connection" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td></tr>
+                        
+                    </table>
                 
 
                 <div x-ww-support="pb1.0|pb2.0">
@@ -301,11 +333,38 @@
     
         
         
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
+                <div class="ref-sect-title">
+                    <h2> Events </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.connection.html#.event:connectionchange">blackberry.connection.connectionchange</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
     
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -313,134 +372,164 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#clientX">clientX</a>
+                                        <a href="blackberry.connection.html#.type">type</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
+    
+        
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
+                <div class="ref-sect-title">
+                    <h2> Constants </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#clientY">clientY</a>
+                                        <a href="blackberry.connection.html#.BB">BB</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#force">force</a>
+                                        <a href="blackberry.connection.html#.BLUETOOTH_DUN">BLUETOOTH_DUN</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#identifier">identifier</a>
+                                        <a href="blackberry.connection.html#.CELL_2G">CELL_2G</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#pageX">pageX</a>
+                                        <a href="blackberry.connection.html#.CELL_3G">CELL_3G</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#pageY">pageY</a>
+                                        <a href="blackberry.connection.html#.CELL_4G">CELL_4G</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#radiusX">radiusX</a>
+                                        <a href="blackberry.connection.html#.ETHERNET">ETHERNET</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#radiusY">radiusY</a>
+                                        <a href="blackberry.connection.html#.NONE">NONE</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#rotationAngle">rotationAngle</a>
+                                        <a href="blackberry.connection.html#.UNKNOWN">UNKNOWN</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#screenX">screenX</a>
+                                        <a href="blackberry.connection.html#.USB">USB</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="Touch.html#screenY">screenY</a>
+                                        <a href="blackberry.connection.html#.VPN">VPN</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.connection.html#.WIFI">WIFI</a>
                                         
                                     </td>
                                 </tr>
@@ -455,9 +544,6 @@
         
         
     
-        
-        
-    
 
     
 </div>
@@ -466,9 +552,6 @@
 
         
         
-
-    
-    
 
     
     
@@ -480,24 +563,146 @@
     
         <div class="ref-sect">
             <div class="ref-sect-title">
+                <h2>Events</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:connectionchange"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.connection.connectionchange
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>connectionchange</b> event is triggered whenever the network connection type changes.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the connectionchange event.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>info:</b> An object with the pertinent information.
+                                                    
+                                                        <br />
+                                                        <b>info.oldType:</b> The network connection type prior to the event.
+                                                    
+                                                        <br />
+                                                        <b>info.newType:</b> The new network connection type.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+function onChange(info) {
+  alert("The network connection type used to be: " + info.oldType + " and is now: " + info.newType);
+}
+
+blackberry.event.addEventListener("connectionchange", onChange);
+
+&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
                 <h2>Properties</h2>
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name="clientX"></a>
+                            <a name=".type"></a>
                  
                             
                             
                                 
                                     
-                                                      
+                                        static              
                                         readonly
-                                        Number
+                                        String
                                         
                                         
-                                            clientX
+                                            type
                                             
                                                                   
                                     
@@ -516,7 +721,7 @@
                                        
                             
                             
-                            <p>x-coordinate of point relative to the viewport, excluding any scroll offset</p>
+                            <p>The type of network connection that is being used by the application. Note that CELL_4G is always returned for cellular connection.</p>
                             <br />
                             
                             
@@ -525,804 +730,6 @@
                                     <thead><tr><th colspan="2">
                                         Supported Platforms
                                     </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="clientY"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            clientY
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>y-coordinate of point relative to the viewport, excluding any scroll offset</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="force"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            force
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>a relative value of pressure applied, in the range 0 to 1, where 0 is no pressure, and 1 is the highest level of pressure the touch device is capable of sensing; 0 if no value is known. In environments where force is known, the absolute pressure represented by the force attribute, and the sensitivity in levels of pressure, may vary.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="identifier"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            identifier
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>An identification number for each touch point, unique to that touch point per session.The algorithm for determining the identifier value is as follows: <br /><br /><ol><li>if there are no other active touch event sessions, the value of identifier must be 0</li><li>if there is at least one active touch event session, the value of identifier must be the lowest integer not currently used by any active Touch object in any active touch event session</li></ol></p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="pageX"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            pageX
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>x-coordinate of point relative to the viewport, including any scroll offset</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="pageY"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            pageY
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>y-coordinate of point relative to the viewport, including any scroll offset</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="radiusX"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            radiusX
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the x-axis, in pixels of the same scale as screenX; 1 if no value is known. The value must be positive.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="radiusY"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            radiusY
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the y-axis, in pixels of the same scale as screenY; 1 if no value is known. The value must be positive.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="rotationAngle"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            rotationAngle
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>the angle (in degrees) that the ellipse described by radiusX and radiusY is rotated clockwise about its center; 0 if no value is known. The value must be greater than or equal to 0 and less than 90. <br /><br />If the ellipse described by radiusX and radiusY is circular, then rotationAngle has no effect. The user agent may use 0 as the value in this case, or it may use any other value in the allowed range. (For example, the user agent may use the rotationAngle value from the previous touch event, to avoid sudden changes.)</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="screenX"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            screenX
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>x-coordinate of point relative to the screen</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x">
-                        <h3>
-                            <a name="screenY"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            screenY
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>y-coordinate of point relative to the screen</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
                                     
                                         <tr><td></td><td>
                                             &nbsp;- BlackBerry 10
@@ -1358,6 +765,840 @@
     
 
     
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title">
+                <h2>Constants</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".BB"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            BB
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>BlackBerry Bridge connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".BLUETOOTH_DUN"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            BLUETOOTH_DUN
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Bluetooth tethering connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".CELL_2G"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            CELL_2G
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Cellular 2G connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".CELL_3G"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            CELL_3G
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Cellular 3G connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".CELL_4G"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            CELL_4G
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Cellular 4G connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".ETHERNET"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            ETHERNET
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Wired ethernet connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".NONE"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            NONE
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>No connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".UNKNOWN"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            UNKNOWN
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Unknown connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".USB"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            USB
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>USB connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".VPN"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            VPN
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>VPN connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".WIFI"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            WIFI
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Wi-fi connection</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
     
 
     
@@ -1369,7 +1610,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 01:21:12 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 01:21:05 GMT-0400 (EDT)
         </div>
 
     </div>
@@ -1381,72 +1622,3 @@
         </div>
     </div>
 </section>
-
-</div>
-
-
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageend.min.js"></script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/jquery.carouFredSel-4.4.1-packed.js"></script>
-<script type="text/javascript" src="https://client.akamai.com/dlm/dlm.js"></js>
-<script> 
-    global.init('/html5/', 'apis', 'index', '', '/html5/webroot/');
-</script>
-<script>
-var menu, menu_id_str, selected, siblings;
-    menu = null;
-    menu_id_str = $('.side-nav-content').attr('id');
-    if (menu_id_str !== 'none') {
-        menu = menu_id_str;
-    }
-    $(document).ready(function () {
-        stage.initiate();
-        stage.add_measurement('footer_top', function () {
-            var m = $('#main');
-            stage.footer_top = m.offset().top + m.height();
-        }, false);
-        stage.add_measurement('art_height', function () {
-            stage.art_height = $('#main').height();
-        }, false);
-        stage.initiate();
-        sticky.initiate();
-        sizer.initiate(); /* Initiates resizing of menu on pages where it is relevant */
-
-        selected = $('.no_children.item_active').first();
-        selected.siblings().addClass('active_sibling');
-        $("#main a").each(function () {
-            $(this).bind('click', function () {
-                sticky.scrollEvent();
-            });
-        });
-
-    });
-    $(window).load(function () {
-        var container, scrollTo;
-        initMenu(window.location.pathname, menu);
-        reset_size_and_scroll();
-        $(function () {
-            container = $('#side-nav-children');
-            scrollTo = $('.active', container);
-            if (scrollTo.length > 0) {
-                container.scrollTop(scrollTo.offset().top - container.offset().top + container.scrollTop() - 80);
-            }
-        });
-    });
-
-    $(window).resize(function (e) {
-        if (e) { e.stopPropagation(); }
-        reset_size_and_scroll();
-    });
-    $(window).scroll(function (e) {
-        if (e) { e.stopPropagation(); }
-        reset_size_and_scroll();
-    });
-</script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageload.min.js"></script>
-<script type="text/javascript" src="nav.js"></script>
-
-
-
-</body>
-</html>
-
