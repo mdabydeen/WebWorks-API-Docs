@@ -20,3 +20,4 @@ WebWorks-API-Docs-next-BB10-ccmAPI
 WebWorks-API-Docs-master-sidebar-fix
 WebWorks-API-Docs-next-BB10-push-docs
 WebWorks-API-Docs-next-BB10-bbm
+WebWorks-API-Docs-next-BB10-locale
