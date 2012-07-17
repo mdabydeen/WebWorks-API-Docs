@@ -139,11 +139,31 @@ You can obtain other users from the following functions/callbacks:
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|bb10x">
+                                <tr x-ww-support="bb5.0|bb10x">
                                     <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#bbmsdkVersion">bbmsdkVersion</a>
                                     <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#countryCode">countryCode</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#countryFlag">countryFlag</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
@@ -214,6 +234,16 @@ You can obtain other users from the following functions/callbacks:
                                     <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#timezone">timezone</a>
+                                    <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
@@ -315,7 +345,7 @@ You can obtain other users from the following functions/callbacks:
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|bb10x">
+                                <tr x-ww-support="bb5.0|bb10x">
                                     <td class="first_column">
                                         
                                             Number
@@ -323,6 +353,30 @@ You can obtain other users from the following functions/callbacks:
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#bbmsdkVersion">bbmsdkVersion</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#countryCode">countryCode</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#countryFlag">countryFlag</a>
                                         
                                     </td>
                                 </tr>
@@ -407,6 +461,18 @@ You can obtain other users from the following functions/callbacks:
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#statusMessage">statusMessage</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.BBMPlatformUser.html#timezone">timezone</a>
                                         
                                     </td>
                                 </tr>
@@ -525,7 +591,7 @@ You can obtain other users from the following functions/callbacks:
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|bb10x">
+                    <div class="detailed_item function" x-ww-support="bb5.0|bb10x">
                         <h3>
                             <a name="bbmsdkVersion"></a>
                  
@@ -573,8 +639,150 @@ You can obtain other users from the following functions/callbacks:
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry OS 5.0
                                         </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name="countryCode"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        readonly
+                                        String
+                                        
+                                        
+                                            countryCode
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The country code of the user.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name="countryFlag"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        readonly
+                                        String
+                                        
+                                        
+                                            countryFlag
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The a picture of the user's country flag encoded as base64 image string.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
                                     
                                         <tr><td></td><td>
                                             &nbsp;- BlackBerry 10
@@ -1142,6 +1350,77 @@ displayPicImg.src = user.displayPicture;
                         </div>
                     </div>
                 
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name="timezone"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        readonly
+                                        String
+                                        
+                                        
+                                            timezone
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The timezone of the user.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
             </div>
         </div>
     
@@ -1158,7 +1437,7 @@ displayPicImg.src = user.displayPicture;
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 17 2012 16:44:26 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 17 2012 17:00:06 GMT-0400 (EDT)
         </div>
 
     </div>
