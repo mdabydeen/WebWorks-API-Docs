@@ -158,7 +158,7 @@
 
         
             <p>
-                The contextmenu namespace provides the facility<h3>Context Menu</h3><p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. Thecontextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, aswell as listen to specific events related to the context menu being triggered and displayed.<p><h4>Enabling</h4><p>The contextmenu can be enalbed by calling the blackberry.ui.contextmenu.enabled property. When set to true, thecontextmenu will capture the context menu events, and pass any events that the user has registered for. When set to falsethe contextmenu will default to the system, and the developer will have no access to the events described below.</p><h4>Events</h4>Developers can subscribe to the following events:</p><ul> <li>contextmenudisplayrequested</li> <li>contextmenuicondisplay</li> <li>contextmenufulldisplay</li> <li>contextmenuclosed</li></ul><p>These events allow developers to alter their user interface when the menu is triggered, as well asrelay the menu closing and opening to the underlying application.</p>
+                The contextmenu namespace provides the facility<h3>Context Menu</h3><p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. Thecontextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, aswell as listen to specific events related to the context menu being triggered and displayed.<p><h4>Enabling</h4><p>The contextmenu can be enalbed by calling the blackberry.ui.contextmenu.enabled property. When set to true, thecontextmenu will capture the context menu events, and pass any events that the user has registered for. When set to falsethe contextmenu will default to the system, and the developer will have no access to the events described below.</p><h4>Events</h4>Developers can subscribe to the following events:</p><ul> <li>contextmenuicondisplay</li> <li>contextmenufulldisplay</li> <li>contextmenuclosed</li></ul><p>These events allow developers to alter their user interface when the menu is triggered, as well asrelay the menu closing and opening to the underlying application.</p>
             </p>
         
 
@@ -188,7 +188,31 @@
                     
                         <tr x-ww-support="">
                             <td>
+                                <a href="blackberry.ui.contextmenu.html#.addItem">addItem</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="">
+                            <td>
                                 <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td>
+                        </tr>
+                    
+                        <tr x-ww-support="">
+                            <td>
+                                <a href="blackberry.ui.contextmenu.html#.theme">theme</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -268,7 +292,17 @@
                     <ul>
                         
                             <li x-ww-support="">
+                                <a href="blackberry.ui.contextmenu.html#.addItem">addItem</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="">
                                 <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                
+                            </li>
+                        
+                            <li x-ww-support="">
+                                <a href="blackberry.ui.contextmenu.html#.theme">theme</a>
                                 
                             </li>
                         
@@ -302,6 +336,137 @@
     
 
     
+        
+            <div x-ww-support="">
+                <h2>
+                    <a name=".addItem"></a>
+                    addItem
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        addItem(actionId : String, label : String, icon : String)
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p>AddItem allows the developer to add custom items to the context menu. The items will be appended to the listof operating system defined functions. Developers must provide the following parameters to successfully add items to the contextmenu.</p>
+                <br />
+                        
+                
+                        
+                
+                    <br />
+                    <table>
+                        <thead><tr>
+                            <th>
+                               Parameter
+                               
+                            </th>
+                            <th>
+                               Type
+                               
+                            </th>
+                            <th>
+                               Description
+                               
+                            </th>
+                        </tr></thead>
+                                       
+                        
+                            
+                            <tr>
+                                <td><b>actionId</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    a property that uniquely defines the action to be added to the context menu. Ideally some sort of reverse DNS style name.                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>label</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    a string that will be displayed to the user describing the custom context to be performed. ie: Edit                         
+                                    
+                                </td>
+                            </tr>
+                        
+                            
+                            <tr>
+                                <td><b>icon</b></td>
+                                <td>
+                                    
+                                        String
+                                    
+                                                                                        
+                                </td>
+                                <td>
+                                    
+                                    a path to the an image to display in the context menu                         
+                                    
+                                </td>
+                            </tr>
+                                      
+                    </table>
+                                   
+                        
+                
+
+                
+
+                
+                
+
+	<br /><h3>Code Example(s)</h3>
+	
+		<pre>&lt;script type="text/javascript"&gt;function disabledContextMenu() {    blackberry.ui.contextmenu.enabled = false;}if(!blackberru.ui.contextmenu.enabled){    console.log("context menu is currently disabled");    }&lt;/script&gt;</pre>
+	
+    
+            </div>
         
             <div x-ww-support="">
                 <h2>
@@ -397,8 +562,66 @@
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function disabledContextMenu() {blackberry.ui.contextmenu.enabled = false;}if(!blackberru.ui.contextmenu.enabled){    console.log("context menu is currently disabled");}&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;function disabledContextMenu() {    blackberry.ui.contextmenu.enabled = false;}if(!blackberru.ui.contextmenu.enabled){    console.log("context menu is currently disabled");    }&lt;/script&gt;</pre>
 	
+    
+            </div>
+        
+            <div x-ww-support="">
+                <h2>
+                    <a name=".theme"></a>
+                    theme
+                </h2>
+                <hr/>
+                 
+                
+                
+                    <table>
+                        <tr><td>
+                            
+                                
+                                    static              
+                                    
+                                        void
+                                    
+                                    
+                                        theme()
+                                                              
+                                
+                            
+                        </td></tr>
+                    </table>
+                    <br />
+                
+                        
+                
+                
+                    
+                    <br />
+                
+                
+                           
+                        
+                              
+                    <h3>Supported Platform(s)</h3>      
+                                  
+                                   
+                <br />
+                        
+                <h3>Description</h3>
+                <p></p>
+                <br />
+                        
+                
+                        
+                                   
+                        
+                
+
+                
+
+                
+                
     
             </div>
         
@@ -446,7 +669,7 @@
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 10 2012 18:09:22 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 17 2012 13:05:59 GMT-0400 (EDT)
         </div>
 
     </div>
