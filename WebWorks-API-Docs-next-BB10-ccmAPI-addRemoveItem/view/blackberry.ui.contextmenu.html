@@ -159,7 +159,18 @@
         
             <p>
                 The contextmenu namespace provides the facility to interact with the context menu api to control whether context menus are enabled, listen to events, add items to appear based on the context, and set the theme of the context menu.
-<h3>Context Menu</h3><p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. Thecontextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, aswell as listen to specific events related to the context menu being triggered and displayed.<p><h4>Enabling</h4><p>The contextmenu can be enabled by calling the blackberry.ui.contextmenu.enabled property. When set to true, thecontextmenu will capture the context menu events, and pass any events that the user has registered for. When set to falsethe contextmenu will default to the system, and the developer will have no access to the events described below.</p>
+
+<h3>Context Menu</h3>
+<p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. The
+contextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, as
+well as listen to specific events related to the context menu being triggered and displayed.
+<p>
+
+<h4>Enabling</h4>
+<p>The contextmenu can be enabled by calling the blackberry.ui.contextmenu.enabled property. When set to true, the
+contextmenu will capture the context menu events, and pass any events that the user has registered for. When set to false
+the contextmenu will default to the system, and the developer will have no access to the events described below.
+</p>
             </p>
         
 
@@ -187,7 +198,7 @@
                     <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                     
                     
-                        <tr x-ww-support="">
+                        <tr x-ww-support="bb10x|ripple">
                             <td>
                                 <a href="blackberry.ui.contextmenu.html#.addItem">addItem</a>
                                 <td class="apiNo">&nbsp;</td>
@@ -195,7 +206,7 @@
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
@@ -211,7 +222,7 @@
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="">
+                        <tr x-ww-support="bb10x|ripple">
                             <td>
                                 <a href="blackberry.ui.contextmenu.html#.removeItem">removeItem</a>
                                 <td class="apiNo">&nbsp;</td>
@@ -219,7 +230,7 @@
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                             </td>
                         </tr>
                     
@@ -287,12 +298,12 @@
         
         
             <br />
-            <div x-ww-support="">
+            <div x-ww-support="bb10x|ripple">
                 <h3> Functions </h3>
                 
                     <ul>
                         
-                            <li x-ww-support="">
+                            <li x-ww-support="bb10x|ripple">
                                 <a href="blackberry.ui.contextmenu.html#.addItem">addItem</a>
                                 
                             </li>
@@ -302,7 +313,7 @@
                                 
                             </li>
                         
-                            <li x-ww-support="">
+                            <li x-ww-support="bb10x|ripple">
                                 <a href="blackberry.ui.contextmenu.html#.removeItem">removeItem</a>
                                 
                             </li>
@@ -338,7 +349,7 @@
 
     
         
-            <div x-ww-support="">
+            <div x-ww-support="bb10x|ripple">
                 <h2>
                     <a name=".addItem"></a>
                     addItem
@@ -375,6 +386,12 @@
                         
                               
                     <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
                                   
                                    
                 <br />
@@ -604,12 +621,21 @@ function addMyItem() {
 
 	<br /><h3>Code Example(s)</h3>
 	
-		<pre>&lt;script type="text/javascript"&gt;function disabledContextMenu() {    blackberry.ui.contextmenu.enabled = false;}if(!blackberru.ui.contextmenu.enabled){    console.log("context menu is currently disabled");    }&lt;/script&gt;</pre>
+		<pre>&lt;script type="text/javascript"&gt;
+
+function disabledContextMenu() {
+    blackberry.ui.contextmenu.enabled = false;
+}
+
+if(!blackberru.ui.contextmenu.enabled){
+    console.log("context menu is currently disabled");
+    }
+&lt;/script&gt;</pre>
 	
     
             </div>
         
-            <div x-ww-support="">
+            <div x-ww-support="bb10x|ripple">
                 <h2>
                     <a name=".removeItem"></a>
                     removeItem
@@ -646,6 +672,12 @@ function addMyItem() {
                         
                               
                     <h3>Supported Platform(s)</h3>      
+                    
+                        &nbsp;- BlackBerry 10
+                        <br />
+                    
+                        &nbsp;- Ripple Emulator
+                        <br />
                                   
                                    
                 <br />
@@ -782,7 +814,7 @@ function removeMyItem() {
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jul 18 2012 17:54:05 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 21 2012 06:45:06 GMT-0400 (EDT)
         </div>
 
     </div>
