@@ -67,7 +67,7 @@
                     
                 
                 <br /><br />
-                <i>Last Updated: Thu Jul 12 2012 17:47:41 GMT-0400 (EDT)</i>                
+                <i>Last Updated: Sat Jul 21 2012 01:18:23 GMT-0400 (EDT)</i>                
             </div>
         
 
@@ -122,18 +122,6 @@
                             </td>
                         </tr>
                     
-                        <tr x-ww-support="bb10x|ripple">
-                            <td>
-                                <a href="blackberry.invoke.html#.invokeViewer">invokeViewer</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                            </td>
-                        </tr>
-                    
                         <tr x-ww-support="bb10x">
                             <td>
                                 <a href="blackberry.invoke.html#.event:onChildCardClosed">onChildCardClosed</a>
@@ -161,18 +149,6 @@
                         <tr x-ww-support="bb10x">
                             <td>
                                 <a href="blackberry.invoke.html#.event:onChildCardStartPeek">onChildCardStartPeek</a>
-                                <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                            </td>
-                        </tr>
-                    
-                        <tr x-ww-support="bb10x">
-                            <td>
-                                <a href="blackberry.invoke.html#.event:onViewerMessageReceived">onViewerMessageReceived</a>
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -266,11 +242,6 @@
                                 
                             </li>
                         
-                            <li x-ww-support="bb10x|ripple">
-                                <a href="blackberry.invoke.html#.invokeViewer">invokeViewer</a>
-                                
-                            </li>
-                        
                     </ul>
                 
                 
@@ -297,11 +268,6 @@
                         
                             <li x-ww-support="bb10x">
                                 <a href="blackberry.invoke.html#.event:onChildCardStartPeek">onChildCardStartPeek</a>
-                                
-                            </li>
-                        
-                            <li x-ww-support="bb10x">
-                                <a href="blackberry.invoke.html#.event:onViewerMessageReceived">onViewerMessageReceived</a>
                                 
                             </li>
                         
@@ -710,179 +676,6 @@
     
             </div>
         
-            <div x-ww-support="bb10x|ripple">
-                <h2>
-                    <a name=".invokeViewer"></a>
-                    invokeViewer
-                </h2>
-                <hr/>
-                 
-                
-                
-                    <table>
-                        <tr><td>
-                            
-                                
-                                    static              
-                                    
-                                        void
-                                    
-                                    
-                                        invokeViewer(request : Object, onSuccess : function, onError : function)
-                                                              
-                                
-                            
-                        </td></tr>
-                    </table>
-                    <br />
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                    
-                        &nbsp;- Ripple Emulator
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>Invokes a Viewer</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>request</b></td>
-                                <td>
-                                    
-                                        Object
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    Object literal that specifies what to invoke. Refer to the example code for more information.                         
-                                    
-                                        <br />
-                                        
-                                            <br />
-                                            <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
-                                        
-                                            <br />
-                                            <b>action:</b> The action to be performed by the target. You can use the ACTION_* constants or other known action strings.
-                                        
-                                            <br />
-                                            <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
-                                        
-                                            <br />
-                                            <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
-                                        
-                                            <br />
-                                            <b>width:</b> The number of pixels of width that the viewer should conform to when initializing
-                                        
-                                            <br />
-                                            <b>height:</b> The number of pixels of height that the viewer should conform to when initializing
-                                        
-                                            <br />
-                                            <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
-                                        
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>onSuccess</b></td>
-                                <td>
-                                    
-                                        function(viewer : blackberry.invoke.invokedViewer)
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess(viewer).                         
-                                    
-                                        <br />
-                                        
-                                            <br />
-                                            <b>viewer:</b> The <code>blackberry.invoke.invokedViewer</code> object that allows the invoker to set the vairous properties and communicate to the invoked viewer.
-                                        
-                                    
-                                </td>
-                            </tr>
-                        
-                            
-                            <tr>
-                                <td><b>onError</b></td>
-                                <td>
-                                    
-                                        function(<i>[error: String]</i>)
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
-                                    
-                                        <br />
-                                        
-                                            <br />
-                                            <b>error:</b>  A String that describes the error.
-                                        
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&lt;script type="text/javascript"&gt;function onInvokeViewerSuccess(viewer) {    viewer.setPosition(0, 0);    viewer.setVisibility(true);    viewer.setZOrder(10);}function onInvokeViewerError(error) {    alert("Invocation failed, error: " + error);}function invokeViewer() {    // To invoke a Viewer, you need provide width and height fields    blackberry.invoke.invokeViewer({        target: "a.viewer.app", // The target should point to the "Viewer" target entry point of an application        width: 600,        height: 600    }, onInvokeViewerSuccess, onInvokeViewerError);}&lt;/script&gt;</pre>
-	
-    
-            </div>
-        
     
 
     
@@ -1172,101 +965,6 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
     
             </div>
         
-            <div x-ww-support="bb10x">
-                <h2>
-                    <a name=".event:onViewerMessageReceived"></a>
-                    onViewerMessageReceived
-                </h2>
-                <hr/>
-                 
-                
-                
-                        
-                
-                
-                    
-                    <br />
-                
-                
-                           
-                        
-                              
-                    <h3>Supported Platform(s)</h3>      
-                    
-                        &nbsp;- BlackBerry 10
-                        <br />
-                                  
-                                   
-                <br />
-                        
-                <h3>Description</h3>
-                <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">removeEventListener</a> function. <br /><br />
-The <b>onViewerMessageReceived</b> event is used to pass control message from viewer targets to the host.</p>
-                <br />
-                        
-                
-                        
-                
-                    <br />
-                    <table>
-                        <thead><tr>
-                            <th>
-                               Parameter
-                               
-                            </th>
-                            <th>
-                               Type
-                               
-                            </th>
-                            <th>
-                               Description
-                               
-                            </th>
-                        </tr></thead>
-                                       
-                        
-                            
-                            <tr>
-                                <td><b>yourCallbackFunction</b></td>
-                                <td>
-                                    
-                                        function(viewer : blackberry.invoke.invokedViewer, message : String)
-                                    
-                                                                                        
-                                </td>
-                                <td>
-                                    
-                                    The callback function that will be invoked on the onViewerMessageReceived event.                         
-                                    
-                                        <br />
-                                        
-                                            <br />
-                                            <b>viewer:</b> Indicates the <code>blackberry.invoke.invokedViewer</code> object that has sent the message.
-                                        
-                                            <br />
-                                            <b>message:</b> The message string sent from the invoked viewer to the host.
-                                        
-                                    
-                                </td>
-                            </tr>
-                                      
-                    </table>
-                                   
-                        
-                
-
-                
-
-                
-                
-
-	<br /><h3>Code Example(s)</h3>
-	
-		<pre>&lt;script type="text/javascript"&gt;function onViewerMessageReceivedHandler(viewer, message) {   // If received a "doSomething" message from the viewer,   // call doSomething() method.   if (message == "doSomething") {       doSomething();   }}blackberry.event.addEventListener("onViewerMessageReceived", onViewerMessageReceivedHandler);&lt;/script&gt;</pre>
-	
-    
-            </div>
-        
     
 
 
@@ -1309,7 +1007,7 @@ The <b>onViewerMessageReceived</b> event is used to pass control message from vi
         <hr />
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 12 2012 17:47:41 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 21 2012 01:18:23 GMT-0400 (EDT)
         </div>
 
     </div>

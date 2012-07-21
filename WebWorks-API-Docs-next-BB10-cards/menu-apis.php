@@ -274,12 +274,6 @@ array('title'=>'Invoke','link'=>'/html5/apis/blackberry.invoke.AddressBookArgume
 
     
             
-    ,array('title'=>'InvokedViewer','link'=>'/html5/apis/blackberry.invoke.InvokedViewer.html','id'=>'InvokedViewer','children'=>array())
-        
-    
-
-    
-            
     ,array('title'=>'JavaArguments','link'=>'/html5/apis/blackberry.invoke.JavaArguments.html','id'=>'JavaArguments','children'=>array())
         
     
