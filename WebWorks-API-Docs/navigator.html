@@ -61,18 +61,18 @@
 
         <h1>
             
-                Audio
+                HTML5 Navigator
             
         </h1>
 
 
         
             <p>
-                The audio object provides information about supported audio functionality on the device.
+                This Navigator API provides functionality to return the online status of the browser.
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                     
                 
   
@@ -105,7 +105,11 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry OS 5.0+</td></tr>
+                                <tr><td>- BlackBerry OS 6.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry 10</td></tr>
                             
                                 <tr><td>- Ripple Emulator</td></tr>
                             
@@ -118,27 +122,39 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.audio.html#.supportedContentTypes">blackberry.audio.supportedContentTypes</a>
-                                        <td class="apiYes">Y</td>
+                                        <a href="navigator.html#.onLine">onLine</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.audio.html#.supportedProtocols">blackberry.audio.supportedProtocols</a>
-                                        <td class="apiYes">Y</td>
+                                        <a href="navigator.html#event:offline">offline</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                    <td>
+                                        <a href="navigator.html#event:online">online</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
@@ -159,41 +175,9 @@
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                        <tr><td>
-                            <p>You must declare the feature element(s) below in your configuration document:</p>
-                        </td></tr></tbody></table>
-                    <table>
-                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
-                        
-                            
-                            
-                                
-                            
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.audio" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td></tr>
-                        
-                            
-                            
-                                
-                            
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.audio.Player" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td></tr>
-                        
-                    </table>
+                    <tr><td>
+                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+                    </td></tr></tbody></table>
                 
 
                 <div x-ww-support="pb1.0|pb2.0">
@@ -225,35 +209,38 @@
     
         
         
+    
+        
+        
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                 <div class="ref-sect-title">
-                    <h2> Functions </h2>
+                    <h2> Events </h2>
                 </div>
                 <div class="ref-sect-content">
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            String[]
+                                            void
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.audio.html#.supportedContentTypes">blackberry.audio.supportedContentTypes</a>
+                                        <a href="navigator.html#event:offline">offline</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            String[]
+                                            void
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.audio.html#.supportedProtocols">blackberry.audio.supportedProtocols</a>
+                                        <a href="navigator.html#event:online">online</a>
                                         
                                     </td>
                                 </tr>
@@ -267,8 +254,32 @@
     
         
         
-    
-        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            Boolean
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="navigator.html#.onLine">onLine</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
         
     
         
@@ -291,32 +302,24 @@
 
     
     
+
+    
+    
         <div class="ref-sect">
             <div class="ref-sect-title clearfix">
-                <h2>Functions</h2>
+                <h2>Events</h2>
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                         <h3>
-                            <a name=".supportedContentTypes"></a>
+                            <a name="event:offline"></a>
                  
                             
                             
                                 
                                     
-                                        static              
-                                        
-                                        String[]
-                                        
-                                        
-                                            blackberry.audio.supportedContentTypes
-                                            
-                                                
-                                                    (protocol : String)
-                                                
-                                            
-                                                                  
+                                            offline
                                     
                                 
                             
@@ -333,7 +336,7 @@
                                        
                             
                             
-                            <p>Request the list of supported content types for a specified protocol.</p>
+                            <p>The <b>offline</b> event is triggered whenever browser switches to offline</p>
                             <br />
                             
                             
@@ -344,7 +347,15 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry OS 6.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -366,10 +377,20 @@
                                     
                                         
                                         <tr>
-                                            <td><b>protocol</b></td>
+                                            <td><b>CallbackFunction</b></td>
                                             <td>
                                                 
-                                                The input protocol for the supported content types.                         
+                                                The callback function that will be invoked on the offline event                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>useCapture</b></td>
+                                            <td>
+                                                
+                                                A boolean that indicates whether the user wishes to initiate capture                         
                                                 
                                             </td>
                                         </tr>
@@ -383,15 +404,6 @@
 
                             
                             
-                                <br />
-                                <span><b>Return:</b></span>
-                                
-                                    
-                                        <p> The list of supported content types for the protocol provided </p>
-                                    
-                                
-                                <br />
-                            
                             
                             
                             
@@ -403,33 +415,22 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text/javascript&quot;&gt;  // Display supported content types for specified protocol   var protocol = &quot;file&quot;;  var contentTypes = blackberry.audio.supportedContentTypes(protocol);  if (contentTypes) {    var printingContentTypesList = &quot;&quot;;    for (i = 0; i &lt; contentTypes.length; i++) {      printingContentTypesList += contentTypes[i] + &quot;\n&quot;;    }        alert(&quot;List of &quot; + contentTypes.length + &quot; supported content-types for &apos;&quot; + protocol + &quot;&apos; :\n&quot; + printingContentTypesList);  }    &lt;/script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>function onOffline() {}  document.body.addEventListener("offline", function() { alert("offline")}, false);}</pre></code></td></tbody></table>
     
   
 
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
                         <h3>
-                            <a name=".supportedProtocols"></a>
+                            <a name="event:online"></a>
                  
                             
                             
                                 
                                     
-                                        static              
-                                        
-                                        String[]
-                                        
-                                        
-                                            blackberry.audio.supportedProtocols
-                                            
-                                                
-                                                    (content_type : String)
-                                                
-                                            
-                                                                  
+                                            online
                                     
                                 
                             
@@ -446,7 +447,7 @@
                                        
                             
                             
-                            <p>Request the list of supported protocols for a specified content type.</p>
+                            <p>The <b>online</b> event is triggered whenever browser switches to online</p>
                             <br />
                             
                             
@@ -457,7 +458,15 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry OS 6.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -479,10 +488,20 @@
                                     
                                         
                                         <tr>
-                                            <td><b>content_type</b></td>
+                                            <td><b>CallbackFunction</b></td>
                                             <td>
                                                 
-                                                The content type for the supported protocols.                         
+                                                The callback function that will be invoked on the online event                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>useCapture</b></td>
+                                            <td>
+                                                
+                                                A boolean that indicates whether the user wishes to initiate capture                         
                                                 
                                             </td>
                                         </tr>
@@ -496,14 +515,106 @@
 
                             
                             
-                                <br />
-                                <span><b>Return:</b></span>
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>function onOnline() {}  document.body.addEventListener("online", function() { alert("online")}, false);}</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Properties</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                        <h3>
+                            <a name=".onLine"></a>
+                 
+                            
+                            
                                 
                                     
-                                        <p> The list of supported protocols for the content type provided </p>
+                                        static              
+                                        readonly
+                                        Boolean
+                                        
+                                        
+                                            onLine
+                                            
+                                                                  
                                     
                                 
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
                                 <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The property returns a boolean value to indicate the status online or offline</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 6.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
                             
                             
                             
@@ -516,7 +627,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text/javascript&quot;&gt;  // Display all supported protocols  var protocols = blackberry.audio.supportedProtocols(null);  if (protocols) {    var printingProtocolsList = &quot;&quot;;    for (i = 0; i &lt; protocols.length; i++) {      printingProtocolsList += protocols[i] + &quot;\n&quot;;    }        alert(&quot;List of &quot; + protocols.length + &quot; supported protocols:\n&quot; + printingProtocolsList);    }    &lt;/script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>function supportNavigatorOnline() { if(window.navigator.onLine) {   alert("onLine"); } else {   alert("offline"); }}</pre></code></td></tbody></table>
     
   
 
@@ -533,19 +644,13 @@
     
     
 
-    
-    
-
-    
-    
-
 
 
 
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 24 2012 01:08:11 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jul 24 2012 01:08:18 GMT-0400 (EDT)
         </div>
 
     </div>
