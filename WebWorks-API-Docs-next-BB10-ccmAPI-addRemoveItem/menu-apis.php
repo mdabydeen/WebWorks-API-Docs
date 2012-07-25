@@ -705,7 +705,7 @@ array('title'=>'Touch','link'=>'/html5/apis/Element.html','id'=>'Touch','childre
             
             
 array('title'=>'User Interface','link'=>'/html5/apis/blackberry.ui.contextmenu.html','id'=>'User Interface','children'=>array(
-    array('title'=>'ContextMenu','link'=>'/html5/apis/blackberry.ui.contextmenu.html','id'=>'ContextMenu','children'=>array())
+    array('title'=>'Context Menu','link'=>'/html5/apis/blackberry.ui.contextmenu.html','id'=>'Context Menu','children'=>array())
             
         
     
