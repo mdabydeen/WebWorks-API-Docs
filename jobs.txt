@@ -24,3 +24,4 @@ WebWorks-API-Docs-next-BB10-locale
 WebWorks-API-Docs-next-BB10-ccmAPI-addRemoveItem
 WebWorks-API-Docs-master-template-fix
 WebWorks-API-Docs-next-BB10-application-events
+WebWorks-API-Docs-next-BB10-api-menu-filtering
