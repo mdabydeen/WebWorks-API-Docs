@@ -68,7 +68,7 @@
 
         
             <p>
-                The ContactFindOptions object contains fields that filter and sort the results of contacts.find().
+                The ContactFindOptions object contains fields that filter and sort the results of <a href="blackberry.pim.contacts.html#.find">blackberry.pim.contacts.find</a>().
 
 
                 
@@ -161,7 +161,7 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FIRST_NAME">SEARCH_FIELD_FIRST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_GIVEN_NAME">SEARCH_FIELD_GIVEN_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -173,7 +173,7 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LAST_NAME">SEARCH_FIELD_LAST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FAMILY_NAME">SEARCH_FIELD_FAMILY_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -269,7 +269,7 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FIRST_NAME">SORT_FIELD_FIRST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_GIVEN_NAME">SORT_FIELD_GIVEN_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -281,7 +281,7 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_LAST_NAME">SORT_FIELD_LAST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FAMILY_NAME">SORT_FIELD_FAMILY_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -475,7 +475,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FIRST_NAME">SEARCH_FIELD_FIRST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_GIVEN_NAME">SEARCH_FIELD_GIVEN_NAME</a>
                                         
                                     </td>
                                 </tr>
@@ -487,7 +487,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LAST_NAME">SEARCH_FIELD_LAST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FAMILY_NAME">SEARCH_FIELD_FAMILY_NAME</a>
                                         
                                     </td>
                                 </tr>
@@ -583,7 +583,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FIRST_NAME">SORT_FIELD_FIRST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_GIVEN_NAME">SORT_FIELD_GIVEN_NAME</a>
                                         
                                     </td>
                                 </tr>
@@ -595,7 +595,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_LAST_NAME">SORT_FIELD_LAST_NAME</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FAMILY_NAME">SORT_FIELD_FAMILY_NAME</a>
                                         
                                     </td>
                                 </tr>
@@ -753,45 +753,6 @@
                             
                             
                 
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>function findContact() {
-    var contacts = blackberry.pim.contacts;
-
-    var searchFirstName = {
-        "fieldName" : contacts.ContactFindOptions.SEARCH_FIELD_FIRST_NAME,
-        "fieldValue" : "John"
-    };
-
-    var searchLastName = {
-        "fieldName" : contacts.ContactFindOptions.SEARCH_FIELD_LAST_NAME,
-        "fieldValue" : "Smith"
-    };
-
-    var sortOrganization = {
-        "fieldName" : contacts.ContactFindOptions.SORT_FIELD_ORGANIZATION_NAME,
-        "desc" : false
-    };
-
-    var findOptions = new contacts.ContactFindOptions(
-        [searchFirstName, searchLastName], // filter
-        [sortOrganization],                // sort
-        20                                 // limit
-    );
-
-    contacts.find(["name"], onSuccess, onError, findOptions);
-}
-
-function onSuccess(contacts) {
-    alert("John Smith was found");
-}
-
-function onError(error) {
-    alert("Contact find failed: " + error.code);
-}</pre></code></td></tbody></table>
-    
   
 
                         </div>
@@ -1052,7 +1013,7 @@ function onError(error) {
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".SEARCH_FIELD_FIRST_NAME"></a>
+                            <a name=".SEARCH_FIELD_GIVEN_NAME"></a>
                  
                             
                             
@@ -1063,7 +1024,7 @@ function onError(error) {
                                         Number
                                         
                                         
-                                            SEARCH_FIELD_FIRST_NAME
+                                            SEARCH_FIELD_GIVEN_NAME
                                             
                                                 
                                                     
@@ -1127,7 +1088,7 @@ function onError(error) {
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".SEARCH_FIELD_LAST_NAME"></a>
+                            <a name=".SEARCH_FIELD_FAMILY_NAME"></a>
                  
                             
                             
@@ -1138,7 +1099,7 @@ function onError(error) {
                                         Number
                                         
                                         
-                                            SEARCH_FIELD_LAST_NAME
+                                            SEARCH_FIELD_FAMILY_NAME
                                             
                                                 
                                                     
@@ -1727,7 +1688,7 @@ function onError(error) {
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".SORT_FIELD_FIRST_NAME"></a>
+                            <a name=".SORT_FIELD_GIVEN_NAME"></a>
                  
                             
                             
@@ -1738,7 +1699,7 @@ function onError(error) {
                                         Number
                                         
                                         
-                                            SORT_FIELD_FIRST_NAME
+                                            SORT_FIELD_GIVEN_NAME
                                             
                                                 
                                                     
@@ -1802,7 +1763,7 @@ function onError(error) {
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".SORT_FIELD_LAST_NAME"></a>
+                            <a name=".SORT_FIELD_FAMILY_NAME"></a>
                  
                             
                             
@@ -1813,7 +1774,7 @@ function onError(error) {
                                         Number
                                         
                                         
-                                            SORT_FIELD_LAST_NAME
+                                            SORT_FIELD_FAMILY_NAME
                                             
                                                 
                                                     
@@ -1963,7 +1924,7 @@ function onError(error) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 26 2012 10:35:34 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 26 2012 11:28:24 GMT-0400 (EDT)
         </div>
 
     </div>
