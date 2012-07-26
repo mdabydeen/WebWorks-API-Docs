@@ -1,22 +1,5 @@
 
 
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>
-        Task - BlackBerry WebWorks
-    </title>
-
-    <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
-    <link href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main.min.css" type="text/css" rel="stylesheet" />
-</head>
-
-<body>
-<div class="site_container clearfix guide-container">
-    
-
 <section  class="page_container references">
 	<div class="row">
         <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
@@ -78,14 +61,14 @@
 
         <h1>
             
-                Task
+                ContactFindOptions
             
         </h1>
 
 
         
             <p>
-                The Task object represents a Task entry that would be in your PIM task list.  This Task object can be used for manipulating Task PIM information.
+                The ContactFindOptions object contains fields that filter and sort the results of contacts.find().
 
 
                 
@@ -115,9 +98,7 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry OS 5.0+</td></tr>
-                            
-                                <tr><td>- Ripple Emulator</td></tr>
+                                <tr><td>- BlackBerry 10</td></tr>
                             
                             </tbody>
                         </table>
@@ -128,257 +109,197 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                                 
-                                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                    <tr x-ww-support="bb10x">
                                         <td>
-                                            <a href="blackberry.pim.Task.html">blackberry.pim.Task</a>
-                                            <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                            <a href="blackberry.pim.contacts.ContactFindOptions.html">blackberry.pim.contacts.ContactFindOptions</a>
+                                            <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                         </td>
                                     </tr>
                                 
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.find">blackberry.pim.Task.find</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#filter">filter</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#remove">remove</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#limit">limit</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#save">save</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#sort">sort</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#categories">categories</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FIRST_NAME">SEARCH_FIELD_FIRST_NAME</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#due">due</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LAST_NAME">SEARCH_FIELD_LAST_NAME</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#note">note</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_ORGANIZATION_NAME">SEARCH_FIELD_ORGANIZATION_NAME</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#priority">priority</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_PHONE">SEARCH_FIELD_PHONE</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#recurrence">recurrence</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_EMAIL">SEARCH_FIELD_EMAIL</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#reminder">reminder</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_BBMPIN">SEARCH_FIELD_BBMPIN</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#status">status</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LINKEDIN">SEARCH_FIELD_LINKEDIN</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#summary">summary</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_TWITTER">SEARCH_FIELD_TWITTER</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#uid">uid</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_VIDEO_CHAT">SEARCH_FIELD_VIDEO_CHAT</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.NOT_STARTED">NOT_STARTED</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FIRST_NAME">SORT_FIELD_FIRST_NAME</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.IN_PROGRESS">IN_PROGRESS</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_LAST_NAME">SORT_FIELD_LAST_NAME</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.COMPLETED">COMPLETED</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_ORGANIZATION_NAME">SORT_FIELD_ORGANIZATION_NAME</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#.WAITING">WAITING</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#.DEFERRED">DEFERRED</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#.PRIORITY_HIGH">PRIORITY_HIGH</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#.PRIORITY_NORMAL">PRIORITY_NORMAL</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#.PRIORITY_LOW">PRIORITY_LOW</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
@@ -409,56 +330,14 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.find" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                            <tr x-ww-support="bb10x"><td>
+                                &lt;feature id="blackberry.pim.contacts" /&gt;
+                                <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td></tr>
-                        
-                            
-                            
-                                
-                            
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.pim.Recurrence" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td></tr>
-                        
-                            
-                            
-                                
-                            
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.pim.Reminder" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                            </td></tr>
-                        
-                            
-                            
-                                
-                            
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.pim.Task" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td></tr>
                         
                     </table>
@@ -491,7 +370,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
                 <div class="ref-sect-title">
                     <h2> Constructors </h2>
                 </div>
@@ -499,68 +378,14 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html">blackberry.pim.Task</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                        </tbody></table>
-                    
-                    
-                </div>
-            </div>
-        
-    
-        
-        
-            <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                <div class="ref-sect-title">
-                    <h2> Functions </h2>
-                </div>
-                <div class="ref-sect-content">
-                    
-                        <table><tbody>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Task[]
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#.find">blackberry.pim.Task.find</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            void
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#remove">remove</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            void
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#save">save</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html">blackberry.pim.contacts.ContactFindOptions</a>
                                         
                                     </td>
                                 </tr>
@@ -577,8 +402,11 @@
     
         
         
+    
+        
+        
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -586,110 +414,38 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            void
+                                            Object[]
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#categories">categories</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#filter">filter</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Date
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#due">due</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            String
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#note">note</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#priority">priority</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#limit">limit</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Recurrence
+                                            Object[]
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#recurrence">recurrence</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Reminder
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#reminder">reminder</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#status">status</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            String
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#summary">summary</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            String
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Task.html#uid">uid</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#sort">sort</a>
                                         
                                     </td>
                                 </tr>
@@ -704,7 +460,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -712,98 +468,146 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.NOT_STARTED">NOT_STARTED</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FIRST_NAME">SEARCH_FIELD_FIRST_NAME</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.IN_PROGRESS">IN_PROGRESS</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LAST_NAME">SEARCH_FIELD_LAST_NAME</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.COMPLETED">COMPLETED</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_ORGANIZATION_NAME">SEARCH_FIELD_ORGANIZATION_NAME</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.WAITING">WAITING</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_PHONE">SEARCH_FIELD_PHONE</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.DEFERRED">DEFERRED</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_EMAIL">SEARCH_FIELD_EMAIL</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.PRIORITY_HIGH">PRIORITY_HIGH</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_BBMPIN">SEARCH_FIELD_BBMPIN</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.PRIORITY_NORMAL">PRIORITY_NORMAL</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LINKEDIN">SEARCH_FIELD_LINKEDIN</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Task.html#.PRIORITY_LOW">PRIORITY_LOW</a>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_TWITTER">SEARCH_FIELD_TWITTER</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_VIDEO_CHAT">SEARCH_FIELD_VIDEO_CHAT</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FIRST_NAME">SORT_FIELD_FIRST_NAME</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_LAST_NAME">SORT_FIELD_LAST_NAME</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_ORGANIZATION_NAME">SORT_FIELD_ORGANIZATION_NAME</a>
                                         
                                     </td>
                                 </tr>
@@ -835,16 +639,16 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".Task"></a>
+                            <a name=".ContactFindOptions"></a>
                  
                             
                             
                                 
-                                    blackberry.pim.Task
+                                    blackberry.pim.contacts.ContactFindOptions
                                     
-                                        ()
+                                        (<i>[filter : Object[]]</i>, <i>[sort : Object[]]</i>, <i>[limit : Number]</i>)
                                     
                                 
                             
@@ -858,7 +662,7 @@
                                        
                             
                             
-                            <p><div><p>      The Task object is an instance object, where if a new instance is desired, it must be created using the new keyword.    </p></div></p>
+                            <p></p>
                             <br />
                             
                             
@@ -869,108 +673,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;  &sol;&sol; Create our Task   var newTask = new blackberry.pim.Task();   newTask.summary = &quot;Get Groceries&quot;;   newTask.note = &quot;Pick up eggs, and Milk&quot;;    newTask.priority = blackberry.pim.Task.PRIORITY_HIGH;     newTask.save(); &lt;&sol;script&gt;</pre></code></td></tbody></table>
-    
-  
-
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    
-
-    
-    
-        <div class="ref-sect">
-            <div class="ref-sect-title clearfix">
-                <h2>Functions</h2>
-            </div>
-            <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".find"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Task[]
-                                        
-                                        
-                                            blackberry.pim.Task.find
-                                            
-                                                
-                                                    (<i>[filter : <a href="blackberry.find.FilterExpression.html">blackberry.find.FilterExpression</a>]</i>, <i>[orderBy : String]</i>, <i>[maxReturn : Number]</i>, <i>[isAscending : Boolean]</i>)
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This method finds the tasks that match the regular expression provided.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -991,37 +694,45 @@
                                             <td><b>filter</b></td>
                                             <td>
                                                 
-                                                Optional expression parameter that defines the search criteria for the find.  If no value is provided the method will return all the Tasks on the device.                         
+                                                Optional.  An array of object literals that specifies search criteria to filter the results.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>fieldName:</b> The field being searched.  This should be one of the SEARCH_FIELD_* constants.
+                                                    
+                                                        <br />
+                                                        <b>fieldValue:</b> The value of the field.
+                                                    
                                                 
                                             </td>
                                         </tr>
                                     
                                         
                                         <tr>
-                                            <td><b>orderBy</b></td>
+                                            <td><b>sort</b></td>
                                             <td>
                                                 
-                                                Optional &apos;orderBy&apos; parameter specifying the field which the results will be sorted by. If &apos;isAscending&apos; is not specified or &apos;isAscending&apos; is true, the sort results will be in an ascending order. If &apos;isAscending&apos; is false, the sort results will be in a descending order.                         
+                                                Optional.  An array of object literals that specifies the order of the results.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>fieldName:</b> The field to sort.  This should be one of the SORT_FIELD_* constants.
+                                                    
+                                                        <br />
+                                                        <b>desc:</b> The sort order (descending if true).
+                                                    
                                                 
                                             </td>
                                         </tr>
                                     
                                         
                                         <tr>
-                                            <td><b>maxReturn</b></td>
+                                            <td><b>limit</b></td>
                                             <td>
                                                 
-                                                Optional integer parameter specifying the maximum number of results to return from the find.  If not specified or set to -1, it will return all results found.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>isAscending</b></td>
-                                            <td>
-                                                
-                                                Optional &apos;isAscending&apos; parameter specifying whether the sort order is ascending or descending. If not specified or set to true, the results sorted by the field specified by &apos;orderBy&apos; will be in an ascending order. If set to false, the sort results will be in a descending order. If no &apos;orderBy&apos; value is specified, &apos;isAscending&apos; is neglected.                         
+                                                Optional.  The maximum number of results to return from the search.                         
                                                 
                                             </td>
                                         </tr>
@@ -1042,164 +753,45 @@
                             
                             
                 
-  
 
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="remove"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        void
-                                        
-                                        
-                                            remove
-                                            
-                                                
-                                                    ()
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This method will remove a Task from the PIM storage.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>function findContact() {
+    var contacts = blackberry.pim.contacts;
 
-                            
-                            
-                            
+    var searchFirstName = {
+        "fieldName" : contacts.ContactFindOptions.SEARCH_FIELD_FIRST_NAME,
+        "fieldValue" : "John"
+    };
 
-                            
-                            
-                            
-                            
-                            
+    var searchLastName = {
+        "fieldName" : contacts.ContactFindOptions.SEARCH_FIELD_LAST_NAME,
+        "fieldValue" : "Smith"
+    };
 
-                            
-                            
-                
-  
+    var sortOrganization = {
+        "fieldName" : contacts.ContactFindOptions.SORT_FIELD_ORGANIZATION_NAME,
+        "desc" : false
+    };
 
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="save"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        void
-                                        
-                                        
-                                            save
-                                            
-                                                
-                                                    ()
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This method will save the changes made to the Task object.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
+    var findOptions = new contacts.ContactFindOptions(
+        [searchFirstName, searchLastName], // filter
+        [sortOrganization],                // sort
+        20                                 // limit
+    );
 
-                            
-                            
-                            
+    contacts.find(["name"], onSuccess, onError, findOptions);
+}
 
-                            
-                            
-                            
-                            
-                            
+function onSuccess(contacts) {
+    alert("John Smith was found");
+}
 
-                            
-                            
-                
+function onError(error) {
+    alert("Contact find failed: " + error.code);
+}</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -1214,15 +806,18 @@
 
     
     
+
+    
+    
         <div class="ref-sect">
             <div class="ref-sect-title clearfix">
                 <h2>Properties</h2>
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name="categories"></a>
+                            <a name="filter"></a>
                  
                             
                             
@@ -1230,11 +825,10 @@
                                     
                                                       
                                         
+                                        Object[]
                                         
-                                            void
                                         
-                                        
-                                            categories
+                                            filter
                                             
                                                                   
                                     
@@ -1253,7 +847,12 @@
                                        
                             
                             
-                            <p>The list of categories associated to the task.</p>
+                            <p>An array of object literals that specifies search criteria to filter the results.  The object should be in the following form: <br><pre>
+{
+    fieldName: &lt;field name, one of the SEARCH_FIELD_* constants&gt;,
+    fieldValue: &lt;value of the field&gt;
+}
+</pre></p>
                             <br />
                             
                             
@@ -1264,11 +863,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1296,159 +891,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name="due"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Date
-                                        
-                                        
-                                            due
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>The due date for this task.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="note"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        String
-                                        
-                                        
-                                            note
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Contains a more complete description than the summary field.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="priority"></a>
+                            <a name="limit"></a>
                  
                             
                             
@@ -1459,7 +904,7 @@
                                         Number
                                         
                                         
-                                            priority
+                                            limit
                                             
                                                                   
                                     
@@ -1478,7 +923,7 @@
                                        
                             
                             
-                            <p>This specifies the priority of the task.  Value can be one of the &apos;Priority&apos; constants. Default value is PRIORITY_NORMAL.</p>
+                            <p>The maximum number of contact results returned.</p>
                             <br />
                             
                             
@@ -1489,11 +934,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1521,9 +962,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name="recurrence"></a>
+                            <a name="sort"></a>
                  
                             
                             
@@ -1531,10 +972,10 @@
                                     
                                                       
                                         
-                                        Recurrence
+                                        Object[]
                                         
                                         
-                                            recurrence
+                                            sort
                                             
                                                                   
                                     
@@ -1553,7 +994,12 @@
                                        
                             
                             
-                            <p>This is the rule to store how this task should be repeated if any.</p>
+                            <p>An array of object literals that specifies the order of the results.  The object should be in the following form: <br><pre>
+{
+    fieldName: &lt;field name, one of the SORT_FIELD_* constants&gt;,
+    desc: true to sort results in descending order     
+}
+</pre></p>
                             <br />
                             
                             
@@ -1564,311 +1010,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="reminder"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Reminder
-                                        
-                                        
-                                            reminder
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This is the rule to store how the user should be reminded about the task.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="status"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Number
-                                        
-                                        
-                                            status
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Current status of this task. Value can be one of the &apos;Status&apos; constants. Default value is NOT_STARTED.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="summary"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        String
-                                        
-                                        
-                                            summary
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Contains a brief description of the task.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="uid"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        String
-                                        
-                                        
-                                            uid
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Contains the unique ID of the object. It is the primary key and would be automatically generated. This field is read-only.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1908,9 +1050,9 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".NOT_STARTED"></a>
+                            <a name=".SEARCH_FIELD_FIRST_NAME"></a>
                  
                             
                             
@@ -1921,7 +1063,7 @@
                                         Number
                                         
                                         
-                                            NOT_STARTED
+                                            SEARCH_FIELD_FIRST_NAME
                                             
                                                 
                                                     
@@ -1944,7 +1086,7 @@
                                        
                             
                             
-                            <p>Constant representing the NOT_STARTED status</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -1955,11 +1097,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1987,9 +1125,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".IN_PROGRESS"></a>
+                            <a name=".SEARCH_FIELD_LAST_NAME"></a>
                  
                             
                             
@@ -2000,7 +1138,7 @@
                                         Number
                                         
                                         
-                                            IN_PROGRESS
+                                            SEARCH_FIELD_LAST_NAME
                                             
                                                 
                                                     
@@ -2023,7 +1161,7 @@
                                        
                             
                             
-                            <p>Constant representing the IN_PROGRESS status</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2034,11 +1172,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2066,9 +1200,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".COMPLETED"></a>
+                            <a name=".SEARCH_FIELD_ORGANIZATION_NAME"></a>
                  
                             
                             
@@ -2079,7 +1213,7 @@
                                         Number
                                         
                                         
-                                            COMPLETED
+                                            SEARCH_FIELD_ORGANIZATION_NAME
                                             
                                                 
                                                     
@@ -2102,7 +1236,7 @@
                                        
                             
                             
-                            <p>Constant representing the COMPLETED status</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2113,11 +1247,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2145,9 +1275,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".WAITING"></a>
+                            <a name=".SEARCH_FIELD_PHONE"></a>
                  
                             
                             
@@ -2158,7 +1288,7 @@
                                         Number
                                         
                                         
-                                            WAITING
+                                            SEARCH_FIELD_PHONE
                                             
                                                 
                                                     
@@ -2181,7 +1311,7 @@
                                        
                             
                             
-                            <p>Constant representing the WAITING status</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2192,11 +1322,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2224,9 +1350,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".DEFERRED"></a>
+                            <a name=".SEARCH_FIELD_EMAIL"></a>
                  
                             
                             
@@ -2237,7 +1363,7 @@
                                         Number
                                         
                                         
-                                            DEFERRED
+                                            SEARCH_FIELD_EMAIL
                                             
                                                 
                                                     
@@ -2260,7 +1386,7 @@
                                        
                             
                             
-                            <p>Constant representing the DEFERRED status</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2271,11 +1397,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2303,9 +1425,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".PRIORITY_HIGH"></a>
+                            <a name=".SEARCH_FIELD_BBMPIN"></a>
                  
                             
                             
@@ -2316,7 +1438,7 @@
                                         Number
                                         
                                         
-                                            PRIORITY_HIGH
+                                            SEARCH_FIELD_BBMPIN
                                             
                                                 
                                                     
@@ -2339,7 +1461,7 @@
                                        
                             
                             
-                            <p>Constant representing the HIGH priority</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2350,11 +1472,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2382,9 +1500,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".PRIORITY_NORMAL"></a>
+                            <a name=".SEARCH_FIELD_LINKEDIN"></a>
                  
                             
                             
@@ -2395,7 +1513,7 @@
                                         Number
                                         
                                         
-                                            PRIORITY_NORMAL
+                                            SEARCH_FIELD_LINKEDIN
                                             
                                                 
                                                     
@@ -2418,7 +1536,7 @@
                                        
                             
                             
-                            <p>Constant representing the NORMAL priority</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2429,11 +1547,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2461,9 +1575,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".PRIORITY_LOW"></a>
+                            <a name=".SEARCH_FIELD_TWITTER"></a>
                  
                             
                             
@@ -2474,7 +1588,7 @@
                                         Number
                                         
                                         
-                                            PRIORITY_LOW
+                                            SEARCH_FIELD_TWITTER
                                             
                                                 
                                                     
@@ -2497,7 +1611,7 @@
                                        
                             
                             
-                            <p>Constant representing the LOW priority</p>
+                            <p>Used by specifying the search filter</p>
                             <br />
                             
                             
@@ -2508,11 +1622,307 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".SEARCH_FIELD_VIDEO_CHAT"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            SEARCH_FIELD_VIDEO_CHAT
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Used by specifying the search filter</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
                                         <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".SORT_FIELD_FIRST_NAME"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            SORT_FIELD_FIRST_NAME
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Used by specifying the sort field</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".SORT_FIELD_LAST_NAME"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            SORT_FIELD_LAST_NAME
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Used by specifying the sort field</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".SORT_FIELD_ORGANIZATION_NAME"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            SORT_FIELD_ORGANIZATION_NAME
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Used by specifying the sort field</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2553,7 +1963,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 26 2012 10:35:42 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 26 2012 10:35:34 GMT-0400 (EDT)
         </div>
 
     </div>
@@ -2565,64 +1975,3 @@
         </div>
     </div>
 </section>
-
-</div>
-
-
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageend.min.js"></script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/jquery.carouFredSel-4.4.1-packed.js"></script>
-<script type="text/javascript" src="https://client.akamai.com/dlm/dlm.js"></js>
-<script> 
-    global.init('/html5/', 'apis', 'index', '', '/html5/webroot/');
-</script>
-<script>
-	var menu, menu_id_str, selected, siblings;
-	menu = null;
-	menu_id_str = $('.side-nav-content').attr('id');
-	if (menu_id_str !== 'none') {
-		menu = menu_id_str;
-	}
-	$(document).ready(function () {
-		stage.initiate();
-		sticky.initiate();
-		sizer.initiate(); /* Initiates resizing of menu on pages where it is relevant */
-
-		selected = $('.no_children.item_active').first();
-		selected.siblings().addClass('active_sibling');
-		$("#main a").each(function () {
-			$(this).bind('click', function () {
-				sticky.scrollEvent();
-			});
-		});
-		
-	});
-	$(window).load(function () {
-		var container, scrollTo;
-		renderMenu(window.location.pathname, menu);
-		reset_size_and_scroll();
-		$(function () {
-			container = $('#side-nav-children');
-			scrollTo = $('.active', container);
-			if (scrollTo.length > 0) {
-				container.scrollTop(scrollTo.offset().top - container.offset().top + container.scrollTop() - 80);
-			}
-		});
-	});
-
-	$(window).resize(function (e) {
-		if (e) { e.stopPropagation(); }
-		reset_size_and_scroll();
-	});
-	$(window).scroll(function (e) {
-		if (e) { e.stopPropagation(); }
-		reset_size_and_scroll();
-	});
-</script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageload.min.js"></script>
-<script type="text/javascript" src="nav.js"></script>
-
-
-
-</body>
-</html>
-
