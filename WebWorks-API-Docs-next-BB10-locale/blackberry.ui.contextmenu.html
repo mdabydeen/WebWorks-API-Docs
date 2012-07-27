@@ -61,18 +61,30 @@
 
         <h1>
             
-                Network
+                Context Menu
             
         </h1>
 
 
         
             <p>
-                The blackberry object is the root of all BlackBerry specific JavaScript functionality. blackberry.network is available by default in the regular browser.
+                The contextmenu namespace provides the facility to interact with the context menu api to control whether context menus are enabled, listen to events, add items to appear based on the context, and set the theme of the context menu.
+
+<h3>Context Menu</h3>
+<p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. The
+contextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, as
+well as listen to specific events related to the context menu being triggered and displayed.
+<p>
+
+<h4>Enabling</h4>
+<p>The contextmenu can be enabled by calling the blackberry.ui.contextmenu.enabled property. When set to true, the
+contextmenu will capture the context menu events, and pass any events that the user has registered for. When set to false
+the contextmenu will default to the system, and the developer will have no access to the events described below.
+</p>
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div x-ww-support="bb10x|ripple">
                     
                 
   
@@ -105,7 +117,7 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry OS 5.0+</td></tr>
+                                <tr><td>- BlackBerry 10</td></tr>
                             
                                 <tr><td>- Ripple Emulator</td></tr>
                             
@@ -118,12 +130,12 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <tr x-ww-support="">
                                     <td>
-                                        <a href="blackberry.html#.network">network</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
@@ -147,9 +159,27 @@
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                    <tr><td>
-                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr></tbody></table>
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support="bb10x|ripple"><td>
+                                &lt;feature id="blackberry.ui.contextmenu" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td></tr>
+                        
+                    </table>
                 
 
                 <div x-ww-support="pb1.0|pb2.0">
@@ -188,7 +218,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0">
+            <div class="ref-sect ref-index" x-ww-support="">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -196,14 +226,14 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <tr x-ww-support="">
                                     <td class="first_column">
                                         
-                                            String
+                                            boolean
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.html#.network">network</a>
+                                        <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
                                         
                                     </td>
                                 </tr>
@@ -247,20 +277,20 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0">
+                    <div class="detailed_item function" x-ww-support="">
                         <h3>
-                            <a name=".network"></a>
+                            <a name=".enabled"></a>
                  
                             
                             
                                 
                                     
                                         static              
-                                        readonly
-                                        String
+                                        
+                                        boolean
                                         
                                         
-                                            network
+                                            enabled
                                             
                                                                   
                                     
@@ -279,7 +309,7 @@
                                        
                             
                             
-                            <p>Returns the wireless network on which the BlackBerry device is communicating.</p>
+                            <p>Context Menu enabled allows the developer to enabled and disable crosscut context menus for their application.</p>
                             <br />
                             
                             
@@ -289,15 +319,30 @@
                                         Supported Platforms
                                     </th></tr></thead>
                                     
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
                                 </table>              
                                                
                             <br />
                             
                             
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>enabled</b></td>
+                                            <td>
+                                                
+                                                property that sets the contextmenu to enabled or disabled                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
                                                
 
                             
@@ -317,7 +362,16 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;  alert(&quot;You are on the &quot; + blackberry.network + &quot; Network&quot;);&lt;&sol;script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+function disabledContextMenu() {
+    blackberry.ui.contextmenu.enabled = false;
+}
+
+if(!blackberry.ui.contextmenu.enabled){
+    console.log("context menu is currently disabled");
+    }
+&lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -340,7 +394,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jul 27 2012 01:20:27 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jul 27 2012 01:20:30 GMT-0400 (EDT)
         </div>
 
     </div>
