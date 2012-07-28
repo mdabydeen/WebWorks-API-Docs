@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>
-        WebGLUniformLocation - BlackBerry WebWorks
+        Context Menu - BlackBerry WebWorks
     </title>
 
     <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
@@ -124,18 +124,30 @@
 
         <h1>
             
-                WebGLUniformLocation
+                Context Menu
             
         </h1>
 
 
         
             <p>
-                The WebGLUniformLocation interface represents the location of a uniform variable in a shader program
+                The contextmenu namespace provides the facility to interact with the context menu api to control whether context menus are enabled, listen to events, add items to appear based on the context, and set the theme of the context menu.
+
+<h3>Context Menu</h3>
+<p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. The
+contextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, as
+well as listen to specific events related to the context menu being triggered and displayed.
+<p>
+
+<h4>Enabling</h4>
+<p>The contextmenu can be enabled by calling the blackberry.ui.contextmenu.enabled property. When set to true, the
+contextmenu will capture the context menu events, and pass any events that the user has registered for. When set to false
+the contextmenu will default to the system, and the developer will have no access to the events described below.
+</p>
 
 
                 
-                    <div x-ww-support="pb_menu|bb10_menu|ripple">
+                    <div x-ww-support="bb10_menu|ripple">
                     
                 
   
@@ -168,8 +180,6 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry PlayBook 2.0</td></tr>
-                            
                                 <tr><td>- BlackBerry 10</td></tr>
                             
                                 <tr><td>- Ripple Emulator</td></tr>
@@ -182,6 +192,18 @@
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
+                            
+                                <tr x-ww-support="">
+                                    <td>
+                                        <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
                             
                         </table>
                     </div>
@@ -200,9 +222,27 @@
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                    <tr><td>
-                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr></tbody></table>
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support="bb10_menu|ripple"><td>
+                                &lt;feature id="blackberry.ui.contextmenu" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                            </td></tr>
+                        
+                    </table>
                 
 
                 <div x-ww-support="pb_menu">
@@ -240,6 +280,33 @@
     
         
         
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="">
+                                    <td class="first_column">
+                                        
+                                            boolean
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
     
         
         
@@ -267,6 +334,116 @@
 
     
     
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Properties</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="">
+                        <h3>
+                            <a name=".enabled"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        boolean
+                                        
+                                        
+                                            enabled
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Context Menu enabled allows the developer to enabled and disable crosscut context menus for their application.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>enabled</b></td>
+                                            <td>
+                                                
+                                                property that sets the contextmenu to enabled or disabled                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+function disabledContextMenu() {
+    blackberry.ui.contextmenu.enabled = false;
+}
+
+if(!blackberry.ui.contextmenu.enabled){
+    console.log("context menu is currently disabled");
+    }
+&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
 
     
     
@@ -280,7 +457,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 28 2012 01:13:37 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 28 2012 01:11:16 GMT-0400 (EDT)
         </div>
 
     </div>
