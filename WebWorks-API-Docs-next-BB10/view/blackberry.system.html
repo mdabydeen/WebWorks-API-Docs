@@ -229,6 +229,18 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td>
+                                        <a href="blackberry.system.html#.language">language</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td>
                                         <a href="blackberry.system.html#.model">model</a>
@@ -238,6 +250,18 @@
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td>
+                                        <a href="blackberry.system.html#.region">region</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
@@ -316,6 +340,30 @@
                                 <tr x-ww-support="bb10x">
                                     <td>
                                         <a href="blackberry.system.html#.event:batterystatus">blackberry.system.batterystatus</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.system.html#.event:languagechanged">blackberry.system.languagechanged</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.system.html#.event:regionchanged">blackberry.system.regionchanged</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -517,6 +565,30 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.event:languagechanged">blackberry.system.languagechanged</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.event:regionchanged">blackberry.system.regionchanged</a>
+                                        
+                                    </td>
+                                </tr>
+                            
                         </tbody></table>
                     
                     
@@ -547,6 +619,18 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.language">language</a>
+                                        
+                                    </td>
+                                </tr>
+                            
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                                     <td class="first_column">
                                         
@@ -555,6 +639,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.system.html#.model">model</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.region">region</a>
                                         
                                     </td>
                                 </tr>
@@ -1474,7 +1570,7 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>info:</b> An object  the pertinent information
+                                                        <b>info:</b> An object with the pertinent information
                                                     
                                                         <br />
                                                         <b>info.level:</b> The percentage of the battery charge (0-100).
@@ -1507,6 +1603,198 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
     <b>Code Example:</b>
     
         <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onBatteryStatusChange(info) {  alert("The playbook " + info.isPlugged?"is ":"is not " + "plugged in with " + info.level + "% battery remaining");}blackberry.event.addEventListener("batterystatus", onBatteryStatusChange);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:languagechanged"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.system.languagechanged
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>languagechange</b> event is triggered whenever the language setting of the device is changed.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be triggered on the languagechange event.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>newLanguage:</b> The new language setting of the device. Its format conforms to <a href="http://tools.ietf.org/html/bcp47">BCP47</a>.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onLanguageChange(newLanguage) {  alert("The laguage has changed to " + newLanguage);}blackberry.event.addEventListener("languagechanged", onLanguageChange);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:regionchanged"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.system.regionchanged
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>regionChange</b> event is triggered whenever the regional setting of the device is changed.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be triggered on the regionchange event.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>newRegion:</b> The new regional setting of the device. Its format conforms to <a href="http://tools.ietf.org/html/bcp47">BCP47</a>.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onRegionChange(newRegion) {  alert("The current region has changed to " + newRegion);}blackberry.event.addEventListener("regionchanged", onRegionChange);&lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -1596,6 +1884,81 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
                         </div>
                     </div>
                 
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                        <h3>
+                            <a name=".language"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            language
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the current UI language for the device. Examples ofpossible values include, but are not limited to "fr_CA", "en_CA","en_US", and "es_ES". The format of the response conforms to<a href="http://tools.ietf.org/html/bcp47">BCP47</a>.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
                     <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
                         <h3>
                             <a name=".model"></a>
@@ -1644,6 +2007,81 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
                                     
                                         <tr><td></td><td>
                                             &nbsp;- BlackBerry PlayBook 1.0+
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                        <h3>
+                            <a name=".region"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            region
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the current country setting for the device. Theregion determines the format of items such as the date, time, numbers,and the calendar. Examples of possible values include, but are notlimited to "fr_CA", "en_CA", "en_US", and "es_ES". The format of theresponse conforms to <a href="http://tools.ietf.org/html/bcp47">BCP47</a>.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -2132,7 +2570,7 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Jul 29 2012 01:11:09 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jul 30 2012 13:05:46 GMT-0400 (EDT)
         </div>
 
     </div>
