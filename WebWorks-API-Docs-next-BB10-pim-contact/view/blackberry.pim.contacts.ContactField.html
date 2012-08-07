@@ -142,18 +142,6 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactField.html#pref">pref</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
                                         <a href="blackberry.pim.contacts.ContactField.html#type">type</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -350,18 +338,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Boolean
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.contacts.ContactField.html#pref">pref</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
                                             String
                                         
                                     </td>
@@ -497,7 +473,7 @@
                                 
                                     blackberry.pim.contacts.ContactField
                                     
-                                        (type : String, value : String, pref : Boolean)
+                                        (type : String, value : String)
                                     
                                 
                             
@@ -557,16 +533,6 @@
                                                 
                                             </td>
                                         </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>pref</b></td>
-                                            <td>
-                                                
-                                                Whether this ContactField contains the user's preferred value.                         
-                                                
-                                            </td>
-                                        </tr>
                                                   
                                 </table>
                                                
@@ -593,12 +559,10 @@
 
     var homeEmail = new contacts.ContactField(
         contacts.ContactField.HOME,
-        "xyz@person.com",
-        true);
+        "xyz@person.com");
     var workEmail = new contacts.ContactField(
         contacts.ContactField.WORK,
-        "abc@rim.com",
-        false);
+        "abc@rim.com");
 
     var newContact = contacts.create();
     newContact.emails = [homeEmail, workEmail];
@@ -638,77 +602,6 @@ function onSaveError(error) {
                 <h2>Properties</h2>
             </div>
             <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name="pref"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Boolean
-                                        
-                                        
-                                            pref
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>If true, this ContactField contains the user's preferred value.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
@@ -1262,7 +1155,7 @@ function onSaveError(error) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 26 2012 11:28:24 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Aug 07 2012 11:49:06 GMT-0400 (EDT)
         </div>
 
     </div>

@@ -214,18 +214,6 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.contacts.ContactAddress.html#pref">pref</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
                                         <a href="blackberry.pim.contacts.ContactAddress.html#region">region</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -470,18 +458,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Boolean
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.contacts.ContactAddress.html#pref">pref</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
                                             String
                                         
                                     </td>
@@ -593,7 +569,7 @@
                                 
                                     blackberry.pim.contacts.ContactAddress
                                     
-                                        (type : String, address1 : String, address2 : String, locality : String, region : String, postalCode : String, country : String, pref : Boolean)
+                                        (type : String, address1 : String, address2 : String, locality : String, region : String, postalCode : String, country : String)
                                     
                                 
                             
@@ -703,16 +679,6 @@
                                                 
                                             </td>
                                         </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>pref</b></td>
-                                            <td>
-                                                
-                                                Whether this ContactAddress contains the user's preferred value.                         
-                                                
-                                            </td>
-                                        </tr>
                                                   
                                 </table>
                                                
@@ -739,12 +705,10 @@
 
     var homeAddress = new contacts.ContactAddress(
         contacts.ContactAddress.HOME,
-        "123 Abc Rd", "", "Waterloo", "Ontario", "Canada",
-        true);
+        "123 Abc Rd", "", "Waterloo", "Ontario", "Canada");
     var workAddress = new contacts.ContactAddress(
         contacts.ContactAddress.WORK,
-        "456 Industry St", "", "Waterloo", "Ontario", "Canada",
-        false);
+        "456 Industry St", "", "Waterloo", "Ontario", "Canada");
 
     var newContact = contacts.create();
     newContact.addresses = [homeAddress, workAddress];
@@ -1213,77 +1177,6 @@ function onSaveError(error) {
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name="pref"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Boolean
-                                        
-                                        
-                                            pref
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>If true, this ContactAddress contains the user's preferred value.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
                             <a name="region"></a>
                  
                             
@@ -1680,7 +1573,7 @@ function onSaveError(error) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 26 2012 11:28:24 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Aug 07 2012 11:49:06 GMT-0400 (EDT)
         </div>
 
     </div>
