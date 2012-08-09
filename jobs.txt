@@ -23,5 +23,4 @@ WebWorks-API-Docs-next-BB10-api-menu-filtering
 WebWorks-API-Docs-next-BB10-pim-contact
 WebWorks-API-Docs-next-BB10-ccmAPI-addRemoveItem
 WebWorks-API-Docs-master-api-filtering-hotfix
-WebWorks-API-Docs-next-BB10-dialog-update
 WebWorks-API-Docs-next-BB10-pim-contact-features
