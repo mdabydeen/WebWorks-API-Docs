@@ -25,3 +25,4 @@ WebWorks-API-Docs-next-BB10-ccmAPI-addRemoveItem
 WebWorks-API-Docs-master-api-filtering-hotfix
 WebWorks-API-Docs-next-BB10-pim-contact-features
 WebWorks-API-Docs-next-BB10-notification
+WebWorks-API-Docs-next-BB10-pim-calendar
