@@ -16,7 +16,7 @@
 
 /**
  * @class The CalenderEventFilter object captures the searchable parameters for finding calendar event items. <b>DAP specs does not have as many fields in their CalendarEventFilter</b>
- * @toc {PIM} CalendarFindOptions
+ * @toc {PIM} CalenderEventFilter
  * @featureID blackberry.pim.calendar
  */
 blackberry.pim.calendar.CalenderEventFilter = {};

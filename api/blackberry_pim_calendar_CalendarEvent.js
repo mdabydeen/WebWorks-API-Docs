@@ -80,7 +80,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.status = "";
 blackberry.pim.calendar.CalendarEvent.prototype.transparency = "";
 
 /**
- * @description An indication of the display status to set for the event. <b>TODO busyStatus() in native CalendarEvent can be one of: free, tentative, busy, or out of office.</b>
+ * @description The recurrence or repetition rule for this event.
  * @type blackberry.pim.calendar.CalendarRepeatRule
  * @BB10X
  */
@@ -135,6 +135,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.accountId = "";
  * rescheduled occurrence is represented as an exception. It is stored in the
  * database as a separate event and it references the original recurring event by
  * means of the parent id.
+ * @readOnly
  * @type String
  * @BB10X
  */
