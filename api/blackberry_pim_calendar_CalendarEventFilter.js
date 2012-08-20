@@ -22,21 +22,22 @@
 blackberry.pim.calendar.CalenderEventFilter = {};
 
 /**
- * @description 
+ * @description Start of the query's time range. All events that enter the range should be returned.
  * @type Date
  * @BB10X
  */
 blackberry.pim.calendar.CalenderEventFilter.prototype.start = null;
 
 /**
- * @description 
+ * @description End of the query's time range. Any event that crosses the range should be returned.
  * @type Date
  * @BB10X
  */
 blackberry.pim.calendar.CalenderEventFilter.prototype.end = null;
 
 /**
- * @description 
+ * @description If true, recurring events will be expanded in search results. This means all occurrences
+ * happening in the time range will be returned.
  * @type Boolean
  * @BB10X
  */

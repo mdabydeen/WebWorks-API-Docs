@@ -56,11 +56,26 @@ blackberry.pim.calendar.Attendee.prototype.role = 0;
  */
 blackberry.pim.calendar.Attendee.prototype.status = 0;
 
-//blackberry.pim.calendar.Attendee.prototype.eventId = "";
+/**
+ * @description True when the attendee represents the user.
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.Attendee.prototype.owner = false;
 
-//blackberry.pim.calendar.Attendee.prototype.contactId = "";
+/**
+ * @description Identifier for the event in which this attendee participates.
+ * @type String
+ * @BB10X
+ */
+blackberry.pim.calendar.Attendee.prototype.eventId = "";
 
-//blackberry.pim.calendar.Attendee.prototype.owner = false;
+/**
+ * @description Identifier for the contact that the attendee object represents.
+ * @type String
+ * @BB10X
+ */
+blackberry.pim.calendar.Attendee.prototype.contactId = "";
 
 /**
  * @description Indicates the attendee is hosting the meeting.

@@ -142,6 +142,20 @@ blackberry.pim.calendar.CalendarEvent.prototype.accountId = "";
 blackberry.pim.calendar.CalendarEvent.prototype.parentId = "";
 
 /**
+ * @description Name of the time zone where the event was created. <b>TODO DAP CalendarEvent does not have this</b>
+ * @type String
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.prototype.timezone = "";
+
+/**
+ * @description A URL associated with the event. <b>TODO DAP CalendarEvent does not have this</b>
+ * @type String
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.prototype.url = "";
+
+/**
  * Saves a new event to the calendar, or updates an existing event if an event with the same id already exists.
  * @param {function} onSaveSuccess The callback function that will be invoked when the contact is saved successfully.
  * @callback {blackberry.pim.calendar.CalendarEvent} onSaveSuccess.event The CalendarEvent object.
