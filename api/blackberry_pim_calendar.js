@@ -83,5 +83,14 @@ blackberry.pim.calendar = {
      * @returns {blackberry.pim.calendar.CalendarFolder[]}
      * @BB10X
      */
-    getCalendarFolders: function () {}
+    getCalendarFolders: function () {},
+
+    /**
+     * @name blackberry.pim.calendar.getTimezones
+     * @function
+     * @description Retrieves the list of all time zones supported by the device. The time zones are based on the Olson time zone database. For more information, refer to <a href="http://www.iana.org/time-zones" target="_blank">IANA</a>.  <b>Not in DAP specs</b>
+     * @returns {String[]}
+     * @BB10X
+     */
+    getTimezones: function () {}
 };
