@@ -68,7 +68,7 @@
 
         
             <p>
-                The blackberry.notification API allows you to create a notification object for BlackBerry 10 and then you can notify, cancel or close it afterwards.
+                The blackberry.notification API allows you to create a notification object in UIB for BlackBerry 10.
 
 
                 
@@ -125,7 +125,7 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.notification.html#cancel">cancel</a>
+                                        <a href="blackberry.notification.html#.remove">blackberry.notification.remove</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -138,30 +138,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td>
                                         <a href="blackberry.notification.html#close">close</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
-                                        <a href="blackberry.notification.html#notify">notify</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
-                                        <a href="blackberry.notification.html#itemId">itemId</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -283,7 +259,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.notification.html#cancel">cancel</a>
+                                        <a href="blackberry.notification.html#.remove">blackberry.notification.remove</a>
                                         
                                     </td>
                                 </tr>
@@ -300,18 +276,6 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
-                                            void
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.notification.html#notify">notify</a>
-                                        
-                                    </td>
-                                </tr>
-                            
                         </tbody></table>
                     
                     
@@ -323,33 +287,6 @@
         
     
         
-        
-            <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
-                <div class="ref-sect-title">
-                    <h2> Properties </h2>
-                </div>
-                <div class="ref-sect-content">
-                    
-                        <table><tbody>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
-                                            String
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.notification.html#itemId">itemId</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                        </tbody></table>
-                    
-                    
-                </div>
-            </div>
         
     
         
@@ -384,7 +321,7 @@
                                 
                                     blackberry.notification
                                     
-                                        (message : Object)
+                                        (title : String, options : Object)
                                     
                                 
                             
@@ -427,21 +364,28 @@
                                     
                                         
                                         <tr>
-                                            <td><b>message</b></td>
+                                            <td><b>title</b></td>
                                             <td>
                                                 
-                                                Mandatory. This notification message object supplies the information needed to create various types of notifications.                         
+                                                Mandatory. Used as text in toasts (if there is no subtitle text) and Universal inbox entries.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>options</b></td>
+                                            <td>
+                                                
+                                                The options object supplies more information needed to create the notification.                         
                                                 
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>itemId:</b> Mandatory. Unique id that identifies this notification. Can be referenced in subsequent messages and responses related to this notification.
+                                                        <b>body:</b> Used as text in toasts and Universal inbox entries.
                                                     
                                                         <br />
-                                                        <b>title:</b> Used as text in toasts (if there is no subtitle text) and Universal inbox entries.
-                                                    
-                                                        <br />
-                                                        <b>subtitle:</b> Used as text in toasts and Universal inbox entries.
+                                                        <b>tag:</b> Tag of the notification. It can be used for closing the notification by static method blackberry.notification.remove().
                                                     
                                                         <br />
                                                         <b>target:</b> Target is used with UIB Transient Notifications if the notification is opened from UIB and also directly if launchInBackground is set to true. This property should match the identifier returned by the invocation framework when the target application registered with the invocation framework. The value none means that there is no launch behaviour for this notification. Value is passed on to the Invocation Framework as target.
@@ -454,6 +398,21 @@
                                                     
                                                         <br />
                                                         <b>payloadURI:</b> URI to payload data to send to the invoked app. Value is passed on to the Invocation Framework as uri. Example: "file://path/to/file". Data is taken from payload parameter, if specified, or no data is delivered on invoke.
+                                                    
+                                                        <br />
+                                                        <b>payloadType:</b> The MIME type of URI or payload data to send to the invoked app. Value is passed on to the Invocation Framework as type. Example: "text/plain".
+                                                    
+                                                        <br />
+                                                        <b>onclick:</b> It is ignored for WebWorks appliction. Insteadly, use oninvoked event handler, which will be triggered when the user clicks the notification in UIB.
+                                                    
+                                                        <br />
+                                                        <b>onshow:</b> It will be triggered if the notification is created successfully; or onerror callback will be triggered.
+                                                    
+                                                        <br />
+                                                        <b>onerror:</b> It will be triggered if the notification is created unsuccessfully; or onshow callback will be triggered.
+                                                    
+                                                        <br />
+                                                        <b>onclose:</b> It is ignored for WebWorks appliction as it has no clear usage of it.
                                                     
                                                 
                                             </td>
@@ -481,44 +440,26 @@
     
         <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&#47;javascript&quot;&gt;
 
-  function onSuccess() {
-      alert("Notification sent successfully!");
-  }
-
-  function onError(error) {
-      alert("Sending notification failed, error: " + error);
-  }
-
-  // Simple notification with LED, vibrate and sound
-  var message = {
-	     itemId : "notification1"
-  }
-  var n = new blackberry.notification(message);
-  n.notify(onSuccess, onError);
-
   // UIB transient notification
-  var message = {
-	     itemId : "transient1",
-      title : "You have a notificaiton",
-      subTitle : "Some details"
+  var title = "You have a notificaiton";
+  var options = {
+      body : "Some details"
   }
-  var n = new blackberry.notification(message);
-  n.notify(onSuccess, onError);
+  var n = new blackberry.notification(title, options);
 
   // User open the application so the UIB notification can be closed
-  n.close(onSuccess, onError);
+  n.close();
 
   // To be verified and completed
   // For Push event
-  var message = {
-	     itemId : "pushevent1",
-      title : "<suitable title>",        // e.g. Application Name
-      subtitle : "<suitable subtitle>",  // e.g. Received a push notification
-      target : "<invocationId>",         // id received from invocation manager
-      payload : "<payload data>"         // optional payload to include, base 64 encoded
+  var title = "<suitable title>";    // e.g. Application Name
+  var options = {
+      body : "<suitable subtitle>",  // e.g. Received a push notification
+      target : "<invocationId>",     // id received from invocation manager
+      payload : "<payload data>",    // optional payload to include, base 64 encoded
+      payloadType : ""               // MIME type of payload
   }
   var n = new blackberry.notification(message);
-  n.notify(onSuccess, onError);
 
 &lt;&#92;script&gt;</pre></code></td></tbody></table>
     
@@ -541,21 +482,21 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name="cancel"></a>
+                            <a name=".remove"></a>
                  
                             
                             
                                 
                                     
-                                                      
+                                        static              
                                         
                                         void
                                         
                                         
-                                            cancel
+                                            blackberry.notification.remove
                                             
                                                 
-                                                    (<i>[onSuccess: function()]</i>, <i>[onError: function(<i>[error: String]</i>)]</i>)
+                                                    (tag : String)
                                                 
                                             
                                                                   
@@ -575,7 +516,7 @@
                                        
                             
                             
-                            <p>This method will cancel the notification, which includes removing the new splat for an application and turning off the LED if there are no other notifications for which the LED is flashing.</p>
+                            <p>This static method will delete the notification from the UIB notifications area automatically. UIB notifications will be removed manually if the user clicks it.</p>
                             <br />
                             
                             
@@ -604,26 +545,10 @@
                                     
                                         
                                         <tr>
-                                            <td><b>onSuccess</b></td>
+                                            <td><b>tag</b></td>
                                             <td>
                                                 
-                                                 The callback function that will be triggerd if the action is successful.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onError</b></td>
-                                            <td>
-                                                
-                                                 The callback function that will be triggered if there was an error proforming the action.                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>error:</b>  A String that describes the error.
-                                                    
+                                                Mandatory. Used as the Id of the notification for deleting it.                         
                                                 
                                             </td>
                                         </tr>
@@ -665,7 +590,7 @@
                                             close
                                             
                                                 
-                                                    (<i>[onSuccess: function()]</i>, <i>[onError: function(<i>[error: String]</i>)]</i>)
+                                                    ()
                                                 
                                             
                                                                   
@@ -685,238 +610,7 @@
                                        
                             
                             
-                            <p>This method will delete the notification from the UIB notifications area automatically. The user also has the ability to delete notifications from the UIB notifications area manually.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onSuccess</b></td>
-                                            <td>
-                                                
-                                                 The callback function that will be triggerd if the action is successful.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onError</b></td>
-                                            <td>
-                                                
-                                                 The callback function that will be triggered if there was an error proforming the action.                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>error:</b>  A String that describes the error.
-                                                    
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name="notify"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        void
-                                        
-                                        
-                                            notify
-                                            
-                                                
-                                                    (<i>[onSuccess: function()]</i>, <i>[onError: function(<i>[error: String]</i>)]</i>)
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This method will send the notification based on the information set in current notification object.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onSuccess</b></td>
-                                            <td>
-                                                
-                                                 The callback function that will be triggerd if the action is successful.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onError</b></td>
-                                            <td>
-                                                
-                                                 The callback function that will be triggered if there was an error proforming the action.                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>error:</b>  A String that describes the error.
-                                                    
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    
-
-    
-    
-
-    
-    
-        <div class="ref-sect">
-            <div class="ref-sect-title clearfix">
-                <h2>Properties</h2>
-            </div>
-            <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name="itemId"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        String
-                                        
-                                        
-                                            itemId
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Return the item Id set by the client. It identifies this notification and can be referenced in subsequent messages and responses related to this notification.</p>
+                            <p>This method will delete the notification from the UIB notifications area automatically. UIB notifications will be removed manually if the user clicks it.</p>
                             <br />
                             
                             
@@ -957,6 +651,12 @@
                 
             </div>
         </div>
+    
+
+    
+    
+
+    
     
 
     
@@ -971,7 +671,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Aug 11 2012 01:18:40 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Aug 25 2012 01:08:33 GMT-0400 (EDT)
         </div>
 
     </div>
