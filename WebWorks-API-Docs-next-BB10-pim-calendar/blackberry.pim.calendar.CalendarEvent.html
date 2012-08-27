@@ -130,6 +130,18 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html#createExceptionEvent">createExceptionEvent</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#remove">remove</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -239,6 +251,18 @@
                                 <tr x-ww-support="bb10x">
                                     <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#location">location</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html#originalStartTime">originalStartTime</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -522,6 +546,18 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
+                                            <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html#createExceptionEvent">createExceptionEvent</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
                                             void
                                         
                                     </td>
@@ -656,6 +692,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#location">location</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Date
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html#originalStartTime">originalStartTime</a>
                                         
                                     </td>
                                 </tr>
@@ -931,6 +979,103 @@
                             <br />
                             
                             
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name="createExceptionEvent"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a>
+                                        
+                                        
+                                            createExceptionEvent
+                                            
+                                                
+                                                    (originalStartTime : Date)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
+with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
+property set to the parameter value.<b>TODO DAP CalendarEvent does not have this</b></p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>originalStartTime</b></td>
+                                            <td>
+                                                
+                                                The date of the original recurrence instance that this event replaces. This date will be
+added to the calling event's exceptionDates array within the recurrence field.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
                                                
 
                             
@@ -1722,6 +1867,81 @@
                             
                             
                             <p>A plain text description of the location of the event.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name="originalStartTime"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        Date
+                                        
+                                        
+                                            originalStartTime
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This attribute is only meaningful in events that are recurrence exceptions.<br>
+A recurrence exception is a differing instance of a recurring event. The
+originalStartTime property stores the time and date of the recurrence instance that
+is replaced by this event.  For example: a daily meeting at 2:00 PM that is rescheduled to
+3:00 PM on a given day would have an originalStartTime of 2:00 PM.<b>TODO DAP CalendarEvent does not have this</b></p>
                             <br />
                             
                             
@@ -2800,7 +3020,7 @@ means of the parent id.</p>
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Aug 27 2012 12:43:36 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Aug 27 2012 14:45:24 GMT-0400 (EDT)
         </div>
 
     </div>
