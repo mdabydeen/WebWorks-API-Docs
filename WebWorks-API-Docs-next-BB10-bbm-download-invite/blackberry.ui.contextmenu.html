@@ -1,22 +1,5 @@
 
 
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>
-        Attendee - BlackBerry WebWorks
-    </title>
-
-    <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
-    <link href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main.min.css" type="text/css" rel="stylesheet" />
-</head>
-
-<body>
-<div class="site_container clearfix guide-container">
-    
-
 <section  class="page_container references">
 	<div class="row">
         <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
@@ -78,16 +61,35 @@
 
         <h1>
             
-                Attendee
+                Context Menu
             
         </h1>
 
 
         
             <p>
-                The Attendee object is used to represent a person who is invited to a calendar appointment.
+                The contextmenu namespace provides the facility to interact with the context menu api to control whether context menus are enabled, listen to events, add items to appear based on the context, and set the theme of the context menu.
+
+<h3>Context Menu</h3>
+<p>Webworks applications can choose to use an in app contextmenu as opposed to the default operating system menu. The
+contextmenu provides several facilities to developers to allow them to control the elements that appear in the menu, as
+well as listen to specific events related to the context menu being triggered and displayed.
+<p>
+
+<h4>Enabling</h4>
+<p>The contextmenu can be enabled by calling the blackberry.ui.contextmenu.enabled property. When set to true, the
+contextmenu will capture the context menu events, and pass any events that the user has registered for. When set to false
+the contextmenu will default to the system, and the developer will have no access to the events described below.
+</p>
 
 
+                
+                    <div x-ww-support="bb10x|ripple">
+                    
+                
+  
+
+                    </div>
                 
             </p>
         
@@ -115,7 +117,7 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry OS 5.0+</td></tr>
+                                <tr><td>- BlackBerry 10</td></tr>
                             
                                 <tr><td>- Ripple Emulator</td></tr>
                             
@@ -127,102 +129,112 @@
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
-                                
-                                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                        <td>
-                                            <a href="blackberry.pim.Attendee.html">blackberry.pim.Attendee</a>
-                                            <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                        </td>
-                                    </tr>
-                                
                             
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#address">address</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.addItem">blackberry.ui.contextmenu.addItem</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#type">type</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.removeItem">blackberry.ui.contextmenu.removeItem</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.ORGANIZER">ORGANIZER</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.INVITED">INVITED</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_ALL">CONTEXT_ALL</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.ACCEPTED">ACCEPTED</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_LINK">CONTEXT_LINK</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.DECLINED">DECLINED</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_IMAGE">CONTEXT_IMAGE</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.TENTATIVE">TENTATIVE</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_IMAGE_LINK">CONTEXT_IMAGE_LINK</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_INPUT">CONTEXT_INPUT</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_TEXT">CONTEXT_TEXT</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
@@ -253,14 +265,14 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
-                                &lt;feature id="blackberry.pim.Attendee" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                            <tr x-ww-support="bb10x|ripple"><td>
+                                &lt;feature id="blackberry.ui.contextmenu" /&gt;
+                                <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
                             </td></tr>
                         
                     </table>
@@ -292,23 +304,38 @@
     
         
         
+    
+        
+        
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb10x|ripple">
                 <div class="ref-sect-title">
-                    <h2> Constructors </h2>
+                    <h2> Functions </h2>
                 </div>
                 <div class="ref-sect-content">
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            
+                                            void
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html">blackberry.pim.Attendee</a>
+                                        <a href="blackberry.ui.contextmenu.html#.addItem">blackberry.ui.contextmenu.addItem</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.ui.contextmenu.html#.removeItem">blackberry.ui.contextmenu.removeItem</a>
                                         
                                     </td>
                                 </tr>
@@ -325,11 +352,8 @@
     
         
         
-    
-        
-        
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -337,26 +361,14 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="">
                                     <td class="first_column">
                                         
-                                            String
+                                            boolean
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#address">address</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.Attendee.html#type">type</a>
+                                        <a href="blackberry.ui.contextmenu.html#.enabled">enabled</a>
                                         
                                     </td>
                                 </tr>
@@ -371,7 +383,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb10x|ripple">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -379,62 +391,74 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.ORGANIZER">ORGANIZER</a>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_ALL">CONTEXT_ALL</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.INVITED">INVITED</a>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_LINK">CONTEXT_LINK</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.ACCEPTED">ACCEPTED</a>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_IMAGE">CONTEXT_IMAGE</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.DECLINED">DECLINED</a>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_IMAGE_LINK">CONTEXT_IMAGE_LINK</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10x|ripple">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.Attendee.html#.TENTATIVE">TENTATIVE</a>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_INPUT">CONTEXT_INPUT</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.ui.contextmenu.html#.CONTEXT_TEXT">CONTEXT_TEXT</a>
                                         
                                     </td>
                                 </tr>
@@ -460,22 +484,36 @@
 
     
     
+
+    
+    
         <div class="ref-sect">
             <div class="ref-sect-title clearfix">
-                <h2>Constructors</h2>
+                <h2>Functions</h2>
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
                         <h3>
-                            <a name=".Attendee"></a>
+                            <a name=".addItem"></a>
                  
                             
                             
                                 
-                                    blackberry.pim.Attendee
                                     
-                                        ()
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.ui.contextmenu.addItem
+                                            
+                                                
+                                                    (contexts : String[], action : Object, callback: function())
+                                                
+                                            
+                                                                  
                                     
                                 
                             
@@ -484,12 +522,17 @@
                         <div class="detailed description">
                             
                             
+                                
+                                <br />
+                            
                     
                             
                                        
                             
                             
-                            <p><div><p>      The Attendee object is an instance object, where if a new instance is desired, it must be created using the new keyword.    </p></div></p>
+                            <p>Allows the developer to add custom items to the context menu. The items will be appended to the end of the list
+of operating system defined functions. Developers must provide the following parameters to successfully add items to the context
+menu.</p>
                             <br />
                             
                             
@@ -500,7 +543,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -512,6 +555,57 @@
                             <br />
                             
                             
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>contexts</b></td>
+                                            <td>
+                                                
+                                                An array of constants defining which contexts this new item should appear.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>action</b></td>
+                                            <td>
+                                                
+                                                An object which defines the menu item to be added.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>actionId:</b> A property that uniquely defines the action to be added to the context menu.
+                                                    
+                                                        <br />
+                                                        <b>label:</b> A string that will be displayed to the user describing the custom context to be performed. ie: Edit
+                                                    
+                                                        <br />
+                                                        <b>icon:</b> A path to the an image to display in the context menu
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>callback</b></td>
+                                            <td>
+                                                
+                                                A function which runs when the menu item action is executed                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
                                                
 
                             
@@ -531,7 +625,143 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;  &sol;&sol; Create our Event    var newAppt = new blackberry.pim.Appointment();    newAppt.location = &quot;Your office&quot;;    newAppt.summary = &quot;Talk about new project&quot;;    newAppt.freeBusy = 0; &sol;&sol; Free  &sol;&sol; Create our hour time slot    var start = new Date();    newAppt.start = start;    var end = start.setHours(start.getHours() + 1);    newAppt.end = end;  &sol;&sol; Create Attendee    var attendees = [];    var onlyAttendee = new blackberry.pim.Attendee();    onlyAttendee.address = &quot;john@foo.com&quot;;    onlyAttendee.type = blackberry.pim.Attendee.INVITED;    attendees.push(onlyAttendee);    newAppt.attendees = attendees;    newAppt.save();&lt;&sol;script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+function addMyItem() {
+    var myItem = {actionId: 'MyItem', label: 'My Item', icon:'http://mysite.com/icon.png'},
+        contexts = [blackberry.ui.contextmenu.CONTEXT_IMAGE, blackberry.ui.contextmenu.CONTEXT_INPUT];
+    blackberry.ui.contextmenu.addItem(contexts, myItem, function() { console.log('hi') });
+}
+&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                        <h3>
+                            <a name=".removeItem"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.ui.contextmenu.removeItem
+                                            
+                                                
+                                                    (contexts : String[], actionId : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Allows the developer to remove previously added custom items from the context menu.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>contexts</b></td>
+                                            <td>
+                                                
+                                                An array of constants defining which contexts this new item should appear.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>actionId</b></td>
+                                            <td>
+                                                
+                                                An id that uniquely defines the action to be removed from the context menu.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+function addMyItem() {
+    var myItem = {actionId: 'MyItem', label: 'My Item', icon:'http://mysite.com/icon.png'},
+        contexts = [blackberry.ui.contextmenu.CONTEXT_IMAGE, blackberry.ui.contextmenu.CONTEXT_INPUT];
+    blackberry.ui.contextmenu.addItem(contexts, myItem);
+}
+
+function removeMyItem() {
+    var myItem = {actionId: 'MyItem', label: 'My Item', icon:'http://mysite.com/icon.png'},
+        contexts = [blackberry.ui.contextmenu.CONTEXT_IMAGE, blackberry.ui.contextmenu.CONTEXT_INPUT];
+    blackberry.ui.contextmenu.removeItem(contexts, myItem.actionId);
+}
+
+&lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -547,29 +777,26 @@
 
     
     
-
-    
-    
         <div class="ref-sect">
             <div class="ref-sect-title clearfix">
                 <h2>Properties</h2>
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="">
                         <h3>
-                            <a name="address"></a>
+                            <a name=".enabled"></a>
                  
                             
                             
                                 
                                     
-                                                      
+                                        static              
                                         
-                                        String
+                                        boolean
                                         
                                         
-                                            address
+                                            enabled
                                             
                                                                   
                                     
@@ -588,7 +815,7 @@
                                        
                             
                             
-                            <p>Contains the email address of a particular attendee.</p>
+                            <p>Context Menu enabled allows the developer to enabled and disable crosscut context menus for their application.</p>
                             <br />
                             
                             
@@ -598,94 +825,30 @@
                                         Supported Platforms
                                     </th></tr></thead>
                                     
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
                                 </table>              
                                                
                             <br />
                             
                             
-                                               
-
                             
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name="type"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Number
-                                        
-                                        
-                                            type
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
                                 <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Indicates the type of a particular attendee. Value can be one of the Attendee types.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
+                                <table>
                                     <thead><tr><th colspan="2">
-                                        Supported Platforms
+                                        Parameters
                                     </th></tr></thead>
+                                                   
                                     
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
+                                        
+                                        <tr>
+                                            <td><b>enabled</b></td>
+                                            <td>
+                                                
+                                                property that sets the contextmenu to enabled or disabled                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
                                                
 
                             
@@ -701,6 +864,21 @@
                             
                             
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+function disabledContextMenu() {
+    blackberry.ui.contextmenu.enabled = false;
+}
+
+if(!blackberry.ui.contextmenu.enabled){
+    console.log("context menu is currently disabled");
+    }
+&lt;/script&gt;</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -718,9 +896,9 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
                         <h3>
-                            <a name=".ORGANIZER"></a>
+                            <a name=".CONTEXT_ALL"></a>
                  
                             
                             
@@ -728,10 +906,10 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            ORGANIZER
+                                            CONTEXT_ALL
                                             
                                                 
                                                     
@@ -754,7 +932,7 @@
                                        
                             
                             
-                            <p>Event organizer</p>
+                            <p>Constant denoting all contexts.</p>
                             <br />
                             
                             
@@ -765,7 +943,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -797,9 +975,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
                         <h3>
-                            <a name=".INVITED"></a>
+                            <a name=".CONTEXT_LINK"></a>
                  
                             
                             
@@ -807,10 +985,10 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            INVITED
+                                            CONTEXT_LINK
                                             
                                                 
                                                     
@@ -833,7 +1011,7 @@
                                        
                             
                             
-                            <p>Attendee as been invited.</p>
+                            <p>Constant denoting the context of links.</p>
                             <br />
                             
                             
@@ -844,7 +1022,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -876,9 +1054,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
                         <h3>
-                            <a name=".ACCEPTED"></a>
+                            <a name=".CONTEXT_IMAGE"></a>
                  
                             
                             
@@ -886,10 +1064,10 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            ACCEPTED
+                                            CONTEXT_IMAGE
                                             
                                                 
                                                     
@@ -912,7 +1090,7 @@
                                        
                             
                             
-                            <p>Attendee has accepted the invitation.</p>
+                            <p>Constant denoting the context of images.</p>
                             <br />
                             
                             
@@ -923,7 +1101,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -955,9 +1133,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
                         <h3>
-                            <a name=".DECLINED"></a>
+                            <a name=".CONTEXT_IMAGE_LINK"></a>
                  
                             
                             
@@ -965,10 +1143,10 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            DECLINED
+                                            CONTEXT_IMAGE_LINK
                                             
                                                 
                                                     
@@ -991,7 +1169,7 @@
                                        
                             
                             
-                            <p>Attendee has declined the invitation.</p>
+                            <p>Constant denoting the context of image links.</p>
                             <br />
                             
                             
@@ -1002,7 +1180,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -1034,9 +1212,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
                         <h3>
-                            <a name=".TENTATIVE"></a>
+                            <a name=".CONTEXT_INPUT"></a>
                  
                             
                             
@@ -1044,10 +1222,10 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            TENTATIVE
+                                            CONTEXT_INPUT
                                             
                                                 
                                                     
@@ -1070,7 +1248,7 @@
                                        
                             
                             
-                            <p>Attendee has tentatively accepted the invitation.</p>
+                            <p>Constant denoting the context of input fields.</p>
                             <br />
                             
                             
@@ -1081,7 +1259,86 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                        <h3>
+                            <a name=".CONTEXT_TEXT"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            CONTEXT_TEXT
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Constant denoting the context of text.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -1126,7 +1383,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Aug 27 2012 12:06:46 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Aug 27 2012 12:06:49 GMT-0400 (EDT)
         </div>
 
     </div>
@@ -1138,64 +1395,3 @@
         </div>
     </div>
 </section>
-
-</div>
-
-
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageend.min.js"></script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/jquery.carouFredSel-4.4.1-packed.js"></script>
-<script type="text/javascript" src="https://client.akamai.com/dlm/dlm.js"></js>
-<script> 
-    global.init('/html5/', 'apis', 'index', '', '/html5/webroot/');
-</script>
-<script>
-	var menu, menu_id_str, selected, siblings;
-	menu = null;
-	menu_id_str = $('.side-nav-content').attr('id');
-	if (menu_id_str !== 'none') {
-		menu = menu_id_str;
-	}
-	$(document).ready(function () {
-		stage.initiate();
-		sticky.initiate();
-		sizer.initiate(); /* Initiates resizing of menu on pages where it is relevant */
-
-		selected = $('.no_children.item_active').first();
-		selected.siblings().addClass('active_sibling');
-		$("#main a").each(function () {
-			$(this).bind('click', function () {
-				sticky.scrollEvent();
-			});
-		});
-		
-	});
-	$(window).load(function () {
-		var container, scrollTo;
-		renderMenu(window.location.pathname, menu);
-		reset_size_and_scroll();
-		$(function () {
-			container = $('#side-nav-children');
-			scrollTo = $('.active', container);
-			if (scrollTo.length > 0) {
-				container.scrollTop(scrollTo.offset().top - container.offset().top + container.scrollTop() - 80);
-			}
-		});
-	});
-
-	$(window).resize(function (e) {
-		if (e) { e.stopPropagation(); }
-		reset_size_and_scroll();
-	});
-	$(window).scroll(function (e) {
-		if (e) { e.stopPropagation(); }
-		reset_size_and_scroll();
-	});
-</script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageload.min.js"></script>
-<script type="text/javascript" src="nav.js"></script>
-
-
-
-</body>
-</html>
-
