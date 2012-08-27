@@ -142,6 +142,17 @@ blackberry.pim.calendar.CalendarEvent.prototype.accountId = "";
 blackberry.pim.calendar.CalendarEvent.prototype.parentId = "";
 
 /**
+ * @description This attribute is only meaningful in events that are recurrence exceptions.<br>
+ * A recurrence exception is a differing instance of a recurring event. The
+ * originalStartTime property stores the time and date of the recurrence instance that
+ * is replaced by this event.  For example: a daily meeting at 2:00 PM that is rescheduled to
+ * 3:00 PM on a given day would have an originalStartTime of 2:00 PM.<b>TODO DAP CalendarEvent does not have this</b>
+ * @type Date
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.prototype.originalStartTime = "";
+
+/**
  * @description Name of the time zone where the event was created. <b>TODO DAP CalendarEvent does not have this</b>
  * @type String
  * @BB10X
@@ -182,6 +193,17 @@ blackberry.pim.calendar.CalendarEvent.prototype.remove = function () {};
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.clone = function () {};
+
+/**
+ * Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
+ * with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
+ * property set to the parameter value.<b>TODO DAP CalendarEvent does not have this</b>
+ * @param {Date} originalStartTime The date of the original recurrence instance that this event replaces. This date will be
+ * added to the calling event's exceptionDates array within the recurrence field.
+ * @returns {blackberry.pim.calendar.CalendarEvent}
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.prototype.createExceptionEvent = function () {};
 
 /**
  * @description Sensitivity level for unrestricted events.
