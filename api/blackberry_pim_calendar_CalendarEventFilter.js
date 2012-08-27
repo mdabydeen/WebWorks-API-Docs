@@ -53,7 +53,7 @@ blackberry.pim.calendar.CalenderEventFilter.prototype.prefix = "";
 
 /**
  * @description When folders are specified, only events that belong to folders are returned.
- * @type String[]
+ * @type blackberry.pim.calendar.CalendarFolder[]
  * @BB10X
  */
-blackberry.pim.calendar.CalenderEventFilter.prototype.folderIds = [];
+blackberry.pim.calendar.CalenderEventFilter.prototype.folders = [];
