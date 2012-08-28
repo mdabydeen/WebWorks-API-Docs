@@ -16,7 +16,6 @@ WebWorks-API-Docs-html5Notification
 WebWorks-API-Docs-html5-Navigator
 WebWorks-API-Docs-master-sidebar-fix
 WebWorks-API-Docs-next-BB10-push-docs
-WebWorks-API-Docs-next-BB10-bbm
 WebWorks-API-Docs-master-template-fix
 WebWorks-API-Docs-next-BB10-api-menu-filtering
 WebWorks-API-Docs-next-BB10-pim-contact
@@ -26,7 +25,5 @@ WebWorks-API-Docs-next-BB10-pim-contact-features
 WebWorks-API-Docs-next-BB10-notification
 WebWorks-API-Docs-next-BB10-pim-calendar
 WebWorks-API-Docs-next-BB10-added-name-imei
-WebWorks-API-Docs-next-BB10-bbm-download-invite
 WebWorks-API-Docs-next-BB10-font
-WebWorks-API-Docs-next-BB10-bbm-invite-to-download
 WebWorks-API-Docs-master_devdocsfix
