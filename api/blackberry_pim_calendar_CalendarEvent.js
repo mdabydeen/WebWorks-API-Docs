@@ -122,11 +122,12 @@ blackberry.pim.calendar.CalendarEvent.prototype.birthday = false;
 blackberry.pim.calendar.CalendarEvent.prototype.sensitivity = 0;
 
 /**
- * @description Identifier for the account that owns the event.<b>TODO DAP CalendarEvent does not have this</b>
- * @type String
+ * @description The CalendarFolder that contains this event. <b>TODO DAP CalendarEvent does not have this</b>
+ * @readOnly
+ * @type blackberry.pim.calendar.CalendarFolder
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.prototype.accountId = "";
+blackberry.pim.calendar.CalendarEvent.prototype.folder = null;
 
 /**
  * @description This attribute is only meaningful in events that are recurrence exceptions.<br>
