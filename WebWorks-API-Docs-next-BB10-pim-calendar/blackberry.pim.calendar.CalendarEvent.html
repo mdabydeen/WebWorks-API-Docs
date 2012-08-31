@@ -166,18 +166,6 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.calendar.CalendarEvent.html#accountId">accountId</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#allDay">allDay</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -238,6 +226,18 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html#folder">folder</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#id">id</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -251,18 +251,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#location">location</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
-                                        <a href="blackberry.pim.calendar.CalendarEvent.html#originalStartTime">originalStartTime</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -603,18 +591,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            String
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.calendar.CalendarEvent.html#accountId">accountId</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
                                             Boolean
                                         
                                     </td>
@@ -675,6 +651,18 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
+                                            <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarEvent.html#folder">folder</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
                                             String
                                         
                                     </td>
@@ -692,18 +680,6 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.calendar.CalendarEvent.html#location">location</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
-                                            Date
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.calendar.CalendarEvent.html#originalStartTime">originalStartTime</a>
                                         
                                     </td>
                                 </tr>
@@ -1036,8 +1012,8 @@
                             
                             
                             <p>Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
-with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
-property set to the parameter value.<b>TODO DAP CalendarEvent does not have this</b></p>
+with the id property set to null and the parentId property set to the id of the calling event.
+<b>TODO DAP CalendarEvent does not have this</b></p>
                             <br />
                             
                             
@@ -1070,7 +1046,8 @@ property set to the parameter value.<b>TODO DAP CalendarEvent does not have this
                                             <td>
                                                 
                                                 The date of the original recurrence instance that this event replaces. This date will be
-added to the calling event's exceptionDates array within the recurrence field.                         
+added to the calling event's exceptionDates array within the recurrence field. The calling event must call save() to
+persist the changes to exceptionDates.                         
                                                 
                                             </td>
                                         </tr>
@@ -1336,77 +1313,6 @@ added to the calling event's exceptionDates array within the recurrence field.
                 <h2>Properties</h2>
             </div>
             <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name="accountId"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        String
-                                        
-                                        
-                                            accountId
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Identifier for the account that owns the event.<b>TODO DAP CalendarEvent does not have this</b></p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
@@ -1765,6 +1671,77 @@ added to the calling event's exceptionDates array within the recurrence field.
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
+                            <a name="folder"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        readonly
+                                        <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>
+                                        
+                                        
+                                            folder
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The CalendarFolder that contains this event. <b>TODO DAP CalendarEvent does not have this</b></p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
                             <a name="id"></a>
                  
                             
@@ -1867,81 +1844,6 @@ added to the calling event's exceptionDates array within the recurrence field.
                             
                             
                             <p>A plain text description of the location of the event.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name="originalStartTime"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Date
-                                        
-                                        
-                                            originalStartTime
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This attribute is only meaningful in events that are recurrence exceptions.<br>
-A recurrence exception is a differing instance of a recurring event. The
-originalStartTime property stores the time and date of the recurrence instance that
-is replaced by this event.  For example: a daily meeting at 2:00 PM that is rescheduled to
-3:00 PM on a given day would have an originalStartTime of 2:00 PM.<b>TODO DAP CalendarEvent does not have this</b></p>
                             <br />
                             
                             
@@ -3020,7 +2922,7 @@ means of the parent id.</p>
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Aug 27 2012 14:45:24 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Aug 31 2012 01:32:15 GMT-0400 (EDT)
         </div>
 
     </div>
