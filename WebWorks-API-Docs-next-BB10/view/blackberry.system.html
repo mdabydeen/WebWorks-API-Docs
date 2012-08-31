@@ -145,6 +145,18 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td>
+                                        <a href="blackberry.system.html#.getFontInfo">blackberry.system.getFontInfo</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                     <td>
                                         <a href="blackberry.system.html#.hasCapability">blackberry.system.hasCapability</a>
@@ -253,6 +265,18 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.system.html#.name">name</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
                                 <tr x-ww-support="bb10x|ripple">
                                     <td>
                                         <a href="blackberry.system.html#.region">region</a>
@@ -340,6 +364,18 @@
                                 <tr x-ww-support="bb10x">
                                     <td>
                                         <a href="blackberry.system.html#.event:batterystatus">blackberry.system.batterystatus</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.system.html#.event:fontchanged">blackberry.system.fontchanged</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -450,6 +486,18 @@
                 <div class="ref-sect-content">
                     
                         <table><tbody>
+                            
+                                <tr x-ww-support="bb10x|ripple">
+                                    <td class="first_column">
+                                        
+                                            Object
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.getFontInfo">blackberry.system.getFontInfo</a>
+                                        
+                                    </td>
+                                </tr>
                             
                                 <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                                     <td class="first_column">
@@ -572,6 +620,18 @@
                                         
                                     </td>
                                     <td>
+                                        <a href="blackberry.system.html#.event:fontchanged">blackberry.system.fontchanged</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
                                         <a href="blackberry.system.html#.event:languagechanged">blackberry.system.languagechanged</a>
                                         
                                     </td>
@@ -639,6 +699,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.system.html#.model">model</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.name">name</a>
                                         
                                     </td>
                                 </tr>
@@ -777,6 +849,100 @@
                 <h2>Functions</h2>
             </div>
             <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                        <h3>
+                            <a name=".getFontInfo"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Object
+                                        
+                                        
+                                            blackberry.system.getFontInfo
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the information of current system font, which is composed of the font family and font size.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> Returns the JavaScript Object that contains fontFamily and fontSize properties. </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Check system font informationvar fontInfo = blackberry.system.getFontInfo();alert("The font family of current system font is " + fontInfo.fontFamily + "\n" + "The size of current system font is " + fontInfo.fontSize);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
                 
                     <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
                         <h3>
@@ -1611,6 +1777,108 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
+                            <a name=".event:fontchanged"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.system.fontchanged
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
+The <b>fontchanged</b> event is triggered whenever the font setting of the system is changed.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be triggered on the fontchange event.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>fontInfo:</b> The Object that contains the information of the new system font.
+                                                    
+                                                        <br />
+                                                        <b>fontInfo.fontFamily:</b> The font family of the new system font.
+                                                    
+                                                        <br />
+                                                        <b>fontInfo.fontSize:</b> The font size of the new system font.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onFontChange(fontInfo) {  alert("The system font has changed to " + fontInfo.fontFamily + " size " + fontInfo.fontSize);}blackberry.event.addEventListener("fontchanged", onFontChange);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
                             <a name=".event:languagechanged"></a>
                  
                             
@@ -1635,7 +1903,7 @@ The <b>batterystatus</b> event is triggered whenever the: <ul><li>battery level 
                             
                             
                             <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
-The <b>languagechange</b> event is triggered whenever the language setting of the device is changed.</p>
+The <b>languagechanged</b> event is triggered whenever the language setting of the device is changed.</p>
                             <br />
                             
                             
@@ -1731,7 +1999,7 @@ The <b>languagechange</b> event is triggered whenever the language setting of th
                             
                             
                             <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br/>
-The <b>regionChange</b> event is triggered whenever the regional setting of the device is changed.</p>
+The <b>regionChanged</b> event is triggered whenever the regional setting of the device is changed.</p>
                             <br />
                             
                             
@@ -2011,6 +2279,77 @@ The <b>regionChange</b> event is triggered whenever the regional setting of the 
                                     
                                         <tr><td></td><td>
                                             &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".name"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        readonly
+                                        String
+                                        
+                                        
+                                            name
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Returns the name of the device.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2570,7 +2909,7 @@ The <b>regionChange</b> event is triggered whenever the regional setting of the 
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Aug 28 2012 10:28:39 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Aug 31 2012 01:24:29 GMT-0400 (EDT)
         </div>
 
     </div>
