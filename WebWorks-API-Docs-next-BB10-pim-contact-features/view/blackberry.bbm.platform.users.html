@@ -126,7 +126,7 @@ application.
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0">
+                    <div x-ww-support="bb5.0|bb6.0|bb7.0|bb10x">
                     
                 
   
@@ -160,6 +160,8 @@ application.
                             <tbody>
                             
                                 <tr><td>- BlackBerry OS 5.0+</td></tr>
+                            
+                                <tr><td>- BlackBerry 10</td></tr>
                             
                             </tbody>
                         </table>
@@ -203,6 +205,18 @@ application.
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToDownload^2">blackberry.bbm.platform.users.inviteToDownload</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
@@ -317,14 +331,14 @@ application.
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0"><td>
+                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|bb10x"><td>
                                 &lt;feature id="blackberry.bbm.platform" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td></tr>
                         
                     </table>
@@ -360,7 +374,7 @@ application.
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0">
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|bb10x">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -400,6 +414,18 @@ application.
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.inviteToDownload">blackberry.bbm.platform.users.inviteToDownload</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.html#.inviteToDownload^2">blackberry.bbm.platform.users.inviteToDownload</a>
                                         
                                     </td>
                                 </tr>
@@ -961,6 +987,90 @@ maximum of 10 download invitations per minute is allowed.
         // User is finished inviting
     }
 });</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".inviteToDownload^2"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.bbm.platform.users.inviteToDownload
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Allows the user to invite contacts to download the application. A download invitation
+card will appear allowing the user to select contacts to invite.
+<p><b>Only contacts without the application can be invited to download.</b></p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>blackberry.bbm.platform.users.inviteToDownload();</pre></code></td></tbody></table>
     
   
 
@@ -2020,7 +2130,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Aug 22 2012 14:57:34 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 04 2012 13:45:47 GMT-0400 (EDT)
         </div>
 
     </div>

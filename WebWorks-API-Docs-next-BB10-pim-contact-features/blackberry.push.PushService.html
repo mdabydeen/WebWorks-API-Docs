@@ -440,6 +440,18 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.SESSION_ALREADY_EXISTS">SESSION_ALREADY_EXISTS</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
                         </table>
                     </div>
                 </div>
@@ -866,6 +878,18 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.SESSION_ALREADY_EXISTS">SESSION_ALREADY_EXISTS</a>
+                                        
+                                    </td>
+                                </tr>
+                            
                         </tbody></table>
                     
                     
@@ -1061,7 +1085,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target',             appId : 'appId1',             ppgUrl : 'https://cp123.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // Or, for an enterprise application with an application ID: // var ops = { invokeTargetId : 'com.sample.pushtest.target', //             appId : 'appId1' };try {    blackberry.push.PushService.create(ops, successCallback,         failCallback, simChangeCallback);} catch (err) {    console.log("Create was called more than once with different "         + "values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {    // The create operation was a success    // Use the pushService object to now perform a     // launchApplicationOnPush, createChannel, destroyChannel, etc.    pushService.createChannel(createChannelCallback);}function failCallback(result) {    // The create operation failed    // You should compare the result code against the error      // constants in this PushService class that apply for     // create and take the recommended action for that constant    if (result == blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the create up to a certain number of attempts         // and then display an error to the user    }    // ... handle the other possible error constants     // from the PushService class}function simChangeCallback() {    // The SIM card was changed and the channel has been     // destroyed since a new user might be using the device.    // It is recommended that the user of this application be     // re-authenticated with the Push Initiator (if your     // Push Initiator implementation supports subscription)     // followed by a call to createChannel.}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target',             appId : 'appId1',             ppgUrl : 'https://cp123.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // Or, for an enterprise application with an application ID: // var ops = { invokeTargetId : 'com.sample.pushtest.target', //             appId : 'appId1' };try {    blackberry.push.PushService.create(ops, successCallback,         failCallback, simChangeCallback);} catch (err) {    console.log("Create was called more than once with different "         + "values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {    // The create operation was a success    // Use the pushService object to now perform a     // launchApplicationOnPush, createChannel, destroyChannel, etc.    pushService.createChannel(createChannelCallback);}function failCallback(result) {    // The create operation failed    // You should compare the result code against the error      // constants in this PushService class that apply for     // create and take the recommended action for that constant    if (result === blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the create up to a certain number of attempts         // and then display an error to the user    }    // ... handle the other possible error constants     // from the PushService class}function simChangeCallback() {    // The SIM card was changed and the channel has been     // destroyed since a new user might be using the device.    // It is recommended that the user of this application be     // re-authenticated with the Push Initiator (if your     // Push Initiator implementation supports subscription)     // followed by a call to createChannel.}</pre></code></td></tbody></table>
     
   
 
@@ -1171,7 +1195,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>pushService.createChannel(createChannelCallback);function createChannelCallback(result, token) {    if (result == blackberry.push.PushService.SUCCESS) {        // Success, so a token should be available        // Subscribe with the Push Initiator using this          // token (if your Push Initiator supports subscription)         // so that you can push to this user using this token    } else if (result ==         blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the createChannel up to a certain number of          // attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    createChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>pushService.createChannel(createChannelCallback);function createChannelCallback(result, token) {    if (result === blackberry.push.PushService.SUCCESS) {        // Success, so a token should be available        // Subscribe with the Push Initiator using this          // token (if your Push Initiator supports subscription)         // so that you can push to this user using this token    } else if (result ===         blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the createChannel up to a certain number of          // attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    createChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
     
   
 
@@ -1278,7 +1302,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>pushService.destroyChannel(destroyChannelCallback);function destroyChannelCallback(result) {    if (result == blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the destroyChannel up to a certain number          // of attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    destroyChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>pushService.destroyChannel(destroyChannelCallback);function destroyChannelCallback(result) {    if (result === blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the destroyChannel up to a certain number          // of attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    destroyChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
     
   
 
@@ -1521,7 +1545,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>// Indicate that you want the application to launch on a new pushpushService.launchApplicationOnPush(true,     launchApplicationCallback);// To indicate that you do not want to launch on a new push, // either leave the default behaviour or call:// pushService.launchApplicationOnPush(false, //     launchApplicationCallback);function launchApplicationOnPush(result) {   if (result == blackberry.push.PushService.INTERNAL_ERROR) {     // Retry the launchApplicationOnPush up to a certain number      // of attempts and then display an error to the user   } else if ... (handle all the error codes possible for                   launchApplicationOnPush - see the error                   constants in this PushService class)}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>// Indicate that you want the application to launch on a new pushpushService.launchApplicationOnPush(true,     launchApplicationCallback);// To indicate that you do not want to launch on a new push, // either leave the default behaviour or call:// pushService.launchApplicationOnPush(false, //     launchApplicationCallback);function launchApplicationOnPush(result) {   if (result === blackberry.push.PushService.INTERNAL_ERROR) {     // Retry the launchApplicationOnPush up to a certain number      // of attempts and then display an error to the user   } else if ... (handle all the error codes possible for                   launchApplicationOnPush - see the error                   constants in this PushService class)}</pre></code></td></tbody></table>
     
   
 
@@ -3196,6 +3220,81 @@
                         </div>
                     </div>
                 
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".SESSION_ALREADY_EXISTS"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            SESSION_ALREADY_EXISTS
+                                            
+                                                
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Result error code when an underlying session already exists.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Check the appId and invokeTargetId to ensure that they are valid and unique to your application.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
             </div>
         </div>
     
@@ -3209,7 +3308,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Aug 22 2012 14:57:31 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 04 2012 13:45:45 GMT-0400 (EDT)
         </div>
 
     </div>
