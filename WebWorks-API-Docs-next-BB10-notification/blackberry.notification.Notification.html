@@ -1,22 +1,5 @@
 
 
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>
-        Event - BlackBerry WebWorks
-    </title>
-
-    <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
-    <link href="https://bdsc.webapps.blackberry.com/html5/webroot/css/main.min.css" type="text/css" rel="stylesheet" />
-</head>
-
-<body>
-<div class="site_container clearfix guide-container">
-    
-
 <section  class="page_container references">
 	<div class="row">
         <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
@@ -78,58 +61,16 @@
 
         <h1>
             
-                Event
+                notification
             
         </h1>
 
 
         
             <p>
-                The event Object contains functions for dealing with specific events.
+                The blackberry.notification API allows you to create a notification object in UIB for BlackBerry 10.
 
 
-                
-                    <div x-ww-support="bb10x">
-                    
-                
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;WebWorks Pause Example&lt;/title&gt;
-
-&lt;script type="text/javascript" charset="utf-8" src="webworks.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" charset="utf-8"&gt;
-
-// Call onWebworksReady when WebWorks is loaded.
-//
-function onLoad() {
-   document.addEventListener("webworksready", onWebworksReady, false);
-}
-
-// WebWorks is loaded and it is now safe to make calls WebWorks API
-//
-function onWebworksReady() {
-   // Make sure "blackberry.app" is declared in config.xml if you intend to use the "pause" event
-   blackberry.event.addEventListener("pause", onPause);
-}
-
-// Handle the pause event
-//
-function onPause() {
-}
-
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="onLoad()"&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre></code></td></tbody></table>
-    
-  
-
-                    </div>
                 
             </p>
         
@@ -167,10 +108,24 @@ function onPause() {
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
+                                
+                                    <tr x-ww-support="bb10x">
+                                        <td>
+                                            <a href="blackberry.notification.Notification.html">blackberry.notification.Notification</a>
+                                            <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                        </td>
+                                    </tr>
+                                
+                            
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a>
+                                        <a href="blackberry.notification.Notification.html#.remove">blackberry.notification.Notification.remove</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -182,7 +137,7 @@ function onPause() {
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a>
+                                        <a href="blackberry.notification.Notification.html#close">close</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -209,9 +164,27 @@ function onPause() {
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                    <tr><td>
-                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr></tbody></table>
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support="bb10x"><td>
+                                &lt;feature id="blackberry.notification" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td></tr>
+                        
+                    </table>
                 
 
                 <div x-ww-support="pb1.0|pb2.0">
@@ -240,6 +213,33 @@ function onPause() {
     
         
         
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
+                <div class="ref-sect-title">
+                    <h2> Constructors </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.notification.Notification.html">blackberry.notification.Notification</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
     
         
         
@@ -259,7 +259,7 @@ function onPause() {
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a>
+                                        <a href="blackberry.notification.Notification.html#.remove">blackberry.notification.Notification.remove</a>
                                         
                                     </td>
                                 </tr>
@@ -271,7 +271,7 @@ function onPause() {
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a>
+                                        <a href="blackberry.notification.Notification.html#close">close</a>
                                         
                                     </td>
                                 </tr>
@@ -306,36 +306,22 @@ function onPause() {
 
     
     
-
-    
-    
         <div class="ref-sect">
             <div class="ref-sect-title clearfix">
-                <h2>Functions</h2>
+                <h2>Constructors</h2>
             </div>
             <div class="ref-sect-content">
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".addEventListener"></a>
+                            <a name=".Notification"></a>
                  
                             
                             
                                 
+                                    blackberry.notification.Notification
                                     
-                                        static              
-                                        
-                                        
-                                            void
-                                        
-                                        
-                                            blackberry.event.addEventListener
-                                            
-                                                
-                                                    (eventName : String, yourCallbackFunction: function())
-                                                
-                                            
-                                                                  
+                                        (title : String, options : Object)
                                     
                                 
                             
@@ -344,15 +330,12 @@ function onPause() {
                         <div class="detailed description">
                             
                             
-                                
-                                <br />
-                            
                     
                             
                                        
                             
                             
-                            <p>Allows you to attach a callback function to an event. You can attach multuple callback functions to a single event.</p>
+                            <p></p>
                             <br />
                             
                             
@@ -381,20 +364,191 @@ function onPause() {
                                     
                                         
                                         <tr>
-                                            <td><b>eventName</b></td>
+                                            <td><b>title</b></td>
                                             <td>
                                                 
-                                                The event you want to attach the callback function to.                         
+                                                Mandatory. Used as text in toasts (if there is no subtitle text) and Universal inbox entries.                         
                                                 
                                             </td>
                                         </tr>
                                     
                                         
                                         <tr>
-                                            <td><b>yourCallbackFunction</b></td>
+                                            <td><b>options</b></td>
                                             <td>
                                                 
-                                                The callback function that will execute when the event occurs.                         
+                                                The options object supplies more information needed to create the notification.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>body:</b> Used as text in toasts and Universal inbox entries.
+                                                    
+                                                        <br />
+                                                        <b>tag:</b> Tag of the notification. It can be used for closing the notification by static method blackberry.notification.Notification.remove().
+                                                    
+                                                        <br />
+                                                        <b>target:</b> Target is used with UIB Transient Notifications if the notification is opened from UIB and also directly if launchInBackground is set to true. This property should match the identifier returned by the invocation framework when the target application registered with the invocation framework. The value none means that there is no launch behaviour for this notification. Value is passed on to the Invocation Framework as target.
+                                                    
+                                                        <br />
+                                                        <b>targetAction:</b> Action as registered with invocation framework. Value is passed on to the Invocation Framework as action. Example bb.action.PUSH.
+                                                    
+                                                        <br />
+                                                        <b>payload:</b> Payload to send to the invoked app. Data must be Base64 encoded. Value is passed on to the Invocation Framework as data. Data is take from PayloadURI if specified or no data is delivered on invoke.
+                                                    
+                                                        <br />
+                                                        <b>payloadURI:</b> URI to payload data to send to the invoked app. Value is passed on to the Invocation Framework as uri. Example: "file://path/to/file". Data is taken from payload parameter, if specified, or no data is delivered on invoke.
+                                                    
+                                                        <br />
+                                                        <b>payloadType:</b> The MIME type of URI or payload data to send to the invoked app. Value is passed on to the Invocation Framework as type. Example: "text/plain".
+                                                    
+                                                        <br />
+                                                        <b>onclick:</b> It is ignored for WebWorks appliction. Insteadly, use oninvoked event handler, which will be triggered when the user clicks the notification in UIB.
+                                                    
+                                                        <br />
+                                                        <b>onshow:</b> It will be triggered if the notification is created successfully; or onerror callback will be triggered.
+                                                    
+                                                        <br />
+                                                        <b>onerror:</b> It will be triggered if the notification is created unsuccessfully; or onshow callback will be triggered.
+                                                    
+                                                        <br />
+                                                        <b>onclose:</b> It is ignored for WebWorks appliction as it has no clear usage of it.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&#47;javascript&quot;&gt;
+
+  // UIB transient notification
+  var title = "You have a notificaiton";
+  var options = {
+      body : "Some details"
+  }
+  var n = new blackberry.notification.Notification(title, options);
+
+  // User open the application so the UIB notification can be closed
+  n.close();
+
+  // To be verified and completed
+  // For Push event
+  var title = "<suitable title>";    // e.g. Application Name
+  var options = {
+      body : "<suitable subtitle>",  // e.g. Received a push notification
+      target : "<invocationId>",     // id received from invocation manager
+      payload : "<payload data>",    // optional payload to include, base 64 encoded
+      payloadType : ""               // MIME type of payload
+  }
+  var n = new blackberry.notification.Notification(message);
+
+&lt;&#92;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Functions</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".remove"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        void
+                                        
+                                        
+                                            blackberry.notification.Notification.remove
+                                            
+                                                
+                                                    (tag : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This static method will delete the notification from the UIB notifications area automatically. UIB notifications will be removed manually if the user clicks it.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>tag</b></td>
+                                            <td>
+                                                
+                                                Mandatory. Used as the Id of the notification for deleting it.                         
                                                 
                                             </td>
                                         </tr>
@@ -422,22 +576,21 @@ function onPause() {
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".removeEventListener"></a>
+                            <a name="close"></a>
                  
                             
                             
                                 
                                     
-                                        static              
+                                                      
+                                        
+                                        void
                                         
                                         
-                                            void
-                                        
-                                        
-                                            blackberry.event.removeEventListener
+                                            close
                                             
                                                 
-                                                    (eventName : String, yourCallbackFunction: function())
+                                                    ()
                                                 
                                             
                                                                   
@@ -457,7 +610,7 @@ function onPause() {
                                        
                             
                             
-                            <p>Allows you to remove a callback function from an event.</p>
+                            <p>This method will delete the notification from the UIB notifications area automatically. UIB notifications will be removed manually if the user clicks it.</p>
                             <br />
                             
                             
@@ -476,35 +629,6 @@ function onPause() {
                             <br />
                             
                             
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>eventName</b></td>
-                                            <td>
-                                                
-                                                The event you want to remove the callback function from.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>yourCallbackFunction</b></td>
-                                            <td>
-                                                
-                                                The callback function that will be removed from the event.                         
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
                                                
 
                             
@@ -547,7 +671,7 @@ function onPause() {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Sep 07 2012 01:15:59 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Sep 07 2012 01:16:03 GMT-0400 (EDT)
         </div>
 
     </div>
@@ -559,64 +683,3 @@ function onPause() {
         </div>
     </div>
 </section>
-
-</div>
-
-
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageend.min.js"></script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/jquery.carouFredSel-4.4.1-packed.js"></script>
-<script type="text/javascript" src="https://client.akamai.com/dlm/dlm.js"></js>
-<script> 
-    global.init('/html5/', 'apis', 'index', '', '/html5/webroot/');
-</script>
-<script>
-	var menu, menu_id_str, selected, siblings;
-	menu = null;
-	menu_id_str = $('.side-nav-content').attr('id');
-	if (menu_id_str !== 'none') {
-		menu = menu_id_str;
-	}
-	$(document).ready(function () {
-		stage.initiate();
-		sticky.initiate();
-		sizer.initiate(); /* Initiates resizing of menu on pages where it is relevant */
-
-		selected = $('.no_children.item_active').first();
-		selected.siblings().addClass('active_sibling');
-		$("#main a").each(function () {
-			$(this).bind('click', function () {
-				sticky.scrollEvent();
-			});
-		});
-		
-	});
-	$(window).load(function () {
-		var container, scrollTo;
-		renderMenu(window.location.pathname, menu);
-		reset_size_and_scroll();
-		$(function () {
-			container = $('#side-nav-children');
-			scrollTo = $('.active', container);
-			if (scrollTo.length > 0) {
-				container.scrollTop(scrollTo.offset().top - container.offset().top + container.scrollTop() - 80);
-			}
-		});
-	});
-
-	$(window).resize(function (e) {
-		if (e) { e.stopPropagation(); }
-		reset_size_and_scroll();
-	});
-	$(window).scroll(function (e) {
-		if (e) { e.stopPropagation(); }
-		reset_size_and_scroll();
-	});
-</script>
-<script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pageload.min.js"></script>
-<script type="text/javascript" src="nav.js"></script>
-
-
-
-</body>
-</html>
-
