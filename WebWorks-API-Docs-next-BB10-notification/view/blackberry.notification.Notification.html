@@ -154,7 +154,31 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
+                                        <a href="blackberry.notification.Notification.html#.requestPermission">blackberry.notification.Notification.requestPermission</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
                                         <a href="blackberry.notification.Notification.html#close">close</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.notification.Notification.html#.permission">permission</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -288,6 +312,18 @@
                                         
                                     </td>
                                     <td>
+                                        <a href="blackberry.notification.Notification.html#.requestPermission">blackberry.notification.Notification.requestPermission</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
                                         <a href="blackberry.notification.Notification.html#close">close</a>
                                         
                                     </td>
@@ -304,6 +340,33 @@
         
     
         
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.notification.Notification.html#.permission">permission</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
         
     
         
@@ -338,7 +401,7 @@
                                 
                                     blackberry.notification.Notification
                                     
-                                        (title : String, options : Object)
+                                        (title : String, <i>[options : Object]</i>)
                                     
                                 
                             
@@ -384,7 +447,7 @@
                                             <td><b>title</b></td>
                                             <td>
                                                 
-                                                Mandatory. Used as text in toasts (if there is no subtitle text) and Universal inbox entries.                         
+                                                Mandatory. Used as title text in Universal inbox entries.                         
                                                 
                                             </td>
                                         </tr>
@@ -399,13 +462,13 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>body:</b> Used as text in toasts and Universal inbox entries.
+                                                        <b>body:</b> Used as subtitle text in Universal inbox entries.
                                                     
                                                         <br />
-                                                        <b>tag:</b> Tag of the notification. It can be used for closing the notification by static method blackberry.notification.Notification.remove().
+                                                        <b>tag:</b> Tag of the notification. If provided, it can be used for closing the notification by static method blackberry.notification.Notification.remove(). If multiple Notification objects are created with the same tag, only one notification will be existing in UIB and the newer created one will replace the older one.
                                                     
                                                         <br />
-                                                        <b>target:</b> Target is used with UIB Transient Notifications if the notification is opened from UIB and also directly if launchInBackground is set to true. This property should match the identifier returned by the invocation framework when the target application registered with the invocation framework. The value none means that there is no launch behaviour for this notification. Value is passed on to the Invocation Framework as target.
+                                                        <b>target:</b> Target of application that will be launched if the user opens the notification in Universal inbox. This property should match the identifier returned by the invocation framework when the target application registered with the invocation framework. Value is passed on to the Invocation Framework as target. If omitted, the target which of type "Application" of the WebWorks application will be used; if there is no valid "Application-type" target defined, nothing will be invoked when the user opens the notification in UIB.
                                                     
                                                         <br />
                                                         <b>targetAction:</b> Action as registered with invocation framework. Value is passed on to the Invocation Framework as action. Example bb.action.PUSH.
@@ -420,7 +483,7 @@
                                                         <b>payloadType:</b> The MIME type of URI or payload data to send to the invoked app. Value is passed on to the Invocation Framework as type. Example: "text/plain".
                                                     
                                                         <br />
-                                                        <b>onclick:</b> It is ignored for WebWorks appliction. Insteadly, use oninvoked event handler, which will be triggered when the user clicks the notification in UIB.
+                                                        <b>onclick:</b> It is ignored for WebWorks appliction. Insteadly, use oninvoked event handler, which will be triggered when the user opens the notification in UIB.
                                                     
                                                         <br />
                                                         <b>onshow:</b> It will be triggered if the notification is created successfully; or onerror callback will be triggered.
@@ -457,26 +520,55 @@
     
         <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&#47;javascript&quot;&gt;
 
-  // UIB transient notification
+  // Create the simplest notification
+  new blackberry.notification.Notification("You have a simple notification");
+
+
+  // Create a notification with body
+  new blackberry.notification.Notification("The title", {body: "The body"});
+
+
+  // Create a notification with events
   var title = "You have a notificaiton";
   var options = {
-      body : "Some details"
+      body : "Some details",
+      onshow : function() { alert("The notification was created successfully!"); },
+      onerror : function() { alert("Error happened when creating the notification!"); }
   }
   var n = new blackberry.notification.Notification(title, options);
 
-  // User open the application so the UIB notification can be closed
-  n.close();
 
-  // To be verified and completed
-  // For Push event
-  var title = "<suitable title>";    // e.g. Application Name
+  // Create notifications with same tag for a chatroom session
+  // Bob says "Hi"
+  new Notification("Bob: Hi", { tag: 'chat_Bob' });
+
+  // Bob says "Are you free this afternoon?"
+  // as only one notification will exist,
+  // the application creates another notification with the combined message using the same tag
+  new Notification("Bob: Hi / Are you free this afternoon?", { tag: 'chat_Bob' });
+
+
+  // Create a notification with invocation information
+  // and use invoked event to determine and do somthing for that notification
+  var title = "A notificaiton for something";
   var options = {
-      body : "<suitable subtitle>",  // e.g. Received a push notification
-      target : "<invocationId>",     // id received from invocation manager
-      payload : "<payload data>",    // optional payload to include, base 64 encoded
-      payloadType : ""               // MIME type of payload
+      targetAction : "BB.action.DoSomethingForNotification",
+      payloadURI : "some link"
   }
-  var n = new blackberry.notification.Notification(message);
+
+  // Create the notification
+  new blackberry.notification.Notification(title, options);
+
+  // Register to listen to invoked event
+  blackberry.event.addEventListener("invoked", onInvoked);
+
+  // Handle invoked event
+  function onInvoked(onInvokedInfo) {
+	     // Do something if the action is "BB.action.DoSomethingForNotification"
+	     if(onInvokedInfo.action == "BB.action.DoSomethingForNotification") {
+	         doSomething(onInvokedInfo.uri); // onInvokedInfo.uri is "some link"
+      }
+  }
 
 &lt;&#92;script&gt;</pre></code></td></tbody></table>
     
@@ -533,7 +625,7 @@
                                        
                             
                             
-                            <p>This static method will delete the notification from the UIB notifications area automatically. UIB notifications will be removed manually if the user clicks it.</p>
+                            <p>This static method will delete the notification from the UIB notifications area automatically. UIB notifications will also be removed manually if the user clicks it.</p>
                             <br />
                             
                             
@@ -565,7 +657,113 @@
                                             <td><b>tag</b></td>
                                             <td>
                                                 
-                                                Mandatory. Used as the Id of the notification for deleting it.                         
+                                                Mandatory. Used as the Id of the notification for deleting it. tag is optional property of options object that is passed to Notification constructor; if it is omitted, the user won't be able to use this static function "remove" to delete the notification.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&#47;javascript&quot;&gt;
+  new blackberry.notification.Notification("You have a tagged notification", { tag: 'tagged_notification' });
+
+  // Even the applicaton is closed and the above object is destroyed,
+  // you can still remove the notifcation
+  blackberry.notification.Notification.remove('tagged_notification');
+&lt;&#92;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".requestPermission"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        void
+                                        
+                                        
+                                            blackberry.notification.Notification.requestPermission
+                                            
+                                                
+                                                    (<i>[callback : funciton]</i>)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The w3c requestPermission function. As for a WebWorks application, permission is always granted, this function will just do nothing.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>callback</b></td>
+                                            <td>
+                                                
+                                                The callback required by w3c requestPermission function. In WebWorks it is ignored.                         
                                                 
                                             </td>
                                         </tr>
@@ -627,7 +825,104 @@
                                        
                             
                             
-                            <p>This method will delete the notification from the UIB notifications area automatically. UIB notifications will be removed manually if the user clicks it.</p>
+                            <p>This member method will delete the notification from the UIB notifications area automatically. UIB notifications will also be removed manually if the user clicks it.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&#47;javascript&quot;&gt;
+  var n = new blackberry.notification.Notification("You have a simple notification");
+
+  // Automatically close the notification after an hour
+  setTimeout("n.close()", 1000 * 60 * 60);
+&lt;&#92;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Properties</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".permission"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            permission
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The w3c static permission attribute returns permission for showing notification for a given origin. As for a WebWorks application, permission is always granted, the value is alwasy "granted".</p>
                             <br />
                             
                             
@@ -676,19 +971,13 @@
     
     
 
-    
-    
-
-    
-    
-
 
 
 
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Sep 07 2012 01:16:03 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Sep 10 2012 15:22:38 GMT-0400 (EDT)
         </div>
 
     </div>
