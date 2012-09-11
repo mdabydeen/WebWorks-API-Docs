@@ -287,6 +287,18 @@ application.
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.html#.event:onupdate^2">blackberry.bbm.platform.users.onupdate</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
                         </table>
                     </div>
                 </div>
@@ -471,7 +483,7 @@ application.
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0">
+            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|bb10x">
                 <div class="ref-sect-title">
                     <h2> Events </h2>
                 </div>
@@ -499,6 +511,18 @@ application.
                                     </td>
                                     <td>
                                         <a href="blackberry.bbm.platform.users.html#.event:onupdate">blackberry.bbm.platform.users.onupdate</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.bbm.platform.users.html#.event:onupdate^2">blackberry.bbm.platform.users.onupdate</a>
                                         
                                     </td>
                                 </tr>
@@ -2014,6 +2038,130 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
                         </div>
                     </div>
                 
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".event:onupdate^2"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.bbm.platform.users.onupdate
+                                            
+                                                
+                                                    (user : <a href="blackberry.bbm.platform.users.BBMPlatformUser.html">blackberry.bbm.platform.users.BBMPlatformUser</a>, event : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p></p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>user</b></td>
+                                            <td>
+                                                
+                                                The user whose information updated.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>event</b></td>
+                                            <td>
+                                                
+                                                The type of update.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;
+
+blackberry.event.addEventListener("onupdate", function(user, event) {
+    // Handle events for the current user
+    if(user.handle == blackberry.platform.self.handle) {
+        if (event == "personalmessage") {
+            alert("Personal message update: " + user.personalmessage);
+        }
+        // Handle other events for the current user...
+    }
+    // Handle events for other users...
+};
+
+&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
             </div>
         </div>
     
@@ -2113,7 +2261,7 @@ blackberry.bbm.platform.users.onupdate = function(user, event) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 04 2012 13:55:26 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 11 2012 12:16:01 GMT-0400 (EDT)
         </div>
 
     </div>
