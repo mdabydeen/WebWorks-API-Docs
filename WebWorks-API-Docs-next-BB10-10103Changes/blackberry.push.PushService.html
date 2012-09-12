@@ -1173,7 +1173,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target',             appId : 'appId1',             ppgUrl : 'https://cp123.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // Or, for an enterprise application with an application ID: // var ops = { invokeTargetId : 'com.sample.pushtest.target', //             appId : 'appId1' };try {    blackberry.push.PushService.create(ops,         successCallback,         failCallback,         simChangeCallback,         pushTransportReadyCallback);} catch (err) {    console.log("Create was called more than once with different "         + "values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {    // The create operation was a success    // Save the pushService object to a global variable    // Now, use the pushService object to now perform a     // launchApplicationOnPush, createChannel, destroyChannel, etc.    pushService.createChannel(createChannelCallback);}function failCallback(result) {    // The create operation failed    // You should compare the result code against the error      // constants in this PushService class that apply for     // create and take the recommended action for that constant    if (result === blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the create up to a certain number of attempts         // and then display an error to the user    }    // ... handle the other possible error constants     // from the PushService class}function simChangeCallback() {    // The SIM card was changed and the channel has been     // destroyed since a new user might be using the device.    // It is recommended that the user of this application be     // re-authenticated with the Push Initiator (if your     // Push Initiator implementation supports subscription)     // followed by a call to createChannel.}function pushTransportReadyCallback(lastFailedOperation) {    // This callback will be called when a create channel    // or destroy channel was previously attempted and it     // failed with the PUSH_TRANSPORT_UNAVAILABLE error code    // and now  the network/push transport is available again.     // The operation indicated by lastFailedOperation should     // be retried again.    if (lastFailedOperation ===         blackberry.push.PushService.CREATE_CHANNEL_OPERATION) {        pushService.createChannel(createChannelCallback);    } else if (lastFailedOperation ===        blackberry.push.PushService.DESTROY_CHANNEL_OPERATION) {       pushService.destroyChannel(destroyChannelCallback);    }}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target',             appId : 'appId1',             ppgUrl : 'https://cp123.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // Or, for an enterprise application with an application ID: // var ops = { invokeTargetId : 'com.sample.pushtest.target', //             appId : 'appId1' };try {    blackberry.push.PushService.create(ops,         successCallback,         failCallback,         simChangeCallback,         pushTransportReadyCallback);} catch (err) {    console.log("Create was called more than once with different "         + "values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {    // The create operation was a success    // Save the pushService object to a global variable    // Now, use the pushService object to now perform a     // launchApplicationOnPush, createChannel, destroyChannel, etc.    pushService.createChannel(createChannelCallback);}function failCallback(result) {    // The create operation failed    // You should compare the result code against the error      // constants in this PushService class that apply for     // create and take the recommended action for that constant    if (result === blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the create up to a certain number of attempts         // and then display an error to the user    }    // ... handle the other possible error constants     // from the PushService class}function simChangeCallback() {    // The SIM card was changed and the channel has been     // destroyed since a new user might be using the device.    // It is recommended that the user of this application be     // re-authenticated with the Push Initiator (if your     // Push Initiator implementation supports subscription)     // followed by a call to createChannel.}function pushTransportReadyCallback(lastFailedOperation) {    // This callback will be called when a create channel    // or destroy channel was previously attempted and it     // failed with the PUSH_TRANSPORT_UNAVAILABLE error code    // and now the network/push transport is available again.     // The operation indicated by lastFailedOperation should     // be retried again.    if (lastFailedOperation ===         blackberry.push.PushService.CREATE_CHANNEL_OPERATION) {        pushService.createChannel(createChannelCallback);    } else if (lastFailedOperation ===        blackberry.push.PushService.DESTROY_CHANNEL_OPERATION) {       pushService.destroyChannel(destroyChannelCallback);    }}</pre></code></td></tbody></table>
     
   
 
@@ -2744,7 +2744,7 @@
                                        
                             
                             
-                            <p>Result error code when attempting to perform a create channel and a PPG URL was missing.<br/><br/>Operations this error can occur on: createChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Specifying a value for ppgUrl programmatically and retrying might correct the issue.</p>
+                            <p>Result error code when attempting to perform a create channel and a PPG URL was missing.<br/><br/>Operations this error can occur on: createChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Specifying a value for <code>options.ppgUrl</code> in the static <code>create</code> functionand retrying might correct the issue.</p>
                             <br />
                             
                             
@@ -3269,7 +3269,7 @@
                                        
                             
                             
-                            <p>Result error code when no invoke target ID is specified on a create operation.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Specifying a value for invokeTargetId programmatically and retrying might correct the issue.</p>
+                            <p>Result error code when no invoke target ID is specified on a create operation.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Specifying a value for <code>options.invokeTargetId</code> in the static <code>create</code> function and retrying might correct the issue.</p>
                             <br />
                             
                             
@@ -3344,7 +3344,7 @@
                                        
                             
                             
-                            <p>Result error code when an underlying session already exists.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Check the appId and invokeTargetId to ensure that they are valid and unique to your application.</p>
+                            <p>Result error code when an underlying session already exists.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Check <code>options.appId</code> and <code>options.invokeTargetId</code> in the static <code>create</code> function to ensure that they are valid and unique to your application.</p>
                             <br />
                             
                             
@@ -3621,7 +3621,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Sep 12 2012 11:26:51 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Sep 12 2012 14:39:59 GMT-0400 (EDT)
         </div>
 
     </div>
