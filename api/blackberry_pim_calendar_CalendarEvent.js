@@ -74,10 +74,10 @@ blackberry.pim.calendar.CalendarEvent.prototype.status = "";
 
 /**
  * @description An indication of the display status to set for the event. <b>TODO busyStatus() in native CalendarEvent can be one of: free, tentative, busy, or out of office.</b>
- * @type String
+ * @type Number
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.prototype.transparency = "";
+blackberry.pim.calendar.CalendarEvent.prototype.transparency = 0;
 
 /**
  * @description The recurrence or repetition rule for this event.
@@ -115,7 +115,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.allDay = false;
 blackberry.pim.calendar.CalendarEvent.prototype.birthday = false;
 
 /**
- * @description Sensitivity level of the event: {@link blackberry.pim.calendar.CalendarEvent.NORMAL}, {@link blackberry.pim.calendar.CalendarEvent.PERSONAL}, {@link blackberry.pim.calendar.CalendarEvent.PRIVATE} or {@link blackberry.pim.calendar.CalendarEvent.CONFIDENTIAL} <b>TODO DAP CalendarEvent does not have this</b>
+ * @description Sensitivity level of the event: {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_NORMAL}, {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PERSONAL}, {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PRIVATE} or {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_CONFIDENTIAL} <b>TODO DAP CalendarEvent does not have this</b>
  * @type Number
  * @BB10X
  */
@@ -212,7 +212,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.createExceptionEvent = function 
  * @type Number
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.NORMAL = 0;
+blackberry.pim.calendar.CalendarEvent.SENSITIVITY_NORMAL = 0;
 
 /**
  * @description Sensitivity level for personal events.
@@ -220,7 +220,7 @@ blackberry.pim.calendar.CalendarEvent.NORMAL = 0;
  * @type Number
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.PERSONAL = 1;
+blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PERSONAL = 1;
 
 /**
  * @description Sensitivity level for private events.
@@ -228,7 +228,7 @@ blackberry.pim.calendar.CalendarEvent.PERSONAL = 1;
  * @type Number
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.PRIVATE = 2;
+blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PRIVATE = 2;
 
 /**
  * @description Sensitivity level for confidential events.
@@ -236,4 +236,38 @@ blackberry.pim.calendar.CalendarEvent.PRIVATE = 2;
  * @type Number
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.CONFIDENTIAL = 3;
+blackberry.pim.calendar.CalendarEvent.SENSITIVITY_CONFIDENTIAL = 3;
+
+/**
+ * @description Transparency constant. Used to inform that the event represents free time (the event's owner is
+ * available).
+ * @constant
+ * @type Number
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_FREE = 0;
+
+/**
+ * @description Transparency constant. Used to inform that an event may or may not happen (the owner may be available).
+ * @constant
+ * @type Number
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_TENTATIVE = 1;
+
+/**
+ * @description Transparency constant. Used to inform that an event is confirmed (the owner is busy).
+ * @constant
+ * @type Number
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_BUSY = 2;
+
+/**
+ * @description Transparency constant. Used to inform that the event owner is out of office.
+ * @constant
+ * @type Number
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_OUT_OF_OFFICE = 3;
+
