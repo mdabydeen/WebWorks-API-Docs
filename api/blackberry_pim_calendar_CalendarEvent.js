@@ -189,13 +189,6 @@ blackberry.pim.calendar.CalendarEvent.prototype.save = function () {};
 blackberry.pim.calendar.CalendarEvent.prototype.remove = function () {};
 
 /**
- * Returns a new CalendarEvent object that is a deep copy of the calling object, with the id property set to null.
- * @returns {blackberry.pim.calendar.CalendarEvent}
- * @BB10X
- */
-blackberry.pim.calendar.CalendarEvent.prototype.clone = function () {};
-
-/**
  * Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
  * with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
  * property set to the parameter value.<b>TODO DAP CalendarEvent does not have this</b>
