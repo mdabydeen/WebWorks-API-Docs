@@ -159,6 +159,18 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
+                                        <a href="blackberry.pim.calendar.html#.findSingleEvent">blackberry.pim.calendar.findSingleEvent</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
                                         <a href="blackberry.pim.calendar.html#.getCalendarFolders">blackberry.pim.calendar.getCalendarFolders</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -316,6 +328,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.calendar.html#.findEvents">blackberry.pim.calendar.findEvents</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.html#.findSingleEvent">blackberry.pim.calendar.findSingleEvent</a>
                                         
                                     </td>
                                 </tr>
@@ -527,7 +551,7 @@
                                             blackberry.pim.calendar.findEvents
                                             
                                                 
-                                                    (onFindSuccess : function, <i>[onFindError : function]</i>, findOptions : <a href="blackberry.pim.calendar.CalendarFindOptions.html">blackberry.pim.calendar.CalendarFindOptions</a>)
+                                                    (findOptions : <a href="blackberry.pim.calendar.CalendarFindOptions.html">blackberry.pim.calendar.CalendarFindOptions</a>, onFindSuccess : function, <i>[onFindError : function]</i>)
                                                 
                                             
                                                                   
@@ -547,7 +571,7 @@
                                        
                             
                             
-                            <p>Find calendar event items in the calendar based on some criterion.</p>
+                            <p>Find calendar events in the calendar based on some criterion.</p>
                             <br />
                             
                             
@@ -573,6 +597,16 @@
                                         Parameters
                                     </th></tr></thead>
                                                    
+                                    
+                                        
+                                        <tr>
+                                            <td><b>findOptions</b></td>
+                                            <td>
+                                                
+                                                Options to be applied to the search.                         
+                                                
+                                            </td>
+                                        </tr>
                                     
                                         
                                         <tr>
@@ -605,13 +639,134 @@
                                                 
                                             </td>
                                         </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".findSingleEvent"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        void
+                                        
+                                        
+                                            blackberry.pim.calendar.findSingleEvent
+                                            
+                                                
+                                                    (findOptions : Object, onFindSuccess : function, <i>[onFindError : function]</i>)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Find single calendar event in the calendar.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
                                     
                                         
                                         <tr>
                                             <td><b>findOptions</b></td>
                                             <td>
                                                 
-                                                Options to be applied to the search.                         
+                                                An object literal that specifies the event id and <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a> that contains the event. The object should be in the following form: <br><pre>
+{
+    eventId: &lt;id of the event&gt;,
+    folder: &lt;CalendarFolder that contains the event&gt; (optional)
+}
+</pre>                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>onFindSuccess</b></td>
+                                            <td>
+                                                
+                                                Success callback function that is invoked with the event returned from the calendar.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>event:</b> The <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a> object from the search. If no event is found, the event object will be null.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>onFindError</b></td>
+                                            <td>
+                                                
+                                                Optional error callback function. Invoked when error occurs.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>error:</b> The blackberry.pim.calendar.CalendarError object which contains the error code.
+                                                    
                                                 
                                             </td>
                                         </tr>
@@ -728,7 +883,7 @@
                                             blackberry.pim.calendar.getLastEventsWithAttendee
                                             
                                                 
-                                                    (attendeeEmail : String, onSuccess : function, <i>[onError : function]</i>, limit : Number)
+                                                    (findOptions : Object, onSuccess : function, <i>[onError : function]</i>)
                                                 
                                             
                                                                   
@@ -777,10 +932,14 @@
                                     
                                         
                                         <tr>
-                                            <td><b>attendeeEmail</b></td>
+                                            <td><b>findOptions</b></td>
                                             <td>
                                                 
-                                                The email which identifies the person that should be present in the returned meetings.                         
+                                                An object literal that specifies the attendee email and the number of events to returned. The object should be in the following form: <br><pre>
+{
+   attendeeEmail: &lt;the email address that identifies the person that should be present in the returned meetings&gt;,
+   limit: &lt;the maximum number of events to return&lt;
+}                         
                                                 
                                             </td>
                                         </tr>
@@ -795,7 +954,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>events:</b> The array of CalendarEvent objects.
+                                                        <b>events:</b> The array of <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a> objects.
                                                     
                                                 
                                             </td>
@@ -807,16 +966,6 @@
                                             <td>
                                                 
                                                 Optional error callback function. Invoked when error occurs.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>limit</b></td>
-                                            <td>
-                                                
-                                                The maximum number of events to return.                         
                                                 
                                             </td>
                                         </tr>
@@ -858,7 +1007,7 @@
                                             blackberry.pim.calendar.getNextEventsWithAttendee
                                             
                                                 
-                                                    (attendeeEmail : String, onSuccess : function, <i>[onError : function]</i>, limit : Number)
+                                                    (findOptions : Object, onSuccess : function, <i>[onError : function]</i>)
                                                 
                                             
                                                                   
@@ -907,10 +1056,14 @@
                                     
                                         
                                         <tr>
-                                            <td><b>attendeeEmail</b></td>
+                                            <td><b>findOptions</b></td>
                                             <td>
                                                 
-                                                The email which identifies the person that should be present in the returned meetings.                         
+                                                An object literal that specifies the attendee email and the number of events to returned. The object should be in the following form: <br><pre>
+{
+   attendeeEmail: &lt;the email address that identifies the person that should be present in the returned meetings&gt;,
+   limit: &lt;the maximum number of events to return&lt;
+}                         
                                                 
                                             </td>
                                         </tr>
@@ -925,7 +1078,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>events:</b> The array of CalendarEvent objects.
+                                                        <b>events:</b> The array of <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a> objects.
                                                     
                                                 
                                             </td>
@@ -937,16 +1090,6 @@
                                             <td>
                                                 
                                                 Optional error callback function. Invoked when error occurs.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>limit</b></td>
-                                            <td>
-                                                
-                                                The maximum number of events to return.                         
                                                 
                                             </td>
                                         </tr>
@@ -1069,7 +1212,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Sep 14 2012 01:09:42 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 18 2012 15:46:21 GMT-0400 (EDT)
         </div>
 
     </div>
