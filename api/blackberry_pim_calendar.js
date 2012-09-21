@@ -81,7 +81,7 @@ blackberry.pim.calendar = {
      * @returns {void}
      * @BB10X
      */
-    getNextEventsWithAttendee: function (attendeeEmail, onSuccess, onError, limit) {},
+    getNextEventsWithAttendee: function (findOptions, onSuccess, onError) {},
 
     /**
      * @name blackberry.pim.calendar.getLastEventsWithAttendee
@@ -99,7 +99,7 @@ blackberry.pim.calendar = {
      * @returns {void}
      * @BB10X
      */
-    getLastEventsWithAttendee: function (attendeeEmail, onSuccess, onError, limit) {},
+    getLastEventsWithAttendee: function (findOptions, onSuccess, onError) {},
 
     /**
      * @name blackberry.pim.calendar.getCalendarFolders
@@ -109,6 +109,15 @@ blackberry.pim.calendar = {
      * @BB10X
      */
     getCalendarFolders: function () {},
+
+    /**
+     * @name blackberry.pim.calendar.getDefaultCalendarFolder
+     * @function
+     * @description Retrieves the default calendar folder. <b>Not in DAP specs</b>
+     * @returns {blackberry.pim.calendar.CalendarFolder}
+     * @BB10X
+     */
+    getDefaultCalendarFolder: function () {},
 
     /**
      * @name blackberry.pim.calendar.getTimezones
