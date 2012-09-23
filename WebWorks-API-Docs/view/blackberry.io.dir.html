@@ -45,6 +45,60 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var ACCEPTABLE_FILTERS = ["bb_menu", "pb_menu", "bb10_menu"],
+                    filter = localStorage.getItem('selectedmenu'),
+                    elements,
+                    target,
+                    x_ww_support,
+                    i;
+
+                if (ACCEPTABLE_FILTERS.indexOf(filter) !== -1) {
+                    elements = getDesiredElements(document.body, 'x-ww-support');
+                    for (i = 0; i < elements.length; i++) {
+                        target = elements[i];
+                        x_ww_support = target.getAttribute('x-ww-support').split('|');
+                        if (x_ww_support.indexOf(filter) < 0) {
+                            target.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload,
+                        newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -89,7 +143,7 @@
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div x-ww-support="bb_menu|pb_menu|ripple">
                     
                 
   
@@ -137,7 +191,7 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.createNewDir">blackberry.io.dir.createNewDir</a>
                                         <td class="apiYes">Y</td>
@@ -149,7 +203,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.deleteDirectory">blackberry.io.dir.deleteDirectory</a>
                                         <td class="apiYes">Y</td>
@@ -161,7 +215,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.exists^2">blackberry.io.dir.exists</a>
                                         <td class="apiYes">Y</td>
@@ -173,7 +227,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.getFreeSpaceForRoot">blackberry.io.dir.getFreeSpaceForRoot</a>
                                         <td class="apiYes">Y</td>
@@ -185,7 +239,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.getParentDirectory">blackberry.io.dir.getParentDirectory</a>
                                         <td class="apiYes">Y</td>
@@ -197,7 +251,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.getRootDirs">blackberry.io.dir.getRootDirs</a>
                                         <td class="apiYes">Y</td>
@@ -209,7 +263,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.listDirectories">blackberry.io.dir.listDirectories</a>
                                         <td class="apiYes">Y</td>
@@ -221,7 +275,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.listFiles">blackberry.io.dir.listFiles</a>
                                         <td class="apiYes">Y</td>
@@ -233,7 +287,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.rename^2">blackberry.io.dir.rename</a>
                                         <td class="apiYes">Y</td>
@@ -245,7 +299,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.appDirs">http://localhost:8472/blackberry/io/dir/appDirs</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -257,7 +311,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.create">http://localhost:8472/blackberry/io/dir/create</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -269,7 +323,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.delete">http://localhost:8472/blackberry/io/dir/delete</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -281,7 +335,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.exists">http://localhost:8472/blackberry/io/dir/exists</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -293,7 +347,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.get">http://localhost:8472/blackberry/io/dir/get</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -305,7 +359,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.list">http://localhost:8472/blackberry/io/dir/list</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -317,7 +371,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.parent">http://localhost:8472/blackberry/io/dir/parent</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -329,7 +383,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td>
                                         <a href="blackberry.io.dir.html#.rename">http://localhost:8472/blackberry/io/dir/rename</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -341,7 +395,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.io.dir.html#.appDirs^2">appDirs</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -380,7 +434,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple"><td>
+                            <tr x-ww-support="bb_menu|pb_menu|ripple"><td>
                                 &lt;feature id="blackberry.io.dir" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -393,7 +447,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                         
                     
@@ -440,7 +494,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|pb_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -448,7 +502,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -460,7 +514,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -472,7 +526,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Boolean
@@ -484,7 +538,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -496,7 +550,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String
@@ -508,7 +562,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String[]
@@ -520,7 +574,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String[]
@@ -532,7 +586,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String[]
@@ -544,7 +598,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -569,7 +623,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="pb1.0|pb2.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="pb_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -577,7 +631,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Object
@@ -602,7 +656,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="pb1.0|pb2.0">
+            <div class="ref-sect ref-index" x-ww-support="pb_menu">
                 <div class="ref-sect-title">
                     <h2> URI Functions </h2>
                 </div>
@@ -610,7 +664,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -622,7 +676,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -634,7 +688,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -646,7 +700,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -658,7 +712,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -670,7 +724,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -682,7 +736,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -694,7 +748,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0">
+                                <tr x-ww-support="pb_menu">
                                     <td class="first_column">
                                         
                                             Object Literal
@@ -733,7 +787,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".createNewDir"></a>
                  
@@ -835,7 +889,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".deleteDirectory"></a>
                  
@@ -947,7 +1001,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".exists^2"></a>
                  
@@ -1049,7 +1103,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".getFreeSpaceForRoot"></a>
                  
@@ -1156,7 +1210,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".getParentDirectory"></a>
                  
@@ -1258,7 +1312,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".getRootDirs"></a>
                  
@@ -1343,7 +1397,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".listDirectories"></a>
                  
@@ -1445,7 +1499,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".listFiles"></a>
                  
@@ -1547,7 +1601,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".rename^2"></a>
                  
@@ -1674,7 +1728,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="pb_menu|ripple">
                         <h3>
                             <a name=".appDirs^2"></a>
                  
@@ -1770,7 +1824,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".appDirs"></a>
                  
@@ -1843,7 +1897,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".create"></a>
                  
@@ -1935,7 +1989,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".delete"></a>
                  
@@ -2037,7 +2091,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".exists"></a>
                  
@@ -2129,7 +2183,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".get"></a>
                  
@@ -2221,7 +2275,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".list"></a>
                  
@@ -2319,7 +2373,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".parent"></a>
                  
@@ -2411,7 +2465,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0">
+                    <div class="detailed_item function" x-ww-support="pb_menu">
                         <h3>
                             <a name=".rename"></a>
                  
@@ -2523,7 +2577,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Sep 10 2012 17:54:16 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:27:43 GMT-0400 (EDT)
         </div>
 
     </div>

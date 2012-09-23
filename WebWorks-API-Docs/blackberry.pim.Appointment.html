@@ -28,6 +28,60 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var ACCEPTABLE_FILTERS = ["bb_menu", "pb_menu", "bb10_menu"],
+                    filter = localStorage.getItem('selectedmenu'),
+                    elements,
+                    target,
+                    x_ww_support,
+                    i;
+
+                if (ACCEPTABLE_FILTERS.indexOf(filter) !== -1) {
+                    elements = getDesiredElements(document.body, 'x-ww-support');
+                    for (i = 0; i < elements.length; i++) {
+                        target = elements[i];
+                        x_ww_support = target.getAttribute('x-ww-support').split('|');
+                        if (x_ww_support.indexOf(filter) < 0) {
+                            target.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload,
+                        newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -111,7 +165,7 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                                 
-                                    <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                    <tr x-ww-support="bb_menu|ripple">
                                         <td>
                                             <a href="blackberry.pim.Appointment.html">blackberry.pim.Appointment</a>
                                             <td class="apiYes">Y</td>
@@ -125,7 +179,7 @@
                                 
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#.find">blackberry.pim.Appointment.find</a>
                                         <td class="apiYes">Y</td>
@@ -137,7 +191,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#remove">remove</a>
                                         <td class="apiYes">Y</td>
@@ -149,7 +203,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#save">save</a>
                                         <td class="apiYes">Y</td>
@@ -161,7 +215,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#allDay">allDay</a>
                                         <td class="apiYes">Y</td>
@@ -173,7 +227,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#attendees">attendees</a>
                                         <td class="apiYes">Y</td>
@@ -185,7 +239,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#end">end</a>
                                         <td class="apiYes">Y</td>
@@ -197,7 +251,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#freeBusy">freeBusy</a>
                                         <td class="apiYes">Y</td>
@@ -209,7 +263,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#location">location</a>
                                         <td class="apiYes">Y</td>
@@ -221,7 +275,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#note">note</a>
                                         <td class="apiYes">Y</td>
@@ -233,7 +287,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#recurrence">recurrence</a>
                                         <td class="apiYes">Y</td>
@@ -245,7 +299,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#reminder">reminder</a>
                                         <td class="apiYes">Y</td>
@@ -257,7 +311,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#start">start</a>
                                         <td class="apiYes">Y</td>
@@ -269,7 +323,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#summary">summary</a>
                                         <td class="apiYes">Y</td>
@@ -281,7 +335,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#uid">uid</a>
                                         <td class="apiYes">Y</td>
@@ -293,7 +347,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#.FREE">FREE</a>
                                         <td class="apiYes">Y</td>
@@ -305,7 +359,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#.TENTATIVE">TENTATIVE</a>
                                         <td class="apiYes">Y</td>
@@ -317,7 +371,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#.BUSY">BUSY</a>
                                         <td class="apiYes">Y</td>
@@ -329,7 +383,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td>
                                         <a href="blackberry.pim.Appointment.html#.OUT_OF_OFFICE">OUT_OF_OFFICE</a>
                                         <td class="apiYes">Y</td>
@@ -368,7 +422,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
+                            <tr x-ww-support="bb_menu|ripple"><td>
                                 &lt;feature id="blackberry.pim.Appointment" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -382,7 +436,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
+                            <tr x-ww-support="bb_menu|ripple"><td>
                                 &lt;feature id="blackberry.pim.Attendee" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -396,7 +450,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
+                            <tr x-ww-support="bb_menu|ripple"><td>
                                 &lt;feature id="blackberry.pim.Recurrence" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -410,7 +464,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
+                            <tr x-ww-support="bb_menu|ripple"><td>
                                 &lt;feature id="blackberry.pim.Reminder" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -424,7 +478,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple"><td>
+                            <tr x-ww-support="bb_menu|ripple"><td>
                                 &lt;feature id="blackberry.find" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -437,7 +491,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                     <table>
                         <tr>
@@ -464,7 +518,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Constructors </h2>
                 </div>
@@ -472,7 +526,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             
@@ -494,7 +548,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -502,7 +556,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Appointment[]
@@ -514,7 +568,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -526,7 +580,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -551,7 +605,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -559,7 +613,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Boolean
@@ -571,7 +625,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Attendee
@@ -583,7 +637,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Date
@@ -595,7 +649,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -607,7 +661,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String
@@ -619,7 +673,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String
@@ -631,7 +685,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Recurrence
@@ -643,7 +697,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Reminder
@@ -655,7 +709,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Date
@@ -667,7 +721,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String
@@ -679,7 +733,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             String
@@ -701,7 +755,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -709,7 +763,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -721,7 +775,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -733,7 +787,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -745,7 +799,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -784,7 +838,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".Appointment"></a>
                  
@@ -887,7 +941,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".find"></a>
                  
@@ -1025,7 +1079,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="remove"></a>
                  
@@ -1104,7 +1158,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="save"></a>
                  
@@ -1198,7 +1252,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="allDay"></a>
                  
@@ -1273,7 +1327,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="attendees"></a>
                  
@@ -1348,7 +1402,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="end"></a>
                  
@@ -1423,7 +1477,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="freeBusy"></a>
                  
@@ -1498,7 +1552,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="location"></a>
                  
@@ -1573,7 +1627,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="note"></a>
                  
@@ -1648,7 +1702,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="recurrence"></a>
                  
@@ -1723,7 +1777,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="reminder"></a>
                  
@@ -1798,7 +1852,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="start"></a>
                  
@@ -1873,7 +1927,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="summary"></a>
                  
@@ -1948,7 +2002,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name="uid"></a>
                  
@@ -2035,7 +2089,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".FREE"></a>
                  
@@ -2114,7 +2168,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".TENTATIVE"></a>
                  
@@ -2193,7 +2247,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".BUSY"></a>
                  
@@ -2272,7 +2326,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
                         <h3>
                             <a name=".OUT_OF_OFFICE"></a>
                  
@@ -2364,7 +2418,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Sep 10 2012 17:53:58 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:27:38 GMT-0400 (EDT)
         </div>
 
     </div>

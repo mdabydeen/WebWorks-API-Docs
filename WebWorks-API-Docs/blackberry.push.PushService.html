@@ -28,6 +28,60 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var ACCEPTABLE_FILTERS = ["bb_menu", "pb_menu", "bb10_menu"],
+                    filter = localStorage.getItem('selectedmenu'),
+                    elements,
+                    target,
+                    x_ww_support,
+                    i;
+
+                if (ACCEPTABLE_FILTERS.indexOf(filter) !== -1) {
+                    elements = getDesiredElements(document.body, 'x-ww-support');
+                    for (i = 0; i < elements.length; i++) {
+                        target = elements[i];
+                        x_ww_support = target.getAttribute('x-ww-support').split('|');
+                        if (x_ww_support.indexOf(filter) < 0) {
+                            target.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload,
+                        newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -72,7 +126,7 @@
 
 
                 
-                    <div x-ww-support="bb10x">
+                    <div x-ww-support="bb10_menu">
                     
                 
   
@@ -116,7 +170,7 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.create">blackberry.push.PushService.create</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -128,7 +182,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#createChannel">createChannel</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -140,7 +194,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#destroyChannel">destroyChannel</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -152,7 +206,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#extractPushPayload">extractPushPayload</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -164,7 +218,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#launchApplicationOnPush">launchApplicationOnPush</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -176,7 +230,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.SUCCESS">SUCCESS</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -188,7 +242,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.INTERNAL_ERROR">INTERNAL_ERROR</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -200,7 +254,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.INVALID_DEVICE_PIN">INVALID_DEVICE_PIN</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -212,7 +266,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.INVALID_PROVIDER_APPLICATION_ID">INVALID_PROVIDER_APPLICATION_ID</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -224,7 +278,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.CHANNEL_ALREADY_DESTROYED">CHANNEL_ALREADY_DESTROYED</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -236,7 +290,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.CHANNEL_ALREADY_DESTROYED_BY_PROVIDER">CHANNEL_ALREADY_DESTROYED_BY_PROVIDER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -248,7 +302,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.INVALID_PPG_SUBSCRIBER_STATE">INVALID_PPG_SUBSCRIBER_STATE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -260,7 +314,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.PPG_SUBSCRIBER_NOT_FOUND">PPG_SUBSCRIBER_NOT_FOUND</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -272,7 +326,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.EXPIRED_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG">EXPIRED_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -284,7 +338,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.INVALID_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG">INVALID_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -296,7 +350,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.PPG_SUBSCRIBER_LIMIT_REACHED">PPG_SUBSCRIBER_LIMIT_REACHED</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -308,7 +362,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.INVALID_OS_VERSION_OR_DEVICE_MODEL_NUMBER">INVALID_OS_VERSION_OR_DEVICE_MODEL_NUMBER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -320,7 +374,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.CHANNEL_SUSPENDED_BY_PROVIDER">CHANNEL_SUSPENDED_BY_PROVIDER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -332,7 +386,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.CREATE_SESSION_NOT_DONE">CREATE_SESSION_NOT_DONE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -344,7 +398,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.MISSING_PPG_URL">MISSING_PPG_URL</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -356,9 +410,9 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.push.PushService.html#.NETWORK_FAILURE">NETWORK_FAILURE</a>
+                                        <a href="blackberry.push.PushService.html#.PUSH_TRANSPORT_UNAVAILABLE">PUSH_TRANSPORT_UNAVAILABLE</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -368,7 +422,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.OPERATION_NOT_SUPPORTED">OPERATION_NOT_SUPPORTED</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -380,7 +434,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.CREATE_CHANNEL_NOT_DONE">CREATE_CHANNEL_NOT_DONE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -392,7 +446,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.MISSING_PORT_FROM_PPG">MISSING_PORT_FROM_PPG</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -404,7 +458,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.push.PushService.html#.MISSING_SUBSCRIPTION_RETURN_CODE_FROM_PPG">MISSING_SUBSCRIPTION_RETURN_CODE_FROM_PPG</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -416,9 +470,9 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.push.PushService.html#.PPG_CURRENTLY_NOT_AVAILABLE">PPG_CURRENTLY_NOT_AVAILABLE</a>
+                                        <a href="blackberry.push.PushService.html#.MISSING_INVOKE_TARGET_ID">MISSING_INVOKE_TARGET_ID</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -428,9 +482,45 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.push.PushService.html#.MISSING_INVOKE_TARGET_ID">MISSING_INVOKE_TARGET_ID</a>
+                                        <a href="blackberry.push.PushService.html#.SESSION_ALREADY_EXISTS">SESSION_ALREADY_EXISTS</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.INVALID_PPG_URL_OR_PPG_UNAVAILABLE">INVALID_PPG_URL_OR_PPG_UNAVAILABLE</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.CREATE_CHANNEL_OPERATION">CREATE_CHANNEL_OPERATION</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.DESTROY_CHANNEL_OPERATION">DESTROY_CHANNEL_OPERATION</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -467,7 +557,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb10x"><td>
+                            <tr x-ww-support="bb10_menu"><td>
                                 &lt;feature id="blackberry.push" /&gt;
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -480,7 +570,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                     <table>
                         <tr>
@@ -510,7 +600,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -518,7 +608,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -530,7 +620,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -542,7 +632,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -554,7 +644,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             PushPayload
@@ -566,7 +656,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -594,7 +684,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -602,7 +692,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -614,7 +704,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -626,7 +716,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -638,7 +728,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -650,7 +740,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -662,7 +752,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -674,7 +764,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -686,7 +776,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -698,7 +788,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -710,7 +800,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -722,7 +812,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -734,7 +824,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -746,7 +836,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -758,7 +848,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -770,7 +860,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -782,19 +872,19 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.push.PushService.html#.NETWORK_FAILURE">NETWORK_FAILURE</a>
+                                        <a href="blackberry.push.PushService.html#.PUSH_TRANSPORT_UNAVAILABLE">PUSH_TRANSPORT_UNAVAILABLE</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -806,7 +896,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -818,7 +908,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -830,7 +920,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -842,19 +932,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.push.PushService.html#.PPG_CURRENTLY_NOT_AVAILABLE">PPG_CURRENTLY_NOT_AVAILABLE</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -862,6 +940,54 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.push.PushService.html#.MISSING_INVOKE_TARGET_ID">MISSING_INVOKE_TARGET_ID</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.SESSION_ALREADY_EXISTS">SESSION_ALREADY_EXISTS</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.INVALID_PPG_URL_OR_PPG_UNAVAILABLE">INVALID_PPG_URL_OR_PPG_UNAVAILABLE</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.CREATE_CHANNEL_OPERATION">CREATE_CHANNEL_OPERATION</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            Number
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.push.PushService.html#.DESTROY_CHANNEL_OPERATION">DESTROY_CHANNEL_OPERATION</a>
                                         
                                     </td>
                                 </tr>
@@ -896,7 +1022,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".create"></a>
                  
@@ -913,7 +1039,7 @@
                                             blackberry.push.PushService.create
                                             
                                                 
-                                                    (options : Object, successCallback: function(pushService : PushService), failCallback: function(result : Number), simChangeCallback: function())
+                                                    (options : Object, successCallback: function(pushService : PushService), failCallback: function(result : Number), simChangeCallback: function(), pushTransportReadyCallback: function(lastFailedOperation : Number))
                                                 
                                             
                                                                   
@@ -1023,6 +1149,22 @@
                                                 
                                             </td>
                                         </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>pushTransportReadyCallback</b></td>
+                                            <td>
+                                                
+                                                The callback that is invoked after a create channel or destroy operation has failed with a result error code of<code>PUSH_TRANSPORT_UNAVAILABLE</code> and the network/push transport is now available again.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>lastFailedOperation:</b> The last operation that was performed that failed with a result error code of <code>PUSH_TRANSPORT_UNAVAILABLE</code>. It should be one of <code>CREATE_CHANNEL_OPERATION</code> or <code>DESTROY_CHANNEL_OPERATION</code>.Use this value to determine which operation should be tried again.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
                                                   
                                 </table>
                                                
@@ -1061,14 +1203,14 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target',             appId : 'appId1',             ppgUrl : 'https://cp123.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // Or, for an enterprise application with an application ID: // var ops = { invokeTargetId : 'com.sample.pushtest.target', //             appId : 'appId1' };try {    blackberry.push.PushService.create(ops, successCallback,         failCallback, simChangeCallback);} catch (err) {    console.log("Create was called more than once with different "         + "values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {    // The create operation was a success    // Use the pushService object to now perform a     // launchApplicationOnPush, createChannel, destroyChannel, etc.    pushService.createChannel(createChannelCallback);}function failCallback(result) {    // The create operation failed    // You should compare the result code against the error      // constants in this PushService class that apply for     // create and take the recommended action for that constant    if (result == blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the create up to a certain number of attempts         // and then display an error to the user    }    // ... handle the other possible error constants     // from the PushService class}function simChangeCallback() {    // The SIM card was changed and the channel has been     // destroyed since a new user might be using the device.    // It is recommended that the user of this application be     // re-authenticated with the Push Initiator (if your     // Push Initiator implementation supports subscription)     // followed by a call to createChannel.}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>// For a consumer application (using the public/BIS PPG)var ops = { invokeTargetId : 'com.sample.pushtest.target',             appId : 'appId1',             ppgUrl : 'https://cp123.pushapi.na.blackberry.com' };// For an enterprise application (using the enterprise/BES PPG)// var ops = { invokeTargetId : 'com.sample.pushtest.target' }; // Or, for an enterprise application with an application ID: // var ops = { invokeTargetId : 'com.sample.pushtest.target', //             appId : 'appId1' };try {    blackberry.push.PushService.create(ops,         successCallback,         failCallback,         simChangeCallback,         pushTransportReadyCallback);} catch (err) {    console.log("Create was called more than once with different "         + "values for options.invokeTargetId or options.appId.");    console.log(err);}function successCallback(pushService) {    // The create operation was a success    // Save the pushService object to a global variable    // Now, use the pushService object to now perform a     // launchApplicationOnPush, createChannel, destroyChannel, etc.    pushService.createChannel(createChannelCallback);}function failCallback(result) {    // The create operation failed    // You should compare the result code against the error      // constants in this PushService class that apply for     // create and take the recommended action for that constant    if (result === blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the create up to a certain number of attempts         // and then display an error to the user    }    // ... handle the other possible error constants     // from the PushService class}function simChangeCallback() {    // The SIM card was changed and the channel has been     // destroyed since a new user might be using the device.    // It is recommended that the user of this application be     // re-authenticated with the Push Initiator (if your     // Push Initiator implementation supports subscription)     // followed by a call to createChannel.}function pushTransportReadyCallback(lastFailedOperation) {    // This callback will be called when a create channel    // or destroy channel was previously attempted and it     // failed with the PUSH_TRANSPORT_UNAVAILABLE error code    // and now the network/push transport is available again.     // The operation indicated by lastFailedOperation should     // be retried again.    if (lastFailedOperation ===         blackberry.push.PushService.CREATE_CHANNEL_OPERATION) {        pushService.createChannel(createChannelCallback);    } else if (lastFailedOperation ===        blackberry.push.PushService.DESTROY_CHANNEL_OPERATION) {       pushService.destroyChannel(destroyChannelCallback);    }}</pre></code></td></tbody></table>
     
   
 
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="createChannel"></a>
                  
@@ -1171,14 +1313,14 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>pushService.createChannel(createChannelCallback);function createChannelCallback(result, token) {    if (result == blackberry.push.PushService.SUCCESS) {        // Success, so a token should be available        // Subscribe with the Push Initiator using this          // token (if your Push Initiator supports subscription)         // so that you can push to this user using this token    } else if (result ==         blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the createChannel up to a certain number of          // attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    createChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>pushService.createChannel(createChannelCallback);function createChannelCallback(result, token) {    if (result === blackberry.push.PushService.SUCCESS) {        // Success, so a token should be available        // Subscribe with the Push Initiator using this          // token (if your Push Initiator supports subscription)         // so that you can push to this user using this token    } else if (result ===         blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the createChannel up to a certain number of          // attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    createChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
     
   
 
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="destroyChannel"></a>
                  
@@ -1278,14 +1420,14 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>pushService.destroyChannel(destroyChannelCallback);function destroyChannelCallback(result) {    if (result == blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the destroyChannel up to a certain number          // of attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    destroyChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>pushService.destroyChannel(destroyChannelCallback);function destroyChannelCallback(result) {    if (result === blackberry.push.PushService.INTERNAL_ERROR) {        // Retry the destroyChannel up to a certain number          // of attempts and then display an error to the user    } else if ... (handle all the error codes possible for                    destroyChannel - see the error constants                    in this PushService class)}</pre></code></td></tbody></table>
     
   
 
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="extractPushPayload"></a>
                  
@@ -1411,7 +1553,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="launchApplicationOnPush"></a>
                  
@@ -1521,7 +1663,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>// Indicate that you want the application to launch on a new pushpushService.launchApplicationOnPush(true,     launchApplicationCallback);// To indicate that you do not want to launch on a new push, // either leave the default behaviour or call:// pushService.launchApplicationOnPush(false, //     launchApplicationCallback);function launchApplicationOnPush(result) {   if (result == blackberry.push.PushService.INTERNAL_ERROR) {     // Retry the launchApplicationOnPush up to a certain number      // of attempts and then display an error to the user   } else if ... (handle all the error codes possible for                   launchApplicationOnPush - see the error                   constants in this PushService class)}</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>// Indicate that you want the application to launch on a new pushpushService.launchApplicationOnPush(true,     launchApplicationCallback);// To indicate that you do not want to launch on a new push, // either leave the default behaviour or call:// pushService.launchApplicationOnPush(false, //     launchApplicationCallback);function launchApplicationOnPush(result) {   if (result === blackberry.push.PushService.INTERNAL_ERROR) {     // Retry the launchApplicationOnPush up to a certain number      // of attempts and then display an error to the user   } else if ... (handle all the error codes possible for                   launchApplicationOnPush - see the error                   constants in this PushService class)}</pre></code></td></tbody></table>
     
   
 
@@ -1546,7 +1688,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SUCCESS"></a>
                  
@@ -1562,6 +1704,8 @@
                                             SUCCESS
                                             
                                                 
+                                                    
+                                                        = 0
                                                     
                                                 
                                             
@@ -1621,7 +1765,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".INTERNAL_ERROR"></a>
                  
@@ -1637,6 +1781,8 @@
                                             INTERNAL_ERROR
                                             
                                                 
+                                                    
+                                                        = 500
                                                     
                                                 
                                             
@@ -1696,7 +1842,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".INVALID_DEVICE_PIN"></a>
                  
@@ -1712,6 +1858,8 @@
                                             INVALID_DEVICE_PIN
                                             
                                                 
+                                                    
+                                                        = 10001
                                                     
                                                 
                                             
@@ -1771,7 +1919,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".INVALID_PROVIDER_APPLICATION_ID"></a>
                  
@@ -1787,6 +1935,8 @@
                                             INVALID_PROVIDER_APPLICATION_ID
                                             
                                                 
+                                                    
+                                                        = 10002
                                                     
                                                 
                                             
@@ -1807,7 +1957,7 @@
                                        
                             
                             
-                            <p>Result error code for an invalid provider application ID.  Either an invalid one was specified or none at all.<br/><br/>Operations this error can occur on: create, createChannel, destroyChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Specifying a valid value for appId programmatically and retrying might correct the issue.</p>
+                            <p>Result error code for an invalid provider application ID.  Either an invalid one was specified or none at all.<br/><br/>Operations this error can occur on: create, createChannel, destroyChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Specifying a valid value for <code>options.appId</code> in the static <code>create</code> function and retrying might correct the issue.</p>
                             <br />
                             
                             
@@ -1846,7 +1996,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CHANNEL_ALREADY_DESTROYED"></a>
                  
@@ -1862,6 +2012,8 @@
                                             CHANNEL_ALREADY_DESTROYED
                                             
                                                 
+                                                    
+                                                        = 10004
                                                     
                                                 
                                             
@@ -1921,7 +2073,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CHANNEL_ALREADY_DESTROYED_BY_PROVIDER"></a>
                  
@@ -1937,6 +2089,8 @@
                                             CHANNEL_ALREADY_DESTROYED_BY_PROVIDER
                                             
                                                 
+                                                    
+                                                        = 10005
                                                     
                                                 
                                             
@@ -1996,7 +2150,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".INVALID_PPG_SUBSCRIBER_STATE"></a>
                  
@@ -2012,6 +2166,8 @@
                                             INVALID_PPG_SUBSCRIBER_STATE
                                             
                                                 
+                                                    
+                                                        = 10006
                                                     
                                                 
                                             
@@ -2071,7 +2227,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".PPG_SUBSCRIBER_NOT_FOUND"></a>
                  
@@ -2087,6 +2243,8 @@
                                             PPG_SUBSCRIBER_NOT_FOUND
                                             
                                                 
+                                                    
+                                                        = 10007
                                                     
                                                 
                                             
@@ -2146,7 +2304,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".EXPIRED_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG"></a>
                  
@@ -2162,6 +2320,8 @@
                                             EXPIRED_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG
                                             
                                                 
+                                                    
+                                                        = 10008
                                                     
                                                 
                                             
@@ -2221,7 +2381,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".INVALID_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG"></a>
                  
@@ -2237,6 +2397,8 @@
                                             INVALID_AUTHENTICATION_TOKEN_PROVIDED_TO_PPG
                                             
                                                 
+                                                    
+                                                        = 10009
                                                     
                                                 
                                             
@@ -2296,7 +2458,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".PPG_SUBSCRIBER_LIMIT_REACHED"></a>
                  
@@ -2312,6 +2474,8 @@
                                             PPG_SUBSCRIBER_LIMIT_REACHED
                                             
                                                 
+                                                    
+                                                        = 10010
                                                     
                                                 
                                             
@@ -2371,7 +2535,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".INVALID_OS_VERSION_OR_DEVICE_MODEL_NUMBER"></a>
                  
@@ -2387,6 +2551,8 @@
                                             INVALID_OS_VERSION_OR_DEVICE_MODEL_NUMBER
                                             
                                                 
+                                                    
+                                                        = 10011
                                                     
                                                 
                                             
@@ -2446,7 +2612,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CHANNEL_SUSPENDED_BY_PROVIDER"></a>
                  
@@ -2462,6 +2628,8 @@
                                             CHANNEL_SUSPENDED_BY_PROVIDER
                                             
                                                 
+                                                    
+                                                        = 10012
                                                     
                                                 
                                             
@@ -2521,7 +2689,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CREATE_SESSION_NOT_DONE"></a>
                  
@@ -2537,6 +2705,8 @@
                                             CREATE_SESSION_NOT_DONE
                                             
                                                 
+                                                    
+                                                        = 10100
                                                     
                                                 
                                             
@@ -2596,7 +2766,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".MISSING_PPG_URL"></a>
                  
@@ -2613,80 +2783,7 @@
                                             
                                                 
                                                     
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Result error code when attempting to perform a create channel and a PPG URL was missing.<br/><br/>Operations this error can occur on: createChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Specifying a value for ppgUrl programmatically and retrying might correct the issue.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name=".NETWORK_FAILURE"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            NETWORK_FAILURE
-                                            
-                                                
+                                                        = 10102
                                                     
                                                 
                                             
@@ -2707,7 +2804,7 @@
                                        
                             
                             
-                            <p>Result error code when a create channel or destroy channel operation has failed due to network issues.<br/><br/>Operations this error can occur on: createChannel, destroyChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Retrying the operation might correct the issue.  This error can also occur when the user's wireless connection (e.g. Wi-Fi, Mobile Network) is off or temporarily down,so it might make sense to communicate this issue up to the user.</p>
+                            <p>Result error code when attempting to perform a create channel and a PPG URL was missing.<br/><br/>Operations this error can occur on: createChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Specifying a value for <code>options.ppgUrl</code> in the static <code>create</code> functionand retrying might correct the issue.</p>
                             <br />
                             
                             
@@ -2746,7 +2843,84 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".PUSH_TRANSPORT_UNAVAILABLE"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            PUSH_TRANSPORT_UNAVAILABLE
+                                            
+                                                
+                                                    
+                                                        = 10103
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Result error code when a create channel or destroy channel operation has failed due to network issues or the push transport being down.<br/><br/>Operations this error can occur on: Create Channel, Destroy Channel (only if using public/BIS PPG)<br/><br/>Recommended action: Wait until <code>pushTransportReadyCallback</code> (one of the arguments in the static <code>create</code> function) is called before retrying. This error can also occur when the user's wireless connection (e.g. Wi-Fi, Mobile Network) is off or temporarily down, so it might make sense to communicate this issue up to the user to double check their wireless connection.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".OPERATION_NOT_SUPPORTED"></a>
                  
@@ -2762,6 +2936,8 @@
                                             OPERATION_NOT_SUPPORTED
                                             
                                                 
+                                                    
+                                                        = 10105
                                                     
                                                 
                                             
@@ -2821,7 +2997,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CREATE_CHANNEL_NOT_DONE"></a>
                  
@@ -2837,6 +3013,8 @@
                                             CREATE_CHANNEL_NOT_DONE
                                             
                                                 
+                                                    
+                                                        = 10106
                                                     
                                                 
                                             
@@ -2896,7 +3074,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".MISSING_PORT_FROM_PPG"></a>
                  
@@ -2912,6 +3090,8 @@
                                             MISSING_PORT_FROM_PPG
                                             
                                                 
+                                                    
+                                                        = 10107
                                                     
                                                 
                                             
@@ -2971,7 +3151,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".MISSING_SUBSCRIPTION_RETURN_CODE_FROM_PPG"></a>
                  
@@ -2987,6 +3167,8 @@
                                             MISSING_SUBSCRIPTION_RETURN_CODE_FROM_PPG
                                             
                                                 
+                                                    
+                                                        = 10108
                                                     
                                                 
                                             
@@ -3046,9 +3228,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".PPG_CURRENTLY_NOT_AVAILABLE"></a>
+                            <a name=".MISSING_INVOKE_TARGET_ID"></a>
                  
                             
                             
@@ -3059,9 +3241,11 @@
                                         Number
                                         
                                         
-                                            PPG_CURRENTLY_NOT_AVAILABLE
+                                            MISSING_INVOKE_TARGET_ID
                                             
                                                 
+                                                    
+                                                        = 10111
                                                     
                                                 
                                             
@@ -3082,7 +3266,7 @@
                                        
                             
                             
-                            <p>Result error code when a create channel or destroy channel operation has failed due to a failure to communicate with the PPG.<br/><br/>Operations this error can occur on: createChannel, destroyChannel (only if using public/BIS PPG)<br/><br/>Recommended action: Retrying the operation might correct the issue.It also might make sense to communicate this issue up to the user telling them to try again later when the PPG is available again.</p>
+                            <p>Result error code when no invoke target ID is specified on a create operation.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Specifying a value for <code>options.invokeTargetId</code> in the static <code>create</code> function and retrying might correct the issue.</p>
                             <br />
                             
                             
@@ -3121,9 +3305,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".MISSING_INVOKE_TARGET_ID"></a>
+                            <a name=".SESSION_ALREADY_EXISTS"></a>
                  
                             
                             
@@ -3134,9 +3318,11 @@
                                         Number
                                         
                                         
-                                            MISSING_INVOKE_TARGET_ID
+                                            SESSION_ALREADY_EXISTS
                                             
                                                 
+                                                    
+                                                        = 10112
                                                     
                                                 
                                             
@@ -3157,7 +3343,238 @@
                                        
                             
                             
-                            <p>Result error code when no invoke target ID is specified on a create operation.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Specifying a value for invokeTargetId programmatically and retrying might correct the issue.</p>
+                            <p>Result error code when an underlying session already exists.<br/><br/>Operations this error can occur on: create<br/><br/>Recommended action: Check <code>options.appId</code> and <code>options.invokeTargetId</code> in the static <code>create</code> function to ensure that they are valid and unique to your application.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".INVALID_PPG_URL_OR_PPG_UNAVAILABLE"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            INVALID_PPG_URL_OR_PPG_UNAVAILABLE
+                                            
+                                                
+                                                    
+                                                        = 10113
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Result error code when the PPG is currently unavailable or an invalid PPG URL was specified.<br/><br/>Operations this error can occur on: Create Channel, Destroy Channel (only if using public/BIS PPG)<br/><br/>Recommended action: Check the value for <code>options.ppgUrl</code> in the static <code>create</code> function.If the value looks correct, then the issue might be that the PPG is temporarily unavailable.Waiting a bit and retrying the operation might correct the issue.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".CREATE_CHANNEL_OPERATION"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            CREATE_CHANNEL_OPERATION
+                                            
+                                                
+                                                    
+                                                        = 1
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Constant associated with the create channel operation.<br/><br/>Compare this constant against <code>pushTransportReadyCallback.lastFailedOperation</code> to determinewhich failed operation should be tried again.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".DESTROY_CHANNEL_OPERATION"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            DESTROY_CHANNEL_OPERATION
+                                            
+                                                
+                                                    
+                                                        = 2
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Constant associated with the destroy channel operation.<br/><br/>Compare this constant against <code>pushTransportReadyCallback.lastFailedOperation</code> to determinewhich failed operation should be tried again.</p>
                             <br />
                             
                             
@@ -3209,7 +3626,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Sep 10 2012 17:56:06 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:27:49 GMT-0400 (EDT)
         </div>
 
     </div>
