@@ -28,6 +28,52 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var filter = localStorage.getItem('selectedmenu');
+                var elements = getDesiredElements(document.body, 'x-ww-support');
+                for (var i = 0; i < elements.length; i++) {
+                    var target = elements[i];
+                    var x_ww_support = target.getAttribute('x-ww-support').split('|');
+                    if (x_ww_support.indexOf(filter) < 0) {
+                        target.style.display = 'none';
+                    }
+                }
+            }
+            
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload;
+                    var newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -74,7 +120,7 @@
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common">
+                    <div x-ww-support="bb_menu|pb_menu|bb10_menu|ripple|common">
                     
                 
   
@@ -103,7 +149,7 @@
                         
                     
                     <br /><br />
-                    <i>Last Updated: Tue Sep 18 2012 15:34:35 GMT-0400 (EDT)</i>
+                    <i>Last Updated: Sun Sep 23 2012 01:33:24 GMT-0400 (EDT)</i>
                 </p>
             </div>
         
@@ -139,7 +185,7 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td>
                                         <a href="blackberry.invoke.html#.closeChildCard">blackberry.invoke.closeChildCard</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -151,7 +197,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.invoke.html#.invoke^2">blackberry.invoke.invoke</a>
                                         <td class="apiYes">Y</td>
@@ -163,7 +209,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td>
                                         <a href="blackberry.invoke.html#.invoke">blackberry.invoke.invoke</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -175,7 +221,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td>
                                         <a href="blackberry.invoke.html#.query">blackberry.invoke.query</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -187,7 +233,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RO">FILE_TRANSFER_COPY_RO</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -199,7 +245,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RW">FILE_TRANSFER_COPY_RW</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -211,7 +257,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.FILE_TRANSFER_LINK">FILE_TRANSFER_LINK</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -223,7 +269,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.FILE_TRANSFER_PRESERVE">FILE_TRANSFER_PRESERVE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -235,7 +281,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.event:onChildCardClosed">blackberry.invoke.onChildCardClosed</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -247,7 +293,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.event:onChildCardEndPeek">blackberry.invoke.onChildCardEndPeek</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -259,7 +305,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.html#.event:onChildCardStartPeek">blackberry.invoke.onChildCardStartPeek</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -298,7 +344,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple|common"><td>
+                            <tr x-ww-support="bb_menu|pb_menu|bb10_menu|ripple|common"><td>
                                 &lt;feature id="blackberry.invoke" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -311,7 +357,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                     <table>
                         <tr>
@@ -341,7 +387,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -349,7 +395,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -361,7 +407,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -373,7 +419,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -385,7 +431,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -407,7 +453,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Events </h2>
                 </div>
@@ -415,7 +461,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -427,7 +473,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -439,7 +485,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -464,7 +510,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -472,7 +518,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -484,7 +530,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -496,7 +542,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -508,7 +554,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -550,7 +596,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
                             <a name=".closeChildCard"></a>
                  
@@ -635,7 +681,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".invoke^2"></a>
                  
@@ -771,7 +817,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
                             <a name=".invoke"></a>
                  
@@ -923,7 +969,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
                             <a name=".query"></a>
                  
@@ -1093,7 +1139,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".event:onChildCardClosed"></a>
                  
@@ -1198,7 +1244,7 @@ The <b>onChildCardClosed</b> event is fired by the navigator to notify the paren
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".event:onChildCardEndPeek"></a>
                  
@@ -1288,7 +1334,7 @@ The <b>onChildCardEndPeek</b> event is fired by the navigator to notify the pare
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".event:onChildCardStartPeek"></a>
                  
@@ -1399,7 +1445,7 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILE_TRANSFER_COPY_RO"></a>
                  
@@ -1474,7 +1520,7 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILE_TRANSFER_COPY_RW"></a>
                  
@@ -1549,7 +1595,7 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILE_TRANSFER_LINK"></a>
                  
@@ -1624,7 +1670,7 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILE_TRANSFER_PRESERVE"></a>
                  
@@ -1712,7 +1758,7 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 18 2012 15:34:35 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:33:24 GMT-0400 (EDT)
         </div>
 
     </div>

@@ -45,6 +45,52 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var filter = localStorage.getItem('selectedmenu');
+                var elements = getDesiredElements(document.body, 'x-ww-support');
+                for (var i = 0; i < elements.length; i++) {
+                    var target = elements[i];
+                    var x_ww_support = target.getAttribute('x-ww-support').split('|');
+                    if (x_ww_support.indexOf(filter) < 0) {
+                        target.style.display = 'none';
+                    }
+                }
+            }
+            
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload;
+                    var newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -126,7 +172,7 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                                 
-                                    <tr x-ww-support="bb10x">
+                                    <tr x-ww-support="bb10_menu">
                                         <td>
                                             <a href="blackberry.pim.contacts.ContactFindOptions.html">blackberry.pim.contacts.ContactFindOptions</a>
                                             <td class="apiNo">&nbsp;</td>
@@ -140,7 +186,7 @@
                                 
                             
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#favorite">favorite</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -152,7 +198,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#filter">filter</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -164,7 +210,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#limit">limit</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -176,7 +222,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#sort">sort</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -188,7 +234,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_GIVEN_NAME">SEARCH_FIELD_GIVEN_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -200,7 +246,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_FAMILY_NAME">SEARCH_FIELD_FAMILY_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -212,7 +258,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_ORGANIZATION_NAME">SEARCH_FIELD_ORGANIZATION_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -224,7 +270,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_PHONE">SEARCH_FIELD_PHONE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -236,7 +282,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_EMAIL">SEARCH_FIELD_EMAIL</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -248,7 +294,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_BBMPIN">SEARCH_FIELD_BBMPIN</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -260,7 +306,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_LINKEDIN">SEARCH_FIELD_LINKEDIN</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -272,7 +318,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_TWITTER">SEARCH_FIELD_TWITTER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -284,7 +330,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SEARCH_FIELD_VIDEO_CHAT">SEARCH_FIELD_VIDEO_CHAT</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -296,7 +342,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_GIVEN_NAME">SORT_FIELD_GIVEN_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -308,7 +354,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_FAMILY_NAME">SORT_FIELD_FAMILY_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -320,7 +366,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.contacts.ContactFindOptions.html#.SORT_FIELD_ORGANIZATION_NAME">SORT_FIELD_ORGANIZATION_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -359,7 +405,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb10x"><td>
+                            <tr x-ww-support="bb10_menu"><td>
                                 &lt;feature id="blackberry.pim.contacts" /&gt;
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -372,7 +418,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                     <table>
                         <tr>
@@ -399,7 +445,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Constructors </h2>
                 </div>
@@ -407,7 +453,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             
@@ -435,7 +481,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -443,7 +489,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Boolean
@@ -455,7 +501,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Object[]
@@ -467,7 +513,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -479,7 +525,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Object[]
@@ -501,7 +547,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -509,7 +555,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -521,7 +567,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -533,7 +579,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -545,7 +591,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -557,7 +603,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -569,7 +615,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -581,7 +627,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -593,7 +639,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -605,7 +651,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -617,7 +663,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -629,7 +675,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -641,7 +687,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             Number
@@ -680,7 +726,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".ContactFindOptions"></a>
                  
@@ -827,7 +873,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="favorite"></a>
                  
@@ -898,7 +944,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="filter"></a>
                  
@@ -974,7 +1020,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="limit"></a>
                  
@@ -1045,7 +1091,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name="sort"></a>
                  
@@ -1133,7 +1179,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_GIVEN_NAME"></a>
                  
@@ -1208,7 +1254,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_FAMILY_NAME"></a>
                  
@@ -1283,7 +1329,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_ORGANIZATION_NAME"></a>
                  
@@ -1358,7 +1404,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_PHONE"></a>
                  
@@ -1433,7 +1479,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_EMAIL"></a>
                  
@@ -1508,7 +1554,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_BBMPIN"></a>
                  
@@ -1583,7 +1629,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_LINKEDIN"></a>
                  
@@ -1658,7 +1704,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_TWITTER"></a>
                  
@@ -1733,7 +1779,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SEARCH_FIELD_VIDEO_CHAT"></a>
                  
@@ -1808,7 +1854,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SORT_FIELD_GIVEN_NAME"></a>
                  
@@ -1883,7 +1929,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SORT_FIELD_FAMILY_NAME"></a>
                  
@@ -1958,7 +2004,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".SORT_FIELD_ORGANIZATION_NAME"></a>
                  
@@ -2046,7 +2092,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 18 2012 15:34:31 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:33:20 GMT-0400 (EDT)
         </div>
 
     </div>

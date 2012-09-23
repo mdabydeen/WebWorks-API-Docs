@@ -28,6 +28,52 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var filter = localStorage.getItem('selectedmenu');
+                var elements = getDesiredElements(document.body, 'x-ww-support');
+                for (var i = 0; i < elements.length; i++) {
+                    var target = elements[i];
+                    var x_ww_support = target.getAttribute('x-ww-support').split('|');
+                    if (x_ww_support.indexOf(filter) < 0) {
+                        target.style.display = 'none';
+                    }
+                }
+            }
+            
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload;
+                    var newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -73,7 +119,7 @@
 
 
                 
-                    <div x-ww-support="bb10x">
+                    <div x-ww-support="bb10_menu">
                     
                 
   
@@ -102,7 +148,7 @@
                         
                     
                     <br /><br />
-                    <i>Last Updated: Tue Sep 18 2012 15:34:30 GMT-0400 (EDT)</i>
+                    <i>Last Updated: Sun Sep 23 2012 01:33:19 GMT-0400 (EDT)</i>
                 </p>
             </div>
         
@@ -132,7 +178,7 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.invokeCamera">blackberry.invoke.card.invokeCamera</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -144,7 +190,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.invokeFilePicker">blackberry.invoke.card.invokeFilePicker</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -156,7 +202,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.CAMERA_MODE_PHOTO">CAMERA_MODE_PHOTO</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -168,7 +214,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.CAMERA_MODE_VIDEO">CAMERA_MODE_VIDEO</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -180,7 +226,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.CAMERA_MODE_FULL">CAMERA_MODE_FULL</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -192,7 +238,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_MODE_PICKER">FILEPICKER_MODE_PICKER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -204,7 +250,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_MODE_SAVER">FILEPICKER_MODE_SAVER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -216,7 +262,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_MODE_PICKER_MULTIPLE">FILEPICKER_MODE_PICKER_MULTIPLE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -228,7 +274,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_MODE_SAVER_MULTIPLE">FILEPICKER_MODE_SAVER_MULTIPLE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -240,7 +286,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_VIEWER_MODE_LIST">FILEPICKER_VIEWER_MODE_LIST</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -252,7 +298,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_VIEWER_MODE_GRID">FILEPICKER_VIEWER_MODE_GRID</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -264,7 +310,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_VIEWER_MODE_DEFAULT">FILEPICKER_VIEWER_MODE_DEFAULT</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -276,7 +322,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_SORT_BY_NAME">FILEPICKER_SORT_BY_NAME</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -288,7 +334,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_SORT_BY_DATE">FILEPICKER_SORT_BY_DATE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -300,7 +346,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_SORT_BY_SUFFIX">FILEPICKER_SORT_BY_SUFFIX</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -312,7 +358,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_SORT_BY_SIZE">FILEPICKER_SORT_BY_SIZE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -324,7 +370,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_SORT_ORDER_ASCENDING">FILEPICKER_SORT_ORDER_ASCENDING</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -336,7 +382,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_SORT_ORDER_DESCENDING">FILEPICKER_SORT_ORDER_DESCENDING</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -348,7 +394,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_TYPE_PICTURE">FILEPICKER_TYPE_PICTURE</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -360,7 +406,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_TYPE_DOCUMENT">FILEPICKER_TYPE_DOCUMENT</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -372,7 +418,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_TYPE_MUSIC">FILEPICKER_TYPE_MUSIC</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -384,7 +430,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_TYPE_VIDEO">FILEPICKER_TYPE_VIDEO</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -396,7 +442,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.invoke.card.html#.FILEPICKER_TYPE_OTHER">FILEPICKER_TYPE_OTHER</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -435,7 +481,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb10x"><td>
+                            <tr x-ww-support="bb10_menu"><td>
                                 &lt;feature id="blackberry.invoke.card" /&gt;
                                 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -448,7 +494,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                     <table>
                         <tr>
@@ -478,7 +524,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -486,7 +532,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -498,7 +544,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             void
@@ -526,7 +572,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -534,7 +580,7 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -546,7 +592,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -558,7 +604,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -570,7 +616,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -582,7 +628,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -594,7 +640,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -606,7 +652,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -618,7 +664,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -630,7 +676,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -642,7 +688,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -654,7 +700,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -666,7 +712,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -678,7 +724,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -690,7 +736,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -702,7 +748,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -714,7 +760,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -726,7 +772,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -738,7 +784,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -750,7 +796,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -762,7 +808,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -774,7 +820,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
                                             String
@@ -816,7 +862,7 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".invokeCamera"></a>
                  
@@ -985,7 +1031,7 @@ function invokeCameraCard() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".invokeFilePicker"></a>
                  
@@ -1297,7 +1343,7 @@ function invokeFileInPickerMode12() {
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CAMERA_MODE_PHOTO"></a>
                  
@@ -1372,7 +1418,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CAMERA_MODE_VIDEO"></a>
                  
@@ -1447,7 +1493,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".CAMERA_MODE_FULL"></a>
                  
@@ -1522,7 +1568,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_MODE_PICKER"></a>
                  
@@ -1597,7 +1643,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_MODE_SAVER"></a>
                  
@@ -1672,7 +1718,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_MODE_PICKER_MULTIPLE"></a>
                  
@@ -1747,7 +1793,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_MODE_SAVER_MULTIPLE"></a>
                  
@@ -1822,7 +1868,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_VIEWER_MODE_LIST"></a>
                  
@@ -1897,7 +1943,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_VIEWER_MODE_GRID"></a>
                  
@@ -1972,7 +2018,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_VIEWER_MODE_DEFAULT"></a>
                  
@@ -2047,7 +2093,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_SORT_BY_NAME"></a>
                  
@@ -2122,7 +2168,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_SORT_BY_DATE"></a>
                  
@@ -2197,7 +2243,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_SORT_BY_SUFFIX"></a>
                  
@@ -2272,7 +2318,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_SORT_BY_SIZE"></a>
                  
@@ -2347,7 +2393,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_SORT_ORDER_ASCENDING"></a>
                  
@@ -2422,7 +2468,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_SORT_ORDER_DESCENDING"></a>
                  
@@ -2497,7 +2543,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_TYPE_PICTURE"></a>
                  
@@ -2572,7 +2618,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_TYPE_DOCUMENT"></a>
                  
@@ -2647,7 +2693,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_TYPE_MUSIC"></a>
                  
@@ -2722,7 +2768,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_TYPE_VIDEO"></a>
                  
@@ -2797,7 +2843,7 @@ function invokeFileInPickerMode12() {
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
                             <a name=".FILEPICKER_TYPE_OTHER"></a>
                  
@@ -2885,7 +2931,7 @@ function invokeFileInPickerMode12() {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Sep 18 2012 15:34:30 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:33:19 GMT-0400 (EDT)
         </div>
 
     </div>
