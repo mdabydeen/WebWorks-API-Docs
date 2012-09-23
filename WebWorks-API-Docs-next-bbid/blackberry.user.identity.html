@@ -1,0 +1,1450 @@
+
+
+<section  class="page_container references">
+	<div class="row">
+        <nav class="column grid_4 side-navigation" id="side-nav-api" role="navigation">
+            <div id="sticky-anchor"> </div>
+            <div class="side-nav-wrapper" id="sticky">
+                <div class="side-nav-content clearfix" id="none">
+                    <div class="side-nav-section clearfix" id="side-nav-title">
+                        <h3>API Reference</h3>
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-parents"> 
+                    </div>
+                    <div class="side-nav-section clearfix" id="side-nav-filter"> 
+                    </div>
+                    <div class="side-nav-section loading clearfix" id="side-nav-children"> 
+                    </div>
+                </div>
+            </div>
+            <div class="side-navspacer-bottom"> </div>
+        </nav>
+
+        <div class="column grid_8">
+                <div class="row">
+                    <article id="main" class="column grid_8" role="main">
+                        
+
+<section>
+
+    <script type="text/javascript">
+
+        function viewSupportedTable() {
+            var table = document.getElementById('APISupportTable');
+            if (table != null && table.style.display != 'inline') {
+                table.style.display = 'inline';
+            }
+            else {
+                table.style.display = 'none';
+            }
+        }
+
+    </script>
+    
+    <style type="text/css">
+
+        .apiYes {
+            background-color: #D1F8FB;
+        }
+        
+        .tdNoWrap {
+            white-space:nowrap;
+        }
+        
+        .APISupportTable {
+            display:none;
+        }
+    </style>
+
+    <div>
+
+
+        <h1>
+            
+                User Identity
+            
+        </h1>
+
+
+        
+            <p>
+                The User Identity object contains information regarding the user&apos;s identity and accounts on a BlackBerry smartphone.
+
+<h3>Identity Service SDK Overview - interfaces for using Identity
+Services from 3rd Party applications</h3><br />
+
+<p><b>What functionality does this Identity Service SDK provide to apps?</b>
+
+<p>This SDK provides a series of functions that enable an application to choose an
+identity provider(s) for their application, and to request authentication tokens
+from that provider, as well as information about the user.
+
+<p>At present, the only Identity Provider available is BlackBerry ID. As more
+identity providers become available, this SDK will provide access to those
+providers.
+
+
+<p><b>Why integrate with Identity Service?</b>
+
+<p>If your app needs to interact with an off-device service that requires user
+authentication, you can integrate with Identity Service to provide seamless
+access to the off-device service. The interaction from the app to the off-device
+service is 'seamless' because the user is not prompted within the app for the
+username and password required by the off-device service. Instead, BlackBerry ID
+can pass back a 'token' that authenticates the user's identity, and that token
+can be read and understood by the off-service device, thus allowing the user
+access to that off-device content WITHOUT requiring user interaction for
+authentication.
+
+<p><b>Fictitious Example</b>: Imagine an app called 'MyPics' that has a user's
+photo content stored off-device, and the content is accessible from the web and
+from BlackBerry devices. If 'MyPics' is integrated with BlackBerry ID
+(i.e. we've created a token specifically for them), the app can request a token
+from BlackBerry ID to confirm the user's identity. The app can send that token
+to the off-device content service for 'MyPics', as a way of 'signing in' that
+user to their MyPics account WITHOUT requiring the user to enter a username and
+password within the 'MyPics' app. The result is a seamless user experience for
+the app; the user will get their photos on the device without having to sign in
+to the 'MyPics' service. Since they are already signed in to their device with
+their BlackBerry ID, and since the app is integrated with BlackBerry ID to use
+tokens, it all happens without any user annoyance of being prompted to 'sign in'
+to MyPics.
+
+<p>Even if your app doesn't need to communicate with off-device services using
+tokens, there are other useful APIs in this SDK that provide access the user's
+account information (first name, last name, screen name, or username).
+
+<p>The next section provides a more detailed technical overview of the APIs that
+provide this functionality.<br />
+
+
+<p><b>Identity Service SDK functionality - API overview</b>
+
+<p>This Identity Service WebWorks SDK provides an interface for applications to make
+use of BlackBerry ID functionality from within their app.
+
+<p>The APIs provided in this SDK enable apps to do the following:
+- retrieve the account information of the user who is signed in with their
+BlackBerry ID on the BB10 device. The API <b>getProperties()</b> can be
+used to retrieve the user's first name, last name, username, and screenname.
+
+<p>- retrieve tokens that prove the user's identity for off-device services
+<i>(known as 'relying parties', because they are <b>relying</b> on BlackBerry ID
+to confirm the user's identity)</i>, so that the user can have seamless access
+to that off-device service without being required to enter their username and
+password. These tokens are used by the off-device service (relying party) to
+confirm the identity of the user. <b>NOTE: The APIs <b>getToken()</b> and
+<b>clearToken()</b> can only be used if the relying party has gone through
+integration process with RIM to have tokens defined for that relying party.</b>
+
+<p>- for background services where it doesn't make sense to show any screens to the
+user (i.e. background services that do not have any UI), suppress the ability
+for the Identity Service to pop up an authentication/password confirmation
+dialog box. The API <b>setOption()</b> is provided to ensure that the
+Identity Service does not present a pop up screen for authentication/password
+verification within background services where that wouldn't make sense.
+
+<p><b>Important</b>: There is never a need for an application to present a
+"sign in" screen to the user. All the IDS APIs listed above will check to see if
+their is a BlackBerry ID associated with the device, and if there isn't one,
+they will pop an authentication (sign in) screen on the device (unless the
+calling app runs in the background and has 'set_GUI_allowed = False' to
+specifically prevent this from happening.)
+
+<p><b>About Callback functions</b>
+
+<p>Several IDS APIs have the following 2 parameters:
+-    Success callback function
+-    Failure callback function
+
+<p>The Identity Service responds asynchronously to API calls made by an
+application. Upon detection of a response, the IDS library will parse the
+response (which will either be success or failure), and invoke the corresponding
+callback function that the app has provided for the success or failure case.
+
+<p>So the callback functions are a mechanism for IDS library to pass the parsed
+response from the daemon back to the calling application. The callback functions
+cannot be NULL; the app must specify what to do in both the success and failure
+scenarios.
+
+<p><b>Integrating an application with IDS APIs</b>
+
+
+<p>The calling app uses the function <b>registerProvider()</b> which will
+connect the app to an Identity Service. This step must be done
+<i>before</i> the app calls any of the IDS APIs described above
+(getToken(), clearToken(), etc). After the app makes an API call to
+one of the IDS APIs listed above (i.e. getToken), the IDS library will
+asynchronously process that request, and call the success/failure callback provided.
+
+
+                
+                    <div x-ww-support="bb10x">
+                    
+                
+  
+
+                    </div>
+                
+            </p>
+        
+
+
+        
+            
+            <br />
+        
+
+
+        
+
+
+        
+
+
+        
+            <div class="ref-sect ref-index">
+                <div class="ref-sect-title">
+                    <h2>Supported Platform(s)</h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table>
+                            <tbody>
+                            
+                                <tr><td>- BlackBerry 10</td></tr>
+                            
+                            </tbody>
+                        </table>
+                    
+                    <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
+                    <div class="APISupportTable" id="APISupportTable">
+                        <table class="apiTable">
+                            <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                            
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.clearToken">blackberry.user.identity.clearToken</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.getProperties">blackberry.user.identity.getProperties</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.getToken">blackberry.user.identity.getToken</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.getVersion">blackberry.user.identity.getVersion</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.registerProvider">blackberry.user.identity.registerProvider</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.setOption">blackberry.user.identity.setOption</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+
+
+        <div class="ref-sect ref-index">
+            <div class="ref-sect-title">
+                <h2>Configuration Document Settings</h2>
+            </div>
+            <div class="ref-sect-content">
+                <table><tbody>
+                    <tr><td>
+                        <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
+                    </td></tr>
+                    
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support="bb10x"><td>
+                                &lt;feature id="blackberry.user.identity" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                            </td></tr>
+                        
+                    </table>
+                
+
+                <div x-ww-support="pb1.0|pb2.0">
+                    
+                        
+                    
+                    <table>
+                        <tr>
+                            <th>Permission Elements (PlayBook Only)</th>
+                        </tr>
+                        
+                            
+                                <tr><td><i>
+                                    You must declare the permission element(s) below in your configuration document:
+                                </i></td></tr>
+                                
+                                    <tr><td>
+                                        - &lt;rim:permit&gt;access_bbid_pii&lt;/rim:permit&gt;
+                                        <br />
+                                        Permits your app to access user identity information.
+                                        <br />
+                                    </td></tr>
+                                
+                            
+
+                            
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+
+
+<div>
+    
+        
+        
+    
+        
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
+                <div class="ref-sect-title">
+                    <h2> Functions </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.clearToken">blackberry.user.identity.clearToken</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.getProperties">blackberry.user.identity.getProperties</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.getToken">blackberry.user.identity.getToken</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            int
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.getVersion">blackberry.user.identity.getVersion</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            int
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.registerProvider">blackberry.user.identity.registerProvider</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            int
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.user.identity.html#.setOption">blackberry.user.identity.setOption</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+</div>
+
+
+
+        
+        
+
+    
+    
+
+    
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Functions</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".clearToken"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        void
+                                        
+                                        
+                                            blackberry.user.identity.clearToken
+                                            
+                                                
+                                                    (provider : String, tokenType : String, appliesTo : String, successCallback: function(result : JSON), failureCallback: function(result : JSON))
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Issue a clear token request.  In cases where the token seems to be invalid or
+too close to expiry to be deemed useful, an application can clear out the
+currently cached token in order to retrieve a newly generated token in the
+next getToken() call.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>provider</b></td>
+                                            <td>
+                                                
+                                                The identity provider to send this request to.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>tokenType</b></td>
+                                            <td>
+                                                
+                                                A token type. It must be NOT NULL
+and 32 characters >= tokenType > 0 character                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>appliesTo</b></td>
+                                            <td>
+                                                
+                                                The application or service to which the token applies. It
+must be NOT NULL and 96 characters >= applies_to > 0 character                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>successCallback</b></td>
+                                            <td>
+                                                
+                                                Function which is invoked upon successful operation of this
+method.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>result:</b> A JSON object containing the in the form below:
+<pre>{
+"result": true
+}</pre>
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>failureCallback</b></td>
+                                            <td>
+                                                
+                                                Function which is invoked when this method fails. This
+callback contains an errorCode parameter to specify the failure condition.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>result:</b> A JSON object containing details of the failure in the form below:
+<pre>{
+"result":"50009",
+"errorDescription":"The appliesTo value is not valid"
+}</pre>
+
+<p><b>Error Handling:</b><br>
+Requests that do not complete successfully will result in the failure
+callback being called with one of the following result codes:
+<p>- 49999: An internal error has occurred attempting to process
+the request.
+<p>- 50009: The appliesTo value is not valid.
+<p>- 50008: The tokenType value is not valid.
+<p>- 50010: There are not enough resources available to
+process the request.
+<p>- 50003: The account is currently locked, token
+access is unavailable while locked.
+<p>- 50004: The user could not be
+authenticated.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;
+	function clearTokenSuccess(clearTokenResult) {
+		alert("Token cleared: " + clearTokenResult.cleared);
+	}
+			
+	function clearTokenFailure(result) {
+		alert("Failed to clear token - result is: " + result.result + " with description: " + result.errorDescription);
+	}
+
+	blackberry.user.identity.registerProvider("ids:rim:bbid");
+	blackberry.user.identity.clearToken("ids:rim:bbid", "MyTokenType", "urn:token:myapplication", clearTokenSuccess, clearTokenFailure);
+&lt;&sol;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".getProperties"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        void
+                                        
+                                        
+                                            blackberry.user.identity.getProperties
+                                            
+                                                
+                                                    (provider : String, propertyList : String, successCallback: function(result : JSON), failureCallback: function(result : JSON))
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Issue a request for a property.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>provider</b></td>
+                                            <td>
+                                                
+                                                The identity provider to send this request to.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>propertyList</b></td>
+                                            <td>
+                                                
+                                                A comma separated string listing each of the properties
+requested                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>successCallback</b></td>
+                                            <td>
+                                                
+                                                Function which is invoked upon successful operation of this
+method.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>result:</b> A JSON object containing the in the form below:
+<pre>{[
+		{"uri":"urn:bbid:firstname":"value":"john"},
+		{"uri":"urn:bbid:lastname":"value":"doe"}
+}</pre>
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>failureCallback</b></td>
+                                            <td>
+                                                
+                                                Function which is invoked when this method fails. This
+callback contains an errorCode parameter to specify the failure condition.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>result:</b> A JSON object containing details of the failure in the form below:
+<pre>{
+"result":"50004",
+"errorDescription":"The user could not be authenticated."
+}</pre>
+<p><b>Error Handling:</b><br>
+Requests that do not complete successfully will result in the failure
+callback being called with one of the following result codes:
+<p>- 49999: An internal error has occurred attempting to process
+the request.
+<p>- 50010: There are not enough resources available to
+process the request.
+<p>- 50003: The account is currently locked, token
+access is unavailable while locked.
+<p>- 50004: The user could not be authenticated.
+<p>- 50011: The service is currently offline and
+and cannot retreive the requested token.
+<p>- 50002: The length of a property name in the list exceeds
+the maximum name length (32).
+<p>- 50017: The application does not have access to
+one of the requested properties.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;
+	function getPropertiesSuccess(properties) {
+		alert("Get properties returned the following user properties:");
+		for( prop in properties ) {
+			alert("Property: " + properties[prop].uri + " value: " + properties[prop].value);
+		}
+	}
+
+	function getPropertiesFailure(result) {
+		alert("Failed to retrieve user properties: " + result.result + " details: " + result.failureInfo);
+	}
+
+	blackberry.user.identity.registerProvider("ids:rim:bbid");
+	blackberry.user.identity.getProperties("ids:rim:bbid", "urn:bbid:firstname,urn:bbid:lastname", getPropertiesSuccess, getPropertiesFailure);
+&lt;&sol;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".getToken"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        void
+                                        
+                                        
+                                            blackberry.user.identity.getToken
+                                            
+                                                
+                                                    (provider : String, tokenType : String, appliesTo : String, successCallback: function(tokenResult : JSON), failureCallback: function(result : JSON))
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Issue a get token request.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>provider</b></td>
+                                            <td>
+                                                
+                                                The identity provider to send this request to.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>tokenType</b></td>
+                                            <td>
+                                                
+                                                A token type. It must be NOT NULL
+and 32 characters >= tokenType > 0 character                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>appliesTo</b></td>
+                                            <td>
+                                                
+                                                The application or service to which the token applies. It
+must be NOT NULL and 96 characters >= applies_to > 0 character                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>successCallback</b></td>
+                                            <td>
+                                                
+                                                Function which is invoked upon successful operation of this
+method.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>tokenResult:</b> A JSON object containing a token and it's information in the form below:
+<pre>{
+"token": "ghdaj23i8rghaepeghk;a",
+"params": ["name":"TOKEN_SECRET","value":"oguireqhge"]
+}</pre>
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>failureCallback</b></td>
+                                            <td>
+                                                
+                                                Function which is invoked when this method fails. This
+callback contains an errorCode parameter to specify the failure condition.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>result:</b> A JSON object containing details of the failure in the form below:
+<pre>{
+"result":"50009",
+"errorDescription":"The appliesTo value is not valid"
+}</pre>
+
+<p><b>Error Handling:</b><br>
+Requests that do not complete successfully will result in the failure
+callback being called with one of the following result codes:
+<p>- 49999: An internal error has occurred attempting to process
+the request.
+<p>- 50009: The appliesTo value is not valid.
+<p>- 50008: The tokenType value is not valid.
+<p>- 50010: There are not enough resources available to
+process the request.
+<p>- 50003: The account is currently locked, token
+access is unavailable while locked.
+<p>- 50004: The user could not be authenticated.
+<p>- 50011: The service is currently offline and
+and cannot retreive the requested token.
+<p>- 50012: An error occurred communicating with
+the service.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;
+	function getTokenSuccess(tokenResult) {
+		alert("Received token: " + tokenResult.token);
+		for( param in tokenResult.tokenParams ) {
+			alert("Token param: " + tokenResult.tokenParams[param].name + " and value: " + tokenResult.tokenParams[param].value);
+		}
+	}
+			
+	function getTokenFailure(result) {
+		alert("Failed to retrieve token - result is: " + result.result + " with description: " + result.errorDescription);
+	}
+
+	blackberry.user.identity.registerProvider("ids:rim:bbid");
+	blackberry.user.identity.getToken("ids:rim:bbid", "MyTokenType", "urn:token:myapplication", getTokenSuccess, getTokenFailure);
+&lt;&sol;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".getVersion"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        int
+                                        
+                                        
+                                            blackberry.user.identity.getVersion
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The getVersion() function retrieves the version of the IDS library
+that your application is using.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> "1000000" </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>
+&lt;script type=&quot;text&sol;javascript&quot;&gt;
+  alert(&quot;Identity Service version is:&quot; + blackberry.user.identity.getVersion());
+&lt;&sol;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".registerProvider"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        int
+                                        
+                                        
+                                            blackberry.user.identity.registerProvider
+                                            
+                                                
+                                                    (name : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Applications use this function to register which Identity Provider(s) that
+they want to use.  Once the application has initialized the library, it can
+register for each of the identity providers it is interested in.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>name</b></td>
+                                            <td>
+                                                
+                                                The name of the identity provider that the application wants to
+use for retrieving user identity information (only BlackBerry ID is supported
+at this time).                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> result </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>
+&lt;script type=&quot;text&sol;javascript&quot;&gt;
+	var registerResult = blackberry.user.identity.registerProvider("ids:rim:bbid");
+	if( registerResult.errorDescription ) {
+		alert("IDS register provider error: " + registerResult.result + " with description: " + registerResult.errorDescription);
+	}
+&lt;&sol;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".setOption"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        int
+                                        
+                                        
+                                            blackberry.user.identity.setOption
+                                            
+                                                
+                                                    (option : int, value : String)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Configure an option in the Identity Services library.  These options allow an
+application to modify the default behavior of the IDS library as well as
+configure the way the library and application integrate together.
+<p>Available options are:
+<p> Set GUI Allowed (option = 0, value = true/false)
+<p>Option to set whether or not GUI allowed flag is set.  Value is "true" or
+"false".  By default, in cases where user input is required, the Identity
+Service performs the user interaction on behalf of the calling
+application.  If this has been set to false, and user input is required,
+the API will return an error.  If no user interaction is required to
+complete the API, this setting has no effect.
+<p> Set Group ID (option = 1, value = groupId)
+<p> Set the group ID of the calling application for UI dialogs.  String
+version of UI group id.  This is required in cases where the Identity
+Service requires user input from the user and must open an interface in
+the context of the calling application.
+<p> Set Verbosity (option = 2, value = {"Silent", "Normal", "Verbose")
+<p> Set the library logging verbosity level.  Useful during application
+development to allow developers to be able to increase logging for
+diagnostics. Note that IDS logs are generated on stderr, and so should be
+captured in the application's log file.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>option</b></td>
+                                            <td>
+                                                
+                                                The option to be modified.                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>value</b></td>
+                                            <td>
+                                                
+                                                The new string value to set                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;
+	var setOptionResult = blackberry.user.identity.setOption(0, true);
+	if( setOptionResult.errorDescription ) {
+		alert("IDS set option error: " + setOptionResult.result + " with description: " + setOptionResult.errorDescription);
+	}
+&lt;&sol;script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+
+
+
+        <div >
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:23:05 GMT-0400 (EDT)
+        </div>
+
+    </div>
+</section>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
