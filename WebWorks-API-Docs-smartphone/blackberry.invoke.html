@@ -28,6 +28,52 @@
 <section>
 
     <script type="text/javascript">
+        (function() {
+            function getDesiredElements(element, attributeName) {
+                var results = new Array();
+                if (element.hasAttribute(attributeName))
+                    results.push(element);
+
+                //Check child nodes
+                for (var i = 0; i < element.childNodes.length; i++) {
+                    var child = element.childNodes[i];
+                    if (child.nodeType == 1) {
+                        results = results.concat(getDesiredElements(child, attributeName));
+                    }
+                }
+                return results;
+            }
+
+            function runFilter() {
+                var filter = localStorage.getItem('selectedmenu');
+                var elements = getDesiredElements(document.body, 'x-ww-support');
+                for (var i = 0; i < elements.length; i++) {
+                    var target = elements[i];
+                    var x_ww_support = target.getAttribute('x-ww-support').split('|');
+                    if (x_ww_support.indexOf(filter) < 0) {
+                        target.style.display = 'none';
+                    }
+                }
+            }
+            
+            if(window.attachEvent) {
+                window.attachEvent('onload', runFilter);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload;
+                    var newonload = function() {
+                        curronload();
+                        runFilter();
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = runFilter;
+                }
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
 
         function viewSupportedTable() {
             var table = document.getElementById('APISupportTable');
@@ -74,7 +120,7 @@
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+                    <div x-ww-support="bb_menu|pb_menu|bb10_menu|ripple|common">
                     
                 
   
@@ -103,7 +149,7 @@
                         
                     
                     <br /><br />
-                    <i>Last Updated: Sat Jul 21 2012 01:09:06 GMT-0400 (EDT)</i>
+                    <i>Last Updated: Sun Sep 23 2012 01:43:48 GMT-0400 (EDT)</i>
                 </p>
             </div>
         
@@ -139,9 +185,9 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td>
-                                        <a href="blackberry.invoke.html#.invoke">blackberry.invoke.invoke</a>
+                                        <a href="blackberry.invoke.html#.closeChildCard">blackberry.invoke.closeChildCard</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -151,7 +197,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td>
                                         <a href="blackberry.invoke.html#.invoke^2">blackberry.invoke.invoke</a>
                                         <td class="apiYes">Y</td>
@@ -163,7 +209,19 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
+                                    <td>
+                                        <a href="blackberry.invoke.html#.invoke">blackberry.invoke.invoke</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td>
                                         <a href="blackberry.invoke.html#.query">blackberry.invoke.query</a>
                                         <td class="apiNo">&nbsp;</td>
@@ -175,207 +233,87 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_ADDRESSBOOK">APP_ADDRESSBOOK</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_BLUETOOTH_CONFIG">APP_BLUETOOTH_CONFIG</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_CALCULATOR">APP_CALCULATOR</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_CALENDAR">APP_CALENDAR</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_CAMERA">APP_CAMERA</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MAPS">APP_MAPS</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MEMOPAD">APP_MEMOPAD</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MESSAGES">APP_MESSAGES</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_PHONE">APP_PHONE</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_SEARCH">APP_SEARCH</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_TASKS">APP_TASKS</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_BROWSER">APP_BROWSER</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_JAVA">APP_JAVA</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MUSIC">APP_MUSIC</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RO">FILE_TRANSFER_COPY_RO</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_PHOTOS">APP_PHOTOS</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RW">FILE_TRANSFER_COPY_RW</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_VIDEOS">APP_VIDEOS</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_LINK">FILE_TRANSFER_LINK</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_APPWORLD">APP_APPWORLD</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_PRESERVE">FILE_TRANSFER_PRESERVE</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.invoke.html#.event:onChildCardClosed">blackberry.invoke.onChildCardClosed</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.invoke.html#.event:onChildCardEndPeek">blackberry.invoke.onChildCardEndPeek</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.invoke.html#.event:onChildCardStartPeek">blackberry.invoke.onChildCardStartPeek</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
@@ -406,7 +344,7 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple"><td>
+                            <tr x-ww-support="bb_menu|pb_menu|bb10_menu|ripple|common"><td>
                                 &lt;feature id="blackberry.invoke" /&gt;
                                 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
@@ -419,7 +357,7 @@
                     </table>
                 
 
-                <div x-ww-support="pb1.0|pb2.0">
+                <div x-ww-support="pb_menu">
                     
                     <table>
                         <tr>
@@ -449,7 +387,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|bb10x|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
                 <div class="ref-sect-title">
                     <h2> Functions </h2>
                 </div>
@@ -457,19 +395,19 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.invoke.html#.invoke">blackberry.invoke.invoke</a>
+                                        <a href="blackberry.invoke.html#.closeChildCard">blackberry.invoke.closeChildCard</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                                <tr x-ww-support="bb_menu|pb_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -481,7 +419,19 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb10x|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.invoke.html#.invoke">blackberry.invoke.invoke</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
                                             void
@@ -502,6 +452,57 @@
     
         
         
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
+                <div class="ref-sect-title">
+                    <h2> Events </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.invoke.html#.event:onChildCardClosed">blackberry.invoke.onChildCardClosed</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.invoke.html#.event:onChildCardEndPeek">blackberry.invoke.onChildCardEndPeek</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.invoke.html#.event:onChildCardStartPeek">blackberry.invoke.onChildCardStartPeek</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
+        
     
         
         
@@ -509,7 +510,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
                 <div class="ref-sect-title">
                     <h2> Constants </h2>
                 </div>
@@ -517,206 +518,50 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_ADDRESSBOOK">APP_ADDRESSBOOK</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RO">FILE_TRANSFER_COPY_RO</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_BLUETOOTH_CONFIG">APP_BLUETOOTH_CONFIG</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RW">FILE_TRANSFER_COPY_RW</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_CALCULATOR">APP_CALCULATOR</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_LINK">FILE_TRANSFER_LINK</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                                <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            Number
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.invoke.html#.APP_CALENDAR">APP_CALENDAR</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_CAMERA">APP_CAMERA</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MAPS">APP_MAPS</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MEMOPAD">APP_MEMOPAD</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MESSAGES">APP_MESSAGES</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_PHONE">APP_PHONE</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_SEARCH">APP_SEARCH</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_TASKS">APP_TASKS</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_BROWSER">APP_BROWSER</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_JAVA">APP_JAVA</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_MUSIC">APP_MUSIC</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_PHOTOS">APP_PHOTOS</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_VIDEOS">APP_VIDEOS</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="pb1.0|pb2.0|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.APP_APPWORLD">APP_APPWORLD</a>
+                                        <a href="blackberry.invoke.html#.FILE_TRANSFER_PRESERVE">FILE_TRANSFER_PRESERVE</a>
                                         
                                     </td>
                                 </tr>
@@ -751,9 +596,9 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
-                            <a name=".invoke"></a>
+                            <a name=".closeChildCard"></a>
                  
                             
                             
@@ -761,14 +606,13 @@
                                     
                                         static              
                                         
+                                        void
                                         
-                                            void
                                         
-                                        
-                                            blackberry.invoke.invoke
+                                            blackberry.invoke.closeChildCard
                                             
                                                 
-                                                    (request : Object, onSuccess: function(), onError: function(<i>[error: String]</i>))
+                                                    ()
                                                 
                                             
                                                                   
@@ -788,7 +632,7 @@
                                        
                             
                             
-                            <p>Invokes another application</p>
+                            <p>As a parent, close the child Card</p>
                             <br />
                             
                             
@@ -811,69 +655,6 @@
                             <br />
                             
                             
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>request</b></td>
-                                            <td>
-                                                
-                                                Object literal that specifies what to invoke. None of the fields are required. Refer to the example code for more information.                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
-                                                    
-                                                        <br />
-                                                        <b>action:</b> The action to be performed by the target.
-                                                    
-                                                        <br />
-                                                        <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
-                                                    
-                                                        <br />
-                                                        <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
-                                                    
-                                                        <br />
-                                                        <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
-                                                    
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onSuccess</b></td>
-                                            <td>
-                                                
-                                                Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess().                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onError</b></td>
-                                            <td>
-                                                
-                                                Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>error:</b>  A String that describes the error.
-                                                    
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
                                                
 
                             
@@ -893,14 +674,14 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function viewPicture() {    // view picture    blackberry.invoke.invoke({        uri: &lt;path to jpg file&gt;,        action: bb.action.VIEW    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function closeChildCard() {    // Close the child Card for some reason    blackberry.invoke.closeChildCard();}&lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|ripple">
                         <h3>
                             <a name=".invoke^2"></a>
                  
@@ -1036,7 +817,159 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10x|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
+                        <h3>
+                            <a name=".invoke"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.invoke.invoke
+                                            
+                                                
+                                                    (request : Object, onSuccess: function(), onError: function(<i>[error: String]</i>))
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Invokes another application</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>request</b></td>
+                                            <td>
+                                                
+                                                Object literal that specifies what to invoke. None of the fields are required. Refer to the example code for more information.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>target:</b> The id that identifies the component to invoke. If target is omitted, the invocation framework would perform brokering based on the specified action, type, URI or data to locate an appropriate target to invoke.
+                                                    
+                                                        <br />
+                                                        <b>action:</b> The action to be performed by the target.
+                                                    
+                                                        <br />
+                                                        <b>type:</b> MIME type of data to be acted on. If the MIME type is not specified then the mime type would be inferred from the given URI. If the MIME type cannot be inferred or URI field is empty then invocation will be rejected.
+                                                    
+                                                        <br />
+                                                        <b>uri:</b> URI pointing to invocation data. If no URI is provided then this implies that the invocation data is provided in-band in the data field of the invocation request.
+                                                    
+                                                        <br />
+                                                        <b>data:</b> Data (String or Blob) to be acted upon encoded based on the specified type.<br/>NOTE: If a String is passed, make sure that it does not contain unicode characters or invocation will fail.
+                                                    
+                                                        <br />
+                                                        <b>file_transfer_mode:</b> An optional string that represents the file transfer mode that can be one of <a href="blackberry.invoke.html#.FILE_TRANSFER_PRESERVE">FILE_TRANSFER_PRESERVE</a>, <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RO">FILE_TRANSFER_COPY_RO</a>, <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RW">FILE_TRANSFER_COPY_RW</a>, <a href="blackberry.invoke.html#.FILE_TRANSFER_LINK">FILE_TRANSFER_LINK</a>. If omitted, it a sensible default of <a href="blackberry.invoke.html#.FILE_TRANSFER_COPY_RO">FILE_TRANSFER_COPY_RO</a> will be used.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>onSuccess</b></td>
+                                            <td>
+                                                
+                                                Callback function that will be triggered when the invocation is successful. Expected signature: function onSuccess().                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>onError</b></td>
+                                            <td>
+                                                
+                                                Callback function that will be triggered when invocation is not successful, or if request's data field cannot be encoded (e.g. when it contains unicode characters). Expected signature: function onError(error).                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>error:</b>  A String that describes the error.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onInvokeSuccess() {    alert("Invocation successful!");}function onInvokeError(error) {    alert("Invocation failed, error: " + error);}function openWebLink() {    // open web link - allows the system to choose an appropriate target that handles http://    blackberry.invoke.invoke({        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openWebLinkInBrowser() {    // open web link in browser    blackberry.invoke.invoke({        target: "sys.browser",        uri: "http://www.blackberry.com"    }, onInvokeSuccess, onInvokeError);}function openMP3File() {    // open mp3 file - allows the system to choose an appropriate target that handles audio/mpeg3    blackberry.invoke.invoke({        type: "audio/mpeg3",        uri: &lt;path to mp3 file&gt;    }, onInvokeSuccess, onInvokeError);}function viewPicture() {    // view picture    blackberry.invoke.invoke({        uri: &lt;path to jpg file&gt;,        action: bb.action.VIEW    }, onInvokeSuccess, onInvokeError);}function openAnotherApp() {    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.custom.json.data",        type: "text/plain",        data: "{'myData': 'A string I pass to another app'}"    }, onInvokeSuccess, onInvokeError);}function openAnotherAppWithUnicodeData(unicodeStr) {    // convert unicode string before calling invoke, the receiver app will have to    // call decodeURIComponent(escape(str)) to get the unicode string back    var convertedStr = unescape(encodeURIComponent(unicodeStr));    // open another application that understands custom data    blackberry.invoke.invoke({        target: "another.app.that.handles.unicode.data",        data: convertedStr    }, onInvokeSuccess, onInvokeError);}function invokeCard() {    // invoking Card is the same as invoking an application, except the target specified should point to the "Card" target entry point    blackberry.invoke.invoke({        target: "an.app.that.supports.card", // The target should point to the "Card" target entry point of an application        type: "text/plain",        data: "{'myData': 'Some data'}"    }, onInvokeSuccess, onInvokeError);}function invokePictureViewer() {    // invoking Card is the same as invoking an application, except the target specified should point to the "Card" target entry point    blackberry.invoke.invoke({        action: "bb.action.VIEW",        uri : "local:///img/image.jpg",        file_transfer_mode : blackberry.invoke.FILE_TRANSFER_COPY_RO    }, onInvokeSuccess, onInvokeError);}function invokeAudoPlayer() {     blackberry.invoke.invoke({         action: "bb.action.VIEW",         uri : "local:///audio/test.mp3",         file_transfer_mode : blackberry.invoke.FILE_TRANSFER_COPY_RO      }, onInvokeSuccess, onInvokeError);}function invokeAudioWithoutTrasnsfer() {     blackberry.invoke.invoke({         action: "bb.action.VIEW",         uri : "local:///audio/test.mp3",      }, onInvokeSuccess, onInvokeError);}&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
                             <a name=".query"></a>
                  
@@ -1200,6 +1133,306 @@
 
     
     
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Events</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:onChildCardClosed"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.invoke.onChildCardClosed
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br /><br />
+The <b>onChildCardClosed</b> event is fired by the navigator to notify the parent that a card is closed. The event includes any response data sent by the card (if the card requested its own closure).</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the onChildCardClosed event                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>request:</b> An object that includes any response data sent by the card (if the card requested closure).
+                                                    
+                                                        <br />
+                                                        <b>request.reason:</b> Describes application level description of why the card was closed. In the case that the close was due to a navigation Navigator will insert the value "navigation"
+                                                    
+                                                        <br />
+                                                        <b>request.type:</b> Describes the type and encoding of the value in the data attributes
+                                                    
+                                                        <br />
+                                                        <b>request.data:</b> Describes the data that will be returned to the parent
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onChildCardClosedHandler(request) {   // The child Card is closed and reason is "OK", process the closure data;   // otherwise do nothing.   if (request.reason == "OK") {       processCardClosureData(request.type, request.data);   }}blackberry.event.addEventListener("onChildCardClosed", onChildCardClosedHandler);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:onChildCardEndPeek"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.invoke.onChildCardEndPeek
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br /><br />
+The <b>onChildCardEndPeek</b> event is fired by the navigator to notify the parent that it is no longer being peeked at.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the onChildCardEndPeek event                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onChildCardEndPeekHandler() {   // The Card stopped peeking   console.log("I am no longer being peeked at.");}blackberry.event.addEventListener("onChildCardEndPeek", onChildCardEndPeekHandler);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:onChildCardStartPeek"></a>
+                 
+                            
+                            
+                                
+                                    
+                                            blackberry.invoke.onChildCardStartPeek
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>This event is fired by the system. If you want to listen to the event you can do so using the <a href="blackberry.event.html#.addEventListener">blackberry.event.addEventListener</a> function and remove the listener using the <a href="blackberry.event.html#.removeEventListener">blackberry.event.removeEventListener</a> function. <br /><br />
+The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the parent that it is being peeked at and describe the type of peek being performed</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>yourCallbackFunction</b></td>
+                                            <td>
+                                                
+                                                The callback function that will be invoked on the onChildCardStartPeek event                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>peekType:</b> Describes the type of peek to be performed as a peek to the content of the parent or a peek to the content of the root. The value is either "content" or "root".
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function onChildCardStartPeekHandler(peekType) {   // The Card started peeking   console.log("The card started peeking.");   if (peekType == "root") {       updateContent(true);   }}blackberry.event.addEventListener("onChildCardStartPeek", onChildCardStartPeekHandler);&lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
 
     
     
@@ -1212,9 +1445,9 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".APP_ADDRESSBOOK"></a>
+                            <a name=".FILE_TRANSFER_COPY_RO"></a>
                  
                             
                             
@@ -1222,14 +1455,12 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            APP_ADDRESSBOOK
+                                            FILE_TRANSFER_COPY_RO
                                             
                                                 
-                                                    
-                                                        = 0
                                                     
                                                 
                                             
@@ -1250,7 +1481,7 @@
                                        
                             
                             
-                            <p>Constant used to invoke the Address Book.</p>
+                            <p>Describes the file transfer mode where the file will be copied to the invoked application with read only privileges</p>
                             <br />
                             
                             
@@ -1261,11 +1492,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1293,9 +1520,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".APP_BLUETOOTH_CONFIG"></a>
+                            <a name=".FILE_TRANSFER_COPY_RW"></a>
                  
                             
                             
@@ -1303,14 +1530,12 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            APP_BLUETOOTH_CONFIG
+                                            FILE_TRANSFER_COPY_RW
                                             
                                                 
-                                                    
-                                                        = 1
                                                     
                                                 
                                             
@@ -1331,7 +1556,7 @@
                                        
                             
                             
-                            <p>Constant used to invoke the Bluetooth Configuration.</p>
+                            <p>Describes the file transfer mode where the file will be copied to the invoked application with read and write privileges</p>
                             <br />
                             
                             
@@ -1342,11 +1567,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1374,9 +1595,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".APP_CALCULATOR"></a>
+                            <a name=".FILE_TRANSFER_LINK"></a>
                  
                             
                             
@@ -1384,14 +1605,12 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            APP_CALCULATOR
+                                            FILE_TRANSFER_LINK
                                             
                                                 
-                                                    
-                                                        = 2
                                                     
                                                 
                                             
@@ -1412,7 +1631,7 @@
                                        
                             
                             
-                            <p>Constant used to invoke the Calculator.</p>
+                            <p>Describes the file transfer mode where the invoked application will receive a link to the file path provided. The permissions of the original file MUST include o+r. It o+w the sender must be the owner of the file.</p>
                             <br />
                             
                             
@@ -1423,11 +1642,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -1455,9 +1670,9 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".APP_CALENDAR"></a>
+                            <a name=".FILE_TRANSFER_PRESERVE"></a>
                  
                             
                             
@@ -1465,14 +1680,12 @@
                                     
                                         static              
                                         
-                                        Number
+                                        String
                                         
                                         
-                                            APP_CALENDAR
+                                            FILE_TRANSFER_PRESERVE
                                             
                                                 
-                                                    
-                                                        = 3
                                                     
                                                 
                                             
@@ -1493,7 +1706,7 @@
                                        
                             
                             
-                            <p>Calendar.</p>
+                            <p>Describes the file transfer mode where the provided URI is preserved as is. No box-2-box logic is applied</p>
                             <br />
                             
                             
@@ -1504,1076 +1717,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_CAMERA"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_CAMERA
-                                            
-                                                
-                                                    
-                                                        = 4
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Camera.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_MAPS"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_MAPS
-                                            
-                                                
-                                                    
-                                                        = 5
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Maps.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".APP_MEMOPAD"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_MEMOPAD
-                                            
-                                                
-                                                    
-                                                        = 6
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Constant used to invoke the Memopad.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".APP_MESSAGES"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_MESSAGES
-                                            
-                                                
-                                                    
-                                                        = 7
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Constant used to invoke the Messages Application.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".APP_PHONE"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_PHONE
-                                            
-                                                
-                                                    
-                                                        = 8
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Constant used to invoke the Phone.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".APP_SEARCH"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_SEARCH
-                                            
-                                                
-                                                    
-                                                        = 9
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Constant used to invoke the Search.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".APP_TASKS"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_TASKS
-                                            
-                                                
-                                                    
-                                                        = 10
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Constant used to invoke the Tasks.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_BROWSER"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_BROWSER
-                                            
-                                                
-                                                    
-                                                        = 11
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Browser.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0|ripple">
-                        <h3>
-                            <a name=".APP_JAVA"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_JAVA
-                                            
-                                                
-                                                    
-                                                        = 12
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Constant used to invoke a Java Application.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_MUSIC"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_MUSIC
-                                            
-                                                
-                                                    
-                                                        = 13
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Music Application.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_PHOTOS"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_PHOTOS
-                                            
-                                                
-                                                    
-                                                        = 14
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Photos Application.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_VIDEOS"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_VIDEOS
-                                            
-                                                
-                                                    
-                                                        = 15
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Videos Application.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="pb1.0|pb2.0|ripple">
-                        <h3>
-                            <a name=".APP_APPWORLD"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            APP_APPWORLD
-                                            
-                                                
-                                                    
-                                                        = 16
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>App World Application.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -2614,7 +1758,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sat Jul 21 2012 01:09:06 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2012 01:43:48 GMT-0400 (EDT)
         </div>
 
     </div>
