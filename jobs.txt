@@ -31,3 +31,4 @@ WebWorks-API-Docs-next-BB10-10103Changes
 WebWorks-API-Docs-next-BB10-r9
 WebWorks-API-Docs-remove-bbm
 WebWorks-API-Docs-next-BB10-contact-find-signature
+WebWorks-API-Docs-master-directory-entry-fix
