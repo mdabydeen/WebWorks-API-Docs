@@ -77,3 +77,38 @@ blackberry.pim.calendar.CalendarFolder.prototype.visible = false;
  * @BB10X
  */
 blackberry.pim.calendar.CalendarFolder.prototype.color = "";
+
+/**
+ * @description True if this calendar folder is the default
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarFolder.prototype.default = true;
+
+/**
+ * @description True if this calendar folder is an enterprise calendar folder
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarFolder.prototype.enterprise = true;
+
+/**
+ * @description True if this calendar folder supports attendees
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarFolder.prototype.supportsParticipants = true;
+
+/**
+ * @description True if this calendar folder supports infinite recurrence
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarFolder.prototype.supportsInfiniteRecurrence = true;
+
+/**
+ * @description True if this calendar folder supports messaging
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarFolder.prototype.supportsMessaging = true;
