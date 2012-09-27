@@ -1,4 +1,3 @@
-WebWorks-API-Docs-Smartphone-Payment-1.5
 WebWorks-API-Docs
 WebWorks-API-Docs-Smartphone-Payment-2.0
 WebWorks-API-Docs-tablet
