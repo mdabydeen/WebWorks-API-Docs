@@ -31,4 +31,3 @@ WebWorks-API-Docs-next-BB10-contact-find-signature
 WebWorks-API-Docs-master-directory-entry-fix
 WebWorks-API-Docs-next-bbid
 WebWorks-API-Docs-next-BB10-pim-message
->>>>>>> a9b207d04d1cd8b83328078864407b384b548d49
