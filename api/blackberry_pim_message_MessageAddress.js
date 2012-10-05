@@ -31,12 +31,12 @@
 * @param {String} displayName The display name of the object.
 * @param {String} email The email address of the object.
 * @example
-*     var MessageAddress = new MessageAddress(MessageAddress.TO, "Eric", "eric@rim.com");
+*     var MessageAddress = new MessageAddress(MessageAddress.TO, "Eric", "eric@somedomain.com");
 */
 blackberry.pim.message.MessageAddress = function() { };
 
 /**
-* Describes the type of the email MessageAddress; it is one of MessageAddress.FROM, MessageAddress.TO, MessageAddress.CC and MessageAddress.BCC
+* Describes the type of the email MessageAddress; it is one of MessageAddress.FROM, MessageAddress.TO, MessageAddress.CC, MessageAddress.BCC and MessageAddress.REPLY_TO
 * @type Number
 * @BB10X
 */

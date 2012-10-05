@@ -15,31 +15,24 @@
 */
 
 /**
- * @class The <code>MessageAccount</code> object contains the message account information for the messaging service.
- * @toc {PIM} MessageAccount
+ * @class The <code>MessageFolder</code> object contains the folder information for a MessageAccount object.
+ * @toc {PIM} MessageFolder
  * @BB10X
  * @featureID blackberry.pim.message
  * @permission access_pimdomain_messaging Permits your app to access message.
  */
-blackberry.pim.message.MessageAccount = {};
+blackberry.pim.message.MessageFolder = {};
 
 /**
- * Contains the unique identifier of the message account.
+ * Contains the name of the message folder.
  * @type String
  * @BB10X
  */
-blackberry.pim.message.MessageAccount.prototype.id = { };
+blackberry.pim.message.MessageFolder.prototype.name = { };
 
 /**
- * Contains the name of the message account.
- * @type String
+ * Contains the type of the message folder.
+ * @type Number
  * @BB10X
  */
-blackberry.pim.message.MessageAccount.prototype.name = { };
-
-/**
- * Return all the folders of the message account.
- * @type blackberry.pim.message.MessageFolder[]
- * @BB10X
- */
-blackberry.pim.message.MessageAccount.prototype.folders = { };
+blackberry.pim.message.MessageFolder.prototype.type = { };

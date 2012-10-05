@@ -15,7 +15,7 @@
 */
 
 /**
- * @class The <code>MessageService</code> object provides .  
+ * @class The <code>MessageService</code> object provides functions for creating and finding contacts as well as getting the message accounts.
  * @toc {PIM} MessageService 
  * @BB10X
  * @featureID blackberry.pim.message
@@ -35,9 +35,9 @@ blackberry.pim.message.MessageService = {};
  *
  *     console.log("email.status: " + email.status); // status is "new" now
  *
- *     email.addresses = [new MessageAddress(MessageAddress.TO, "Eric", "eric@rim.com"),
- *                        new MessageAddress(MessageAddress.TO, "Sergey", "sergey@rim.com"),
- *                        new MessageAddress(MessageAddress.CC, "Hassan", "hassan@rim.com"),];
+ *     email.addresses = [new MessageAddress(MessageAddress.TO, "Eric", "eric@somedomain.com"),
+ *                        new MessageAddress(MessageAddress.TO, "Sergey", "sergey@somedomain.com"),
+ *                        new MessageAddress(MessageAddress.CC, "Hassan", "hassan@somedomain.com"),];
  *     email.subject = "Test";
  *     email.body = "Some body";
  *     email.addAttachment("attachment1", "text/plain", "myTextAttachment.txt");
@@ -82,7 +82,7 @@ blackberry.pim.message.MessageService.prototype.getDefaultMessageAccount = funct
  * @param {function} onFindSuccess Success callback function that is invoked with the messages found.
  * @callback {blackberry.pim.message.Message[]} onFindSuccess.events The array of blackberry.pim.message.Message objects from the search.
  * @param {function} [onFindError] Optional error callback function. Invoked when error occurs.
- * @callback {Number} onFindError.error The detailed error code
+ * @callback {MessageError} onFindError.error The detailed error code when error occurs.
  * @returns {void}
  * @BB10X
  */

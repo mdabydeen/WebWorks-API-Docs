@@ -17,6 +17,7 @@
 /**
  * @class The Message object represents an email item in the device. It can be obtained by calling blackberry.pim.message.MessageService.create() or blackberry.pim.message.MessageService.find()
  * @toc {PIM} Message
+ * @BB10X
  * @featureID blackberry.pim.message
  * @permission access_pimdomain_messaging Permits your app to access message.
  */
@@ -36,6 +37,13 @@ blackberry.pim.message.Message.prototype.id = "";
  * @BB10X
  */
 blackberry.pim.message.Message.prototype.addresses = "";
+
+/**
+ * @description The addresses used in the email.
+ * @type blackberry.pim.message.MessageAttachments[]
+ * @BB10X
+ */
+blackberry.pim.message.Message.prototype.attachments = "";
 
 /**
  * @description The subject of the email.
@@ -107,7 +115,7 @@ blackberry.pim.message.Message.prototype.status = "";
  * Send the unsent message. An error callback is called with an error code if an error happens.
  * @param {function} onSendSuccess The callback function that will be invoked when the message is sent successfully.
  * @param {function} onSendError The callback function that will be invoked when an error happens.
- * @callback {Number} onSendError.error The detailed error code when an error happens.
+ * @callback {MessageError} onSendError.error The detailed error code when an error happens.
  * @returns {void}
  * @BB10X
  */
@@ -117,7 +125,7 @@ blackberry.pim.message.Message.prototype.send = function () {};
  * Save the message if it is created through blackberry.pim.message.MessageService.create(). An error callback is called with an error code if an error happens.
  * @param {function} onSaveSuccess The callback function that will be invoked when the message is saved successfully.
  * @param {function} onSaveError The callback function that will be invoked when an error happens.
- * @callback {Number} onSaveError.error The detailed error code when an error happens.
+ * @callback {MessageError} onSaveError.error The detailed error code when an error happens.
  * @returns {void}
  * @BB10X
  */
@@ -128,31 +136,19 @@ blackberry.pim.message.Message.prototype.save = function () {};
  * @param {String} newFolderName The new folder that the message will be filed.
  * @param {function} onFileSuccess The callback function that will be invoked when the message is filed successfully.
  * @param {function} onFileError The callback function that will be invoked when an error happens.
- * @callback {Number} onFileError.error The detailed error code when an error happens.
+ * @callback {MessageError} onFileError.error The detailed error code when an error happens.
  * @returns {void}
  * @BB10X
  */
 blackberry.pim.message.Message.prototype.file = function () {};
 
 /**
- * Retrieves the information of all the attachments of the email. It is a JavaScript array contains object that has "name", "mimeType" and "size" fields.
- * @returns {Object[]}
- * @BB10X
- * @example
- * // TO be added
- */
-blackberry.pim.message.Message.prototype.getAttachmentInfo = function () {};
-
-/**
- * Save an attachment into file system.
+ * Remove an attachment from the email.
  * @param {Number} index The index of the attachment.
- * @param {String} filePath The file path in the file system that the attachment will be saved.
- * @returns {Boolean} result Indication of whether the attachment has been saved to file system successfully or not.
+ * @returns {void}
  * @BB10X
- * @example
- * // TO be added
  */
-blackberry.pim.message.Message.prototype.saveAttachment = function () {};
+blackberry.pim.message.Message.prototype.removeAttachment = function () {};
 
 /**
  * Add an attachment to the email.
