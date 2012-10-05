@@ -188,7 +188,7 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.pim.message.Message.html#getAttachmentInfo">getAttachmentInfo</a>
+                                        <a href="blackberry.pim.message.Message.html#removeAttachment">removeAttachment</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -201,18 +201,6 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.message.Message.html#save">save</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10_menu">
-                                    <td>
-                                        <a href="blackberry.pim.message.Message.html#saveAttachment">saveAttachment</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -249,6 +237,18 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.pim.message.Message.html#addresses">addresses</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.pim.message.Message.html#attachments">attachments</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -484,11 +484,11 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            Object[]
+                                            void
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.message.Message.html#getAttachmentInfo">getAttachmentInfo</a>
+                                        <a href="blackberry.pim.message.Message.html#removeAttachment">removeAttachment</a>
                                         
                                     </td>
                                 </tr>
@@ -501,18 +501,6 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.message.Message.html#save">save</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10_menu">
-                                    <td class="first_column">
-                                        
-                                            Boolean
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.message.Message.html#saveAttachment">saveAttachment</a>
                                         
                                     </td>
                                 </tr>
@@ -570,6 +558,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.message.Message.html#addresses">addresses</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            blackberry.pim.message.MessageAttachments[]
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.message.Message.html#attachments">attachments</a>
                                         
                                     </td>
                                 </tr>
@@ -970,7 +970,7 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name="getAttachmentInfo"></a>
+                            <a name="removeAttachment"></a>
                  
                             
                             
@@ -978,13 +978,13 @@
                                     
                                                       
                                         
-                                        Object[]
+                                        void
                                         
                                         
-                                            getAttachmentInfo
+                                            removeAttachment
                                             
                                                 
-                                                    ()
+                                                    (index : Number)
                                                 
                                             
                                                                   
@@ -1004,7 +1004,7 @@
                                        
                             
                             
-                            <p>Retrieves the information of all the attachments of the email. It is a JavaScript array contains object that has "name", "mimeType" and "size" fields.</p>
+                            <p>Remove an attachment from the email.</p>
                             <br />
                             
                             
@@ -1023,6 +1023,25 @@
                             <br />
                             
                             
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>index</b></td>
+                                            <td>
+                                                
+                                                The index of the attachment.                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
                                                
 
                             
@@ -1038,12 +1057,6 @@
                             
                             
                 
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>// TO be added</pre></code></td></tbody></table>
-    
   
 
                         </div>
@@ -1154,125 +1167,6 @@
                             
                             
                 
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10_menu">
-                        <h3>
-                            <a name="saveAttachment"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        
-                                        Boolean
-                                        
-                                        
-                                            saveAttachment
-                                            
-                                                
-                                                    (index : Number, filePath : String)
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Save an attachment into file system.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>index</b></td>
-                                            <td>
-                                                
-                                                The index of the attachment.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>filePath</b></td>
-                                            <td>
-                                                
-                                                The file path in the file system that the attachment will be saved.                         
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                                <br />
-                                <span><b>Return:</b></span>
-                                
-                                    
-                                        <p> result Indication of whether the attachment has been saved to file system successfully or not. </p>
-                                    
-                                
-                                <br />
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>// TO be added</pre></code></td></tbody></table>
-    
   
 
                         </div>
@@ -1488,6 +1382,77 @@
                                         
                                         
                                             addresses
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>The addresses used in the email.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name="attachments"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        blackberry.pim.message.MessageAttachments[]
+                                        
+                                        
+                                            attachments
                                             
                                                                   
                                     
@@ -2200,7 +2165,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 02 2012 12:04:42 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 05 2012 15:28:13 GMT-0400 (EDT)
         </div>
 
     </div>
