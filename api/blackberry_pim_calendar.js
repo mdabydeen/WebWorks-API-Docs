@@ -58,7 +58,7 @@ blackberry.pim.calendar = {
     /**
      * @name blackberry.pim.calendar.findEvents
      * @function
-     * @description Find calendar events in the calendar based on some criterion.
+     * @description Find calendar event(s) in the calendar based on some criteria. This function can be used to look up events based on start/end time, location, or summary. This function can also be used to look up a single event given the event id and CalendarFolder which contains it. The second use case is useful if you have an instance of the CalendarEvent object, and wants to get the "fresh" copy from the calendar (in case the event has been changed by other apps).
      * @param {blackberry.pim.calendar.CalendarFindOptions} findOptions  Options to be applied to the search.
      * @param {function} onFindSuccess Success callback function that is invoked with the events returned from the calendar.
      * @callback {blackberry.pim.calendar.CalendarEvent[]} onFindSuccess.events The array of CalendarEvent objects from the search.
@@ -66,6 +66,8 @@ blackberry.pim.calendar = {
      * @callback {blackberry.pim.calendar.CalendarError} onFindError.error The CalendarError object which contains the error code.
      * @returns {void}
      * @example
+     * var cal = blackberry.pim.calendar;
+     *
      * function onFindSuccess(events) {
      *     events.forEach(function (evt) {
      *         alert("Event summary: " + evt.summary);
@@ -77,35 +79,25 @@ blackberry.pim.calendar = {
      *     alert("Error: " + error.code);
      * }
      *
-     * function findEvents(keyword) {
-     *     var cal = blackberry.pim.calendar;
+     * function findEventsByKeyword(keyword) {
      *     var filter = new cal.CalendarEventFilter(keyword);
      *     var findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
      *
+     *     // Find all events that has the specified keyword in summary or location field
+     *     cal.findEvents(findOptions, onFindSuccess, onFindError);
+     * }
+     *
+     * function findSingleEvent(eventId, folder) {
+     *     var findOptions = new cal.CalendarFindOptions();
+     *     findOptions.eventId = eventId;
+     *     findOptions.folder = folder;
+     *
+     *     // Find the single event that has the specified event id that belongs to the specified folder
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
      * }
      * @BB10X
      */
     findEvents: function (findOptions, onFindSuccess, onFindError) {},
-
-    /**
-     * @name blackberry.pim.calendar.findSingleEvent
-     * @function
-     * @description Find single calendar event in the calendar by event id and CalendarFolder. This is useful if you have an instance of the CalendarEvent object, and wants to get the "fresh" copy from the calendar (in case the event has been changed by other apps).
-     * @param {Object} findOptions An object literal that specifies the event id and {@link blackberry.pim.calendar.CalendarFolder} that contains the event. The object should be in the following form: <br><pre>
-     * {
-     *     eventId: &lt;id of the event&gt;,
-     *     folder: &lt;CalendarFolder that contains the event&gt;
-     * }
-     * </pre>
-     * @param {function} onFindSuccess Success callback function that is invoked with the event returned from the calendar.
-     * @callback {blackberry.pim.calendar.CalendarEvent} onFindSuccess.event The {@link blackberry.pim.calendar.CalendarEvent} object from the search. If no event is found, the event object will be null.
-     * @param {function} [onFindError] Optional error callback function. Invoked when error occurs.
-     * @callback {blackberry.pim.calendar.CalendarError} onFindError.error The {@link blackberry.pim.calendar.CalendarError} object which contains the error code.
-     * @returns {void}
-     * @BB10X
-     */
-    findSingleEvent: function (findOptions, onFindSuccess, onFindError) {},
 
     /**
      * @name blackberry.pim.calendar.getNextEventsWithAttendee
