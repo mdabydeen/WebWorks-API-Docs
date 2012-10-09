@@ -94,35 +94,35 @@ blackberry.pim.calendar.CalendarEvent.prototype.recurrence = null;
 blackberry.pim.calendar.CalendarEvent.prototype.reminder = 0;
 
 /**
- * @description The list of attendees in the event.<b>TODO DAP CalendarEvent has no mention of attendees at all</b>
+ * @description The list of attendees in the event.
  * @type blackberry.pim.calendar.Attendee[]
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.attendees = null;
 
 /**
- * @description True if the event is an all-day event.<b>TODO DAP CalendarEvent does not have this</b>
+ * @description True if the event is an all-day event.
  * @type Boolean
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.allDay = false;
 
 /**
- * @description True if the event represents a birthday.<b>TODO DAP CalendarEvent does not have this</b>
+ * @description True if the event represents a birthday.
  * @type Boolean
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.birthday = false;
 
 /**
- * @description Sensitivity level of the event: {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_NORMAL}, {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PERSONAL}, {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PRIVATE} or {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_CONFIDENTIAL} <b>TODO DAP CalendarEvent does not have this</b>
+ * @description Sensitivity level of the event: {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_NORMAL}, {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PERSONAL}, {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_PRIVATE} or {@link blackberry.pim.calendar.CalendarEvent.SENSITIVITY_CONFIDENTIAL}
  * @type Number
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.sensitivity = 0;
 
 /**
- * @description The CalendarFolder that contains this event. <b>TODO DAP CalendarEvent does not have this</b>
+ * @description The CalendarFolder that contains this event.
  * @readOnly
  * @type blackberry.pim.calendar.CalendarFolder
  * @BB10X
@@ -147,21 +147,21 @@ blackberry.pim.calendar.CalendarEvent.prototype.parentId = "";
  * A recurrence exception is a differing instance of a recurring event. The
  * originalStartTime property stores the time and date of the recurrence instance that
  * is replaced by this event.  For example: a daily meeting at 2:00 PM that is rescheduled to
- * 3:00 PM on a given day would have an originalStartTime of 2:00 PM.<b>TODO DAP CalendarEvent does not have this</b>
+ * 3:00 PM on a given day would have an originalStartTime of 2:00 PM.
  * @type Date
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.originalStartTime = "";
 
 /**
- * @description Name of the time zone where the event was created. <b>TODO DAP CalendarEvent does not have this</b>
+ * @description Name of the time zone where the event was created.
  * @type String
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.timezone = "";
 
 /**
- * @description A URL associated with the event. <b>TODO DAP CalendarEvent does not have this</b>
+ * @description A URL associated with the event.
  * @type String
  * @BB10X
  */
@@ -191,10 +191,61 @@ blackberry.pim.calendar.CalendarEvent.prototype.remove = function () {};
 /**
  * Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
  * with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
- * property set to the parameter value.<b>TODO DAP CalendarEvent does not have this</b>
+ * property set to the parameter value.
  * @param {Date} originalStartTime The date of the original recurrence instance that this event replaces. This date will be
  * added to the calling event's exceptionDates array within the recurrence field.
  * @returns {blackberry.pim.calendar.CalendarEvent}
+ * @example
+ * var evt, exceptionEvt;
+ *
+ * function onExceptionSaveSuccess(exceptionEvtCreated) {
+ *     exceptionEvt = exceptionEvtCreated;
+ *     alert("Exception event created successfully: " + exceptionEvt.id); // exception event has a different id than the original event
+ * }
+ *
+ * function onSaveSuccess(created) {
+ *     evt = created;
+ *     // Recurring event created successcully, with the following occurences:
+ *     // Jan 22, 2013, 12:00
+ *     // Jan 25, 2013, 12:00
+ *     // Jan 29, 2013, 12:00
+ *     // Feb 1, 2013, 12:00
+ *     // Feb 5, 2013, 12:00
+ *     // Feb 8, 2013, 12:00
+ *     // Feb 12, 2013, 12:00
+ *     // Feb 15, 2013, 12:00
+ *
+ *     // The following code replaces the last occurence with an exception occurence on the day after
+ *     exceptionEvt = evt.createExceptionEvent(new Date("Feb 15, 2013, 12:00"));
+ *     exceptionEvt.start = new Date("Feb 16, 2013, 12:00");
+ *     exceptionEvt.end = new Date("Feb 16, 2013, 12:30");
+ *     exceptionEvt.save(onExceptionSaveSuccess, onSaveError);
+ * }
+ *
+ * function onSaveError(error) {
+ *     alert("Error saving event to device: " + error.code);
+ * }
+ *
+ * function createRecurringEventWithOneException() {
+ *     var cal = blackberry.pim.calendar;
+ *     var start = new Date("Jan 21, 2013, 12:00");
+ *     var end = new Date("Jan 21, 2013, 12:30");
+ *     var location = "some location";
+ *     var summary = "My recurring event";
+ *     var repeatRule = new CalendarRepeatRule({
+ *         "frequency": CalendarRepeatRule.FREQUENCY_WEEKLY,
+ *         "expires": new Date("Feb 18, 2013, 12:00"),
+ *         "dayInWeek": CalendarRepeatRule.TUESDAY | CalendarRepeatRule.FRIDAY
+ *     });
+ *     evt = cal.createEvent({
+ *         "summary": summary,
+ *         "location": location,
+ *         "start": start,
+ *         "end": end,
+ *         "recurrence": repeatRule
+ *     });
+ *     evt.save(onSaveSuccess, onSaveError);
+ * }
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.createExceptionEvent = function () {};
