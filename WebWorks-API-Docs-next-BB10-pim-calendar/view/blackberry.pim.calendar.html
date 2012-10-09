@@ -159,18 +159,6 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.pim.calendar.html#.findSingleEvent">blackberry.pim.calendar.findSingleEvent</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
                                         <a href="blackberry.pim.calendar.html#.getCalendarFolders">blackberry.pim.calendar.getCalendarFolders</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -352,18 +340,6 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.calendar.html#.findEvents">blackberry.pim.calendar.findEvents</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
-                                            void
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.calendar.html#.findSingleEvent">blackberry.pim.calendar.findSingleEvent</a>
                                         
                                     </td>
                                 </tr>
@@ -646,7 +622,7 @@ function createEventInDefaultCalendarFolder(summary, location) {
                                        
                             
                             
-                            <p>Find calendar events in the calendar based on some criterion.</p>
+                            <p>Find calendar event(s) in the calendar based on some criteria. This function can be used to look up events based on start/end time, location, or summary. This function can also be used to look up a single event given the event id and CalendarFolder which contains it. The second use case is useful if you have an instance of the CalendarEvent object, and wants to get the "fresh" copy from the calendar (in case the event has been changed by other apps).</p>
                             <br />
                             
                             
@@ -735,7 +711,9 @@ function createEventInDefaultCalendarFolder(summary, location) {
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>function onFindSuccess(events) {
+        <table><tbody><td class="code"><code><pre>var cal = blackberry.pim.calendar;
+
+function onFindSuccess(events) {
     events.forEach(function (evt) {
         alert("Event summary: " + evt.summary);
         alert("Event location: " + evt.location);
@@ -746,145 +724,23 @@ function onFindError(error) {
     alert("Error: " + error.code);
 }
 
-function findEvents(keyword) {
-    var cal = blackberry.pim.calendar;
+function findEventsByKeyword(keyword) {
     var filter = new cal.CalendarEventFilter(keyword);
     var findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
 
+    // Find all events that has the specified keyword in summary or location field
+    cal.findEvents(findOptions, onFindSuccess, onFindError);
+}
+
+function findSingleEvent(eventId, folder) {
+    var findOptions = new cal.CalendarFindOptions();
+    findOptions.eventId = eventId;
+    findOptions.folder = folder;
+
+    // Find the single event that has the specified event id that belongs to the specified folder
     cal.findEvents(findOptions, onFindSuccess, onFindError);
 }</pre></code></td></tbody></table>
     
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name=".findSingleEvent"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        void
-                                        
-                                        
-                                            blackberry.pim.calendar.findSingleEvent
-                                            
-                                                
-                                                    (findOptions : Object, onFindSuccess : function, <i>[onFindError : function]</i>)
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Find single calendar event in the calendar by event id and CalendarFolder. This is useful if you have an instance of the CalendarEvent object, and wants to get the "fresh" copy from the calendar (in case the event has been changed by other apps).</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>findOptions</b></td>
-                                            <td>
-                                                
-                                                An object literal that specifies the event id and <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a> that contains the event. The object should be in the following form: <br><pre>
-{
-    eventId: &lt;id of the event&gt;,
-    folder: &lt;CalendarFolder that contains the event&gt;
-}
-</pre>                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onFindSuccess</b></td>
-                                            <td>
-                                                
-                                                Success callback function that is invoked with the event returned from the calendar.                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>event:</b> The <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a> object from the search. If no event is found, the event object will be null.
-                                                    
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onFindError</b></td>
-                                            <td>
-                                                
-                                                Optional error callback function. Invoked when error occurs.                         
-                                                
-                                                    <br />
-                                                    
-                                                        <br />
-                                                        <b>error:</b> The blackberry.pim.calendar.CalendarError object which contains the error code.
-                                                    
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
   
 
                         </div>
@@ -1468,7 +1324,7 @@ function findEvents(keyword) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 09 2012 13:44:00 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 09 2012 16:27:01 GMT-0400 (EDT)
         </div>
 
     </div>
