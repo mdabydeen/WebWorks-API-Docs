@@ -183,6 +183,18 @@
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
+                                        <a href="blackberry.pim.calendar.html#.getCurrentTimezone">blackberry.pim.calendar.getCurrentTimezone</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
                                         <a href="blackberry.pim.calendar.html#.getDefaultCalendarFolder">blackberry.pim.calendar.getDefaultCalendarFolder</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -364,6 +376,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.pim.calendar.html#.getCalendarFolders">blackberry.pim.calendar.getCalendarFolders</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.html#.getCurrentTimezone">blackberry.pim.calendar.getCurrentTimezone</a>
                                         
                                     </td>
                                 </tr>
@@ -554,6 +578,33 @@
                             
                             
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>var evt;
+
+function onSaveSuccess(created) {
+    evt = created; // set evt to the object returned in save success callback, which contains the persisted event id
+    alert("Event saved to device: " + evt.id);
+}
+
+function onSaveError(error) {
+    alert("Error saving event to device: " + error.code);
+}
+
+function createEventInDefaultCalendarFolder(summary, location) {
+    var cal = blackberry.pim.calendar;
+    evt = cal.createEvent({
+        "summary": summary,
+        "location": location,
+        "start": new Date("Jan 01, 2015, 12:00"),
+        "end": new Date("Jan 01, 2015, 12:30"),
+        "timezone": "America/New_York" // if timezone is specified explicitly, then the times will be for that particular timezone; otherwise, the times will be for the current device timezone
+    });
+    evt.save(onSaveSuccess, onSaveError);
+}</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -680,6 +731,29 @@
                             
                             
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>function onFindSuccess(events) {
+    events.forEach(function (evt) {
+        alert("Event summary: " + evt.summary);
+        alert("Event location: " + evt.location);
+    });
+}
+
+function onFindError(error) {
+    alert("Error: " + error.code);
+}
+
+function findEvents(keyword) {
+    var cal = blackberry.pim.calendar;
+    var filter = new cal.CalendarEventFilter(keyword);
+    var findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
+
+    cal.findEvents(findOptions, onFindSuccess, onFindError);
+}</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -721,7 +795,7 @@
                                        
                             
                             
-                            <p>Find single calendar event in the calendar.</p>
+                            <p>Find single calendar event in the calendar by event id and CalendarFolder. This is useful if you have an instance of the CalendarEvent object, and wants to get the "fresh" copy from the calendar (in case the event has been changed by other apps).</p>
                             <br />
                             
                             
@@ -756,7 +830,7 @@
                                                 An object literal that specifies the event id and <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a> that contains the event. The object should be in the following form: <br><pre>
 {
     eventId: &lt;id of the event&gt;,
-    folder: &lt;CalendarFolder that contains the event&gt; (optional)
+    folder: &lt;CalendarFolder that contains the event&gt;
 }
 </pre>                         
                                                 
@@ -852,7 +926,7 @@
                                        
                             
                             
-                            <p>Retrieves calendar folders from all calendar accounts. <b>Not in DAP specs</b></p>
+                            <p>Retrieves calendar folders from all calendar accounts.</p>
                             <br />
                             
                             
@@ -886,6 +960,89 @@
                             
                             
                 
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name=".getCurrentTimezone"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            blackberry.pim.calendar.getCurrentTimezone
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Retrieves the time zone currently used by the device.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>function getCurrentTimezone() {
+    return blackberry.pim.calendar.getCurrentTimezone(); // e.g. "America/New_York"
+}</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -927,7 +1084,7 @@
                                        
                             
                             
-                            <p>Retrieves the default calendar folder. <b>Not in DAP specs</b></p>
+                            <p>Retrieves the default calendar folder.</p>
                             <br />
                             
                             
@@ -1002,7 +1159,7 @@
                                        
                             
                             
-                            <p>Fetches the most recent meetings in which the user and the specified person participate. <b>Not in DAP specs</b></p>
+                            <p>Fetches the most recent meetings in which the user and the specified person participate.</p>
                             <br />
                             
                             
@@ -1037,7 +1194,7 @@
                                                 An object literal that specifies the attendee email and the number of events to returned. The object should be in the following form: <br><pre>
 {
    attendeeEmail: &lt;the email address that identifies the person that should be present in the returned meetings&gt;,
-   limit: &lt;the maximum number of events to return&lt;
+   limit: &lt;the maximum number of events to return&gt;
 }                         
                                                 
                                             </td>
@@ -1161,7 +1318,7 @@
                                                 An object literal that specifies the attendee email and the number of events to returned. The object should be in the following form: <br><pre>
 {
    attendeeEmail: &lt;the email address that identifies the person that should be present in the returned meetings&gt;,
-   limit: &lt;the maximum number of events to return&lt;
+   limit: &lt;the maximum number of events to return&gt;
 }                         
                                                 
                                             </td>
@@ -1250,7 +1407,7 @@
                                        
                             
                             
-                            <p>Retrieves the list of all time zones supported by the device. The time zones are based on the Olson time zone database. For more information, refer to <a href="http://www.iana.org/time-zones" target="_blank">IANA</a>.  <b>Not in DAP specs</b></p>
+                            <p>Retrieves the list of all time zones supported by the device. The time zones are based on the Olson time zone database. For more information, refer to <a href="http://www.iana.org/time-zones" target="_blank">IANA</a>.</p>
                             <br />
                             
                             
@@ -1311,7 +1468,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Oct 04 2012 14:44:18 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 09 2012 13:44:00 GMT-0400 (EDT)
         </div>
 
     </div>
