@@ -122,7 +122,7 @@ blackberry.pim.message.Message.prototype.status = "";
 blackberry.pim.message.Message.prototype.send = function () {};
 
 /**
- * Save the message if it is created through blackberry.pim.message.MessageService.create(). An error callback is called with an error code if an error happens.
+ * Save the message to draft or update the message with the changes. An error callback is called with an error code if an error happens.
  * @param {function} onSaveSuccess The callback function that will be invoked when the message is saved successfully.
  * @param {function} onSaveError The callback function that will be invoked when an error happens.
  * @callback {MessageError} onSaveError.error The detailed error code when an error happens.
@@ -130,17 +130,6 @@ blackberry.pim.message.Message.prototype.send = function () {};
  * @BB10X
  */
 blackberry.pim.message.Message.prototype.save = function () {};
-
-/**
- * File the received message to a different folder. An error callback is called with an error code if an error happens.
- * @param {String} newFolderName The new folder that the message will be filed.
- * @param {function} onFileSuccess The callback function that will be invoked when the message is filed successfully.
- * @param {function} onFileError The callback function that will be invoked when an error happens.
- * @callback {MessageError} onFileError.error The detailed error code when an error happens.
- * @returns {void}
- * @BB10X
- */
-blackberry.pim.message.Message.prototype.file = function () {};
 
 /**
  * Remove an attachment from the email.
