@@ -312,27 +312,27 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb_menu|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td>
                                         <a href="blackberry.ui.dialog.html#.D_PROMPT">D_PROMPT</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb_menu|ripple">
+                                    <td>
+                                        <a href="blackberry.ui.dialog.html#.C_CANCEL">C_CANCEL</a>
                                         <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiYes">Y</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="pb_menu|bb10_menu|ripple">
-                                    <td>
-                                        <a href="blackberry.ui.dialog.html#.C_CANCEL">C_CANCEL</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
                                     </td>
                                 </tr>
                             
@@ -756,7 +756,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb_menu|ripple">
+                                <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -768,7 +768,7 @@
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="pb_menu|bb10_menu|ripple">
+                                <tr x-ww-support="bb_menu|ripple">
                                     <td class="first_column">
                                         
                                             Number
@@ -1950,7 +1950,7 @@
                                                         <b>thirdOptionButton:</b>  The element for the optional button. Set to true if selected.
                                                     
                                                         <br />
-                                                        <b>oktext:</b>  The element for entered text. Returns the user's entered string.(Option only used for select dialogs: D_PROMPT). <br/>NOTE: The callback 'index' is NOT implemented for BB10. Also note callback 'ok', 'cancel', 'thirdOptionButton', 'oktext', are only implemented on BB10.
+                                                        <b>oktext:</b>  The element for entered text. Returns the user's entered string.(Option only used for select dialogs: D_PROMPT). <br/><br/>NOTE: Callback 'ok', 'cancel', 'thirdOptionButton', 'oktext', are only implemented on BB10. Also note callback 'index' is NOT implemented for BB10.
                                                     
                                                 
                                             </td>
@@ -1978,7 +1978,7 @@
                                                         <b>global:</b> Specifies the global flag of the dialog window. (Your application cannot be minimized when the dialog global setting is set to true and when any dialog window is open). By default this parameter is false when not specified.
                                                     
                                                         <br />
-                                                        <b>third:</b> Desired label for optional third button. (This option is only available for select dialogs: D_OK, D_SAVE, D_DELETE, D_YES_NO, D_OK_CANCEL). <br/>NOTE: The 'third' parameter is only implemented in BB10. Also note the parameters for 'size', 'position', and 'global' are NOT implemented for BB10.
+                                                        <b>third:</b> Desired label for optional third button. (This option is only available for select dialogs: D_OK, D_SAVE, D_DELETE, D_YES_NO, D_OK_CANCEL). <br/>NOTE: The parameters for 'size', 'position', and 'global' are NOT implemented for BB10. Also note 'third' parameter is only implemented in BB10.
                                                     
                                                 
                                             </td>
@@ -2474,7 +2474,7 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
+                    <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
                             <a name=".D_PROMPT"></a>
                  
@@ -2488,87 +2488,6 @@
                                         
                                         
                                             D_PROMPT
-                                            
-                                                
-                                                    
-                                                        = -1
-                                                    
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Cancel Choice for us in dialogs</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="pb_menu|bb10_menu|ripple">
-                        <h3>
-                            <a name=".C_CANCEL"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        Number
-                                        
-                                        
-                                            C_CANCEL
                                             
                                                 
                                                     
@@ -2604,11 +2523,88 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
+                                            &nbsp;- Ripple Emulator
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb_menu|ripple">
+                        <h3>
+                            <a name=".C_CANCEL"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Number
+                                        
+                                        
+                                            C_CANCEL
+                                            
+                                                
+                                                    
+                                                        = -1
+                                                    
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Standard Prompt input dialog</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry OS 5.0+
                                         </td></tr>
                                     
                                         <tr><td></td><td>
@@ -3788,7 +3784,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 12 2012 18:28:33 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 12 2012 18:59:26 GMT-0400 (EDT)
         </div>
 
     </div>
