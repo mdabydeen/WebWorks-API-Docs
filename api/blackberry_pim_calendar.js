@@ -66,7 +66,9 @@ blackberry.pim.calendar = {
      * @callback {blackberry.pim.calendar.CalendarError} onFindError.error The CalendarError object which contains the error code.
      * @returns {void}
      * @example
-     * var cal = blackberry.pim.calendar;
+     * var cal = blackberry.pim.calendar,
+     *     CalendarFindOptions = cal.CalendarFindOptions,
+     *     CalendarEventFilter = cal.CalendarEventFilter;
      *
      * function onFindSuccess(events) {
      *     events.forEach(function (evt) {
@@ -79,58 +81,52 @@ blackberry.pim.calendar = {
      *     alert("Error: " + error.code);
      * }
      * 
-    *  // Use case 1: find any events by keyword in location, summary, or attendees' names/emails
+     * // Use case 1: find any events by keyword in any of the following fields:
+     * // -location
+     * // -summary
+     * // -attendees' names or emails
      * function findEventsByKeyword(keyword) {
-     *     var filter = new cal.CalendarEventFilter(location);
-     *     var findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
+     *     var filter = new CalendarEventFilter(location);
+     *     var findOptions = new CalendarFindOptions(filter, null, CalendarFindOptions.DETAIL_FULL);
      *
      *     // Find all events that has the specified keyword in summary, location or attendees' name/email
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
      * }
      *
-     * // Use case 2: find any events that contains this attendee email
-     * function findEventsByEventIdAndAttendeeEmail() {
-     *     var filter = {
-     *             substring: "email@company.com"
-     *         },
-     *         findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
-     *
-     *         cal.findEvents(findOptions, onFindScucess, onFindError);
-     * }
-     *
-     * // Use case 3: find single event by event id and folder
+     * // Use case 2: find one single event by event id and folder
      * function findSingleEvent(eventId, folder) {
      *     var findOptions,
-     *         filter = new cal.CalendarEventFilter();
+     *         filter = new CalendarEventFilter();
      *     
-     *     filter.enventId = eventId;
+     *     filter.eventId = eventId;
      *     filter.folders  = [folder];
-     *     // when finding single events, the returned event will always have all fields populated, regardless of
-     *     // what detail level the user specified
-     *     findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
+     *
+     *     // When finding single events, the returned event will always have all fields populated,
+     *     // regardless of what detail level the user specifies
+     *     findOptions = new CalendarFindOptions(filter, null, CalendarFindOptions.DETAIL_FULL);
      *
      *     // Find the single event that has the specified event id that belongs to the specified folder
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
      * }
      *
      * // Extra params will be ignored in this example
-     * function findEventsByMutipleFieldsInFilter(keyword, eventId, folder) {
+     * function findEventsExtraParamsIgnored(keyword, eventId, folder) {
      *     var filter = {
-     *             substring: keyword,  // search substring in summary, attendee, location
-     *             eventId: 2,
-     *             end: new Date("2012-12-21"),
-     *             expandRecurring: false,
-     *             folders: [folder],       // search in a specified folder
+     *             substring: keyword,           // ignored
+     *             eventId: 2,                   // applied in search
+     *             end: new Date("2012-12-21"),  // ignored
+     *             expandRecurring: false,       // ignored - recurring event will be returned as one event
+     *             folders: [folder],            // applied in search
      *             start: new Date("2012-12-12")
      *         },
      *         findOption = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
      *
-     *         // Since event id and folder are specified, the event id will be used in the search
-     *         // The events array in the callback will only contain one event, with the matching event id and folder
-     *         cal.findEvents(findOptions, onFindSuccess, onFindError);
+     *    // By specifying event id and folder, you instruct the search engine to look for the event with
+     *    // the matching event id and folder. All other search parameters will be ignored.
+     *    // The events array in the callback contain at most one event.
+     *    cal.findEvents(findOptions, onFindSuccess, onFindError);
      * }
      *
-
      * @BB10X
      */
     findEvents: function (findOptions, onFindSuccess, onFindError) {},
@@ -151,27 +147,5 @@ blackberry.pim.calendar = {
      * @returns {blackberry.pim.calendar.CalendarFolder}
      * @BB10X
      */
-    getDefaultCalendarFolder: function () {},
-
-    /**
-     * @name blackberry.pim.calendar.getTimezones
-     * @function
-     * @description Retrieves the list of all time zones supported by the device. The time zones are based on the Olson time zone database. For more information, refer to <a href="http://www.iana.org/time-zones" target="_blank">IANA</a>.
-     * @returns {String[]}
-     * @BB10X
-     */
-    getTimezones: function () {},
-
-    /**
-     * @name blackberry.pim.calendar.getCurrentTimezone
-     * @function
-     * @description Retrieves the time zone currently used by the device.
-     * @returns {String}
-     * @example
-     * function getCurrentTimezone() {
-     *     return blackberry.pim.calendar.getCurrentTimezone(); // e.g. "America/New_York"
-     * }
-     * @BB10X
-     */
-    getCurrentTimezone: function () {}
+    getDefaultCalendarFolder: function () {}
 };
