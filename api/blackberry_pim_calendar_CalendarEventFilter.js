@@ -65,7 +65,8 @@ blackberry.pim.calendar.CalenderEventFilter.prototype.expandRecurring = false;
 blackberry.pim.calendar.CalenderEventFilter.prototype.substring = "";
 
 /**
- * @description When folders are specified, only events that belong to folders are returned.
+ * @description When folders are specified, only events that belong to folders are returned. When searching for a single event,
+ * this array should only contain one folder.
  * @type blackberry.pim.calendar.CalendarFolder[]
  * @BB10X
  */
