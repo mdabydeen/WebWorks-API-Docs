@@ -60,7 +60,14 @@ blackberry.pim.message.Message.prototype.subject = "";
 blackberry.pim.message.Message.prototype.body = "";
 
 /**
- * @description The folder of the email.
+ * @description The MIME type of the body text. It is either "text" or "html".
+ * @type String
+ * @BB10X
+ */
+blackberry.pim.message.Message.prototype.bodyType = "";
+
+/**
+ * @description The message folder of the email.
  * @readOnly
  * @type String
  * @BB10X

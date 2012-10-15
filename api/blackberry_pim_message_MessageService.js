@@ -87,3 +87,13 @@ blackberry.pim.message.MessageService.prototype.getDefaultMessageAccount = funct
  * @BB10X
  */
 blackberry.pim.message.MessageService.prototype.find = function () {};
+
+/**
+ * @function
+ * @description Retrieve a single Message object from a message account by the message identifier.
+ * @param {blackberry.pim.message.MessageAccount} account Message account that the message belongs to.
+ * @param {String} id The unique identidier of the message.
+ * @returns {blackberry.pim.message.Message}
+ * @BB10X
+ */
+blackberry.pim.message.MessageService.prototype.getMessage = function () {};

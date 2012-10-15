@@ -24,6 +24,13 @@
 blackberry.pim.message.MessageFolder = {};
 
 /**
+ * Contains the unique identifier of the message folder.
+ * @type String
+ * @BB10X
+ */
+blackberry.pim.message.MessageFolder.prototype.id = { };
+
+/**
  * Contains the name of the message folder.
  * @type String
  * @BB10X

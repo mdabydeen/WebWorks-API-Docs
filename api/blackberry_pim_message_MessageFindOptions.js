@@ -19,13 +19,27 @@
  * @toc {PIM} MessageFindOptions
  * @featureID blackberry.pim.message
  * @constructor Constructor for a new MessageFindOptions object.
- * @param {blackberry.pim.message.MessageAccount} account Mandatory. This specifies the message account under which the search will be conducted.
- * @param {blackberry.pim.message.MessageFolder} folder Mandatory. This specifies the message folder under which the search will be conducted.
- * @param {blackberry.pim.message.MessageFindFilter} [filter] Optional. A MessageFindFilter object that specifies criterias for the search.
- * @param {Number} [offset] Optional. Set the offset for the search. If not specified, it will start the search from the first message.
- * @param {Number} [limit] Optional. Set the maximum number of results to return from the search. If not specified, all matching messages will be returned.
+ * @param {blackberry.pim.message.MessageAccount} [account] Optional. This specifies the message account under which the search will be conducted. The default value is null, which means the search will be conducted under all the existing message accounts.
+ * @param {blackberry.pim.message.MessageFolder} [folder] Optional. This specifies the message folder under which the search will be conducted. The default value is null, which means the search will be conducted under all the message folders.
+ * @param {blackberry.pim.message.MessageFindFilter} [filter] Optional. A MessageFindFilter object that specifies criterias for the search. The default value is null, which means it will return all messages.
+ * @param {Number} [offset] Optional. Set the offset for the search. The default value is 0, which means it will start the search from the first message. If either account or folder is null, the set value will be ignored.
+ * @param {Number} [limit] Optional. Set the maximum number of results to return from the search. The default value is -1, which means all matching messages will be returned. If either account or folder is null, the set value will be ignored.
  */
 blackberry.pim.message.MessageFindOptions = {};
+
+/**
+ * @description The message account under which the search will be conducted.
+ * @type blackberry.pim.message.MessageAccount
+ * @BB10X
+ */
+blackberry.pim.message.MessageFindOptions.prototype.account = null;
+
+/**
+ * @description The message folder under which the search will be conducted.
+ * @type blackberry.pim.message.MessageFolder
+ * @BB10X
+ */
+blackberry.pim.message.MessageFindOptions.prototype.folder = null;
 
 /**
  * @description A search filter with which specifies criterias for the search.
@@ -46,19 +60,5 @@ blackberry.pim.message.MessageFindOptions.prototype.offset = 0;
  * @description The maximum number of returned results.
  * @BB10X
  */
-blackberry.pim.message.MessageFindOptions.prototype.limit = 0;
-
-/**
- * @type String
- * @description The id of the event. Used for looking up single event.
- * @BB10X
- */
-blackberry.pim.message.MessageFindOptions.prototype.eventId = "";
-
-/**
- * @type blackberry.pim.message.CalendarFolder
- * @description The folder that contains the event. Used for looking up single event.
- * @BB10X
- */
-blackberry.pim.message.MessageFindOptions.prototype.folder = null;
+blackberry.pim.message.MessageFindOptions.prototype.limit = -1;
 
