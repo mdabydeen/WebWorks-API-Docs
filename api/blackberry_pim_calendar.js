@@ -83,57 +83,52 @@ blackberry.pim.calendar = {
      *     var filter = new cal.CalendarEventFilter(keyword);
      *     var findOptions = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
      *
-     *     // Find all events that has the specified keyword in summary or location field
+     *     // Find all events that has the specified keyword in summary, location field or attendee name/email
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
      * }
      *
      * function findSingleEvent(eventId, folder) {
-     *     var findOptions = new cal.CalendarFindOptions();
-     *     findOptions.eventId = eventId;
-     *     findOptions.folder = folder;
+     *     var findOptions,
+     *         filter = new cal.CalendarEventFilter();
+     *     
+     *     filter.enventId = eventId;
+     *     filter.folders  = [folder];
+     *     findOptions = new cal.CalendarFindOptions(filter, null, null);
      *
      *     // Find the single event that has the specified event id that belongs to the specified folder
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
      * }
+     *
+     * function findEventsByMutipleFieldsInFilter() {
+     *     var filter = {
+     *             subString: "some thing/one/where",        // search substring in description, attendee, location
+     *             eventId: 2,
+     *             end: "2012-12-21",
+     *             expandRecurring: false,
+     *             folders: [{a folder object here}],       // search in a specified folder
+     *             start: "2012-12-12"
+     *         },
+     *         findOption = new cal.CalendarFindOptions(filter, null, null);
+     *
+     *         // Find the single event which specified by eventId and folder, 
+     *         // other fileds in filter were ignored
+     *         cal.findEvents(findOptions, onFindSuccess, onFindError);
+     * }
+     *
+     * function findEventsByEventIdAndAttendeeEmail() {
+     *     var filter = {
+     *             eventId: 3,
+     *             folders: [{a folder object here}],
+     *             attendeeEmail: "email@company.com"
+     *         },
+     *         findOptions = new cal.CalendarFindOptions(filter, null, null);
+     *         // ? Find the single event that has the specified event id 
+     *         // that belongs to the specified folder
+     *         cal.findEvents(findOptions, onFindScucess, onFindError);
+     * }
      * @BB10X
      */
     findEvents: function (findOptions, onFindSuccess, onFindError) {},
-
-    /**
-     * @name blackberry.pim.calendar.getNextEventsWithAttendee
-     * @function
-     * @description Fetches the nearest future meetings in which the user and the specified person participate. <b>Not in DAP specs</b>
-     * @param {Object} findOptions An object literal that specifies the attendee email and the number of events to returned. The object should be in the following form: <br><pre>
-     * {
-     *    attendeeEmail: &lt;the email address that identifies the person that should be present in the returned meetings&gt;,
-     *    limit: &lt;the maximum number of events to return&gt;
-     * }
-     * @param {function} onSuccess Success callback function that is invoked with the events returned from the calendar.
-     * @callback {blackberry.pim.calendar.CalendarEvent[]} onSuccess.events The array of {@link blackberry.pim.calendar.CalendarEvent} objects.
-     * @param {function} [onError] Optional error callback function. Invoked when error occurs.
-     * @callback {blackberry.pim.calendar.CalendarError} onFindError.error The {@link blackberry.pim.calendar.CalendarError} object which contains the error code.
-     * @returns {void}
-     * @BB10X
-     */
-    getNextEventsWithAttendee: function (findOptions, onSuccess, onError) {},
-
-    /**
-     * @name blackberry.pim.calendar.getLastEventsWithAttendee
-     * @function
-     * @description Fetches the most recent meetings in which the user and the specified person participate.
-     * @param {Object} findOptions An object literal that specifies the attendee email and the number of events to returned. The object should be in the following form: <br><pre>
-     * {
-     *    attendeeEmail: &lt;the email address that identifies the person that should be present in the returned meetings&gt;,
-     *    limit: &lt;the maximum number of events to return&gt;
-     * }
-     * @param {function} onSuccess Success callback function that is invoked with the events returned from the calendar.
-     * @callback {blackberry.pim.calendar.CalendarEvent[]} onSuccess.events The array of {@link blackberry.pim.calendar.CalendarEvent} objects.
-     * @param {function} [onError] Optional error callback function. Invoked when error occurs.
-     * @callback {blackberry.pim.calendar.CalendarError} onFindError.error The {@link blackberry.pim.calendar.CalendarError} object which contains the error code.
-     * @returns {void}
-     * @BB10X
-     */
-    getLastEventsWithAttendee: function (findOptions, onSuccess, onError) {},
 
     /**
      * @name blackberry.pim.calendar.getCalendarFolders

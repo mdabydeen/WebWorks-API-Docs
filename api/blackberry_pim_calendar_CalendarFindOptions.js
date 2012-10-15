@@ -62,20 +62,6 @@ blackberry.pim.calendar.CalendarFindOptions.prototype.limit = 0;
 blackberry.pim.calendar.CalendarFindOptions.prototype.detail = 0;
 
 /**
- * @type String
- * @description The id of the event. Used for looking up single event.
- * @BB10X
- */
-blackberry.pim.calendar.CalendarFindOptions.prototype.eventId = "";
-
-/**
- * @type blackberry.pim.calendar.CalendarFolder
- * @description The folder that contains the event. Used for looking up single event.
- * @BB10X
- */
-blackberry.pim.calendar.CalendarFindOptions.prototype.folder = null;
-
-/**
  * @constant
  * @type Number
  * @description Used by specifying the sort field

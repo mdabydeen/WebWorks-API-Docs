@@ -28,6 +28,13 @@
 blackberry.pim.calendar.CalenderEventFilter = {};
 
 /**
+ * @type String
+ * @description The id of the event. Used for looking up single event.
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarFindOptions.prototype.eventId = "";
+
+/**
  * @description Start of the query's time range. All events that enter the range should be returned.
  * @type Date
  * @BB10X
