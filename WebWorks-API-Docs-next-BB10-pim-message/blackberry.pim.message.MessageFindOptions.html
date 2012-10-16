@@ -171,7 +171,7 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.pim.message.MessageFindOptions.html#eventId">eventId</a>
+                                        <a href="blackberry.pim.message.MessageFindOptions.html#account">account</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -343,11 +343,11 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            String
+                                            <a href="blackberry.pim.message.MessageAccount.html">blackberry.pim.message.MessageAccount</a>
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.pim.message.MessageFindOptions.html#eventId">eventId</a>
+                                        <a href="blackberry.pim.message.MessageFindOptions.html#account">account</a>
                                         
                                     </td>
                                 </tr>
@@ -367,7 +367,7 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td class="first_column">
                                         
-                                            blackberry.pim.message.CalendarFolder
+                                            <a href="blackberry.pim.message.MessageFolder.html">blackberry.pim.message.MessageFolder</a>
                                         
                                     </td>
                                     <td>
@@ -439,7 +439,7 @@
                                 
                                     blackberry.pim.message.MessageFindOptions
                                     
-                                        (account : <a href="blackberry.pim.message.MessageAccount.html">blackberry.pim.message.MessageAccount</a>, folder : <a href="blackberry.pim.message.MessageFolder.html">blackberry.pim.message.MessageFolder</a>, <i>[filter : <a href="blackberry.pim.message.MessageFindFilter.html">blackberry.pim.message.MessageFindFilter</a>]</i>, <i>[offset : Number]</i>, <i>[limit : Number]</i>)
+                                        (<i>[account : <a href="blackberry.pim.message.MessageAccount.html">blackberry.pim.message.MessageAccount</a>]</i>, <i>[folder : <a href="blackberry.pim.message.MessageFolder.html">blackberry.pim.message.MessageFolder</a>]</i>, <i>[filter : <a href="blackberry.pim.message.MessageFindFilter.html">blackberry.pim.message.MessageFindFilter</a>]</i>, <i>[offset : Number]</i>, <i>[limit : Number]</i>)
                                     
                                 
                             
@@ -485,7 +485,7 @@
                                             <td><b>account</b></td>
                                             <td>
                                                 
-                                                Mandatory. This specifies the message account under which the search will be conducted.                         
+                                                Optional. This specifies the message account under which the search will be conducted. The default value is null, which means the search will be conducted under all the existing message accounts.                         
                                                 
                                             </td>
                                         </tr>
@@ -495,7 +495,7 @@
                                             <td><b>folder</b></td>
                                             <td>
                                                 
-                                                Mandatory. This specifies the message folder under which the search will be conducted.                         
+                                                Optional. This specifies the message folder under which the search will be conducted. The default value is null, which means the search will be conducted under all the message folders.                         
                                                 
                                             </td>
                                         </tr>
@@ -505,7 +505,7 @@
                                             <td><b>filter</b></td>
                                             <td>
                                                 
-                                                Optional. A MessageFindFilter object that specifies criterias for the search.                         
+                                                Optional. A MessageFindFilter object that specifies criterias for the search. The default value is null, which means it will return all messages.                         
                                                 
                                             </td>
                                         </tr>
@@ -515,7 +515,7 @@
                                             <td><b>offset</b></td>
                                             <td>
                                                 
-                                                Optional. Set the offset for the search. If not specified, it will start the search from the first message.                         
+                                                Optional. Set the offset for the search. The default value is 0, which means it will start the search from the first message. If either account or folder is null, the set value will be ignored.                         
                                                 
                                             </td>
                                         </tr>
@@ -525,7 +525,7 @@
                                             <td><b>limit</b></td>
                                             <td>
                                                 
-                                                Optional. Set the maximum number of results to return from the search. If not specified, all matching messages will be returned.                         
+                                                Optional. Set the maximum number of results to return from the search. The default value is -1, which means all matching messages will be returned. If either account or folder is null, the set value will be ignored.                         
                                                 
                                             </td>
                                         </tr>
@@ -571,7 +571,7 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name="eventId"></a>
+                            <a name="account"></a>
                  
                             
                             
@@ -579,10 +579,10 @@
                                     
                                                       
                                         
-                                        String
+                                        <a href="blackberry.pim.message.MessageAccount.html">blackberry.pim.message.MessageAccount</a>
                                         
                                         
-                                            eventId
+                                            account
                                             
                                                                   
                                     
@@ -601,7 +601,7 @@
                                        
                             
                             
-                            <p>The id of the event. Used for looking up single event.</p>
+                            <p>The message account under which the search will be conducted.</p>
                             <br />
                             
                             
@@ -721,7 +721,7 @@
                                     
                                                       
                                         
-                                        blackberry.pim.message.CalendarFolder
+                                        <a href="blackberry.pim.message.MessageFolder.html">blackberry.pim.message.MessageFolder</a>
                                         
                                         
                                             folder
@@ -743,7 +743,7 @@
                                        
                             
                             
-                            <p>The folder that contains the event. Used for looking up single event.</p>
+                            <p>The message folder under which the search will be conducted.</p>
                             <br />
                             
                             
@@ -940,7 +940,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Oct 11 2012 17:46:25 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 16 2012 12:13:13 GMT-0400 (EDT)
         </div>
 
     </div>
