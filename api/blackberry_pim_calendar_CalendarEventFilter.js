@@ -16,7 +16,7 @@
 
 /**
  * @class The CalenderEventFilter object captures the searchable parameters for finding calendar event items.
- * @toc {PIM} CalenderEventFilter
+ * @toc {PIM} CalendarEventFilter
  * @featureID blackberry.pim.calendar
  * @constructor Constructor for a new CalenderEventFilter object.
  * @param {String} [substring] Optional. If specified, only events whose summary or location fields contain the specified value will be returned.
