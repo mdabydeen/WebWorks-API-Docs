@@ -191,6 +191,18 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.system.html#.getCurrentTimezone">blackberry.system.getCurrentTimezone</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
                                 <tr x-ww-support="bb10_menu|ripple">
                                     <td>
                                         <a href="blackberry.system.html#.getFontInfo">blackberry.system.getFontInfo</a>
@@ -200,6 +212,18 @@
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiYes">Y</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.system.html#.getTimezones">blackberry.system.getTimezones</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
@@ -533,6 +557,18 @@
                     
                         <table><tbody>
                             
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.getCurrentTimezone">blackberry.system.getCurrentTimezone</a>
+                                        
+                                    </td>
+                                </tr>
+                            
                                 <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
@@ -541,6 +577,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.system.html#.getFontInfo">blackberry.system.getFontInfo</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            String[]
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.system.html#.getTimezones">blackberry.system.getTimezones</a>
                                         
                                     </td>
                                 </tr>
@@ -896,6 +944,87 @@
             </div>
             <div class="ref-sect-content">
                 
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".getCurrentTimezone"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String
+                                        
+                                        
+                                            blackberry.system.getCurrentTimezone
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Retrieves the time zone currently used by the device.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>function getCurrentTimezone() {    return blackberry.system.getCurrentTimezone(); // e.g. "America/New_York"}</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
                     <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
                             <a name=".getFontInfo"></a>
@@ -985,6 +1114,81 @@
     
         <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Check system font informationvar fontInfo = blackberry.system.getFontInfo();alert("The font family of current system font is " + fontInfo.fontFamily + "\n" + "The size of current system font is " + fontInfo.fontSize);&lt;/script&gt;</pre></code></td></tbody></table>
     
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".getTimezones"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        String[]
+                                        
+                                        
+                                            blackberry.system.getTimezones
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Retrieves the list of all time zones supported by the device. The time zones are based on the Olson time zone database. For more information, refer to <a href="http://www.iana.org/time-zones" target="_blank">IANA</a>.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
   
 
                         </div>
@@ -2955,7 +3159,7 @@ The <b>regionChanged</b> event is triggered whenever the regional setting of the
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 16 2012 11:25:21 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Oct 22 2012 08:11:51 GMT-0400 (EDT)
         </div>
 
     </div>
