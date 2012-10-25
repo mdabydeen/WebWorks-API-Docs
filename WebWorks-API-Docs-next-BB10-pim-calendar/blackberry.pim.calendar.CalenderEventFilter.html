@@ -72,6 +72,13 @@
 
 
                 
+                    <div x-ww-support="bb10x">
+                    
+                
+  
+
+                    </div>
+                
             </p>
         
 
@@ -108,20 +115,18 @@
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
-                                
-                                    <tr x-ww-support="bb10x">
-                                        <td>
-                                            <a href="blackberry.pim.calendar.CalenderEventFilter.html">blackberry.pim.calendar.CalenderEventFilter</a>
-                                            <td class="apiNo">&nbsp;</td>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalenderEventFilter.html#detail">detail</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                        </td>
-                                    </tr>
-                                
-                            
+                                    </td>
+                                </tr>
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
@@ -249,33 +254,6 @@
     
         
         
-            <br />
-            <div class="ref-sect ref-index" x-ww-support="bb10x">
-                <div class="ref-sect-title">
-                    <h2> Constructors </h2>
-                </div>
-                <div class="ref-sect-content">
-                    
-                        <table><tbody>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
-                                            
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.calendar.CalenderEventFilter.html">blackberry.pim.calendar.CalenderEventFilter</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                        </tbody></table>
-                    
-                    
-                </div>
-            </div>
-        
     
         
         
@@ -293,6 +271,18 @@
                 <div class="ref-sect-content">
                     
                         <table><tbody>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            Date
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalenderEventFilter.html#detail">detail</a>
+                                        
+                                    </td>
+                                </tr>
                             
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
@@ -333,7 +323,7 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Date
+                                            Number
                                         
                                     </td>
                                     <td>
@@ -378,22 +368,37 @@
 
     
     
+
+    
+    
+
+    
+    
+
+    
+    
         <div class="ref-sect">
             <div class="ref-sect-title clearfix">
-                <h2>Constructors</h2>
+                <h2>Properties</h2>
             </div>
             <div class="ref-sect-content">
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".CalenderEventFilter"></a>
+                            <a name="detail"></a>
                  
                             
                             
                                 
-                                    blackberry.pim.calendar.CalenderEventFilter
                                     
-                                        (<i>[substring : String]</i>, <i>[folders : <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>[]]</i>, <i>[start : Date]</i>, <i>[end : Date]</i>, <i>[detail : Number]</i>)
+                                                      
+                                        
+                                        Date
+                                        
+                                        
+                                            detail
+                                            
+                                                                  
                                     
                                 
                             
@@ -402,12 +407,15 @@
                         <div class="detailed description">
                             
                             
+                                
+                                <br />
+                            
                     
                             
                                        
                             
                             
-                            <p></p>
+                            <p>Start of the query's time range. All events that enter the range should be returned.</p>
                             <br />
                             
                             
@@ -426,65 +434,6 @@
                             <br />
                             
                             
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>substring</b></td>
-                                            <td>
-                                                
-                                                Optional. If specified, only events whose summary or location fields contain the specified value will be returned.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>folders</b></td>
-                                            <td>
-                                                
-                                                Optional. If specified, only events contained in the specified CalendarFolders will be returned.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>start</b></td>
-                                            <td>
-                                                
-                                                Optional. Start of the query's time range.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>end</b></td>
-                                            <td>
-                                                
-                                                Optional. End of the query's time range.                         
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>detail</b></td>
-                                            <td>
-                                                
-                                                Optional. Detail level of the search results. This should be one of the DETAIL_* constants. Defaults to <a href="blackberry.pim.calendar.CalendarFindOptions.html#.DETAIL_AGENDA">DETAIL_AGENDA</a>.                         
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
                                                
 
                             
@@ -504,24 +453,6 @@
 
                         </div>
                     </div>
-                
-            </div>
-        </div>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-        <div class="ref-sect">
-            <div class="ref-sect-title clearfix">
-                <h2>Properties</h2>
-            </div>
-            <div class="ref-sect-content">
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
@@ -748,7 +679,7 @@ this array should only contain one folder.</p>
                                     
                                                       
                                         
-                                        Date
+                                        Number
                                         
                                         
                                             start
@@ -770,7 +701,7 @@ this array should only contain one folder.</p>
                                        
                             
                             
-                            <p>Start of the query's time range. All events that enter the range should be returned.</p>
+                            <p>Detail level of the search results. This should be one of the DETAIL_* constants. Defaults to <a href="blackberry.pim.calendar.CalendarFindOptions.html#.DETAIL_AGENDA">DETAIL_AGENDA</a></p>
                             <br />
                             
                             
@@ -897,7 +828,7 @@ back-end to return only events whose summary or location fields contain the spec
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Oct 18 2012 14:20:05 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Oct 25 2012 14:38:30 GMT-0400 (EDT)
         </div>
 
     </div>
