@@ -66,9 +66,7 @@ blackberry.pim.calendar = {
      * @callback {blackberry.pim.calendar.CalendarError} onFindError.error The CalendarError object which contains the error code.
      * @returns {void}
      * @example
-     * var cal = blackberry.pim.calendar,
-     *     CalendarFindOptions = cal.CalendarFindOptions,
-     *     CalendarEventFilter = cal.CalendarEventFilter;
+     * var cal = blackberry.pim.calendar;
      *
      * function onFindSuccess(events) {
      *     events.forEach(function (evt) {
@@ -86,8 +84,11 @@ blackberry.pim.calendar = {
      * // -summary
      * // -attendees' names or emails
      * function findEventsByKeyword(keyword) {
-     *     var filter = new CalendarEventFilter(location);
-     *     var findOptions = new CalendarFindOptions(filter, null, CalendarFindOptions.DETAIL_FULL);
+     *     var filter = { "location" : location };
+     *     var findOptions = { 
+     *          "filter" : filter,
+     *          "detail" : CalendarFindOptions.DETAIL_FULL
+     *          };
      *
      *     // Find all events that has the specified keyword in summary, location or attendees' name/email
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
@@ -96,14 +97,17 @@ blackberry.pim.calendar = {
      * // Use case 2: find one single event by event id and folder
      * function findSingleEvent(eventId, folder) {
      *     var findOptions,
-     *         filter = new CalendarEventFilter();
+     *         filter {};
      *     
      *     filter.eventId = eventId;
      *     filter.folders  = [folder];
      *
      *     // When finding single events, the returned event will always have all fields populated,
      *     // regardless of what detail level the user specifies
-     *     findOptions = new CalendarFindOptions(filter, null, CalendarFindOptions.DETAIL_FULL);
+     *     findOptions = { 
+     *                      "filter" : filter,
+     *                      "detail" : CalendarFindOptions.DETAIL_FULL
+     *                   };
      *
      *     // Find the single event that has the specified event id that belongs to the specified folder
      *     cal.findEvents(findOptions, onFindSuccess, onFindError);
@@ -119,7 +123,10 @@ blackberry.pim.calendar = {
      *             folders: [folder],            // applied in search
      *             start: new Date("2012-12-12")
      *         },
-     *         findOption = new cal.CalendarFindOptions(filter, null, cal.CalendarFindOptions.DETAIL_FULL);
+     *         findOption = { 
+                                "filter" : filter,
+                                "detail" : cal.CalendarFindOptions.DETAIL_FULL
+                            };
      *
      *    // By specifying event id and folder, you instruct the search engine to look for the event with
      *    // the matching event id and folder. All other search parameters will be ignored.

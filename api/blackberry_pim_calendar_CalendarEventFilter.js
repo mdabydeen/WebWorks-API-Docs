@@ -18,12 +18,6 @@
  * @class The CalenderEventFilter object captures the searchable parameters for finding calendar event items.
  * @toc {PIM} CalendarEventFilter
  * @featureID blackberry.pim.calendar
- * @constructor Constructor for a new CalenderEventFilter object.
- * @param {String} [substring] Optional. If specified, only events whose summary or location fields contain the specified value will be returned.
- * @param {blackberry.pim.calendar.CalendarFolder[]} [folders] Optional. If specified, only events contained in the specified CalendarFolders will be returned.
- * @param {Date} [start] Optional. Start of the query's time range.
- * @param {Date} [end] Optional. End of the query's time range.
- * @param {Number} [detail] Optional. Detail level of the search results. This should be one of the DETAIL_* constants. Defaults to {@link blackberry.pim.calendar.CalendarFindOptions.DETAIL_AGENDA}.
  */
 blackberry.pim.calendar.CalenderEventFilter = {};
 
@@ -37,6 +31,13 @@ blackberry.pim.calendar.CalendarFindOptions.prototype.eventId = "";
 /**
  * @description Start of the query's time range. All events that enter the range should be returned.
  * @type Date
+ * @BB10X
+ */
+blackberry.pim.calendar.CalenderEventFilter.prototype.detail = 0;
+
+/**
+ * @description Detail level of the search results. This should be one of the DETAIL_* constants. Defaults to {@link blackberry.pim.calendar.CalendarFindOptions.DETAIL_AGENDA}
+ * @type Number
  * @BB10X
  */
 blackberry.pim.calendar.CalenderEventFilter.prototype.start = null;

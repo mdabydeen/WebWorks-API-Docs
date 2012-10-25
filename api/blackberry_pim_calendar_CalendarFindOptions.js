@@ -18,13 +18,6 @@
  * @class The CalendarFindOptions object contains fields that filter and sort the results of {@link blackberry.pim.calendar.findEvents}().
  * @toc {PIM} CalendarFindOptions
  * @featureID blackberry.pim.calendar
- * @constructor Constructor for a new CalendarFindOptions object.
- * @param {blackberry.pim.calendar.CalenderEventFilter} [filter] Optional. A CalendarEventFilter object that specifies search criteria to filter the results.
- * @param {Object[]} [sort] Optional. An array of object literals that specifies the order of the results.
- * @param {Number} [sort.fieldName] The field to sort. This should be one of the SORT_FIELD_* constants.
- * @param {Boolean} [sort.desc] The sort order (descending if true).
- * @param {Number} [detail] Optional. Detail level of the search results. This should be one of the DETAIL_* constants. Defaults to {@link blackberry.pim.calendar.CalendarFindOptions.DETAIL_AGENDA}.
- * @param {Number} [limit] Optional. The maximum number of results to return from the search. Defaults to -1, which would cause all matching events to be returned.
  */
 blackberry.pim.calendar.CalendarFindOptions = {};
 
