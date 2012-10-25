@@ -155,4 +155,33 @@ blackberry.pim.calendar = {
      * @BB10X
      */
     getDefaultCalendarFolder: function () {}
+
+    /**
+     * @name blackberry.pim.calendar.getCalendarAccounts
+     * @function
+     * @description Retrieves all calendar accounts.
+     * @returns {blackberry.pim.calendar.CalendarAccount[]}
+     * @BB10X
+     */
+    getCalendarAccounts: function () {},
+
+   /**
+     * @name blackberry.pim.calendar.getDefaultCalendarAccount
+     * @function
+     * @description Retrieves the default calendar account.
+     * @returns {blackberry.pim.calendar.CalendarAccount}
+     * @BB10X
+     */
+    getDefaultCalendarAccount: function () {}
+
+    /**
+     * @name blackberry.pim.calendar.getEvent
+     * @function
+     * @description Retrieves the event with specified eventId and folder.
+     * @param {String} [eventId] the identifier of the event
+     * @param {blackberry.pim.calendar.Folder} [folder] the folder that contains this event
+     * @returns {blackberry.pim.calendar.CalendarEvent}
+     * @BB10X
+     */
+    getEvent: function (eventId, folder) {}
 };
