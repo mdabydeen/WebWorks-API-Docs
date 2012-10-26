@@ -61,18 +61,18 @@
 
         <h1>
             
-                Settings
+                CalendarAccount
             
         </h1>
 
 
         
             <p>
-                Provides read access to BBM Connected Application settings.
+                The <code>CalendarAccount</code> object contains the calendar account information for the calendar service.
 
 
                 
-                    <div x-ww-support="bb5.0|bb6.0|bb7.0">
+                    <div x-ww-support="bb10x">
                     
                 
   
@@ -105,7 +105,7 @@
                         <table>
                             <tbody>
                             
-                                <tr><td>- BlackBerry OS 5.0+</td></tr>
+                                <tr><td>- BlackBerry 10</td></tr>
                             
                             </tbody>
                         </table>
@@ -116,27 +116,39 @@
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.bbm.platform.settings.html#.alwaysAllowPublicConns">alwaysAllowPublicConns</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#folders">folders</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <tr x-ww-support="bb10x">
                                     <td>
-                                        <a href="blackberry.bbm.platform.settings.html#.profileboxEnabled">profileboxEnabled</a>
-                                        <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#id">id</a>
+                                        <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#name">name</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                                     </td>
                                 </tr>
                             
@@ -167,14 +179,14 @@
                             
                                 
                             
-                            <tr x-ww-support="bb5.0|bb6.0|bb7.0"><td>
-                                &lt;feature id="blackberry.bbm.platform" /&gt;
-                                <td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
+                            <tr x-ww-support="bb10x"><td>
+                                &lt;feature id="blackberry.pim.calendar" /&gt;
+                                <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
                             </td></tr>
                         
                     </table>
@@ -216,7 +228,7 @@
         
         
             <br />
-            <div class="ref-sect ref-index" x-ww-support="bb5.0|bb6.0|bb7.0">
+            <div class="ref-sect ref-index" x-ww-support="bb10x">
                 <div class="ref-sect-title">
                     <h2> Properties </h2>
                 </div>
@@ -224,26 +236,38 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Boolean
+                                            <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>[]
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.settings.html#.alwaysAllowPublicConns">alwaysAllowPublicConns</a>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#folders">folders</a>
                                         
                                     </td>
                                 </tr>
                             
-                                <tr x-ww-support="bb5.0|bb6.0|bb7.0">
+                                <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            Boolean
+                                            String
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.bbm.platform.settings.html#.profileboxEnabled">profileboxEnabled</a>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#id">id</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
+                                            String
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#name">name</a>
                                         
                                     </td>
                                 </tr>
@@ -287,20 +311,20 @@
             </div>
             <div class="ref-sect-content">
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".alwaysAllowPublicConns"></a>
+                            <a name="folders"></a>
                  
                             
                             
                                 
                                     
-                                        static              
-                                        readonly
-                                        Boolean
+                                                      
+                                        
+                                        <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>[]
                                         
                                         
-                                            alwaysAllowPublicConns
+                                            folders
                                             
                                                                   
                                     
@@ -319,9 +343,7 @@
                                        
                             
                             
-                            <p>Whether a prompt is shown when hosting a public connection or requesting to join a public connection.
-<p><code>true</code> if the prompt is never shown; <code>false</code> otherwise.
-<p>See <a href="blackberry.bbm.platform.io.html#.host">blackberry.bbm.platform.io.host</a> and <a href="blackberry.bbm.platform.io.html#.joinHost">blackberry.bbm.platform.io.joinHost</a></p>
+                            <p>Return all the folders of the calendar account.</p>
                             <br />
                             
                             
@@ -332,7 +354,7 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -360,20 +382,20 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb5.0|bb6.0|bb7.0">
+                    <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
-                            <a name=".profileboxEnabled"></a>
+                            <a name="id"></a>
                  
                             
                             
                                 
                                     
-                                        static              
-                                        readonly
-                                        Boolean
+                                                      
+                                        
+                                        String
                                         
                                         
-                                            profileboxEnabled
+                                            id
                                             
                                                                   
                                     
@@ -392,9 +414,7 @@
                                        
                             
                             
-                            <p>Whether the application profile box appears in the current user's BBM profile.
-<p><code>true</code> if the profile box appears; <code>false</code> otherwise.
-<p>See <a href="blackberry.bbm.platform.self.profilebox.html">blackberry.bbm.platform.self.profilebox</a></p>
+                            <p>Contains the unique identifier of the calendar account.</p>
                             <br />
                             
                             
@@ -405,7 +425,78 @@
                                     </th></tr></thead>
                                     
                                         <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 5.0+
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
+                            <a name="name"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        String
+                                        
+                                        
+                                            name
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Name of the calendar account.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
                                         </td></tr>
                                     
                                 </table>              
@@ -449,7 +540,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 26 2012 01:13:57 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 26 2012 01:13:47 GMT-0400 (EDT)
         </div>
 
     </div>
