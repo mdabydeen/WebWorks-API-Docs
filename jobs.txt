@@ -35,5 +35,4 @@ WebWorks-API-Docs-next-BB10-contact-find-optional-filter
 WebWorks-API-Docs-next-BB10-HTML5Dialog
 WebWorks-API-Docs-next-BB10-system-timezone
 WebWorks-API-Docs-next-BB10-sensors
-WebWorks-API-Docs-bbm_update
 WebWorks-API-Docs-bbm_permission
