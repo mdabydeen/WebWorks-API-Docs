@@ -114,7 +114,7 @@
 
         
             <p>
-                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br> The sensors object has two major functions for controlling the various sensors on the device. All of its functions and properties are used directly from the object.
+                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br> The sensors object has various events which listen to sensors on the device. All of its functions and events are used directly from the object.
 
 
                 
@@ -792,7 +792,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -847,7 +847,7 @@
                                             blackberry.sensors.deviceazimuthpitchroll
                                             
                                                 
-                                                    ()
+                                                    (data : Object)
                                                 
                                             
                                                                   
@@ -867,7 +867,7 @@
                                        
                             
                             
-                            <p>Device azimuth pitch roll sensor<p>This sensor returns a rotation matrix based on the orientation of the device</p>
+                            <p>Device sensor azimuth pitch roll sensor.<p>This sensor returns a rotation matrix based on the orientation of the device.</p>
                             <br />
                             
                             
@@ -893,6 +893,28 @@
                                         Parameters
                                     </th></tr></thead>
                                                    
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>azimuth:</b> Azimuth from 0 -> 360 degrees from magnetic north.
+                                                    
+                                                        <br />
+                                                        <b>pitch:</b> Pitch from -180 to 180 degrees.
+                                                    
+                                                        <br />
+                                                        <b>roll:</b> Roll from -90 to 90 degrees.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
                                                   
                                 </table>
                                                
@@ -984,7 +1006,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -1056,7 +1078,7 @@
                                        
                             
                             
-                            <p>Device gravity sensor<p>This sensor returns gravity information from the gravity sensor. Returned as m/s/s (meters/second/second).</p>
+                            <p>Device gravity sensor.<p>This sensor returns gravity information from the gravity sensor. Returned as m/s/s (meters/second/second).</p>
                             <br />
                             
                             
@@ -1088,7 +1110,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -1192,7 +1214,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -1302,12 +1324,12 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>value:</b> Illuminance in lux
+                                                        <b>value:</b> Illuminance in lux.
                                                     
                                                 
                                             </td>
@@ -1510,7 +1532,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -1585,7 +1607,7 @@
                                        
                             
                             
-                            <p>Device orientation sensor<p>This sensor returns device orientation information.</p>
+                            <p>Device orientation sensor.<p>This sensor returns device orientation information.</p>
                             <br />
                             
                             
@@ -1617,7 +1639,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -1721,15 +1743,15 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>value:</b> Discrete steps of distance or actual value in cm
+                                                        <b>value:</b> Discrete steps of distance or actual value in cm.
                                                     
                                                         <br />
-                                                        <b>normalized:</b> 0.0 -> 1.0 (close -> far), normalized unit-less signal from raw sensor
+                                                        <b>normalized:</b> 0.0 -> 1.0 (close -> far), normalized unit-less signal from raw sensor.
                                                     
                                                 
                                             </td>
@@ -1773,7 +1795,7 @@
                                             blackberry.sensors.devicerotationmatrix
                                             
                                                 
-                                                    (data : Object, <i>[data : Array]</i>)
+                                                    (data : Object)
                                                 
                                             
                                                                   
@@ -1793,7 +1815,7 @@
                                        
                             
                             
-                            <p>Device rotation matrix sensor<p>This sensor returns a rotation matrix based on the orientation of the device</p>
+                            <p>Device rotation matrix sensor.<p>This sensor returns a rotation matrix based on the orientation of the device.</p>
                             <br />
                             
                             
@@ -1825,17 +1847,13 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>data</b></td>
-                                            <td>
-                                                
-                                                3x3 Float array of data values representing the matrix                         
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>matrix:</b> 3x3 Float array of data values representing the matrix.
+                                                    
                                                 
                                             </td>
                                         </tr>
@@ -1880,7 +1898,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 17:34:08 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 17:53:06 GMT-0500 (EST)
         </div>
 
     </div>
