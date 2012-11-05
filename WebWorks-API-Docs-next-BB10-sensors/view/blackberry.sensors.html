@@ -223,6 +223,18 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
+                                        <a href="blackberry.sensors.html#.event:devicegravity">blackberry.sensors.devicegravity</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
                                         <a href="blackberry.sensors.html#.event:devicegyroscope">blackberry.sensors.devicegyroscope</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -408,6 +420,18 @@
                                         
                                     </td>
                                     <td>
+                                        <a href="blackberry.sensors.html#.event:devicegravity">blackberry.sensors.devicegravity</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
                                         <a href="blackberry.sensors.html#.event:devicegyroscope">blackberry.sensors.devicegyroscope</a>
                                         
                                     </td>
@@ -569,19 +593,19 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>delay:</b> time in ms to report back between sensor updates
+                                                        <b>delay:</b> Time in ms to report back between sensor updates
                                                     
                                                         <br />
-                                                        <b>background:</b> allow sensor to send updates while app is in background
+                                                        <b>background:</b> Allow sensor to send updates while app is in background
                                                     
                                                         <br />
-                                                        <b>batching:</b> when batching is enabled and supported by the hardware, sensors will report samples in hardware-specific batch sizes to conserve power
+                                                        <b>batching:</b> When batching is enabled and supported by the hardware, sensors will report samples in hardware-specific batch sizes to conserve power
                                                     
                                                         <br />
-                                                        <b>queue:</b> enabling the queue creates a client-specific service side queue of events, this is useful to not miss any events
+                                                        <b>queue:</b> Enabling the queue creates a client-specific service side queue of events, this is useful to not miss any events
                                                     
                                                         <br />
-                                                        <b>reducedReporting:</b> when reduced reporting is enabled, only a significant change between the last read event and the current unread event will cause an event to be delivered (useful for power saving)
+                                                        <b>reducedReporting:</b> When reduced reporting is enabled, only a significant change between the last read event and the current unread event will cause an event to be delivered (useful for power saving)
                                                     
                                                 
                                             </td>
@@ -833,6 +857,91 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
+                            <a name=".event:devicegravity"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.devicegravity
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device gravity sensor<p>This sensor returns gravity information from the gravity sensor.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
                             <a name=".event:devicegyroscope"></a>
                  
                             
@@ -978,7 +1087,7 @@
                                        
                             
                             
-                            <p>Device light sensor<p>This sensor returns brightness infomormation from the light sensor.</p>
+                            <p>Device light sensor<p>This sensor returns brightness information from the light sensor.</p>
                             <br />
                             
                             
@@ -1223,7 +1332,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>value:</b> discrete steps of distance or actual value in cm
+                                                        <b>value:</b> Discrete steps of distance or actual value in cm
                                                     
                                                         <br />
                                                         <b>normalized:</b> 0.0 -> 1.0 (close -> far), normalized unit-less signal from raw sensor
@@ -1272,7 +1381,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:58:37 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 16:12:32 GMT-0500 (EST)
         </div>
 
     </div>
