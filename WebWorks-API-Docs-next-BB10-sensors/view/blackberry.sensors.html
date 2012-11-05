@@ -884,7 +884,7 @@
                                        
                             
                             
-                            <p>Device apr matrix sensor<p>This sensor returns a rotation matrix based on the orientation of the device</p>
+                            <p>Device azimuth pitch roll sensor<p>This sensor returns a rotation matrix based on the orientation of the device</p>
                             <br />
                             
                             
@@ -1053,7 +1053,7 @@
                                             blackberry.sensors.devicegravity
                                             
                                                 
-                                                    ()
+                                                    (data : Object)
                                                 
                                             
                                                                   
@@ -1099,6 +1099,25 @@
                                         Parameters
                                     </th></tr></thead>
                                                    
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>y:</b> The y-axis value.
+                                                    
+                                                        <br />
+                                                        <b>z:</b> The z-axis value.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
                                                   
                                 </table>
                                                
@@ -1349,7 +1368,7 @@
                                             blackberry.sensors.devicelinearacceleration
                                             
                                                 
-                                                    ()
+                                                    (data : Object)
                                                 
                                             
                                                                   
@@ -1395,6 +1414,28 @@
                                         Parameters
                                     </th></tr></thead>
                                                    
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>x:</b> The x-axis value.
+                                                    
+                                                        <br />
+                                                        <b>y:</b> The y-axis value.
+                                                    
+                                                        <br />
+                                                        <b>z:</b> The z-axis value.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
                                                   
                                 </table>
                                                
@@ -1749,7 +1790,7 @@
                                             blackberry.sensors.devicerotationmatrix
                                             
                                                 
-                                                    (<i>[data : Array]</i>)
+                                                    (data : Object, <i>[data : Array]</i>)
                                                 
                                             
                                                                   
@@ -1801,6 +1842,16 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
+                                                The object containing the sensor data                         
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
                                                 3x3 Float array of data values representing the matrix                         
                                                 
                                             </td>
@@ -1846,7 +1897,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 17:04:31 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 17:34:08 GMT-0500 (EST)
         </div>
 
     </div>
