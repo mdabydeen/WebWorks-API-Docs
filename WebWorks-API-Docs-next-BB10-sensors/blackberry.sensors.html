@@ -242,7 +242,31 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
+                                        <a href="blackberry.sensors.html#.event:devicelinearacceleration">blackberry.sensors.devicelinearacceleration</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
                                         <a href="blackberry.sensors.html#.event:devicemagnetometer">blackberry.sensors.devicemagnetometer</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:deviceorientation">blackberry.sensors.deviceorientation</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -439,7 +463,31 @@
                                         
                                     </td>
                                     <td>
+                                        <a href="blackberry.sensors.html#.event:devicelinearacceleration">blackberry.sensors.devicelinearacceleration</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
                                         <a href="blackberry.sensors.html#.event:devicemagnetometer">blackberry.sensors.devicemagnetometer</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:deviceorientation">blackberry.sensors.deviceorientation</a>
                                         
                                     </td>
                                 </tr>
@@ -664,7 +712,7 @@
                                        
                             
                             
-                            <p>Device accelerometer sensor<p>This sensor returns accelerometer data not including gravity information.</p>
+                            <p>Device accelerometer sensor<p>This sensor returns accelerometer data. m/s/s (meters/second/second)</p>
                             <br />
                             
                             
@@ -771,7 +819,7 @@
                                        
                             
                             
-                            <p>Device compass sensor<p>This sensor returns directional infomormation from the compass sensor.</p>
+                            <p>Device compass sensor<p>This sensor returns directional information from the compass sensor.</p>
                             <br />
                             
                             
@@ -808,7 +856,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>value:</b> The azimuth value
+                                                        <b>value:</b> Azimuth from 0 -> 360 degrees from magnetic north.
                                                     
                                                         <br />
                                                         <b>isFaceDown:</b> Flag if device is faced down
@@ -960,7 +1008,7 @@
                                        
                             
                             
-                            <p>Device gyroscope sensor<p>This sensor returns data from the gyroscope sensor.</p>
+                            <p>Device gyroscope sensor<p>This sensor returns data from the gyroscope sensor. r/s (radians/second).</p>
                             <br />
                             
                             
@@ -1136,6 +1184,91 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
+                            <a name=".event:devicelinearacceleration"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.devicelinearacceleration
+                                            
+                                                
+                                                    ()
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device linear acceleration sensor<p>This sensor returns linear acceleration data from the device accelerometer</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
                             <a name=".event:devicemagnetometer"></a>
                  
                             
@@ -1171,7 +1304,7 @@
                                        
                             
                             
-                            <p>Device magnetometer sensor<p>This sensor returns information from the device's magnetometer.</p>
+                            <p>Device magnetometer sensor<p>This sensor returns values from the device's magnetometer. uT (micro Tesla).</p>
                             <br />
                             
                             
@@ -1215,6 +1348,110 @@
                                                     
                                                         <br />
                                                         <b>z:</b> The z-axis value
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:deviceorientation"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.deviceorientation
+                                            
+                                                
+                                                    (data : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device orientation sensor<p>This sensor returns device orientation information.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>screen:</b> Screen rotation in degrees: 0, 90, 180 or 270.
+                                                    
+                                                        <br />
+                                                        <b>face:</b> String-based representation of device face.
                                                     
                                                 
                                             </td>
@@ -1364,7 +1601,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 16:12:32 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 16:33:08 GMT-0500 (EST)
         </div>
 
     </div>
