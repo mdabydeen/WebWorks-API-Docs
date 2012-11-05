@@ -142,7 +142,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function sensorCallback(sensor, data) {      if (sensor == blackberry.sensors.COMPASS) {          alert(Current azimuth: " + data.azimuth);      }   }}// Start the event listener for the sensors callback   blackberry.event.addEventListener("onsensor", sensorCallback);// Start listening to the compass sensor with a delay feedback of 1000ms    blackberry.sensors.startSensor(blackberry.sensors.COMPASS, { delay : 1000 });   &lt;/script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function compassCallback(sensor, data) {      alert(Current azimuth: " + data.value);   }}// Start listening to the compass sensor with a delay feedback of 1000ms    blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callback   blackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -188,18 +188,6 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.sensors.html#.setOptions">blackberry.sensors.setOptions</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10_menu">
-                                    <td>
-                                        <a href="blackberry.sensors.html#.stopSensor">blackberry.sensors.stopSensor</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -331,18 +319,6 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.sensors.html#.setOptions">blackberry.sensors.setOptions</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10_menu">
-                                    <td class="first_column">
-                                        
-                                            void
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.sensors.html#.stopSensor">blackberry.sensors.stopSensor</a>
                                         
                                     </td>
                                 </tr>
@@ -535,101 +511,6 @@
                                                         <br />
                                                         <b>reducedReporting:</b> when reduced reporting is enabled, only a significant change between the last read event and the current unread event will cause an event to be delivered (useful for power saving)
                                                     
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10_menu">
-                        <h3>
-                            <a name=".stopSensor"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        
-                                            void
-                                        
-                                        
-                                            blackberry.sensors.stopSensor
-                                            
-                                                
-                                                    (sensor : String)
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>This method will stop reporting sensor data of the given sensor</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>sensor</b></td>
-                                            <td>
-                                                
-                                                The sensor to stop listening to                         
                                                 
                                             </td>
                                         </tr>
@@ -1017,7 +898,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:07:05 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:14:45 GMT-0500 (EST)
         </div>
 
     </div>
