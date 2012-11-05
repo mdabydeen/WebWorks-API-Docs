@@ -199,7 +199,7 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.sensors.html#.event:ondeviceaccelerometer">blackberry.sensors.ondeviceaccelerometer</a>
+                                        <a href="blackberry.sensors.html#.event:deviceaccelerometer">blackberry.sensors.deviceaccelerometer</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -211,7 +211,7 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.sensors.html#.event:ondevicegyroscope">blackberry.sensors.ondevicegyroscope</a>
+                                        <a href="blackberry.sensors.html#.event:devicecompass">blackberry.sensors.devicecompass</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -223,7 +223,19 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.sensors.html#.event:ondevicemagnetometer">blackberry.sensors.ondevicemagnetometer</a>
+                                        <a href="blackberry.sensors.html#.event:devicegyroscope">blackberry.sensors.devicegyroscope</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:devicemagnetometer">blackberry.sensors.devicemagnetometer</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -348,7 +360,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.sensors.html#.event:ondeviceaccelerometer">blackberry.sensors.ondeviceaccelerometer</a>
+                                        <a href="blackberry.sensors.html#.event:deviceaccelerometer">blackberry.sensors.deviceaccelerometer</a>
                                         
                                     </td>
                                 </tr>
@@ -360,7 +372,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.sensors.html#.event:ondevicegyroscope">blackberry.sensors.ondevicegyroscope</a>
+                                        <a href="blackberry.sensors.html#.event:devicecompass">blackberry.sensors.devicecompass</a>
                                         
                                     </td>
                                 </tr>
@@ -372,7 +384,19 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="blackberry.sensors.html#.event:ondevicemagnetometer">blackberry.sensors.ondevicemagnetometer</a>
+                                        <a href="blackberry.sensors.html#.event:devicegyroscope">blackberry.sensors.devicegyroscope</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:devicemagnetometer">blackberry.sensors.devicemagnetometer</a>
                                         
                                     </td>
                                 </tr>
@@ -550,7 +574,7 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".event:ondeviceaccelerometer"></a>
+                            <a name=".event:deviceaccelerometer"></a>
                  
                             
                             
@@ -562,7 +586,7 @@
                                             void
                                         
                                         
-                                            blackberry.sensors.ondeviceaccelerometer
+                                            blackberry.sensors.deviceaccelerometer
                                             
                                                 
                                                     (data : Object)
@@ -657,7 +681,7 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".event:ondevicegyroscope"></a>
+                            <a name=".event:devicecompass"></a>
                  
                             
                             
@@ -669,10 +693,114 @@
                                             void
                                         
                                         
-                                            blackberry.sensors.ondevicegyroscope
+                                            blackberry.sensors.devicecompass
                                             
                                                 
-                                                    (data : Object, <i>[temperature : Float]</i>)
+                                                    (data : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device compass sensor<p>This sensor returns accelerometer data including gravity information from the gyroscope sensor.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>value:</b> The azimuth value
+                                                    
+                                                        <br />
+                                                        <b>isFaceDown:</b> Flag if device is faced down
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:devicegyroscope"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.devicegyroscope
+                                            
+                                                
+                                                    (data : Object)
                                                 
                                             
                                                                   
@@ -737,16 +865,9 @@
                                                         <br />
                                                         <b>z:</b> The z-axis value
                                                     
-                                                
-                                            </td>
-                                        </tr>
-                                    
-                                        
-                                        <tr>
-                                            <td><b>temperature</b></td>
-                                            <td>
-                                                
-                                                the temperature of the gyroscope sensor (in degrees Celsius).                         
+                                                        <br />
+                                                        <b>temperature:</b> the temperature of the gyroscope sensor (in degrees Celsius).
+                                                    
                                                 
                                             </td>
                                         </tr>
@@ -774,7 +895,7 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
-                            <a name=".event:ondevicemagnetometer"></a>
+                            <a name=".event:devicemagnetometer"></a>
                  
                             
                             
@@ -786,7 +907,7 @@
                                             void
                                         
                                         
-                                            blackberry.sensors.ondevicemagnetometer
+                                            blackberry.sensors.devicemagnetometer
                                             
                                                 
                                                     (data : Object)
@@ -898,7 +1019,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:14:45 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:28:28 GMT-0500 (EST)
         </div>
 
     </div>
