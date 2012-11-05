@@ -245,6 +245,18 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:deviceproximity">blackberry.sensors.deviceproximity</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
                         </table>
                     </div>
                 </div>
@@ -285,11 +297,11 @@
                     </table>
                 
 
-                <div x-ww-support="pb_menu">
+                <div x-ww-support="pb_menu|bb10_menu">
                     
                     <table>
                         <tr>
-                            <th>Permission Elements (PlayBook Only)</th>
+                            <th>Permission Elements (PlayBook and BlackBerry 10+)</th>
                         </tr>
                         
                             <tr><td>
@@ -397,6 +409,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.sensors.html#.event:devicemagnetometer">blackberry.sensors.devicemagnetometer</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:deviceproximity">blackberry.sensors.deviceproximity</a>
                                         
                                     </td>
                                 </tr>
@@ -866,7 +890,7 @@
                                                         <b>z:</b> The z-axis value
                                                     
                                                         <br />
-                                                        <b>temperature:</b> the temperature of the gyroscope sensor (in degrees Celsius).
+                                                        <b>temperature:</b> The temperature of the gyroscope sensor (in degrees Celsius).
                                                     
                                                 
                                             </td>
@@ -1000,6 +1024,110 @@
                         </div>
                     </div>
                 
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:deviceproximity"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.deviceproximity
+                                            
+                                                
+                                                    (data : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device proximity sensor<p>This sensor returns accelerometer data including gravity information from the gyroscope sensor.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>value:</b> 1 if face is detected, 0 otherwise.
+                                                    
+                                                        <br />
+                                                        <b>normalized:</b> Normalized value of proximity sensor
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
             </div>
         </div>
     
@@ -1019,7 +1147,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:28:28 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:51:10 GMT-0500 (EST)
         </div>
 
     </div>
