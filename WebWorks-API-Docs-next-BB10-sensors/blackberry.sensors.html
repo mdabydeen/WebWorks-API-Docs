@@ -204,6 +204,30 @@
                                     </td>
                                 </tr>
                             
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:ondevicegyroscope">blackberry.sensors.ondevicegyroscope</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:ondevicemagnetometer">blackberry.sensors.ondevicemagnetometer</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
                         </table>
                     </div>
                 </div>
@@ -332,6 +356,30 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.sensors.html#.event:ondeviceaccelerometer">blackberry.sensors.ondeviceaccelerometer</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:ondevicegyroscope">blackberry.sensors.ondevicegyroscope</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:ondevicemagnetometer">blackberry.sensors.ondevicemagnetometer</a>
                                         
                                     </td>
                                 </tr>
@@ -639,7 +687,7 @@
                                        
                             
                             
-                            <p>Device accelerometer sensor<p>This callback is mandatory and must be assigned <b>before</b> the call to <a href="blackberry.bbm.platform.html#.register">blackberry.bbm.platform.register</a>.</p>
+                            <p>Device accelerometer sensor<p>This sensor returns accelerometer data not including gravity information.</p>
                             <br />
                             
                             
@@ -676,10 +724,237 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>x:</b> the x-axis value
+                                                        <b>x:</b> The x-axis value
                                                     
                                                         <br />
-                                                        <b>z:</b> the z-axis value
+                                                        <b>y:</b> The y-axis value
+                                                    
+                                                        <br />
+                                                        <b>z:</b> The z-axis value
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:ondevicegyroscope"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.ondevicegyroscope
+                                            
+                                                
+                                                    (data : Object, <i>[temperature : Float]</i>)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device gyroscope sensor<p>This sensor returns accelerometer data including gravity information from the gyroscope sensor.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>x:</b> The x-axis value
+                                                    
+                                                        <br />
+                                                        <b>y:</b> The y-axis value
+                                                    
+                                                        <br />
+                                                        <b>z:</b> The z-axis value
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>temperature</b></td>
+                                            <td>
+                                                
+                                                the temperature of the gyroscope sensor (in degrees Celsius).                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:ondevicemagnetometer"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.ondevicemagnetometer
+                                            
+                                                
+                                                    (data : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device magnetometer sensor<p>This sensor returns information from the device's magnetometer.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>x:</b> The x-axis value
+                                                    
+                                                        <br />
+                                                        <b>y:</b> The y-axis value
+                                                    
+                                                        <br />
+                                                        <b>z:</b> The z-axis value
                                                     
                                                 
                                             </td>
@@ -725,7 +1000,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 14:38:34 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 15:07:05 GMT-0500 (EST)
         </div>
 
     </div>
