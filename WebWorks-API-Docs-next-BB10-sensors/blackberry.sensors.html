@@ -114,7 +114,7 @@
 
         
             <p>
-                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br> The sensors object has various events which listen to sensors on the device. All of its functions and events are used directly from the object.
+                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br> The sensors object has various event listeners for sensors on the device.
 
 
                 
@@ -218,6 +218,18 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
+                                        <a href="blackberry.sensors.html#.event:devicefacedetect">blackberry.sensors.devicefacedetect</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
                                         <a href="blackberry.sensors.html#.event:devicegravity">blackberry.sensors.devicegravity</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -231,6 +243,18 @@
                                 <tr x-ww-support="bb10_menu">
                                     <td>
                                         <a href="blackberry.sensors.html#.event:devicegyroscope">blackberry.sensors.devicegyroscope</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:deviceholster">blackberry.sensors.deviceholster</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -463,6 +487,18 @@
                                         
                                     </td>
                                     <td>
+                                        <a href="blackberry.sensors.html#.event:devicefacedetect">blackberry.sensors.devicefacedetect</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
                                         <a href="blackberry.sensors.html#.event:devicegravity">blackberry.sensors.devicegravity</a>
                                         
                                     </td>
@@ -476,6 +512,18 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.sensors.html#.event:devicegyroscope">blackberry.sensors.devicegyroscope</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            void
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.sensors.html#.event:deviceholster">blackberry.sensors.deviceholster</a>
                                         
                                     </td>
                                 </tr>
@@ -1043,6 +1091,107 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu">
                         <h3>
+                            <a name=".event:devicefacedetect"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.devicefacedetect
+                                            
+                                                
+                                                    (data : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device face detection sensor.<p>This sensor returns the status of the holster sensor.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>value:</b> 1 if face is detected, 0 otherwise.
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
                             <a name=".event:devicegravity"></a>
                  
                             
@@ -1113,6 +1262,9 @@
                                                 The object containing the sensor data.                         
                                                 
                                                     <br />
+                                                    
+                                                        <br />
+                                                        <b>x:</b> The x-axis value.
                                                     
                                                         <br />
                                                         <b>y:</b> The y-axis value.
@@ -1229,6 +1381,107 @@
                                                     
                                                         <br />
                                                         <b>temperature:</b> The temperature of the gyroscope sensor (in degrees Celsius).
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".event:deviceholster"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        
+                                            void
+                                        
+                                        
+                                            blackberry.sensors.deviceholster
+                                            
+                                                
+                                                    (data : Object)
+                                                
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Device holster sensor.<p>This sensor returns the status of the holster sensor.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>data</b></td>
+                                            <td>
+                                                
+                                                The object containing the sensor data.                         
+                                                
+                                                    <br />
+                                                    
+                                                        <br />
+                                                        <b>value:</b> Holster status. 0 for not holstered, 1 for holstered.
                                                     
                                                 
                                             </td>
@@ -1898,7 +2151,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Nov 05 2012 17:53:06 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 06 2012 11:47:34 GMT-0500 (EST)
         </div>
 
     </div>
