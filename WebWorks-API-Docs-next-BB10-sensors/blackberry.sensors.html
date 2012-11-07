@@ -114,7 +114,7 @@
 
         
             <p>
-                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br>The sensors object has various event listeners for sensors on the device.
+                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device.<br><br>The sensors object has various event listeners for sensors on the device.
 
 
                 
@@ -125,7 +125,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function compassCallback(sensor, data) {      alert("Current azimuth: " + data.value);   }}// Start listening to the compass sensor with a delay feedback of 1000    blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callback   blackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensorfunction compassCallback(sensor, data) {    alert("Current azimuth: " + data.value);}// Start listening to the compass sensor with a delay feedback of 1000 blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callbackblackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -649,7 +649,7 @@
                                        
                             
                             
-                            <p>This method will start a sensor with the specifed options and begin returning it to the added event listener<br><br> The supported object fields for 'options' are:</p>
+                            <p>This method will start a sensor with the specifed options and begin returning it to the added event listener.<br><br>The supported object fields for 'options' are:</p>
                             <br />
                             
                             
@@ -681,7 +681,7 @@
                                             <td><b>sensor</b></td>
                                             <td>
                                                 
-                                                The sensor to listen to                         
+                                                The sensor to listen to.                         
                                                 
                                             </td>
                                         </tr>
@@ -691,7 +691,7 @@
                                             <td><b>options</b></td>
                                             <td>
                                                 
-                                                The options for the sensor being started                         
+                                                The options for the sensor being started.                         
                                                 
                                                     <br />
                                                     
@@ -784,7 +784,7 @@
                                        
                             
                             
-                            <p>Device accelerometer sensor<p>This sensor returns accelerometer data. Returned as m/s/s (meters/second/second).</p>
+                            <p>Device accelerometer sensor.<p>This sensor returns accelerometer data. Returned as m/s/s (meters/second/second).</p>
                             <br />
                             
                             
@@ -998,7 +998,7 @@
                                        
                             
                             
-                            <p>Device compass sensor<p>This sensor returns directional information from the compass sensor.</p>
+                            <p>Device compass sensor.<p>This sensor returns directional information from the compass sensor.</p>
                             <br />
                             
                             
@@ -1209,7 +1209,7 @@
                                        
                             
                             
-                            <p>Device gyroscope sensor<p>This sensor returns data from the gyroscope sensor. Returned as r/s (radians/second).</p>
+                            <p>Device gyroscope sensor.<p>This sensor returns data from the gyroscope sensor. Returned as r/s (radians/second).</p>
                             <br />
                             
                             
@@ -1420,7 +1420,7 @@
                                        
                             
                             
-                            <p>Device light sensor<p>This sensor returns brightness information from the light sensor.</p>
+                            <p>Device light sensor.<p>This sensor returns brightness information from the light sensor.</p>
                             <br />
                             
                             
@@ -1553,7 +1553,7 @@
                                             <td><b>data</b></td>
                                             <td>
                                                 
-                                                The object containing the sensor data                         
+                                                The object containing the sensor data.                         
                                                 
                                                     <br />
                                                     
@@ -1628,7 +1628,7 @@
                                        
                             
                             
-                            <p>Device magnetometer sensor<p>This sensor returns values from the device's magnetometer. Returned as µT (micro Tesla).</p>
+                            <p>Device magnetometer sensor.<p>This sensor returns values from the device's magnetometer. Returned as µT (micro Tesla).</p>
                             <br />
                             
                             
@@ -1839,7 +1839,7 @@
                                        
                             
                             
-                            <p>Device proximity sensor<p>This sensor returns data from the proximity sensor.</p>
+                            <p>Device proximity sensor.<p>This sensor returns data from the proximity sensor.</p>
                             <br />
                             
                             
@@ -2026,7 +2026,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 07 2012 15:10:35 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 07 2012 16:02:44 GMT-0500 (EST)
         </div>
 
     </div>
