@@ -125,7 +125,7 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function compassCallback(sensor, data) {      alert(Current azimuth: " + data.value);   }}// Start listening to the compass sensor with a delay feedback of 1000ms    blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callback   blackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function compassCallback(sensor, data) {      alert("Current azimuth: " + data.value);   }}// Start listening to the compass sensor with a delay feedback of 1000ms    blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callback   blackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
     
   
 
@@ -696,19 +696,19 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>delay:</b> Time in ms to report back between sensor updates
+                                                        <b>delay:</b> Time in µs (microseconds) to report back between sensor updates.
                                                     
                                                         <br />
-                                                        <b>background:</b> Allow sensor to send updates while app is in background
+                                                        <b>background:</b> Allow sensor to send updates while app is in background.
                                                     
                                                         <br />
-                                                        <b>batching:</b> When batching is enabled and supported by the hardware, sensors will report samples in hardware-specific batch sizes to conserve power
+                                                        <b>batching:</b> When batching is enabled and supported by the hardware, sensors will report samples in hardware-specific batch sizes to conserve power.
                                                     
                                                         <br />
-                                                        <b>queue:</b> Enabling the queue creates a client-specific service side queue of events, this is useful to not miss any events
+                                                        <b>queue:</b> Enabling the queue creates a client-specific service side queue of events, this is useful to not miss any events.
                                                     
                                                         <br />
-                                                        <b>reducedReporting:</b> When reduced reporting is enabled, only a significant change between the last read event and the current unread event will cause an event to be delivered (useful for power saving)
+                                                        <b>reducedReporting:</b> When reduced reporting is enabled, only a significant change between the last read event and the current unread event will cause an event to be delivered (useful for power saving).
                                                     
                                                 
                                             </td>
@@ -1319,7 +1319,7 @@
                                        
                             
                             
-                            <p>Device face detection sensor.<p>This sensor returns the status of the holster sensor.</p>
+                            <p>Device holster detection sensor.<p>This sensor returns the status of the holster sensor.</p>
                             <br />
                             
                             
@@ -1356,7 +1356,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>value:</b> 1 if face is detected, 0 otherwise.
+                                                        <b>value:</b> 1 if device is holstered, 0 otherwise.
                                                     
                                                 
                                             </td>
@@ -1980,7 +1980,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>matrix:</b> 3x3 Float array of data values representing the matrix.
+                                                        <b>matrix:</b> Float array of data values representing the matrix.
                                                     
                                                 
                                             </td>
@@ -2026,7 +2026,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 06 2012 13:46:18 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 07 2012 14:49:41 GMT-0500 (EST)
         </div>
 
     </div>
