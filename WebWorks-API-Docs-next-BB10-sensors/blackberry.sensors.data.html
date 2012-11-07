@@ -107,11 +107,31 @@
 
         <h1>
             
-                DirectoryEntry#createReader
+                Sensors
             
         </h1>
 
 
+        
+            <p>
+                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br> The sensors object has various event listeners for sensors on the device.
+
+
+                
+                    <div x-ww-support="">
+                    
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function compassCallback(sensor, data) {      alert("Current azimuth: " + data.value);   }}// Start listening to the compass sensor with a delay feedback of 1000ms    blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callback   blackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                    </div>
+                
+            </p>
         
 
 
@@ -134,36 +154,10 @@
                 </div>
                 <div class="ref-sect-content">
                     
-                        <table>
-                            <tbody>
-                            
-                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
-                            
-                                <tr><td>- BlackBerry 10</td></tr>
-                            
-                                <tr><td>- Ripple Emulator</td></tr>
-                            
-                            </tbody>
-                        </table>
-                    
                     <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
                     <div class="APISupportTable" id="APISupportTable">
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
-                            
-                                
-                                    <tr x-ww-support="pb_menu|bb10_menu|ripple">
-                                        <td>
-                                            <a href="DirectoryEntry%23createReader.html">DirectoryEntry#createReader</a>
-                                            <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                                        </td>
-                                    </tr>
-                                
                             
                             
                         </table>
@@ -183,9 +177,27 @@
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                    <tr><td>
-                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr></tbody></table>
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support=""><td>
+                                &lt;feature id="blackberry.sensors" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td></tr>
+                        
+                    </table>
                 
 
                 <div x-ww-support="pb_menu|bb10_menu">
@@ -214,33 +226,6 @@
     
         
         
-            <br />
-            <div class="ref-sect ref-index" x-ww-support="pb_menu|bb10_menu|ripple">
-                <div class="ref-sect-title">
-                    <h2> Constructors </h2>
-                </div>
-                <div class="ref-sect-content">
-                    
-                        <table><tbody>
-                            
-                                <tr x-ww-support="pb_menu|bb10_menu|ripple">
-                                    <td class="first_column">
-                                        
-                                            
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="DirectoryEntry%23createReader.html">DirectoryEntry#createReader</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                        </tbody></table>
-                    
-                    
-                </div>
-            </div>
-        
     
         
         
@@ -267,85 +252,6 @@
         
 
     
-    
-        <div class="ref-sect">
-            <div class="ref-sect-title clearfix">
-                <h2>Constructors</h2>
-            </div>
-            <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="pb_menu|bb10_menu|ripple">
-                        <h3>
-                            <a name="createReader"></a>
-                 
-                            
-                            
-                                
-                                    DirectoryEntry#createReader
-                                    
-                                        ()
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>creates a new DirectoryReader to read contents in a directory</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
     
 
     

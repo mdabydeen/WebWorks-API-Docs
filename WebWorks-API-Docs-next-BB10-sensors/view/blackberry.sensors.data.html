@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>
-        TextMetrics - BlackBerry WebWorks
+        Sensors - BlackBerry WebWorks
     </title>
 
     <script type="text/javascript" src="https://bdsc.webapps.blackberry.com/html5/webroot/js/pagehead.min.js"></script>
@@ -124,20 +124,26 @@
 
         <h1>
             
-                TextMetrics
+                Sensors
             
         </h1>
 
 
         
             <p>
-                The measureText() method takes one argument, text. When the method is invoked it returns a <a href="TextMetrics.html">TextMetrics</a> object with width property set to the width the text given the set font and element properties.http://dev.w3.org/html5/2dcontext/#dom-context-2d-createlineargradient
+                The Sensors object allows you to get access to system level sensors and attributes of the BlackBerry device<br><br> The sensors object has various event listeners for sensors on the device.
 
 
                 
-                    <div x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
+                    <div x-ww-support="">
                     
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;// Create a callback to handle each sensor   function compassCallback(sensor, data) {      alert("Current azimuth: " + data.value);   }}// Start listening to the compass sensor with a delay feedback of 1000ms    blackberry.sensors.setOptions("devicecompass", { delay : 1000 });   // Start the event listener for the sensors callback   blackberry.event.addEventListener("devicecompass", compassCallback);   &lt;/script&gt;</pre></code></td></tbody></table>
+    
   
 
                     </div>
@@ -165,37 +171,11 @@
                 </div>
                 <div class="ref-sect-content">
                     
-                        <table>
-                            <tbody>
-                            
-                                <tr><td>- BlackBerry OS 6.0+</td></tr>
-                            
-                                <tr><td>- BlackBerry PlayBook 1.0+</td></tr>
-                            
-                                <tr><td>- BlackBerry 10</td></tr>
-                            
-                                <tr><td>- Ripple Emulator</td></tr>
-                            
-                            </tbody>
-                        </table>
-                    
                     <a href="javascript:viewSupportedTable()">View Supported Platform Table</a>
                     <div class="APISupportTable" id="APISupportTable">
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
-                            
-                                <tr x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
-                                    <td>
-                                        <a href="TextMetrics.html#width">width</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td>
-<td class="apiYes">Y</td><td class="apiYes">Y</td>
-                                    </td>
-                                </tr>
                             
                         </table>
                     </div>
@@ -214,9 +194,27 @@
                         <p>To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:</p>
                     </td></tr>
                     
-                    <tr><td>
-                        This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
-                    </td></tr></tbody></table>
+                        <tr><td>
+                            <p>You must declare the feature element(s) below in your configuration document:</p>
+                        </td></tr></tbody></table>
+                    <table>
+                        <thead><tr><th>Feature ID</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
+                        
+                            
+                            
+                                
+                            
+                            <tr x-ww-support=""><td>
+                                &lt;feature id="blackberry.sensors" /&gt;
+                                <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td><td class="apiNo">&nbsp;</td>
+                            </td></tr>
+                        
+                    </table>
                 
 
                 <div x-ww-support="pb_menu|bb10_menu">
@@ -254,33 +252,6 @@
     
         
         
-            <br />
-            <div class="ref-sect ref-index" x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
-                <div class="ref-sect-title">
-                    <h2> Properties </h2>
-                </div>
-                <div class="ref-sect-content">
-                    
-                        <table><tbody>
-                            
-                                <tr x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
-                                    <td class="first_column">
-                                        
-                                            Number
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="TextMetrics.html#width">width</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                        </tbody></table>
-                    
-                    
-                </div>
-            </div>
-        
     
         
         
@@ -308,98 +279,6 @@
 
     
     
-        <div class="ref-sect">
-            <div class="ref-sect-title clearfix">
-                <h2>Properties</h2>
-            </div>
-            <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="bb_menu|pb_menu|bb10_menu|ripple">
-                        <h3>
-                            <a name="width"></a>
-                 
-                            
-                            
-                                
-                                    
-                                                      
-                                        readonly
-                                        Number
-                                        
-                                        
-                                            width
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>text width</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry OS 6.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry PlayBook 1.0+
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- Ripple Emulator
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    
 
     
     
@@ -413,7 +292,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 07 2012 14:18:57 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 07 2012 14:18:48 GMT-0500 (EST)
         </div>
 
     </div>
