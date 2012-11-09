@@ -47,10 +47,10 @@ blackberry.ui.dialog ={
 		customAsk : function(message, choices,defaultChoice,globalStatus){},
 
 		/**
-         * @function
+		 * @function
 		 * @description Creates an asynchronous custom dialog to ask the user a question. <br/>
-         * Uses the custom dialog. The function is an asynchronous call and will not block execution. It will return the 0-based index of the user's choice. <br/>
-         * NOTE: function is only implemented for Ripple emulation on Playbook.
+		 * Uses the custom dialog. The function is an asynchronous call and will not block execution. It will return the 0-based index of the user's choice. <br/>
+		 * NOTE: function is only implemented for Ripple emulation on Playbook.
 		 * @param {String} message Message to be displayed in the dialog.
 		 * @param {String[]} buttons Array of string choices that will be presented to the user in the form of buttons.
 		 * @callback {function} [onOptionSelected] Optional callback function that will be invoked when the user makes a selection. Expected signature: function onOptionSelected(selectedButtonIndex). <p> NOTE: onOptionSelected is required for BlackBerry OS5.0+.
@@ -115,23 +115,18 @@ blackberry.ui.dialog ={
 
 		/**
 		 * @description Creates an asynchronous standard dialog to ask the user a question. <br/>
-		 * Uses the standard dialog. The function is an asynchronous call and will not block execution. It will return the 0-based index of the user's choice.<br/> 
-         * NOTE: function is only implemented for Ripple emulation on Playbook.
+		 * Uses the standard dialog. The function is an asynchronous call and will not block execution. It will return an object containing selected elements and input values.<br/> 
+		 * NOTE: function is only implemented for Ripple emulation on Playbook.
 		 * @param {String} message Message to be displayed in the dialog.
 		 * @param {Number} type  Parameter that specifies the type of standard dialog. Constants starting with D_*. 
 		 * @callback {function} [onOptionSelected] Optional callback function that will be invoked when the user makes a selection. Expected signature: function onOptionSelected(selectedButtonIndex).  <p> NOTE: onOptionSelected is required for BlackBerry OS5.0+.
-		 * @callback {Number} [onOptionSelected.index] The index of the selection the user has made.
-		 * @callback {String} [onOptionSelected.promptText] The element for entered text. Returns the user's entered string.(Option only used for select dialogs: D_PROMPT). <br/><br/>
-		 * NOTE: Callback 'promptText', is only implemented on BB10.
-		 * @param {Object} [settings = null] Optional Object literal that allows the user to manipulate the size, location, title of the dialog, and whether this is a global dialog (your application cannot be minimized when a global dialog is active; by default when the 'global' flag is not passed, dialog will be modal only for your application). It is not required to provide all parameters, and these do not have to be specified in any particular order. <p> NOTE: The settings parameter applies only to PlayBook, Ripple, and BB10. On the other devices, it has no effect.
+		 * @callback {Boolean} [onOptionSelected.firstButton] The element for the primary ok/save/yes/delete button. Set to true if selected.
+		 * @callback {Boolean} [onOptionSelected.secondButton] The element for the secondary cancel/no/discard button. Set to true if selected.
+		 * @callback {Boolean} [onOptionSelected.thirdOptionButton] The element for the optional button. Set to true if selected.
+		 * @callback {String} [onOptionSelected.promptText] The element for entered text. Returns the user's entered string. If cancel is selected set to null.(Option only used for select dialogs: D_PROMPT). <br/><br/>
+		 * @param {Object} [settings = null] Optional Object literal that allows the user to manipulate the title and optional buttons of the dialog. It is not required to provide all parameters, and these do not have to be specified in any particular order. <p> NOTE: The settings parameter applies only to PlayBook, Ripple, and BB10. On the other devices, it has no effect.
 		 * @param {String} [settings.title] Desired title of the dialog.
-		 * @param {String} [settings.size] Desired size of the dialog.
-		 * @param {String} [settings.position] Desired position of the dialog.
-		 * @param {Boolean} [settings.global] Specifies the global flag of the dialog window. (Your application cannot be minimized when the dialog global setting is set to true and when any dialog window is open). By default this parameter is false when not specified.
-		 * @param {String} [settings.thirdOptionLabel] Desired label for optional third button. (This option is only available for select dialogs: not available for D_PROMPT or D_OK). <br/><br/>
-		 * NOTE: The parameters for 'size', 'position', and 'global' are NOT implemented for BB10. Also note 'third' parameter is only implemented in BB10.
-		 * @BB50+
-		 * @PB10+
+		 * @param {String} [settings.thirdOptionLabel] Desired label for optional third button. (This option is only available for select dialogs: not available for D_PROMPT or D_OK). <br/>
 		 * @BB10X
 		 * @RIPPLE
 		 * @example
@@ -143,7 +138,7 @@ blackberry.ui.dialog ={
 		 *
 		 * function standardDialog() {
 		 *   try {
-		 *     blackberry.ui.dialog.standardAskAsync("Save?", blackberry.ui.dialog.D_SAVE, dialogCallBack, {title : "Save Dialog"});
+		 *     blackberry.ui.dialog.standardAskAsync("Save?", blackberry.ui.dialog.D_SAVE, dialogCallBack, {title : "Save Dialog", thirdOptionLabel : "Never"});
 		 *   }catch (e) {
 		 *     alert("Exception in standardDialog: " + e);
 		 *   }
@@ -153,15 +148,52 @@ blackberry.ui.dialog ={
 		 */
 		standardAskAsync : function(message,type,onOptionSelected,settings){},
 
-        /**
+		/**
+		 * @name blackberry.ui.dialog.standardAskAsync^2
+		 * @function
+		 * @description Creates an asynchronous standard dialog to ask the user a question. <br/>
+		 * Uses the standard dialog. The function is an asynchronous call and will not block execution. It will return the 0-based index of the user's choice. <br/> 
+		 * NOTE: function is only implemented for Ripple emulation on Playbook.
+		 * @param {String} message Message to be displayed in the dialog.
+		 * @param {Number} type  Parameter that specifies the type of standard dialog. Constants starting with D_*. 
+		 * @callback {function} [onOptionSelected] Optional callback function that will be invoked when the user makes a selection. Expected signature: function onOptionSelected(selectedButtonIndex).  <p> NOTE: onOptionSelected is required for BlackBerry OS5.0+.
+		 * @callback {Number} [onOptionSelected.index] The index of the selection the user has made.
+		 * @param {Object} [settings = null] Optional Object literal that allows the user to manipulate the size, location, title of the dialog, and whether this is a global dialog (your application cannot be minimized when a global dialog is active; by default when the 'global' flag is not passed, dialog will be modal only for your application). It is not required to provide all parameters, and these do not have to be specified in any particular order. <p> NOTE: The settings parameter applies only to PlayBook, Ripple, and BB10. On the other devices, it has no effect.
+		 * @param {String} [settings.title] Desired title of the dialog.
+		 * @param {String} [settings.size] Desired size of the dialog.
+		 * @param {String} [settings.position] Desired position of the dialog.
+		 * @param {Boolean} [settings.global] Specifies the global flag of the dialog window. (Your application cannot be minimized when the dialog global setting is set to true and when any dialog window is open). By default this parameter is false when not specified.
+		 * @BB50+
+		 * @PB10+
+		 * @RIPPLE
+		 * @example
+		 * &lt;script type="text/javascript"&gt;
+		 *
+		 * function dialogCallBack(index){
+		 *   alert(index);
+		 * }
+		 *
+		 * function standardDialog() {
+		 *   try {
+		 *     blackberry.ui.dialog.standardAskAsync("Save?", blackberry.ui.dialog.D_SAVE, dialogCallBack, {title : "Save Dialog", size: blackberry.ui.dialog.SIZE_MEDIUM, position : blackberry.ui.dialog.BOTTOM});
+		 *   }catch (e) {
+		 *     alert("Exception in standardDialog: " + e);
+		 *   }
+		 * }
+		 *
+		 * &lt;/script&gt;
+		 */
+		standardAskAsync : function(message,type,onOptionSelected,settings){},
+
+		/**
 		 * @description Creates an asynchronous dialog to allow user to select one or many items in a list.
 		 * <p/>The function is an asynchronous call and will not block JavaScript execution. It will return array of indexes that user selected.
 		 * @param {Boolean} allowMultiple If true, the dialog will allow multiple selection.
 		 * @param {Object[]} options Array of objects representing the select items and their states.
-         * @param {String} options.label The value of an item in the dropdown list
-         * @param {Boolean} options.selected Flag that indicates whether an item should be rendered as currently selected
-         * @param {Boolean} options.enabled Flag that indicates whether an item should be enabled for selection
-         * @param {String} options.type Can be either "group" or "option" to indicate whether an item is a group header or an option
+		 * @param {String} options.label The value of an item in the dropdown list
+		 * @param {Boolean} options.selected Flag that indicates whether an item should be rendered as currently selected
+		 * @param {Boolean} options.enabled Flag that indicates whether an item should be enabled for selection
+		 * @param {String} options.type Can be either "group" or "option" to indicate whether an item is a group header or an option
 		 * @callback {function} onSelected A callback that will be invoked with the user's choices from the native UI.
 		 * @callback {Number[]} onSelected.indices The indices of the user's selections.
 		 * @BB50+
@@ -169,22 +201,22 @@ blackberry.ui.dialog ={
 		 * &lt;script type="text/javascript"&gt;
 		 *
 		 * function onSelected(indices) {
-         *   var i;
-         *   for(i = 0; i < indices.length; i++) {
+		 *   var i;
+		 *   for(i = 0; i < indices.length; i++) {
 		 *     alert("Item selected: " + indices[i]);
-         *   }
+		 *   }
 		 * }
 		 *
 		 * function selectAsync() {
 		 *   try {
 		 *     blackberry.ui.dialog.selectAsync(false,
-         *                                      [ { label : "Animals", selected : false, enabled : false, type : "group"},
-         *                                        { label : "cat", selected : true, enabled : true, type : "option"},
-         *                                        { label : "dog", selected : false, enabled : true, type : "option"},
-         *                                        { label : "mouse", selected : false, enabled : true, type : "option"},
-         *                                        { label : "raccoon", selected : false, enabled : true, type : "option"}
-         *                                      ],
-         *                                      window.onSelected);
+		 *                                      [ { label : "Animals", selected : false, enabled : false, type : "group"},
+		 *                                        { label : "cat", selected : true, enabled : true, type : "option"},
+		 *                                        { label : "dog", selected : false, enabled : true, type : "option"},
+		 *                                        { label : "mouse", selected : false, enabled : true, type : "option"},
+		 *                                        { label : "raccoon", selected : false, enabled : true, type : "option"}
+		 *                                      ],
+		 *                                      window.onSelected);
 		 *   }catch (e) {
 		 *     alert("Exception in selectAsync: " + e);
 		 *   }
@@ -194,14 +226,14 @@ blackberry.ui.dialog ={
 		 */
 		selectAsync : function(allowMultiple, options, onSelected){},
 
-        /**
+		/**
 		 * @description Creates an asynchronous dialog to allow user to select a date/time for an HTML 5 input of types: date, datetime, datetime-local, month, time
 		 * <p/>The function is an asynchronous call and will not block execution. It will return the value selected by the user.
 		 * @param {String} type One of: "date", "datetime", "datetime-local", "month", "time".
 		 * @param {Object[]} options The current state of the input control.
-         * @param {String} options.value String representation of the current date/time displayed in the field
-         * @param {String} options.min String representation of the minimum date/time allowed in the field
-         * @param {String} options.max String representation of the maximum date/time allowed in the field
+		 * @param {String} options.value String representation of the current date/time displayed in the field
+		 * @param {String} options.min String representation of the minimum date/time allowed in the field
+		 * @param {String} options.max String representation of the maximum date/time allowed in the field
 		 * @callback {function} onDateTimeSelected A callback that will be invoked with the user's choices from the native UI.
 		 * @callback {String} onDateTimeSelected.datetime The date/time user has selected.
 		 * @BB50+
@@ -212,14 +244,14 @@ blackberry.ui.dialog ={
 		 *   alert(datetime);
 		 * }
 		 *
-         * //Input argument is a reference to an input control of type: date, datetime, datetime-local, month, time
+		 * //Input argument is a reference to an input control of type: date, datetime, datetime-local, month, time
 		 * function dateTimeAsync(htmlDateTimeInput) {
 		 *   try {
-         *     var opts = { "value" : htmlDateTimeInput.value,
-         *                   "min"   : htmlDateTimeInput.min || "",
-         *                   "max"   : htmlDateTimeInput.max || ""
-         *     };
-         *
+		 *     var opts = { "value" : htmlDateTimeInput.value,
+		 *                   "min"   : htmlDateTimeInput.min || "",
+		 *                   "max"   : htmlDateTimeInput.max || ""
+		 *     };
+		 *
 		 *     blackberry.ui.dialog.dateTimeAsync("date", opts, window.onDateTimeSelected);
 		 *   }catch (e) {
 		 *     alert("Exception in dateTimeAsync: " + e);
@@ -312,7 +344,7 @@ blackberry.ui.dialog ={
 		 */
 		D_OK_CANCEL:4,
 		/**
-	 	 * @constant
+		 * @constant
 		 * @type Number
 		 * @description Standard OK/Cancel dialog
 		 * @default 5
