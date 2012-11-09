@@ -544,11 +544,11 @@
                     </table>
                 
 
-                <div x-ww-support="pb_menu">
+                <div x-ww-support="pb_menu|bb10_menu">
                     
                     <table>
                         <tr>
-                            <th>Permission Elements (PlayBook Only)</th>
+                            <th>Permission Elements (PlayBook and BlackBerry 10+)</th>
                         </tr>
                         
                             <tr><td>
@@ -1334,7 +1334,7 @@
                                             <td><b>buttons</b></td>
                                             <td>
                                                 
-                                                Array of string choices that will be presented to the user in the form of buttons.                         
+                                                Array of string choices that will be presented to the user in the form of buttons. Each button will be displayed in order of the array from top to bottom.                         
                                                 
                                             </td>
                                         </tr>
@@ -1349,7 +1349,7 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>index:</b>  The index of the selection the user has made.
+                                                        <b>index:</b>  The 0-based index of the selection the user has made ordered from top to bottom.
                                                     
                                                 
                                             </td>
@@ -1869,7 +1869,7 @@
                                        
                             
                             
-                            <p>Creates an asynchronous standard dialog to ask the user a question. <br/>Uses the standard dialog. The function is an asynchronous call and will not block execution. It will return the 0-based index of the user's choice.<br/> NOTE: function is only implemented for Ripple emulation on Playbook.</p>
+                            <p>Creates an asynchronous standard dialog to ask the user a question. <br/>Uses the standard dialog. The function is an asynchronous call and will not block execution. It will return the 0-based index of the user's choice, ordered from left to right.<br/> NOTE: function is only implemented for Ripple emulation on Playbook.</p>
                             <br />
                             
                             
@@ -1938,10 +1938,10 @@
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>index:</b>  The index of the selection the user has made.
+                                                        <b>index:</b>  The 0-based index of the selection the user has made, ordered from left to right.
                                                     
                                                         <br />
-                                                        <b>promptText:</b>  The element for entered text. Returns the user's entered string.(Option only used for select dialogs: D_PROMPT). <br/><br/>NOTE: Callback 'promptText', is only implemented on BB10.
+                                                        <b>promptText:</b>  The element for entered text. Returns the user's entered string. If cancel is selected this will return null.(Option only used for select dialogs: D_PROMPT). <br/><br/>NOTE: Callback 'promptText', is only implemented on BB10.
                                                     
                                                 
                                             </td>
@@ -2147,7 +2147,7 @@
                                        
                             
                             
-                            <p>Standard Save dialog</p>
+                            <p>Standard Save/Discard dialog</p>
                             <br />
                             
                             
@@ -2236,7 +2236,7 @@
                                        
                             
                             
-                            <p>Standard Delete confirmation dialog</p>
+                            <p>Standard Delete/Cancel confirmation dialog</p>
                             <br />
                             
                             
@@ -2584,7 +2584,7 @@
                                        
                             
                             
-                            <p>Standard Prompt input dialog</p>
+                            <p>Standard Cancel/Ok, Prompt input dialog</p>
                             <br />
                             
                             
@@ -3775,7 +3775,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Oct 31 2012 09:51:07 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Nov 09 2012 17:33:35 GMT-0500 (EST)
         </div>
 
     </div>
