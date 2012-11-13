@@ -18,6 +18,104 @@
  * @class The <code>CalendarRepeatRule</code> object represents the recurrence of a calendar event item.
  * @toc {PIM} CalendarRepeatRule
  * @featureID blackberry.pim.calendar
+ * @example
+ * var calendar = blackberry.pim.calendar,
+ *     CalendarRepeatRule = calendar.CalendarRepeatRule,
+ *     recEvent;
+ *
+ * function onSaveSuccess(saved) {
+ *     alert("Event saved successfully: " + saved.id);
+ *     recEvent = saved;
+ * }
+ *
+ * function onSaveError(error) {
+ *     alert("Event not saved, error code: " + error.code);
+ * }
+ *
+ * // Create an event that repeats every month for 4 times
+ * function createEventRepeatEveryMonth() {
+ *    var start = new Date("Jan 6, 2013, 12:00"),
+ *        end = new Date("Jan 6, 2013, 12:30"),
+ *        summary = "Every month",
+ *        rule = {
+ *            "frequency": CalendarRepeatRule.FREQUENCY_MONTHLY,
+ *            "expires": new Date("Dec 31, 2013"),
+ *            "numberOfOccurrences": 4
+ *        };
+ *
+ *    recEvent = calendar.createEvent({"summary": summary, "start": start, "end": end, "recurrence": rule});
+ *    recEvent.save(onSaveSuccess, onSaveError);
+ * }
+ *
+ * // Create an event that repeats every month, sets explicit expiry date
+ * // the event will only have 3 occurrences since the expiry date
+ * // is before the 4th occurrence
+ * function createEventRepeatEveryMonthExpire() {
+ *    var start = new Date("Jan 7, 2013, 12:00"),
+ *        end = new Date("Jan 7, 2013, 12:30"),
+ *        venue = "some location",
+ *        summary = "Every month binding expiry date",
+ *        rule = {
+ *            "frequency": CalendarRepeatRule.FREQUENCY_MONTHLY,
+ *            "expires": new Date("Mar 30, 2013"),
+ *            "numberOfOccurrences": 4
+ *        };
+ *
+ *    recEvent = calendar.createEvent({"summary": summary, "location": venue, "start": start, "end": end, "recurrence": rule});
+ *    recEvent.save(onSaveSuccess, onSaveError);
+ * }
+ *
+ * // Create an event that repeats every week on Monday and Wednesday
+ * function createEventRepeatEveryMonWed() {
+ *    var start = new Date("Jan 21, 2013, 12:00"),
+ *        end = new Date("Jan 21, 2013, 12:30"),
+ *        venue = "some location",
+ *        summary = "Every Mon and Wed",
+ *        rule = {
+ *            "frequency": CalendarRepeatRule.FREQUENCY_WEEKLY,
+ *            "expires": new Date("Mar 30, 2013"),
+ *            "dayInWeek": CalendarRepeatRule.MONDAY | CalendarRepeatRule.WEDNESDAY
+ *        };
+ *
+ *    recEvent = calendar.createEvent({"summary": summary, "location": venue, "start": start, "end": end, "recurrence": rule});
+ *    recEvent.save(onSaveSuccess, onSaveError);
+ * }
+ *
+ * // Create an event that repeats on first Friday every month
+ * function createEventFirstFriEveryMonth() {
+ *    var start = new Date("Feb 1, 2013, 12:00"),
+ *        end = new Date("Feb 1, 2013, 12:30"),
+ *        venue = "some location",
+ *        summary = "First Fri every month",
+ *        rule = {
+ *            "frequency": CalendarRepeatRule.FREQUENCY_MONTHLY_AT_A_WEEK_DAY,
+ *            "expires": new Date("Jun 30, 2013"),
+ *            "dayInWeek": CalendarRepeatRule.FRIDAY,
+ *            "weekInMonth": 1
+ *        };
+ *
+ *   recEvent = calendar.createEvent({"summary": summary, "location": venue, "start": start, "end": end, "recurrence": rule});
+ *   recEvent.save(onSaveSuccess, onSaveError);
+ * }
+ *
+ * // Create an event that repeats on the first Friday of the seventh
+ * // month every year
+ * function createEventFirstFriSeventhMonthEveryYear() {
+ *    var start = new Date("Jul 5, 2013, 12:00"),
+ *        end = new Date("Jul 5, 2013, 12:30"),
+ *        venue = "some location",
+ *        summary = "First Fri of seventh month every year",
+ *        rule = {
+ *            "frequency": CalendarRepeatRule.FREQUENCY_YEARLY_AT_A_WEEK_DAY_OF_MONTH,
+ *            "expires": new Date("Jun 30, 2017, 12:00"),
+ *            "dayInWeek": CalendarRepeatRule.FRIDAY,
+ *            "weekInMonth": 1,
+ *            "monthInYear": 7
+ *        };
+ *
+ *   recEvent = calendar.createEvent({"summary": summary, "location": venue, "start": start, "end": end, "recurrence": rule});
+ *   recEvent.save(onSaveSuccess, onSaveError);
+ * }
  */
 blackberry.pim.calendar.CalendarRepeatRule = {};
 
