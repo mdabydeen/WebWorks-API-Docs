@@ -39,3 +39,4 @@ WebWorks-API-Docs-next-BB10-add-push-error-codes
 WebWorks-API-Docs-next-BB10-pim-contacts-constructor
 WebWorks-API-Docs-twg_next-BB10-orientation
 WebWorks-API-Docs-twg_next-BB10-toast
+WebWorks-API-Docs-invoke-interruption
