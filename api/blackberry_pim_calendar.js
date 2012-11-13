@@ -24,7 +24,7 @@ blackberry.pim.calendar = {
     /**
      * @name blackberry.pim.calendar.createEvent
      * @function
-     * @description Returns a new {@link blackberry.pim.calendar.CalendarEvent} object. This method does not persist the CalendarEvent object to the device. To persist the CalendarEvent object to the device, invoke the CalendarEvent.save method. <b>Not in DAP specs</b>
+     * @description Returns a new {@link blackberry.pim.calendar.CalendarEvent} object. This method does not persist the CalendarEvent object to the device. To persist the CalendarEvent object to the device, invoke {@link blackberry.pim.calendar.CalendarEvent#save}().
      * @param {Object} properties Optional object literal that specifies the field values for the CalendarEvent object. The object should be in the following form (with any number of properties):
      * @param {blackberry.pim.calendar.CalendarFolder} [folder]  Optional CalendarFolder object that contains the event. If no folder is specified, the event will be created in the default calendar.
      * @returns {blackberry.pim.calendar.CalendarEvent}
@@ -33,8 +33,8 @@ blackberry.pim.calendar = {
      *     calendar = blackberry.pim.calendar;
      *
      * function onSaveSuccess(created) {
-     *    // set evt to the object returned in save success callback, which contains
-     *    // the persisted event id
+     *    // set evt to the object returned in save success callback, which
+     *    // contains the persisted event id
      *    evt = created;
      *    alert("Event saved to device: " + evt.id);
      * }
@@ -49,8 +49,9 @@ blackberry.pim.calendar = {
      *        "location": location,
      *        "start": new Date("Jan 01, 2015, 12:00"),
      *        "end": new Date("Jan 01, 2015, 12:30"),
-     *        // if timezone is specified explicitly, then the times will be for that particular
-     *        // timezone; otherwise, the times will be for the current device timezone
+     *        // if timezone is specified explicitly, then the times will be
+     *        // for that particular timezone; otherwise, the times will be
+     *        // for the current device timezone
      *        "timezone": "America/New_York"
      *    });
      *    evt.save(onSaveSuccess, onSaveError);
@@ -62,7 +63,7 @@ blackberry.pim.calendar = {
     /**
      * @name blackberry.pim.calendar.findEvents
      * @function
-     * @description Find calendar event(s) in the calendar based on some criteria. This function can be used to look up events based on start/end time, location, or summary. This function can also be used to look up a single event given the event id and CalendarFolder which contains it. The second use case is useful if you have an instance of the CalendarEvent object, and wants to get the "fresh" copy from the calendar (in case the event has been changed by other apps).
+     * @description Find calendar event(s) in the calendar based on some criteria. This function can be used to look up events based on start/end time, location, or summary.
      * @param {blackberry.pim.calendar.CalendarFindOptions} findOptions  Options to be applied to the search.
      * @param {function} onFindSuccess Success callback function that is invoked with the events returned from the calendar.
      * @callback {blackberry.pim.calendar.CalendarEvent[]} onFindSuccess.events The array of CalendarEvent objects from the search.
@@ -182,7 +183,9 @@ blackberry.pim.calendar = {
     /**
      * @name blackberry.pim.calendar.getEvent
      * @function
-     * @description Retrieves the event with specified eventId and folder.
+     * @description Retrieves the event with specified eventId and folder. This function is especially useful if you have
+     * previously obtained an event object, and you want to get a fresh copy from the backend to make sure all its properties
+     * are up-to-date.
      * @param {String} eventId The identifier of the event
      * @param {blackberry.pim.calendar.Folder} folder the folder that contains this event
      * @returns {blackberry.pim.calendar.CalendarEvent}

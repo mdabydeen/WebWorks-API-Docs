@@ -66,11 +66,11 @@ blackberry.pim.calendar.CalendarEvent.prototype.start = null;
 blackberry.pim.calendar.CalendarEvent.prototype.end = null;
 
 /**
- * @description An indication of the user's status of the event. <b>TODO meetingStatus() in native CalendarEvent returns a number and the values don't match up the specs.</b>
- * @type String
+ * @description An indication of the user's status of the event.
+ * @type Number
  * @BB10X
  */
-blackberry.pim.calendar.CalendarEvent.prototype.status = "";
+blackberry.pim.calendar.CalendarEvent.prototype.status = 0;
 
 /**
  * @description An indication of the display status to set for the event. Its value can be one of: {@link blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_FREE},
@@ -181,7 +181,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.url = "";
  *    <li>trying to save the event to a calendar folder which the app does not have access to (e.g.
  *        if the default calendar folder is set to an enterprise account, but the app is not running
  *        in work perimeter), result in {@link blackberry.pim.calendar.CalendarError.PERMISSION_DENIED_ERROR}</li>
- *    <li>other errors in back end, result in {@link blackberry.pim.calendar.CalendarError.UNKNOWN_ERROR}</li>
+ *    <li>other errors in the backend, result in {@link blackberry.pim.calendar.CalendarError.UNKNOWN_ERROR}</li>
  * </ul>
  * @returns {void}
  * @BB10X
@@ -195,7 +195,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.url = "";
  *         "start": new Date("Jan 1, 2013, 13:00"),
  *         "end": new Date("Jan 1, 2013, 16:00"),
  *         "transparency": calendar.CalendarEvent.SENSITIVITY_PERSONAL,
- *         "reminder": 2880 // 2 days before start
+ *         "reminder": 2 * 24 * 60 // 2 days before start
  *     });
  *
  * // save event to default calendar folder
@@ -240,7 +240,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.save = function () {};
  *        "start": new Date("Jan 1, 2013, 13:00"),
  *        "end": new Date("Jan 1, 2013, 16:00"),
  *        "transparency": calendar.CalendarEvent.SENSITIVITY_PERSONAL,
- *        "reminder": 2880 // 2 days before start
+ *        "reminder": 2 * 24 * 60 // 2 days before start
  *    });
  *
  *    // will result in error, since the event has not been saved to the
@@ -307,24 +307,39 @@ blackberry.pim.calendar.CalendarEvent.prototype.remove = function () {};
  *     CalendarRepeatRule = calendar.CalendarRepeatRule;
  *
  * function onExceptionSaveSuccess(exceptionEvtCreated) {
+ *    // Exception event created successcully, now the recurring event
+ *    // has the following occurences:
+ *    // Jan 22, 2013, 12:00
+ *    // Jan 25, 2013, 12:00
+ *    // Jan 29, 2013, 12:00
+ *    // Feb  1, 2013, 12:00
+ *    // Feb  5, 2013, 12:00
+ *    // Feb  8, 2013, 12:00
+ *    // Feb 12, 2013, 12:00
+ *    // Feb 16, 2013, 12:00
  *    exceptionEvt = exceptionEvtCreated;
  *    // exception event has a different id than the original event
  *    alert("Exception event created successfully: " + exceptionEvt.id);
+ *
+ *    // get a fresh copy of the recurring event which contains the
+ *    // updated recurrence
+ *    evt = calendar.getEvent(evt.id, evt.folder);
  * }
  *
  * function onSaveSuccess(created) {
- *    evt = created;
  *    // Recurring event created successcully, with the following occurences:
  *    // Jan 22, 2013, 12:00
  *    // Jan 25, 2013, 12:00
  *    // Jan 29, 2013, 12:00
- *    // Feb 1, 2013, 12:00
- *    // Feb 5, 2013, 12:00
- *    // Feb 8, 2013, 12:00
+ *    // Feb  1, 2013, 12:00
+ *    // Feb  5, 2013, 12:00
+ *    // Feb  8, 2013, 12:00
  *    // Feb 12, 2013, 12:00
  *    // Feb 15, 2013, 12:00
+ *    evt = created;
  *
- *    // The following code replaces the last occurence with an exception occurence on the day after
+ *    // The following code replaces the last occurence with an exception
+ *    // occurence on the day after
  *    exceptionEvt = evt.createExceptionEvent(new Date("Feb 15, 2013, 12:00"));
  *    exceptionEvt.start = new Date("Feb 16, 2013, 12:00");
  *    exceptionEvt.end = new Date("Feb 16, 2013, 12:30");
@@ -335,7 +350,7 @@ blackberry.pim.calendar.CalendarEvent.prototype.remove = function () {};
  *    alert("Error saving event to device: " + error.code);
  * }
  *
- * function createRecurringEventWithOneException() {
+ * function createRecurringEvent() {
  *    var start = new Date("Jan 21, 2013, 12:00");
  *    var end = new Date("Jan 21, 2013, 12:30");
  *    var location = "some location";

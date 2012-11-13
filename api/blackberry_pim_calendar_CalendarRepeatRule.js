@@ -52,7 +52,7 @@ blackberry.pim.calendar.CalendarRepeatRule.prototype.expires = null;
 blackberry.pim.calendar.CalendarRepeatRule.prototype.exceptionDates = null;
 
 /**
- * @description The number of repetitions in a finite recurrence.<br>A finite recurrence should have an expiry date or a defined number of occurrences. <b>NOTE: not in DAP specs</b>
+ * @description The number of repetitions in a finite recurrence.<br>A finite recurrence should have an expiry date or a defined number of occurrences.
  * @type Number
  * @BB10X
  */

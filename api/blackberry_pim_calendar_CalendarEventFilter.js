@@ -48,7 +48,7 @@ blackberry.pim.calendar.CalenderEventFilter.prototype.expandRecurring = false;
 
 /**
  * @description Substring used in the search. By setting the substring, the user instructs the
- * back-end to return only events whose summary, location, or attendees' names or emails fields
+ * backend to return only events whose summary, location, or attendees' names or emails fields
  * contain the specified value.
  * @type String
  * @BB10X
