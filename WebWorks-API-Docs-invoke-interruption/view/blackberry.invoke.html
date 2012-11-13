@@ -166,7 +166,7 @@
                         
                     
                     <br /><br />
-                    <i>Last Updated: Tue Nov 13 2012 01:10:23 GMT-0500 (EST)</i>
+                    <i>Last Updated: Tue Nov 13 2012 10:08:22 GMT-0500 (EST)</i>
                 </p>
             </div>
         
@@ -201,18 +201,6 @@
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
-                            
-                                <tr x-ww-support="bb10_menu">
-                                    <td>
-                                        <a href="blackberry.invoke.html#.clearInterrupter">blackberry.invoke.clearInterrupter</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
                             
                                 <tr x-ww-support="bb10_menu|ripple">
                                     <td>
@@ -264,7 +252,7 @@
                             
                                 <tr x-ww-support="bb10_menu">
                                     <td>
-                                        <a href="blackberry.invoke.html#.registerInterrupter">blackberry.invoke.registerInterrupter</a>
+                                        <a href="blackberry.invoke.html#.interrupter">interrupter</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -436,18 +424,6 @@
                     
                         <table><tbody>
                             
-                                <tr x-ww-support="bb10_menu">
-                                    <td class="first_column">
-                                        
-                                            void
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.clearInterrupter">blackberry.invoke.clearInterrupter</a>
-                                        
-                                    </td>
-                                </tr>
-                            
                                 <tr x-ww-support="bb10_menu|ripple">
                                     <td class="first_column">
                                         
@@ -492,18 +468,6 @@
                                     </td>
                                     <td>
                                         <a href="blackberry.invoke.html#.query">blackberry.invoke.query</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10_menu">
-                                    <td class="first_column">
-                                        
-                                            object
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.invoke.html#.registerInterrupter">blackberry.invoke.registerInterrupter</a>
                                         
                                     </td>
                                 </tr>
@@ -570,6 +534,33 @@
         
     
         
+        
+            <br />
+            <div class="ref-sect ref-index" x-ww-support="bb10_menu">
+                <div class="ref-sect-title">
+                    <h2> Properties </h2>
+                </div>
+                <div class="ref-sect-content">
+                    
+                        <table><tbody>
+                            
+                                <tr x-ww-support="bb10_menu">
+                                    <td class="first_column">
+                                        
+                                            Function
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.invoke.html#.interrupter">interrupter</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </tbody></table>
+                    
+                    
+                </div>
+            </div>
         
     
         
@@ -660,87 +651,6 @@
                 <h2>Functions</h2>
             </div>
             <div class="ref-sect-content">
-                
-                    <div class="detailed_item function" x-ww-support="bb10_menu">
-                        <h3>
-                            <a name=".clearInterrupter"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        void
-                                        
-                                        
-                                            blackberry.invoke.clearInterrupter
-                                            
-                                                
-                                                    ()
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Clears the registered interrupter from the system invocation. This stops any future invocations from being interrupted and             sent to the user.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt;function clearInterruption() {    // Close the child Card for some reason    blackberry.invoke.clearInterrupter();}&lt;/script&gt;</pre></code></td></tbody></table>
-    
-  
-
-                        </div>
-                    </div>
                 
                     <div class="detailed_item function" x-ww-support="bb10_menu|ripple">
                         <h3>
@@ -1273,115 +1183,6 @@
                         </div>
                     </div>
                 
-                    <div class="detailed_item function" x-ww-support="bb10_menu">
-                        <h3>
-                            <a name=".registerInterrupter"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        object
-                                        
-                                        
-                                            blackberry.invoke.registerInterrupter
-                                            
-                                                
-                                                    (onInvoke : function)
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Registers a function that is triggered during invocation as an interrupter. Allows developers to interrupt the invocation, and perform and action they please.             Developers are passed the invocation object, and can perform any modifications to it they like. The modifications should be returned from the function</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                            
-                                <br />
-                                <table>
-                                    <thead><tr><th colspan="2">
-                                        Parameters
-                                    </th></tr></thead>
-                                                   
-                                    
-                                        
-                                        <tr>
-                                            <td><b>onInvoke</b></td>
-                                            <td>
-                                                
-                                                function that is triggered on invoke                         
-                                                
-                                            </td>
-                                        </tr>
-                                                  
-                                </table>
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                                <br />
-                                <span><b>Return:</b></span>
-                                
-                                    
-                                        <p> modified request from the user to the system to be run on invocation </p>
-                                    
-                                
-                                <br />
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-
-    <br />
-    <b>Code Example:</b>
-    
-        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt; function registerForInvokeInterrupter() {     blackberry.invoke.registerInterrupter(function (request) {         if(confirm("System would like to invoke: " + request + " would you like to continue?")) {             return request;         } else {             alert("User canceled invocation");         }     }); } startCameraApp(); &lt;/script&gt;</pre></code></td></tbody></table>
-    
-  
-
-                        </div>
-                    </div>
-                
             </div>
         </div>
     
@@ -1690,6 +1491,120 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
     
 
     
+    
+        <div class="ref-sect">
+            <div class="ref-sect-title clearfix">
+                <h2>Properties</h2>
+            </div>
+            <div class="ref-sect-content">
+                
+                    <div class="detailed_item function" x-ww-support="bb10_menu">
+                        <h3>
+                            <a name=".interrupter"></a>
+                 
+                            
+                            
+                                
+                                    
+                                        static              
+                                        
+                                        Function
+                                        
+                                        
+                                            interrupter
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>Registers a function that is triggered during invocation as an interrupter. Allows developers to interrupt the invocation, and perform and action they please.             Developers are passed the invocation object, and can perform any modifications to it they like. The modifications should be returned from the function</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                            
+                                <br />
+                                <table>
+                                    <thead><tr><th colspan="2">
+                                        Parameters
+                                    </th></tr></thead>
+                                                   
+                                    
+                                        
+                                        <tr>
+                                            <td><b>onInvoke</b></td>
+                                            <td>
+                                                
+                                                function that is triggered on invoke                         
+                                                
+                                            </td>
+                                        </tr>
+                                                  
+                                </table>
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                                <br />
+                                <span><b>Return:</b></span>
+                                
+                                    
+                                        <p> modified request from the user to the system to be run on invocation </p>
+                                    
+                                
+                                <br />
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>&lt;script type="text/javascript"&gt; function registerForInvokeInterrupter() {     blackberry.invoke.interrupter = function (request) {         if(confirm("System would like to invoke: " + request + " would you like to continue?")) {             return request;         } else {             alert("User canceled invocation");         }     }; } function clearInterrupter () {     blackberry.invoke.interrupter = null; } registerForInvokeInterrupter(); clearInterrupter(); &lt;/script&gt;</pre></code></td></tbody></table>
+    
+  
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
     
 
     
@@ -2013,7 +1928,7 @@ The <b>onChildCardStartPeek</b> event is fired by the navigator to notify the pa
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 13 2012 01:10:23 GMT-0500 (EST)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 13 2012 10:08:22 GMT-0500 (EST)
         </div>
 
     </div>
