@@ -48,10 +48,10 @@ blackberry.payment = {
      * cases where this method is being executed by a background thread), you can set allowRefresh to false to have this method
      * immediately return the purchase results cached on the BlackBerry device (possibly an empty list) without querying the Payment
      * Service server.
-     * @param {Boolean} [refresh]  True if the BlackBerry should be allowed to refresh the list of purchases from the Payment Service
+     * @param {Boolean} refresh True if the BlackBerry should be allowed to refresh the list of purchases from the Payment Service
      * server. False if the current list of cached purchases should be returned immediately.
      * @callback {function} callbackOnSuccess Function to be invoked on successful call.
-     * @callback {String} callbackOnSuccess.data A string representing a literal array of {@link Purchase} items is passed as a parameter
+     * @callback {Array} callbackOnSuccess.purchases An array of {@link Purchase} items is passed as a parameter
      * in the form below:
      * <pre>[{
      * "transactionID": "00000001",
@@ -72,8 +72,8 @@ blackberry.payment = {
      * "initialPeriod": "7",
      * "metaData": "My Metadata"
      * }]</pre>
-     * @callback {function} [callbackOnFailure] Function to be invoked when an error occurs.
-     * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+     * @callback {function} callbackOnFailure Function to be invoked when an error occurs.
+     * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
      * @PB10+
      * @BB10X
      * @BB50+
@@ -88,12 +88,10 @@ blackberry.payment = {
      *  }
      *
      *  function success(purchases) {
-     *    var purchasedItems = JSON.parse(purchase);
-     *    
-     *      for(var i = 0; i < purchasedItems.length; i++) {
-     *          var transId = purchasedItems[i].transactionID;
-     *          var sku = purchasedItems[i].digitalGoodSKU;
-     *          var dgId = purchasedItems[i].digitalGoodID;
+     *      for(var i = 0; i < purchases.length; i++) {
+     *          var transId = purchases[i].transactionID;
+     *          var sku = purchases[i].digitalGoodSKU;
+     *          var dgId = purchases[i].digitalGoodID;
      *          alert("Purchased Item " i + ": " + transId + "," + sku +  "," + dgId);
      *      }
      *  }
@@ -111,19 +109,19 @@ blackberry.payment = {
      * digital good to be purchased, but it is not necessary to provide both. To customize the name and icon that are displayed on the
      * purchase dialog banners, provide the purchaseAppName and/or purchaseAppIcon arguments. If not provided, the name and icon that
      * were registered with App World will be used.
-     * @param {Object} args Contains information that describes the purchase.
-     * @callback {String} args.digitalGoodID ID of the digital good being purchased.
-     * @callback {String} args.digitalGoodSKU SKU of the digital good being purchased.
-     * @callback {String} args.digitalGoodName Name of the digital good being purchased.
-     * @callback {String} args.metaData Metadata associated with the digital good. Metadata offers the application developer a way to
+     * @param {Object} purchaseArguments Contains information that describes the purchase.
+     * @callback {String} purchaseArguments.digitalGoodID ID of the digital good being purchased.
+     * @callback {String} purchaseArguments.digitalGoodSKU SKU of the digital good being purchased.
+     * @callback {String} purchaseArguments.digitalGoodName Name of the digital good being purchased.
+     * @callback {String} purchaseArguments.metaData Metadata associated with the digital good. Metadata offers the application developer a way to
      * store information about each purchase on the Payment Service server.
-     * @callback {String} args.purchaseAppName Name of the application requesting the purchase.
-     * @callback {String} args.purchaseAppIcon Icon of the application requesting the purchase.
-     * @callback {Object} args.extraParameters Set of extra parameters, in the form of key/value pairs, to associate with the purchase.
+     * @callback {String} purchaseArguments.purchaseAppName Name of the application requesting the purchase.
+     * @callback {String} purchaseArguments.purchaseAppIcon Icon of the application requesting the purchase.
+     * @callback {Object} purchaseArguments.extraParameters Set of extra parameters, in the form of key/value pairs, to associate with the purchase.
      * @callback {function} callbackOnSuccess Function to be called when the payment is successful.
-     * @callback {String} callbackOnSuccess.data A string representing a {@link Purchase} object literal.
-     * @callback {function} [callbackOnFailure] Function to be called when an error occurs.
-     * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+     * @callback {Purchase} callbackOnSuccess.data A {@link Purchase} object containing the details of the successful purchase.
+     * @callback {function} callbackOnFailure Function to be called when an error occurs.
+     * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
      * @PB10+
      * @BB10X
      * @BB50+
@@ -146,8 +144,7 @@ blackberry.payment = {
      *    }
      *  }
      *
-     *  function success(purchase) {
-     *    var purchasedItem = JSON.parse(purchase);
+     *  function success(purchasedItem) {
      *    var transId = purchasedItem.transactionID;
      *    var sku = purchasedItem.digitalGoodSKU;
      *    var dgId = purchasedItem.digitalGoodID;
@@ -159,7 +156,7 @@ blackberry.payment = {
      *  }
      * &lt;/script&gt;
      */
-    purchase : function (args, callbackOnSuccess, callbackOnFailure) {
+    purchase : function (purchaseArguments, callbackOnSuccess, callbackOnFailure) {
     },
     /**
     * @function
@@ -172,10 +169,10 @@ blackberry.payment = {
     * present if the digital good represents a subscription item.
     * @callback {String} callbackOnSuccess.data.renewalPrice The subscription renewal price. This will only be present if the digital
     * good represents a subscription item.
-    * @callback {String} callbackOnSuccess.data.renewalPeriod Tje number of days in the subscription renewal period. This will only be
+    * @callback {String} callbackOnSuccess.data.renewalPeriod The number of days in the subscription renewal period. This will only be
     * present if the digital good represents a subscription item.
     * @callback {function} callbackOnFailure Function to be called when an error occurs.
-    * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+    * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
     * @BB10X
     * @example
     * &lt;script type="text/javascript"&gt;
@@ -212,10 +209,10 @@ blackberry.payment = {
     * @function
     * @description Initiates a request for the catalog of digital goods that can be purchased by the application.
     * @callback {function} callbackOnSuccess Function to be called on success.
-    * @callback {String} callbackOnSuccess.data A string representing a literal array of {@link DigitalGood} items is passed as a
+    * @callback {Array} callbackOnSuccess.childGoods An array of {@link DigitalGood} items is passed as a
     * parameter to callbackOnSuccess.
     * @callback {function} callbackOnFailure Function to be called when an error occurs.
-    * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+    * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
     * @BB10X
     * @example
     * &lt;script type="text/javascript"&gt;
@@ -227,8 +224,7 @@ blackberry.payment = {
     *    }
     *  }
     *
-    *  function success(goods) {
-    *        var goodsList = JSON.parse(goods)
+    *  function success(goodsList) {
     *        if(goodsList.length > 0) {
     *            for(var i = 0; i < goodsList.length; i++){
     *                var id = goodsList[i].id;
@@ -250,14 +246,14 @@ blackberry.payment = {
     },
     /**
     * @function
-    * @description Initiates a call to check whether the currently logged in BBID user has rights to the provided digital good subscription
-    * at this time.
+    * @description Initiates a call to check whether the currently logged in BBID user has rights to the current app-level subscription.
+    * If the calling application is not a subscription app, this will return false.
     * <p>
     * A user can cancel a subscription, and it will remain active until the subscription period has passed.
     * @callback {function} callbackOnSuccess Function to be called on success.
-    * @callback {Boolean} callbackOnSuccess.subscriptionExists Whether the subscription digital good is currently active.
+    * @callback {Boolean} callbackOnSuccess.data.subscriptionExists Whether the subscription to the application is currently active.
     * @callback {function} callbackOnFailure Function to be called when an error occurs.
-    * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+    * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
     * @BB10X
     * @example
     * &lt;script type="text/javascript"&gt;
@@ -269,8 +265,40 @@ blackberry.payment = {
     *    }
     *  }
     *
-    *  function success(isSubscribed) {
-            alert("User is " + (isSubscribed ? "" : "not ") + "subscribed to the item." )
+    *  function success(data) {
+            alert("User is " + (data.subscriptionExists ? "" : "not ") + "subscribed to the app." )
+    *  }
+    *
+    *  function failure(error) {
+    *    alert("Error occurred: " + error.errorText + ", " + error.errorID);
+    *  }
+    * &lt;/script&gt;
+    */
+    checkAppSubscription : function(callbackOnSuccess, callbackOnFailure) {
+    },
+    /**
+    * @function
+    * @description Initiates a call to check whether the currently logged in BBID user has rights to the provided digital good subscription
+    * at this time.
+    * <p>
+    * A user can cancel a subscription, and it will remain active until the subscription period has passed.
+    * @callback {function} callbackOnSuccess Function to be called on success.
+    * @callback {Boolean} callbackOnSuccess.data.subscriptionExists Whether the subscription digital good is currently active.
+    * @callback {function} callbackOnFailure Function to be called when an error occurs.
+    * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
+    * @BB10X
+    * @example
+    * &lt;script type="text/javascript"&gt;
+    *   function checkSubscription() {
+    *     try{
+            blackberry.payment.checkExisting("12345", success, failure);
+    *    }catch (e){
+    *      alert ("Error" + e);
+    *    }
+    *  }
+    *
+    *  function success(data) {
+            alert("User is " + (data.subscriptionExists ? "" : "not ") + "subscribed to the item." )
     *  }
     *
     *  function failure(error) {
@@ -288,9 +316,9 @@ blackberry.payment = {
     * at the time of purchase or queried by calling getExistingPurchases.  The cancelation of a non-subscription digital good is
     * not permitted.
     * @callback {function} callbackOnSuccess Function to be called on success.
-    * @callback {Boolean} callbackOnSuccess.subscriptionCancelled True if the cancellation was successfull.
+    * @callback {Boolean} callbackOnSuccess.data.subscriptionCancelled True if the cancellation was successful.
     * @callback {function} callbackOnFailure Function to be called when an error occurs.
-    * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+    * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
     * @BB10X
     * @example
     * &lt;script type="text/javascript"&gt;
@@ -302,8 +330,8 @@ blackberry.payment = {
     *    }
     *  }
     *
-    *  function success(subscriptionCancelled) {
-    *        alert("Cancellation " + (subscriptionCancelled ? "" : "NOT ") + "successfull");    
+    *  function success(data) {
+    *        alert("Cancellation " + (data.subscriptionCancelled ? "" : "NOT ") + "successful");    
     *  }
     *
     *  function failure(error) {
@@ -319,9 +347,9 @@ blackberry.payment = {
     * of the device.  It can be used by applications to identify BlackBerry users across devices and different installations of their
     * application.
     * @callback {function} callbackOnSuccess Function to be called on success.
-    * @callback {Number} callbackOnSuccess.PPID The users PPID.
+    * @callback {String} callbackOnSuccess.data.PPID The users PPID.
     * @callback {function} callbackOnFailure Function to be called when an error occurs.
-    * @callback {String} callbackOnFailure.data A string representing a {@link PaymentError} object literal.
+    * @callback {PaymentError} callbackOnFailure.error A {@link PaymentError} object containing details about the error.
     * @BB10X
     * @example
     * &lt;script type="text/javascript"&gt;
@@ -333,8 +361,8 @@ blackberry.payment = {
     *    }
     *  }
     *
-    *  function success(ppid) {
-            alert("User's PPID: " + ppid);
+    *  function success(data) {
+            alert("User's PPID: " + data.ppid);
     *  }
     *
     *  function failure(error) {
