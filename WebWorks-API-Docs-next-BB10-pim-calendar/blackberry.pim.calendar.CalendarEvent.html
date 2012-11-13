@@ -68,7 +68,7 @@
 
         
             <p>
-                The CalendarEvent object represents an event in the device calendar. It can be obtained by calling <a href="blackberry.pim.calendar.html#.createEvent">blackberry.pim.calendar.createEvent</a>() or <a href="blackberry.pim.calendar.html#.findEvents">blackberry.pim.calendar.findEvents</a>()
+                The <code>CalendarEvent</code> object represents an event in the device calendar. It can be obtained by calling <a href="blackberry.pim.calendar.html#.createEvent">blackberry.pim.calendar.createEvent</a>() or <a href="blackberry.pim.calendar.html#.findEvents">blackberry.pim.calendar.findEvents</a>()
 
 
                 
@@ -1032,7 +1032,7 @@
                                        
                             
                             
-                            <p>Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
+                            <p>Creates a new CalendarEvent object for a recurrence exception of the calling event. This is a deep copy of the object,
 with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
 property set to the parameter value.</p>
                             <br />
@@ -1092,55 +1092,58 @@ added to the calling event's exceptionDates array within the recurrence field.
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>var evt, exceptionEvt;
+        <table><tbody><td class="code"><code><pre>var evt,
+    exceptionEvt,
+    calendar = blackberry.pim.calendar,
+    CalendarRepeatRule = calendar.CalendarRepeatRule;
 
 function onExceptionSaveSuccess(exceptionEvtCreated) {
-    exceptionEvt = exceptionEvtCreated;
-    alert("Exception event created successfully: " + exceptionEvt.id); // exception event has a different id than the original event
+   exceptionEvt = exceptionEvtCreated;
+   // exception event has a different id than the original event
+   alert("Exception event created successfully: " + exceptionEvt.id);
 }
 
 function onSaveSuccess(created) {
-    evt = created;
-    // Recurring event created successcully, with the following occurences:
-    // Jan 22, 2013, 12:00
-    // Jan 25, 2013, 12:00
-    // Jan 29, 2013, 12:00
-    // Feb 1, 2013, 12:00
-    // Feb 5, 2013, 12:00
-    // Feb 8, 2013, 12:00
-    // Feb 12, 2013, 12:00
-    // Feb 15, 2013, 12:00
+   evt = created;
+   // Recurring event created successcully, with the following occurences:
+   // Jan 22, 2013, 12:00
+   // Jan 25, 2013, 12:00
+   // Jan 29, 2013, 12:00
+   // Feb 1, 2013, 12:00
+   // Feb 5, 2013, 12:00
+   // Feb 8, 2013, 12:00
+   // Feb 12, 2013, 12:00
+   // Feb 15, 2013, 12:00
 
-    // The following code replaces the last occurence with an exception occurence on the day after
-    exceptionEvt = evt.createExceptionEvent(new Date("Feb 15, 2013, 12:00"));
-    exceptionEvt.start = new Date("Feb 16, 2013, 12:00");
-    exceptionEvt.end = new Date("Feb 16, 2013, 12:30");
-    exceptionEvt.save(onExceptionSaveSuccess, onSaveError);
+   // The following code replaces the last occurence with an exception occurence on the day after
+   exceptionEvt = evt.createExceptionEvent(new Date("Feb 15, 2013, 12:00"));
+   exceptionEvt.start = new Date("Feb 16, 2013, 12:00");
+   exceptionEvt.end = new Date("Feb 16, 2013, 12:30");
+   exceptionEvt.save(onExceptionSaveSuccess, onSaveError);
 }
 
 function onSaveError(error) {
-    alert("Error saving event to device: " + error.code);
+   alert("Error saving event to device: " + error.code);
 }
 
 function createRecurringEventWithOneException() {
-    var cal = blackberry.pim.calendar;
-    var start = new Date("Jan 21, 2013, 12:00");
-    var end = new Date("Jan 21, 2013, 12:30");
-    var location = "some location";
-    var summary = "My recurring event";
-    var repeatRule = new CalendarRepeatRule({
-        "frequency": CalendarRepeatRule.FREQUENCY_WEEKLY,
-        "expires": new Date("Feb 18, 2013, 12:00"),
-        "dayInWeek": CalendarRepeatRule.TUESDAY | CalendarRepeatRule.FRIDAY
-    });
-    evt = cal.createEvent({
-        "summary": summary,
-        "location": location,
-        "start": start,
-        "end": end,
-        "recurrence": repeatRule
-    });
-    evt.save(onSaveSuccess, onSaveError);
+   var start = new Date("Jan 21, 2013, 12:00");
+   var end = new Date("Jan 21, 2013, 12:30");
+   var location = "some location";
+   var summary = "My recurring event";
+   var repeatRule = new CalendarRepeatRule({
+      "frequency": CalendarRepeatRule.FREQUENCY_WEEKLY,
+      "expires": new Date("Feb 18, 2013, 12:00"),
+      "dayInWeek": CalendarRepeatRule.TUESDAY | CalendarRepeatRule.FRIDAY
+   });
+   evt = calendar.createEvent({
+      "summary": summary,
+      "location": location,
+      "start": start,
+      "end": end,
+      "recurrence": repeatRule
+   });
+   evt.save(onSaveSuccess, onSaveError);
 }</pre></code></td></tbody></table>
     
   
@@ -1164,7 +1167,7 @@ function createRecurringEventWithOneException() {
                                             remove
                                             
                                                 
-                                                    (onRemoveSuccess : function, onRemoveError : function)
+                                                    (onRemoveSuccess : function, onRemoveError : function, <i>[removeAll : Boolean]</i>)
                                                 
                                             
                                                                   
@@ -1184,7 +1187,7 @@ function createRecurringEventWithOneException() {
                                        
                             
                             
-                            <p>Removes the event from the calendar. An error callback is called with a CalendarError object if the removal is unsuccessful.</p>
+                            <p>Removes the event from the calendar. An error callback is called with a <a href="blackberry.pim.calendar.CalendarError.html">blackberry.pim.calendar.CalendarError</a> object if the removal is unsuccessful.</p>
                             <br />
                             
                             
@@ -1231,8 +1234,20 @@ function createRecurringEventWithOneException() {
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>error:</b> The CalendarError object which contains the error code.
+                                                        <b>error:</b> The <a href="blackberry.pim.calendar.CalendarError.html">blackberry.pim.calendar.CalendarError</a> object which contains the error code. A possible error is to remove an event before it was saved, this would result in <a href="blackberry.pim.calendar.CalendarError.html#.INVALID_ARGUMENT_ERROR">INVALID_ARGUMENT_ERROR</a>.
                                                     
+                                                
+                                            </td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>removeAll</b></td>
+                                            <td>
+                                                
+                                                Optional flag that only applies to recurring events. If removeAll is set to true,
+all occurrences of the recurring event will be removed; otherwise, only the single occurrence represented by
+this event object will be removed. This parameter defaults to true if not specified.                         
                                                 
                                             </td>
                                         </tr>
@@ -1253,6 +1268,72 @@ function createRecurringEventWithOneException() {
                             
                             
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>var calendar = blackberry.pim.calendar;
+
+function testRemove() {
+   // omitting optional folder parameter in createEvent(), calling save()
+   // will save event to default calendar folder
+   var evt = calendar.createEvent({
+       "summary": "Picnic",
+       "location": "South Park",
+       "start": new Date("Jan 1, 2013, 13:00"),
+       "end": new Date("Jan 1, 2013, 16:00"),
+       "transparency": calendar.CalendarEvent.SENSITIVITY_PERSONAL,
+       "reminder": 2880 // 2 days before start
+   });
+
+   // will result in error, since the event has not been saved to the
+   // calendar folder yet
+   evt.remove(function () {
+      alert("Event removed!");
+   }, function (error) {
+      alert("Failed to remove event, error code: " + error.code);
+   });
+
+   // save event to default calendar folder
+   evt.save(function (saved) {
+      evt = saved; // replace original evt object
+      alert("Event saved: " + evt.id);
+   }, function (error) {
+      alert("Error saving event, error code: " + error.code);
+   });
+
+   // this will remove the event from the calendar folder
+   evt.remove(function () {
+      alert("Event removed!");
+   }, function (error) {
+      alert("Failed to remove event, error code: " + error.code);
+   });
+}
+
+function removeSingleOccurrence(keyword, dateToRemove) {
+   // find all instances of the recurring event
+   calendar.findEvents({
+      "filter": {
+          "substring": keyword,
+          "expandRecurring": true
+      }
+   }, function (events) {
+      alert("Found " + events.length + " events that matches filter!");
+      events.forEach(function (evt) {
+         if (evt.start.toISOString() === dateToRemove.toISOString()) {
+	           evt.remove(function () {
+               alert(dateToRemove + " instance removed successfully!");
+            }, function (error) {
+               alert(dateToRemove + " instance not removed, error code: " + error.code);
+            },
+            false); // pass false to remove only this single occurrence
+         }
+      });
+   }, function (error) {
+      alert("Failed to find events, error code: " + error.code);
+   });
+}</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -1331,7 +1412,7 @@ function createRecurringEventWithOneException() {
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>event:</b> The CalendarEvent object.
+                                                        <b>event:</b> The <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a> object. You should save this object for further operations on the event and use it to replace the original event object prior to save.
                                                     
                                                 
                                             </td>
@@ -1347,7 +1428,15 @@ function createRecurringEventWithOneException() {
                                                     <br />
                                                     
                                                         <br />
-                                                        <b>error:</b> The CalendarError object which contains the error code.
+                                                        <b>error:</b> The <a href="blackberry.pim.calendar.CalendarError.html">blackberry.pim.calendar.CalendarError</a> object which contains the error code. Possible errors:
+<ul>
+   <li>start or end date time is missing, result in <a href="blackberry.pim.calendar.CalendarError.html#.INVALID_ARGUMENT_ERROR">INVALID_ARGUMENT_ERROR</a></li>
+   <li>end date time is before start date time, result in <a href="blackberry.pim.calendar.CalendarError.html#.INVALID_ARGUMENT_ERROR">INVALID_ARGUMENT_ERROR</a></li>
+   <li>trying to save the event to a calendar folder which the app does not have access to (e.g.
+       if the default calendar folder is set to an enterprise account, but the app is not running
+       in work perimeter), result in <a href="blackberry.pim.calendar.CalendarError.html#.PERMISSION_DENIED_ERROR">PERMISSION_DENIED_ERROR</a></li>
+   <li>other errors in back end, result in <a href="blackberry.pim.calendar.CalendarError.html#.UNKNOWN_ERROR">UNKNOWN_ERROR</a></li>
+</ul>
                                                     
                                                 
                                             </td>
@@ -1369,6 +1458,40 @@ function createRecurringEventWithOneException() {
                             
                             
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>var calendar = blackberry.pim.calendar,
+    // omitting optional folder parameter in createEvent(), calling save() will
+    // save event to default calendar folder
+    evt = calendar.createEvent({
+        "summary": "Picnic",
+        "location": "South Park",
+        "start": new Date("Jan 1, 2013, 13:00"),
+        "end": new Date("Jan 1, 2013, 16:00"),
+        "transparency": calendar.CalendarEvent.SENSITIVITY_PERSONAL,
+        "reminder": 2880 // 2 days before start
+    });
+
+// save event to default calendar folder
+evt.save(function (saved) {
+    evt = saved; // replace original evt object
+    alert("Event saved: " + evt.id);
+}, function (error) {
+    alert("Error saving event, error code: " + error.code);
+});
+
+// edit event description
+evt.description = "This is going to be fun!";
+// save changes to event
+evt.save(function (saved) {
+    evt = saved; // replace original evt object
+    alert("Event description: " + evt.description);
+}, function (error) {
+    alert("Error saving event, error code: " + error.code);
+});</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -1847,7 +1970,7 @@ function createRecurringEventWithOneException() {
                                        
                             
                             
-                            <p>A globally unique identifier.</p>
+                            <p>An identifier for the event.</p>
                             <br />
                             
                             
@@ -2140,7 +2263,7 @@ means of the parent id.</p>
                                        
                             
                             
-                            <p>The recurrence or repetition rule for this event.</p>
+                            <p>The recurrence or repetition rule for this event. This is used for creating a recurring event.</p>
                             <br />
                             
                             
@@ -2211,7 +2334,7 @@ means of the parent id.</p>
                                        
                             
                             
-                            <p>A reminder for the event, specified as the number of minutes between the alert and the start time.<b>TODO native CalendarEvent takes a number of minutes before start of event, but DAP CalendarEvent does it differently http://www.w3.org/TR/calendar-api/#widl-CalendarEvent-reminder</b></p>
+                            <p>A reminder for the event, specified as the number of minutes between the alert and the start time.</p>
                             <br />
                             
                             
@@ -2637,7 +2760,9 @@ means of the parent id.</p>
                                        
                             
                             
-                            <p>An indication of the display status to set for the event. <b>TODO busyStatus() in native CalendarEvent can be one of: free, tentative, busy, or out of office.</b></p>
+                            <p>An indication of the display status to set for the event. Its value can be one of: <a href="blackberry.pim.calendar.CalendarEvent.html#.TRANSPARENCY_FREE">TRANSPARENCY_FREE</a>,
+<a href="blackberry.pim.calendar.CalendarEvent.html#.TRANSPARENCY_TENTATIVE">TRANSPARENCY_TENTATIVE</a>, <a href="blackberry.pim.calendar.CalendarEvent.html#.TRANSPARENCY_BUSY">TRANSPARENCY_BUSY</a>,
+or <a href="blackberry.pim.calendar.CalendarEvent.html#.TRANSPARENCY_OUT_OF_OFFICE">TRANSPARENCY_OUT_OF_OFFICE</a></p>
                             <br />
                             
                             
@@ -3373,7 +3498,7 @@ available).</p>
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 26 2012 01:13:48 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 13 2012 15:04:20 GMT-0500 (EST)
         </div>
 
     </div>

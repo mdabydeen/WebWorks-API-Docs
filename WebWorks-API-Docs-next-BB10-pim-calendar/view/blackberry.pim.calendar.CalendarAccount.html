@@ -85,7 +85,7 @@
 
         
             <p>
-                The <code>CalendarAccount</code> object contains the calendar account information for the calendar service.
+                The <code>CalendarAccount</code> object contains the calendar account information.
 
 
                 
@@ -132,6 +132,18 @@
                         <table class="apiTable">
                             <thead><tr><th>API</th><th>BB5.0</th><th>BB6.0</th><th>BB7.0</th><th>PB1.0</th><th>PB2.0</th><th>BB10</th><th>Ripple</th></tr></thead>
                             
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#enterprise">enterprise</a>
+                                        <td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiNo">&nbsp;</td>
+<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
+                                    </td>
+                                </tr>
                             
                                 <tr x-ww-support="bb10x">
                                     <td>
@@ -256,6 +268,18 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
+                                            Boolean
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="blackberry.pim.calendar.CalendarAccount.html#enterprise">enterprise</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr x-ww-support="bb10x">
+                                    <td class="first_column">
+                                        
                                             <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>[]
                                         
                                     </td>
@@ -330,6 +354,77 @@
                 
                     <div class="detailed_item function" x-ww-support="bb10x">
                         <h3>
+                            <a name="enterprise"></a>
+                 
+                            
+                            
+                                
+                                    
+                                                      
+                                        
+                                        Boolean
+                                        
+                                        
+                                            enterprise
+                                            
+                                                                  
+                                    
+                                
+                            
+                            <br />
+                        </h3>
+                        <div class="detailed description">
+                            
+                            
+                                
+                                <br />
+                            
+                    
+                            
+                                       
+                            
+                            
+                            <p>True when this calendar account is an enterprise account.</p>
+                            <br />
+                            
+                            
+                            
+                                <table>              
+                                    <thead><tr><th colspan="2">
+                                        Supported Platforms
+                                    </th></tr></thead>
+                                    
+                                        <tr><td></td><td>
+                                            &nbsp;- BlackBerry 10
+                                        </td></tr>
+                                    
+                                </table>              
+                                               
+                            <br />
+                            
+                            
+                                               
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                
+  
+
+                        </div>
+                    </div>
+                
+                    <div class="detailed_item function" x-ww-support="bb10x">
+                        <h3>
                             <a name="folders"></a>
                  
                             
@@ -394,6 +489,20 @@
                             
                             
                 
+
+    <br />
+    <b>Code Example:</b>
+    
+        <table><tbody><td class="code"><code><pre>function getCalendarAccountsForGmail() {
+   var calendar = blackberry.pim.calendar,
+       accounts = calendar.getCalendarAccounts();
+
+   // gets all calendar accounts that contains "gmail" in its name
+   return accounts.filter(function (acct) {
+      return /gmail/i.test(acct.name);
+   });
+}</pre></code></td></tbody></table>
+    
   
 
                         </div>
@@ -557,7 +666,7 @@
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 26 2012 01:13:47 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 13 2012 15:04:19 GMT-0500 (EST)
         </div>
 
     </div>

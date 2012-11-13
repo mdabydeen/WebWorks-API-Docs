@@ -68,7 +68,7 @@
 
         
             <p>
-                The Calendar object provides functions for creating and finding contacts.
+                The <code>Calendar</code> object provides functions for creating and finding contacts.
 
 
                 
@@ -143,18 +143,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td>
                                         <a href="blackberry.pim.calendar.html#.getCalendarAccounts">blackberry.pim.calendar.getCalendarAccounts</a>
-                                        <td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiNo">&nbsp;</td>
-<td class="apiYes">Y</td><td class="apiNo">&nbsp;</td>
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td>
-                                        <a href="blackberry.pim.calendar.html#.getCalendarFolders">blackberry.pim.calendar.getCalendarFolders</a>
                                         <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
 <td class="apiNo">&nbsp;</td>
@@ -330,18 +318,6 @@
                                 <tr x-ww-support="bb10x">
                                     <td class="first_column">
                                         
-                                            <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>[]
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="blackberry.pim.calendar.html#.getCalendarFolders">blackberry.pim.calendar.getCalendarFolders</a>
-                                        
-                                    </td>
-                                </tr>
-                            
-                                <tr x-ww-support="bb10x">
-                                    <td class="first_column">
-                                        
                                             <a href="blackberry.pim.calendar.CalendarAccount.html">blackberry.pim.calendar.CalendarAccount</a>
                                         
                                     </td>
@@ -450,7 +426,7 @@
                                        
                             
                             
-                            <p>Returns a new CalendarEvent object. This method does not persist the CalendarEvent object to the device. To persist the CalendarEvent object to the device, invoke the CalendarEvent.save method. <b>Not in DAP specs</b></p>
+                            <p>Returns a new <a href="blackberry.pim.calendar.CalendarEvent.html">blackberry.pim.calendar.CalendarEvent</a> object. This method does not persist the CalendarEvent object to the device. To persist the CalendarEvent object to the device, invoke the CalendarEvent.save method. <b>Not in DAP specs</b></p>
                             <br />
                             
                             
@@ -517,27 +493,31 @@
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>var evt;
+        <table><tbody><td class="code"><code><pre>var evt,
+    calendar = blackberry.pim.calendar;
 
 function onSaveSuccess(created) {
-    evt = created; // set evt to the object returned in save success callback, which contains the persisted event id
-    alert("Event saved to device: " + evt.id);
+   // set evt to the object returned in save success callback, which contains
+   // the persisted event id
+   evt = created;
+   alert("Event saved to device: " + evt.id);
 }
 
 function onSaveError(error) {
-    alert("Error saving event to device: " + error.code);
+   alert("Error saving event to device: " + error.code);
 }
 
 function createEventInDefaultCalendarFolder(summary, location) {
-    var cal = blackberry.pim.calendar;
-    evt = cal.createEvent({
-        "summary": summary,
-        "location": location,
-        "start": new Date("Jan 01, 2015, 12:00"),
-        "end": new Date("Jan 01, 2015, 12:30"),
-        "timezone": "America/New_York" // if timezone is specified explicitly, then the times will be for that particular timezone; otherwise, the times will be for the current device timezone
-    });
-    evt.save(onSaveSuccess, onSaveError);
+   evt = calendar.createEvent({
+       "summary": summary,
+       "location": location,
+       "start": new Date("Jan 01, 2015, 12:00"),
+       "end": new Date("Jan 01, 2015, 12:30"),
+       // if timezone is specified explicitly, then the times will be for that particular
+       // timezone; otherwise, the times will be for the current device timezone
+       "timezone": "America/New_York"
+   });
+   evt.save(onSaveSuccess, onSaveError);
 }</pre></code></td></tbody></table>
     
   
@@ -670,72 +650,82 @@ function createEventInDefaultCalendarFolder(summary, location) {
     <br />
     <b>Code Example:</b>
     
-        <table><tbody><td class="code"><code><pre>var cal = blackberry.pim.calendar;
+        <table><tbody><td class="code"><code><pre>var calendar = blackberry.pim.calendar,
+    CalendarFindOptions = calendar.CalendarFindOptions;
 
 function onFindSuccess(events) {
-    events.forEach(function (evt) {
-        alert("Event summary: " + evt.summary);
-        alert("Event location: " + evt.location);
-    });
+   alert("Found " + events.length + " events!");
+   events.forEach(function (evt) {
+      alert("Event summary: " + evt.summary);
+      alert("Event location: " + evt.location);
+   });
 }
 
 function onFindError(error) {
-    alert("Error: " + error.code);
+   alert("Error: " + error.code);
 }
 
-// Use case 1: find any events by keyword in any of the following fields:
+// Find any events by keyword in any of the following fields:
 // -location
 // -summary
 // -attendees' names or emails
 function findEventsByKeyword(keyword) {
-    var filter = { "location" : location };
-    var findOptions = { 
-         "filter" : filter,
-         "detail" : CalendarFindOptions.DETAIL_FULL
-         };
+   var filter = { "substring" : keyword };
+   var findOptions = {
+       "filter" : filter,
+       "detail" : CalendarFindOptions.DETAIL_FULL
+   };
 
-    // Find all events that has the specified keyword in summary, location or attendees' name/email
-    cal.findEvents(findOptions, onFindSuccess, onFindError);
+   // Find all events that has the specified keyword in summary,
+   // location or attendees' name/email
+   calendar.findEvents(findOptions, onFindSuccess, onFindError);
 }
 
-// Use case 2: find one single event by event id and folder
-function findSingleEvent(eventId, folder) {
-    var findOptions,
-        filter {};
-    
-    filter.eventId = eventId;
-    filter.folders  = [folder];
+function findEventsSortSummaryDescending(keyword) {
+   var filter = { "substring" : keyword };
+   var findOptions = {
+       "filter" : filter,
+       "sort": [{
+          "fieldName": CalendarFindOptions.SORT_FIELD_SUMMARY,
+          "desc": true
+       }],
+       "detail" : CalendarFindOptions.DETAIL_FULL
+   };
 
-    // When finding single events, the returned event will always have all fields populated,
-    // regardless of what detail level the user specifies
-    findOptions = { 
-                     "filter" : filter,
-                     "detail" : CalendarFindOptions.DETAIL_FULL
-                  };
-
-    // Find the single event that has the specified event id that belongs to the specified folder
-    cal.findEvents(findOptions, onFindSuccess, onFindError);
+   calendar.findEvents(findOptions, onFindSuccess, onFindError);
 }
 
-// Extra params will be ignored in this example
-function findEventsExtraParamsIgnored(keyword, eventId, folder) {
-    var filter = {
-            substring: keyword,           // ignored
-            eventId: 2,                   // applied in search
-            end: new Date("2012-12-21"),  // ignored
-            expandRecurring: false,       // ignored - recurring event will be returned as one event
-            folders: [folder],            // applied in search
-            start: new Date("2012-12-12")
-        },
-        findOption = { 
-                                "filter" : filter,
-                                "detail" : cal.CalendarFindOptions.DETAIL_FULL
-                            };
+// Only events in the specified folder will be returned in search results
+function findEventsInCalendarFolder(keyword, folder, limit) {
+   var filter = {
+       "substring": keyword,
+       "folders": [folder]
+   };
+   var findOptions = {
+       "filter": filter,
+       "sort": [{
+          "fieldName": CalendarFindOptions.SORT_FIELD_SUMMARY,
+          "desc": false
+       }],
+       "detail": CalendarFindOptions.DETAIL_AGENDA,
+       "limit": limit
+   };
 
-   // By specifying event id and folder, you instruct the search engine to look for the event with
-   // the matching event id and folder. All other search parameters will be ignored.
-   // The events array in the callback contain at most one event.
-   cal.findEvents(findOptions, onFindSuccess, onFindError);
+   calendar.findEvents(findOptions, onFindSuccess, onFindError);
+}
+
+// Filter is optional in search
+function listAllEvents(limit) {
+   var findOptions = {
+       "sort": [{
+          "fieldName": CalendarFindOptions.SORT_FIELD_SUMMARY,
+          "desc": false
+       }],
+       "detail": CalendarFindOptions.DETAIL_AGENDA,
+       "limit": limit
+   };
+
+   calendar.findEvents(findOptions, onFindSuccess, onFindError);
 }</pre></code></td></tbody></table>
     
   
@@ -780,81 +770,6 @@ function findEventsExtraParamsIgnored(keyword, eventId, folder) {
                             
                             
                             <p>Retrieves all calendar accounts.</p>
-                            <br />
-                            
-                            
-                            
-                                <table>              
-                                    <thead><tr><th colspan="2">
-                                        Supported Platforms
-                                    </th></tr></thead>
-                                    
-                                        <tr><td></td><td>
-                                            &nbsp;- BlackBerry 10
-                                        </td></tr>
-                                    
-                                </table>              
-                                               
-                            <br />
-                            
-                            
-                                               
-
-                            
-                            
-                            
-
-                            
-                            
-                            
-                            
-                            
-
-                            
-                            
-                
-  
-
-                        </div>
-                    </div>
-                
-                    <div class="detailed_item function" x-ww-support="bb10x">
-                        <h3>
-                            <a name=".getCalendarFolders"></a>
-                 
-                            
-                            
-                                
-                                    
-                                        static              
-                                        
-                                        <a href="blackberry.pim.calendar.CalendarFolder.html">blackberry.pim.calendar.CalendarFolder</a>[]
-                                        
-                                        
-                                            blackberry.pim.calendar.getCalendarFolders
-                                            
-                                                
-                                                    ()
-                                                
-                                            
-                                                                  
-                                    
-                                
-                            
-                            <br />
-                        </h3>
-                        <div class="detailed description">
-                            
-                            
-                                
-                                <br />
-                            
-                    
-                            
-                                       
-                            
-                            
-                            <p>Retrieves calendar folders from all calendar accounts.</p>
                             <br />
                             
                             
@@ -1059,7 +974,7 @@ function findEventsExtraParamsIgnored(keyword, eventId, folder) {
                                             blackberry.pim.calendar.getEvent
                                             
                                                 
-                                                    (<i>[eventId : String]</i>, <i>[folder : blackberry.pim.calendar.Folder]</i>)
+                                                    (eventId : String, folder : blackberry.pim.calendar.Folder)
                                                 
                                             
                                                                   
@@ -1111,7 +1026,7 @@ function findEventsExtraParamsIgnored(keyword, eventId, folder) {
                                             <td><b>eventId</b></td>
                                             <td>
                                                 
-                                                the identifier of the event                         
+                                                The identifier of the event                         
                                                 
                                             </td>
                                         </tr>
@@ -1169,7 +1084,7 @@ function findEventsExtraParamsIgnored(keyword, eventId, folder) {
 
         <div >
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Oct 26 2012 01:13:47 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Nov 13 2012 15:04:19 GMT-0500 (EST)
         </div>
 
     </div>
