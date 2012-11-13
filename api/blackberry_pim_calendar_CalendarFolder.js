@@ -15,7 +15,7 @@
 */
 
 /**
- * @class A calendar in the calendar application is represented by a CalendarFolder object. Folders are containers for events. <b>This it not in DAP specs</b>
+ * @class A calendar in the calendar application is represented by a <code>CalendarFolder</code> object. Folders are containers for events.
  * @toc {PIM} CalendarFolder
  * @featureID blackberry.pim.calendar
  */
@@ -91,24 +91,3 @@ blackberry.pim.calendar.CalendarFolder.prototype.default = true;
  * @BB10X
  */
 blackberry.pim.calendar.CalendarFolder.prototype.enterprise = true;
-
-/**
- * @description True if this calendar folder supports attendees
- * @type Boolean
- * @BB10X
- */
-blackberry.pim.calendar.CalendarFolder.prototype.supportsParticipants = true;
-
-/**
- * @description True if this calendar folder supports infinite recurrence
- * @type Boolean
- * @BB10X
- */
-blackberry.pim.calendar.CalendarFolder.prototype.supportsInfiniteRecurrence = true;
-
-/**
- * @description True if this calendar folder supports messaging
- * @type Boolean
- * @BB10X
- */
-blackberry.pim.calendar.CalendarFolder.prototype.supportsMessaging = true;

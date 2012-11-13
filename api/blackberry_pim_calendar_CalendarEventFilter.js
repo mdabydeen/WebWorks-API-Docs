@@ -15,29 +15,15 @@
 */
 
 /**
- * @class The CalenderEventFilter object captures the searchable parameters for finding calendar event items.
+ * @class The <code>CalenderEventFilter</code> object captures the searchable parameters for finding calendar event items.
  * @toc {PIM} CalendarEventFilter
  * @featureID blackberry.pim.calendar
  */
 blackberry.pim.calendar.CalenderEventFilter = {};
 
 /**
- * @type String
- * @description The id of the event. Used for looking up single event.
- * @BB10X
- */
-blackberry.pim.calendar.CalendarFindOptions.prototype.eventId = "";
-
-/**
  * @description Start of the query's time range. All events that enter the range should be returned.
  * @type Date
- * @BB10X
- */
-blackberry.pim.calendar.CalenderEventFilter.prototype.detail = 0;
-
-/**
- * @description Detail level of the search results. This should be one of the DETAIL_* constants. Defaults to {@link blackberry.pim.calendar.CalendarFindOptions.DETAIL_AGENDA}
- * @type Number
  * @BB10X
  */
 blackberry.pim.calendar.CalenderEventFilter.prototype.start = null;
@@ -50,8 +36,11 @@ blackberry.pim.calendar.CalenderEventFilter.prototype.start = null;
 blackberry.pim.calendar.CalenderEventFilter.prototype.end = null;
 
 /**
- * @description If true, recurring events will be expanded in search results. This means all occurrences
- * happening in the time range will be returned.
+ * @description If true, recurring events will be expanded in search results. This means all occurrences within a recurring event
+ * happening in the time range will be returned.<br><strong>NOTE:</strong> The main use case for setting this flag to true is to
+ * remove an occurrence in a recurring event, see {@link blackberry.pim.calendar.CalendarEvent#remove}(). For any other operations
+ * to the recurring event (e.g. changing fields' values), make sure you obtain the event object by either calling {@link blackberry.pim.calendar.getEvent}()
+ * or {@link blackberry.pim.calendar.findEvents}() with the expandRecurring flag set to false.
  * @type Boolean
  * @BB10X
  */
@@ -59,7 +48,8 @@ blackberry.pim.calendar.CalenderEventFilter.prototype.expandRecurring = false;
 
 /**
  * @description Substring used in the search. By setting the substring, the user instructs the
- * back-end to return only events whose summary or location fields contain the specified value.
+ * back-end to return only events whose summary, location, or attendees' names or emails fields
+ * contain the specified value.
  * @type String
  * @BB10X
  */

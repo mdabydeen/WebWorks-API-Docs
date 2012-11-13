@@ -15,7 +15,7 @@
 */
 
 /**
- * @class The Attendee object represents an attendee of a calendar event item.
+ * @class The <code>Attendee</code> object represents an attendee of a calendar event item.
  * @toc {PIM} Attendee
  * @featureID blackberry.pim.calendar
  */

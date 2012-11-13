@@ -17,7 +17,7 @@
 /**
  * @toc {PIM} CalendarError
  * @featureID blackberry.pim.calendar
- * @class The CalendarError object contains error codes and is returned in the error callback.
+ * @class The <code>CalendarError</code> object contains error codes and is returned in the error callback.
  */
 blackberry.pim.calendar.CalendarError = {};
 

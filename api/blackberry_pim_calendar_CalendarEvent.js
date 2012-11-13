@@ -15,7 +15,7 @@
 */
 
 /**
- * @class The CalendarEvent object represents an event in the device calendar. It can be obtained by calling {@link blackberry.pim.calendar.createEvent}() or {@link blackberry.pim.calendar.findEvents}()
+ * @class The <code>CalendarEvent</code> object represents an event in the device calendar. It can be obtained by calling {@link blackberry.pim.calendar.createEvent}() or {@link blackberry.pim.calendar.findEvents}()
  * @toc {PIM} CalendarEvent
  * @featureID blackberry.pim.calendar
  * @permission access_pimdomain_calendars Permits your app to access calendar.
@@ -23,7 +23,7 @@
 blackberry.pim.calendar.CalendarEvent = {};
 
 /**
- * @description A globally unique identifier.
+ * @description An identifier for the event.
  * @readOnly
  * @type String
  * @BB10X
@@ -73,21 +73,23 @@ blackberry.pim.calendar.CalendarEvent.prototype.end = null;
 blackberry.pim.calendar.CalendarEvent.prototype.status = "";
 
 /**
- * @description An indication of the display status to set for the event. <b>TODO busyStatus() in native CalendarEvent can be one of: free, tentative, busy, or out of office.</b>
+ * @description An indication of the display status to set for the event. Its value can be one of: {@link blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_FREE},
+ * {@link blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_TENTATIVE}, {@link blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_BUSY},
+ * or {@link blackberry.pim.calendar.CalendarEvent.TRANSPARENCY_OUT_OF_OFFICE}
  * @type Number
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.transparency = 0;
 
 /**
- * @description The recurrence or repetition rule for this event.
+ * @description The recurrence or repetition rule for this event. This is used for creating a recurring event.
  * @type blackberry.pim.calendar.CalendarRepeatRule
  * @BB10X
  */
 blackberry.pim.calendar.CalendarEvent.prototype.recurrence = null;
 
 /**
- * @description A reminder for the event, specified as the number of minutes between the alert and the start time.<b>TODO native CalendarEvent takes a number of minutes before start of event, but DAP CalendarEvent does it differently http://www.w3.org/TR/calendar-api/#widl-CalendarEvent-reminder</b>
+ * @description A reminder for the event, specified as the number of minutes between the alert and the start time.
  * @type Number
  * @BB10X
  */
@@ -170,81 +172,187 @@ blackberry.pim.calendar.CalendarEvent.prototype.url = "";
 /**
  * Saves a new event to the calendar, or updates an existing event if an event with the same id already exists.
  * @param {function} onSaveSuccess The callback function that will be invoked when the contact is saved successfully.
- * @callback {blackberry.pim.calendar.CalendarEvent} onSaveSuccess.event The CalendarEvent object.
+ * @callback {blackberry.pim.calendar.CalendarEvent} onSaveSuccess.event The {@link blackberry.pim.calendar.CalendarEvent} object. You should save this object for further operations on the event and use it to replace the original event object prior to save.
  * @param {function} onSaveError The callback function that will be invoked when the event cannot be saved.
- * @callback {blackberry.pim.calendar.CalendarError} onSaveError.error The CalendarError object which contains the error code.
+ * @callback {blackberry.pim.calendar.CalendarError} onSaveError.error The {@link blackberry.pim.calendar.CalendarError} object which contains the error code. Possible errors:
+ * <ul>
+ *    <li>start or end date time is missing, result in {@link blackberry.pim.calendar.CalendarError.INVALID_ARGUMENT_ERROR}</li>
+ *    <li>end date time is before start date time, result in {@link blackberry.pim.calendar.CalendarError.INVALID_ARGUMENT_ERROR}</li>
+ *    <li>trying to save the event to a calendar folder which the app does not have access to (e.g.
+ *        if the default calendar folder is set to an enterprise account, but the app is not running
+ *        in work perimeter), result in {@link blackberry.pim.calendar.CalendarError.PERMISSION_DENIED_ERROR}</li>
+ *    <li>other errors in back end, result in {@link blackberry.pim.calendar.CalendarError.UNKNOWN_ERROR}</li>
+ * </ul>
  * @returns {void}
  * @BB10X
+ * @example
+ * var calendar = blackberry.pim.calendar,
+ *     // omitting optional folder parameter in createEvent(), calling save() will
+ *     // save event to default calendar folder
+ *     evt = calendar.createEvent({
+ *         "summary": "Picnic",
+ *         "location": "South Park",
+ *         "start": new Date("Jan 1, 2013, 13:00"),
+ *         "end": new Date("Jan 1, 2013, 16:00"),
+ *         "transparency": calendar.CalendarEvent.SENSITIVITY_PERSONAL,
+ *         "reminder": 2880 // 2 days before start
+ *     });
+ *
+ * // save event to default calendar folder
+ * evt.save(function (saved) {
+ *     evt = saved; // replace original evt object
+ *     alert("Event saved: " + evt.id);
+ * }, function (error) {
+ *     alert("Error saving event, error code: " + error.code);
+ * });
+ *
+ * // edit event description
+ * evt.description = "This is going to be fun!";
+ * // save changes to event
+ * evt.save(function (saved) {
+ *     evt = saved; // replace original evt object
+ *     alert("Event description: " + evt.description);
+ * }, function (error) {
+ *     alert("Error saving event, error code: " + error.code);
+ * });
  */
 blackberry.pim.calendar.CalendarEvent.prototype.save = function () {};
 
 /**
- * Removes the event from the calendar. An error callback is called with a CalendarError object if the removal is unsuccessful.
+ * Removes the event from the calendar. An error callback is called with a {@link blackberry.pim.calendar.CalendarError} object if the removal is unsuccessful.
  * @param {function} onRemoveSuccess The callback function that will be invoked when the event is removed successfully.
  * @param {function} onRemoveError The callback function that will be invoked when the event cannot be removed.
- * @callback {blackberry.pim.calendar.CalendarError} onRemoveError.error The CalendarError object which contains the error code.
+ * @callback {blackberry.pim.calendar.CalendarError} onRemoveError.error The {@link blackberry.pim.calendar.CalendarError} object which contains the error code. A possible error is to remove an event before it was saved, this would result in {@link blackberry.pim.calendar.CalendarError.INVALID_ARGUMENT_ERROR}.
+ * @param {Boolean} [removeAll] Optional flag that only applies to recurring events. If removeAll is set to true,
+ * all occurrences of the recurring event will be removed; otherwise, only the single occurrence represented by
+ * this event object will be removed. This parameter defaults to true if not specified.
  * @returns {void}
  * @BB10X
+ * @example
+ * var calendar = blackberry.pim.calendar;
+ *
+ * function testRemove() {
+ *    // omitting optional folder parameter in createEvent(), calling save()
+ *    // will save event to default calendar folder
+ *    var evt = calendar.createEvent({
+ *        "summary": "Picnic",
+ *        "location": "South Park",
+ *        "start": new Date("Jan 1, 2013, 13:00"),
+ *        "end": new Date("Jan 1, 2013, 16:00"),
+ *        "transparency": calendar.CalendarEvent.SENSITIVITY_PERSONAL,
+ *        "reminder": 2880 // 2 days before start
+ *    });
+ *
+ *    // will result in error, since the event has not been saved to the
+ *    // calendar folder yet
+ *    evt.remove(function () {
+ *       alert("Event removed!");
+ *    }, function (error) {
+ *       alert("Failed to remove event, error code: " + error.code);
+ *    });
+ *
+ *    // save event to default calendar folder
+ *    evt.save(function (saved) {
+ *       evt = saved; // replace original evt object
+ *       alert("Event saved: " + evt.id);
+ *    }, function (error) {
+ *       alert("Error saving event, error code: " + error.code);
+ *    });
+ *
+ *    // this will remove the event from the calendar folder
+ *    evt.remove(function () {
+ *       alert("Event removed!");
+ *    }, function (error) {
+ *       alert("Failed to remove event, error code: " + error.code);
+ *    });
+ * }
+ *
+ * function removeSingleOccurrence(keyword, dateToRemove) {
+ *    // find all instances of the recurring event
+ *    calendar.findEvents({
+ *       "filter": {
+ *           "substring": keyword,
+ *           "expandRecurring": true
+ *       }
+ *    }, function (events) {
+ *       alert("Found " + events.length + " events that matches filter!");
+ *       events.forEach(function (evt) {
+ *          if (evt.start.toISOString() === dateToRemove.toISOString()) {
+ *	           evt.remove(function () {
+ *                alert(dateToRemove + " instance removed successfully!");
+ *             }, function (error) {
+ *                alert(dateToRemove + " instance not removed, error code: " + error.code);
+ *             },
+ *             false); // pass false to remove only this single occurrence
+ *          }
+ *       });
+ *    }, function (error) {
+ *       alert("Failed to find events, error code: " + error.code);
+ *    });
+ * }
  */
 blackberry.pim.calendar.CalendarEvent.prototype.remove = function () {};
 
 /**
- * Creates a new CalendarEvent object for a recurrence exception of the calling event.  This is a deep copy of the object,
+ * Creates a new CalendarEvent object for a recurrence exception of the calling event. This is a deep copy of the object,
  * with the id property set to null, the parentId property set to the id of the calling event, and the originalStartTime
  * property set to the parameter value.
  * @param {Date} originalStartTime The date of the original recurrence instance that this event replaces. This date will be
  * added to the calling event's exceptionDates array within the recurrence field.
  * @returns {blackberry.pim.calendar.CalendarEvent}
  * @example
- * var evt, exceptionEvt;
+ * var evt,
+ *     exceptionEvt,
+ *     calendar = blackberry.pim.calendar,
+ *     CalendarRepeatRule = calendar.CalendarRepeatRule;
  *
  * function onExceptionSaveSuccess(exceptionEvtCreated) {
- *     exceptionEvt = exceptionEvtCreated;
- *     alert("Exception event created successfully: " + exceptionEvt.id); // exception event has a different id than the original event
+ *    exceptionEvt = exceptionEvtCreated;
+ *    // exception event has a different id than the original event
+ *    alert("Exception event created successfully: " + exceptionEvt.id);
  * }
  *
  * function onSaveSuccess(created) {
- *     evt = created;
- *     // Recurring event created successcully, with the following occurences:
- *     // Jan 22, 2013, 12:00
- *     // Jan 25, 2013, 12:00
- *     // Jan 29, 2013, 12:00
- *     // Feb 1, 2013, 12:00
- *     // Feb 5, 2013, 12:00
- *     // Feb 8, 2013, 12:00
- *     // Feb 12, 2013, 12:00
- *     // Feb 15, 2013, 12:00
+ *    evt = created;
+ *    // Recurring event created successcully, with the following occurences:
+ *    // Jan 22, 2013, 12:00
+ *    // Jan 25, 2013, 12:00
+ *    // Jan 29, 2013, 12:00
+ *    // Feb 1, 2013, 12:00
+ *    // Feb 5, 2013, 12:00
+ *    // Feb 8, 2013, 12:00
+ *    // Feb 12, 2013, 12:00
+ *    // Feb 15, 2013, 12:00
  *
- *     // The following code replaces the last occurence with an exception occurence on the day after
- *     exceptionEvt = evt.createExceptionEvent(new Date("Feb 15, 2013, 12:00"));
- *     exceptionEvt.start = new Date("Feb 16, 2013, 12:00");
- *     exceptionEvt.end = new Date("Feb 16, 2013, 12:30");
- *     exceptionEvt.save(onExceptionSaveSuccess, onSaveError);
+ *    // The following code replaces the last occurence with an exception occurence on the day after
+ *    exceptionEvt = evt.createExceptionEvent(new Date("Feb 15, 2013, 12:00"));
+ *    exceptionEvt.start = new Date("Feb 16, 2013, 12:00");
+ *    exceptionEvt.end = new Date("Feb 16, 2013, 12:30");
+ *    exceptionEvt.save(onExceptionSaveSuccess, onSaveError);
  * }
  *
  * function onSaveError(error) {
- *     alert("Error saving event to device: " + error.code);
+ *    alert("Error saving event to device: " + error.code);
  * }
  *
  * function createRecurringEventWithOneException() {
- *     var cal = blackberry.pim.calendar;
- *     var start = new Date("Jan 21, 2013, 12:00");
- *     var end = new Date("Jan 21, 2013, 12:30");
- *     var location = "some location";
- *     var summary = "My recurring event";
- *     var repeatRule = new CalendarRepeatRule({
- *         "frequency": CalendarRepeatRule.FREQUENCY_WEEKLY,
- *         "expires": new Date("Feb 18, 2013, 12:00"),
- *         "dayInWeek": CalendarRepeatRule.TUESDAY | CalendarRepeatRule.FRIDAY
- *     });
- *     evt = cal.createEvent({
- *         "summary": summary,
- *         "location": location,
- *         "start": start,
- *         "end": end,
- *         "recurrence": repeatRule
- *     });
- *     evt.save(onSaveSuccess, onSaveError);
+ *    var start = new Date("Jan 21, 2013, 12:00");
+ *    var end = new Date("Jan 21, 2013, 12:30");
+ *    var location = "some location";
+ *    var summary = "My recurring event";
+ *    var repeatRule = new CalendarRepeatRule({
+ *       "frequency": CalendarRepeatRule.FREQUENCY_WEEKLY,
+ *       "expires": new Date("Feb 18, 2013, 12:00"),
+ *       "dayInWeek": CalendarRepeatRule.TUESDAY | CalendarRepeatRule.FRIDAY
+ *    });
+ *    evt = calendar.createEvent({
+ *       "summary": summary,
+ *       "location": location,
+ *       "start": start,
+ *       "end": end,
+ *       "recurrence": repeatRule
+ *    });
+ *    evt.save(onSaveSuccess, onSaveError);
  * }
  * @BB10X
  */

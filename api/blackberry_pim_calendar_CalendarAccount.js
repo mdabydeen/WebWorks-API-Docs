@@ -15,7 +15,7 @@
 */
 
 /**
- * @class The <code>CalendarAccount</code> object contains the calendar account information for the calendar service.
+ * @class The <code>CalendarAccount</code> object contains the calendar account information.
  * @toc {PIM} CalendarAccount
  * @BB10X
  * @featureID blackberry.pim.calendar
@@ -40,5 +40,22 @@ blackberry.pim.calendar.CalendarAccount.prototype.name = "";
  * Return all the folders of the calendar account.
  * @type blackberry.pim.calendar.CalendarFolder[]
  * @BB10X
+ * @example
+ * function getCalendarAccountsForGmail() {
+ *    var calendar = blackberry.pim.calendar,
+ *        accounts = calendar.getCalendarAccounts();
+ *
+ *    // gets all calendar accounts that contains "gmail" in its name
+ *    return accounts.filter(function (acct) {
+ *       return /gmail/i.test(acct.name);
+ *    });
+ * }
  */
 blackberry.pim.calendar.CalendarAccount.prototype.folders = { };
+
+/**
+ * @description True when this calendar account is an enterprise account.
+ * @type Boolean
+ * @BB10X
+ */
+blackberry.pim.calendar.CalendarAccount.prototype.enterprise = false;

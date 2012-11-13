@@ -15,7 +15,7 @@
 */
 
 /**
- * @class The CalendarFindOptions object contains fields that filter and sort the results of {@link blackberry.pim.calendar.findEvents}().
+ * @class The <code>CalendarFindOptions</code> object contains fields that filter and sort the results of {@link blackberry.pim.calendar.findEvents}().
  * @toc {PIM} CalendarFindOptions
  * @featureID blackberry.pim.calendar
  */
@@ -49,7 +49,7 @@ blackberry.pim.calendar.CalendarFindOptions.prototype.limit = 0;
 
 /**
  * @type Number
- * @description The detail level controls what attributes will be returned for each event.
+ * @description The detail level controls what attributes will be returned for each event. This should be one of the DETAIL_* constants. Defaults to {@link blackberry.pim.calendar.CalendarFindOptions.DETAIL_AGENDA}
  * @BB10X
  */
 blackberry.pim.calendar.CalendarFindOptions.prototype.detail = 0;

@@ -15,7 +15,7 @@
 */
 
 /**
- * @class The CalendarRepeatRule object represents the recurrence of a calendar event item.
+ * @class The <code>CalendarRepeatRule</code> object represents the recurrence of a calendar event item.
  * @toc {PIM} CalendarRepeatRule
  * @featureID blackberry.pim.calendar
  */
